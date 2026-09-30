@@ -1,0 +1,680 @@
+{
+  "title": "禾口餐饮连锁 · 2026 年度感恩盛典",
+  "goal": "以「2026 年度感恩盛典」为主题，做出气氛热烈、数据饱满、结尾有余味的年会模板样张，用于对外展示版式效果",
+  "audience": "禾口餐饮连锁全体员工、门店伙伴与合伙人（模板样张演示对象为潜在客户）",
+  "owner": "禾口餐饮连锁",
+  "randomSeed": "theme08-20260930-dqh",
+  "pageCount": 15,
+  "themePack": "theme08",
+  "slides": [
+    {
+      "layout": "theme08_page005",
+      "props": {
+        "eyebrow": "禾口餐饮连锁 2026",
+        "year": "2026",
+        "subheadline": "从 1.8 亿到 5.2 亿，谢谢每一位同行的人",
+        "subheadMark": "感恩盛典",
+        "closingLine": "2027 年 1 月 22 日 · 杭州西湖文化广场",
+        "headlineLines": [
+          "2026 年度感恩盛典",
+          "一碗热饭，一路同行"
+        ],
+        "meta": [
+          {
+            "k": "时间",
+            "v": "2027.01.22"
+          },
+          {
+            "k": "地点",
+            "v": "杭州西湖文化广场"
+          },
+          {
+            "k": "主办",
+            "v": "禾口餐饮连锁"
+          }
+        ],
+        "decorTexts": [
+          "86 家门店",
+          "520 万人次"
+        ],
+        "mediaCount": 0
+      }
+    },
+    {
+      "layout": "theme08_page007",
+      "props": {
+        "eyebrow": "今晚议程",
+        "headline": "今晚，我们一起过",
+        "subheadline": "17:30 见",
+        "closingLine": "六件事，一个晚上",
+        "cardCount": 6,
+        "chapters": [
+          {
+            "name": "签到入场",
+            "en": "17:30"
+          },
+          {
+            "name": "董事长致辞",
+            "en": "18:00"
+          },
+          {
+            "name": "年度表彰",
+            "en": "18:30"
+          },
+          {
+            "name": "门店节目",
+            "en": "19:10"
+          },
+          {
+            "name": "幸运抽奖",
+            "en": "20:00"
+          },
+          {
+            "name": "合影散场",
+            "en": "21:00"
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme08_page016",
+      "props": {
+        "eyebrow": "董事长致辞",
+        "kicker": "周建国 · 董事长",
+        "headline": "每一碗热饭，都是一次认真",
+        "quote": "十年时间，我们从一口锅走到 86 家门店。",
+        "source": "周建国 · 禾口餐饮连锁董事长",
+        "supportCount": 3,
+        "supports": [
+          "门店 86 家，比去年多开 21 家",
+          "服务顾客 520 万人次",
+          "满意度 96.8%，是顾客给的分数"
+        ]
+      }
+    },
+    {
+      "layout": "theme08_page026",
+      "props": {
+        "eyebrow": "2026 年度数字",
+        "kicker": "服务顾客",
+        "headline": "520 万人次的选择",
+        "subheadline": "平均每 6 秒一位客人",
+        "bigNumber": "520",
+        "bigUnit": "万人次",
+        "anchorStickerLabel": "覆盖城市",
+        "anchorStickerSub": "6 座",
+        "bigNumberCaption": "全年到店顾客",
+        "caption": "86 家门店、1340 位伙伴，38% 的订单来自外卖，撑起这 520 万人次。",
+        "closingLine": "感谢每一位走进禾口的人",
+        "metricCount": 3,
+        "metrics": [
+          {
+            "k": "门店",
+            "v": "86",
+            "unit": "家"
+          },
+          {
+            "k": "员工",
+            "v": "1340",
+            "unit": "人"
+          },
+          {
+            "k": "顾客满意度",
+            "v": "96.8",
+            "unit": "%"
+          }
+        ],
+        "mediaCount": 0
+      }
+    },
+    {
+      "layout": "theme08_page027",
+      "props": {
+        "eyebrow": "五年营收曲线",
+        "headline": "从 1.8 亿到 5.2 亿",
+        "subheadline": "五年，翻了近三倍",
+        "summary": "每一级台阶，都是门店和伙伴一起踩出来的",
+        "axisXLabel": "年度",
+        "axisYLabel": "营收",
+        "valueUnit": "亿元",
+        "focusNote": "2026 年 5.2 亿",
+        "closingLine": "下一个台阶：7 亿元",
+        "baselineLegendLabel": "2025 年 3.9 亿",
+        "nodeCount": 5,
+        "nodes": [
+          {
+            "label": "2022",
+            "sub": "五年起点",
+            "v": 1.8
+          },
+          {
+            "label": "2023",
+            "sub": "同比 +33%",
+            "v": 2.4
+          },
+          {
+            "label": "2024",
+            "sub": "同比 +29%",
+            "v": 3.1
+          },
+          {
+            "label": "2025",
+            "sub": "同比 +26%",
+            "v": 3.9
+          },
+          {
+            "label": "2026",
+            "sub": "同比 +33%",
+            "v": 5.2
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme08_page024",
+      "props": {
+        "eyebrow": "营收贡献拆解",
+        "headline": "5.2 亿是这么来的",
+        "subheadline": "从 3.9 亿到 5.2 亿",
+        "summary": "老店往上顶，新店往外铺",
+        "unit": "亿元",
+        "totalLabel": "2026 年营收",
+        "totalColumnLabel": "合计",
+        "totalColumnLabelEn": "TOTAL",
+        "footerStickerLabel": "增量合计",
+        "footerStickerSub": "1.3 亿",
+        "closingLine": "每一分增量，都来自一线",
+        "stepCount": 5,
+        "steps": [
+          {
+            "label": "2025 年营收",
+            "en": "2025",
+            "v": 3.9
+          },
+          {
+            "label": "老店同店增长",
+            "en": "Same-store",
+            "v": 0.6
+          },
+          {
+            "label": "新开门店",
+            "en": "New stores",
+            "v": 0.4
+          },
+          {
+            "label": "外卖增量",
+            "en": "Delivery",
+            "v": 0.2
+          },
+          {
+            "label": "团餐与零售",
+            "en": "Retail",
+            "v": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme08_page019",
+      "props": {
+        "eyebrow": "季度节奏",
+        "headline": "四个季度，一路走高",
+        "subheadline": "Q4 单季 1.4 亿元",
+        "summary": "越到年底，灶台越热",
+        "badge": "2026",
+        "hero": {
+          "tag": "2026 全年",
+          "label": "营收",
+          "value": "5.2",
+          "unit": "亿元"
+        },
+        "seriesUnit": "亿元",
+        "seriesNote": "季度营收",
+        "chartCaption": "2026 年分季度营收",
+        "closingLine": "明年 Q4，冲 2 亿",
+        "metricCount": 3,
+        "metrics": [
+          {
+            "k": "外卖占比",
+            "v": "38",
+            "unit": "%"
+          },
+          {
+            "k": "顾客满意度",
+            "v": "96.8",
+            "unit": "%"
+          },
+          {
+            "k": "门店",
+            "v": "86",
+            "unit": "家"
+          }
+        ],
+        "series": [
+          {
+            "label": "Q1",
+            "v": 1.1
+          },
+          {
+            "label": "Q2",
+            "v": 1.3
+          },
+          {
+            "label": "Q3",
+            "v": 1.4
+          },
+          {
+            "label": "Q4",
+            "v": 1.4
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme08_page012",
+      "props": {
+        "eyebrow": "月度人气",
+        "headline": "一年 520 万人次",
+        "subheadline": "热的是灶台，也是人心",
+        "summary": "夏天最忙，年底最暖",
+        "unit": "万人次",
+        "peakNote": "峰值 47 万",
+        "insightText": "8 月最忙",
+        "closingLine": "12 个月，一天都没停过火",
+        "cells": [
+          {
+            "m": "1月",
+            "en": "JAN",
+            "v": 38
+          },
+          {
+            "m": "2月",
+            "en": "FEB",
+            "v": 42
+          },
+          {
+            "m": "3月",
+            "en": "MAR",
+            "v": 41
+          },
+          {
+            "m": "4月",
+            "en": "APR",
+            "v": 43
+          },
+          {
+            "m": "5月",
+            "en": "MAY",
+            "v": 45
+          },
+          {
+            "m": "6月",
+            "en": "JUN",
+            "v": 44
+          },
+          {
+            "m": "7月",
+            "en": "JUL",
+            "v": 46
+          },
+          {
+            "m": "8月",
+            "en": "AUG",
+            "v": 47
+          },
+          {
+            "m": "9月",
+            "en": "SEP",
+            "v": 43
+          },
+          {
+            "m": "10月",
+            "en": "OCT",
+            "v": 45
+          },
+          {
+            "m": "11月",
+            "en": "NOV",
+            "v": 41
+          },
+          {
+            "m": "12月",
+            "en": "DEC",
+            "v": 45
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme08_page076",
+      "props": {
+        "eyebrow": "城市版图",
+        "headline": "一年，多了 21 家门店",
+        "subheadline": "从 65 家到 86 家，长三角连成一片",
+        "summary": "杭州稳住基本盘，苏州从 0 长出来",
+        "colA": {
+          "num": "65",
+          "label": "2025 年门店"
+        },
+        "colB": {
+          "num": "86",
+          "label": "2026 年门店"
+        },
+        "valueUnit": "家门店",
+        "closingLine": "2027，下一站上海",
+        "segmentCount": 6,
+        "items": [
+          {
+            "name": "杭州",
+            "rankA": 1,
+            "rankB": 1,
+            "valA": 36,
+            "valB": 41
+          },
+          {
+            "name": "苏州",
+            "rankA": 6,
+            "rankB": 2,
+            "valA": 0,
+            "valB": 14
+          },
+          {
+            "name": "宁波",
+            "rankA": 2,
+            "rankB": 3,
+            "valA": 11,
+            "valB": 12
+          },
+          {
+            "name": "绍兴",
+            "rankA": 3,
+            "rankB": 4,
+            "valA": 8,
+            "valB": 9
+          },
+          {
+            "name": "嘉兴",
+            "rankA": 4,
+            "rankB": 5,
+            "valA": 6,
+            "valB": 6
+          },
+          {
+            "name": "湖州",
+            "rankA": 5,
+            "rankB": 6,
+            "valA": 4,
+            "valB": 4
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme08_page013",
+      "props": {
+        "eyebrow": "门店排行",
+        "headline": "2026 门店营收 TOP5",
+        "subheadline": "前三名都在杭州",
+        "summary": "单店最高 2860 万元",
+        "unit": "百万元",
+        "closingLine": "明年，榜上换几个名字",
+        "columnLabels": [
+          "#",
+          "门店",
+          "城市",
+          "营收(百万元)"
+        ],
+        "rowCount": 5,
+        "rows": [
+          {
+            "name": "湖滨店",
+            "cat": "杭州",
+            "v": 28.6
+          },
+          {
+            "name": "滨江店",
+            "cat": "杭州",
+            "v": 25.4
+          },
+          {
+            "name": "西溪店",
+            "cat": "杭州",
+            "v": 21.8
+          },
+          {
+            "name": "金鸡湖店",
+            "cat": "苏州",
+            "v": 19.6
+          },
+          {
+            "name": "天一广场店",
+            "cat": "宁波",
+            "v": 17.2
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme08_page022",
+      "props": {
+        "eyebrow": "年度大事记",
+        "headline": "这一年，我们走过的四步",
+        "subheadline": "从 70 家到 83 家",
+        "summary": "每一步，都踩在实处",
+        "unit": "家门店",
+        "deckNote": "年末收官 86 家",
+        "closingLine": "3 月 70 家，11 月 83 家",
+        "nodes": [
+          {
+            "label": "3 月",
+            "note": "第 70 家门店开业",
+            "v": 70,
+            "delta": "+5 家"
+          },
+          {
+            "label": "5 月",
+            "note": "中央厨房投产",
+            "v": 74,
+            "delta": "+4 家"
+          },
+          {
+            "label": "8 月",
+            "note": "外卖小程序上线",
+            "v": 79,
+            "delta": "+5 家"
+          },
+          {
+            "label": "11 月",
+            "note": "进入苏州市场",
+            "v": 83,
+            "delta": "+4 家"
+          }
+        ],
+        "nodeCount": 4
+      }
+    },
+    {
+      "layout": "theme08_page082",
+      "props": {
+        "eyebrow": "年度表彰",
+        "headline": "谢谢你们，撑住这一年",
+        "subheadline": "6 个奖项，6 段故事",
+        "summary": "奖杯不大，谢意很重",
+        "focusStickerLabel": "年度榜样",
+        "focusStickerSub": "6 位/组",
+        "stat": {
+          "value": "6",
+          "label": "表彰奖项",
+          "en": "AWARDS"
+        },
+        "closingLine": "明年，把名字留给你",
+        "tiles": [
+          {
+            "name": "刘芳",
+            "tag": "金牌店长 · 滨江店"
+          },
+          {
+            "name": "陈小雨",
+            "tag": "服务之星 · 湖滨店"
+          },
+          {
+            "name": "赵磊",
+            "tag": "最佳新人 · 中央厨房"
+          },
+          {
+            "name": "西溪店",
+            "tag": "最佳团队 · 西溪店"
+          },
+          {
+            "name": "王建华",
+            "tag": "匠心厨师 · 中央厨房"
+          },
+          {
+            "name": "李敏",
+            "tag": "年度合伙人 · 苏州区域"
+          }
+        ],
+        "mediaCount": 0
+      }
+    },
+    {
+      "layout": "theme08_page055",
+      "props": {
+        "eyebrow": "幸运抽奖",
+        "kicker": "20:00 开抽",
+        "headline": "47 份礼物，等你带走",
+        "subheadline": "奖池 12.6 万元",
+        "bigNumber": "47",
+        "bigUnit": "名",
+        "caption": "4 个奖项、47 个中奖名额，1340 位伙伴里有 3.5% 的运气。",
+        "factorsTitle": "奖项设置",
+        "regionStickerLabel": "中奖率",
+        "regionStickerSub": "3.5%",
+        "closingLine": "祝你好运",
+        "factors": [
+          {
+            "label": "特等奖",
+            "note": "华为 MateBook 笔记本 · 2 名"
+          },
+          {
+            "label": "一等奖",
+            "note": "iPhone · 5 名"
+          },
+          {
+            "label": "二等奖",
+            "note": "戴森吹风机 · 10 名"
+          },
+          {
+            "label": "三等奖",
+            "note": "京东卡 1000 元 · 30 名"
+          }
+        ],
+        "factorCount": 4,
+        "metrics": [
+          {
+            "k": "奖项",
+            "v": "4",
+            "unit": "个"
+          },
+          {
+            "k": "中奖名额",
+            "v": "47",
+            "unit": "名"
+          },
+          {
+            "k": "奖品总价值",
+            "v": "12.6",
+            "unit": "万元"
+          }
+        ],
+        "metricCount": 3
+      }
+    },
+    {
+      "layout": "theme08_page015",
+      "props": {
+        "eyebrow": "2027 目标",
+        "headline": "把 86 家，做成 120 家",
+        "subheadline": "2027：进门上海，营收 7 亿",
+        "summary": "继续做对的，改掉慢的",
+        "focusStickerLabel": "2027",
+        "vsLabel": "继续做 / 要改掉",
+        "positive": {
+          "title": "继续做",
+          "en": "KEEP",
+          "items": [
+            {
+              "name": "同店增长",
+              "note": "守住 96.8% 满意度，同店营收再增 15%"
+            },
+            {
+              "name": "外卖提效",
+              "note": "外卖占比从 38% 提到 42%"
+            },
+            {
+              "name": "中央厨房",
+              "note": "让 120 家门店一个味道"
+            }
+          ]
+        },
+        "negative": {
+          "title": "要改掉",
+          "en": "CHANGE",
+          "items": [
+            {
+              "name": "等餐超时",
+              "note": "高峰期等餐超 15 分钟清零"
+            },
+            {
+              "name": "单城过重",
+              "note": "杭州占比从 47.7% 降到 40% 以下"
+            },
+            {
+              "name": "新人流失",
+              "note": "新人 3 个月留存提到 90%"
+            }
+          ]
+        },
+        "closingLine": "120 家门店，7 亿元营收",
+        "milestones": [
+          {
+            "year": "2027 Q1",
+            "title": "上海首店",
+            "note": "静安或徐汇开出第一家"
+          },
+          {
+            "year": "2027 Q2",
+            "title": "门店破 100 家",
+            "note": "全年新开 34 家"
+          },
+          {
+            "year": "2027 Q4",
+            "title": "营收 7 亿元",
+            "note": "同店 +15%，外卖 42%"
+          }
+        ],
+        "milestoneCount": 3
+      }
+    },
+    {
+      "layout": "theme08_page084",
+      "props": {
+        "eyebrow": "谢谢",
+        "kicker": "禾口餐饮连锁",
+        "label": "一碗热饭，一路同行",
+        "source": "2027 年 1 月 22 日 · 杭州",
+        "lines": [
+          "明年，还一起",
+          "把饭端热",
+          "把人守住"
+        ],
+        "supports": [
+          "86 家门店",
+          "1340 位伙伴",
+          "520 万人次顾客"
+        ],
+        "supportCount": 3
+      }
+    }
+  ]
+}

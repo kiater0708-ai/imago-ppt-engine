@@ -1,0 +1,659 @@
+{
+  "title": "禾口餐饮连锁 · 2026 年度感恩盛典",
+  "goal": "做一份「禾口餐饮连锁 2026 年度感恩盛典」年会模板样张：用图形化版式回望一年成绩、致敬获奖伙伴、点燃抽奖气氛，最后收束于新年祝愿，视觉效果优先。",
+  "audience": "禾口餐饮连锁 1340 位员工与受邀嘉宾（门店店长、加盟合伙人、苏州与宁波区域伙伴、供应商）",
+  "owner": "禾口餐饮连锁",
+  "randomSeed": "theme11-20260930-wwc",
+  "pageCount": 15,
+  "themePack": "theme11",
+  "slides": [
+    {
+      "layout": "theme11_page001",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "railText": "2026 年度感恩盛典",
+        "statusText": "今晚 17:30 开场",
+        "deckLabel": "2026 年度盛典",
+        "deckYear": "2026",
+        "kickerLabel": "禾口餐饮连锁",
+        "kickerText": "2026 年度感恩盛典",
+        "ghostMark": "禾口",
+        "headlineHtml": "一碗热饭<br><b>一路同行</b>",
+        "ledeHtml": "2027 年 1 月 22 日 · 杭州西湖文化广场",
+        "pageLabel": "01 · 封面",
+        "tickerCount": 5,
+        "ticker": [
+          "86 家门店",
+          "520 万人次顾客",
+          "1340 位伙伴",
+          "96.8% 顾客满意度",
+          "7 亿元新目标"
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page006",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "禾口",
+        "railText": "今晚流程",
+        "navCurrent": 0,
+        "ixNo": "02",
+        "ixLabel": "序章",
+        "tagChapter": "今晚流程",
+        "tagEn": "TONIGHT",
+        "headingHtml": "今晚，一起过个热乎年",
+        "lede": "17:30 签到入场，21:00 合影散场",
+        "metaLeft": "2026 年度感恩盛典",
+        "metaMid": "杭州西湖文化广场",
+        "navItems": [
+          "开场·回顾·表彰·展望"
+        ],
+        "agendaCount": 4,
+        "agenda": [
+          {
+            "t": "18:00 董事长致辞",
+            "e": "SPEECH"
+          },
+          {
+            "t": "18:30 年度表彰",
+            "e": "AWARDS"
+          },
+          {
+            "t": "19:10 门店节目",
+            "e": "SHOW"
+          },
+          {
+            "t": "20:00 幸运抽奖",
+            "e": "LUCKY DRAW"
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page037",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "禾口",
+        "railText": "董事长致辞",
+        "navCurrent": 0,
+        "ixNo": "03",
+        "ixLabel": "致辞",
+        "kickerNo": "03",
+        "kickerZh": "董事长致辞",
+        "headingHtml": "每一碗热饭，<br><b>都是一次认真</b>",
+        "footLine": "—— 周建国 · 禾口餐饮连锁董事长",
+        "metaLeft": "2026 年度感恩盛典",
+        "metaMid": "董事长致辞",
+        "navItems": [
+          "开场·回顾·表彰·展望"
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page008",
+      "props": {
+        "ghostMark": "禾口",
+        "railText": "年度数字",
+        "navCurrent": 0,
+        "ixNo": "04",
+        "ixLabel": "数字",
+        "kickerLead": "2026 年度数字",
+        "kickerEn": "OUR YEAR",
+        "heroValue": "520",
+        "caption": "全年服务顾客 520 万人次",
+        "metaLeft": "统计口径：2026 年 1—12 月",
+        "noteText": "每一桌，都是回头客",
+        "navItems": [
+          "开场·回顾·表彰·展望"
+        ],
+        "subs": [
+          {
+            "v": "86 家",
+            "l": "门店总数 · 新开 21 家"
+          },
+          {
+            "v": "1340 人",
+            "l": "员工伙伴"
+          },
+          {
+            "v": "96.8%",
+            "l": "顾客满意度"
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page053",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "禾口",
+        "railText": "经营飞轮",
+        "navCurrent": 0,
+        "ixNo": "05",
+        "ixLabel": "飞轮",
+        "lead": "我们只做四件事",
+        "headingHtml": "禾口经营飞轮",
+        "lede": "好食材 → 好味道 → 好口碑 → 更多好门店",
+        "hubZh": "一碗热饭",
+        "hubEn": "ONE BOWL",
+        "metaLeft": "2026 年度感恩盛典",
+        "metaMid": "经营逻辑",
+        "navItems": [
+          "开场·回顾·表彰·展望"
+        ],
+        "stageCount": 4,
+        "stages": [
+          {
+            "zh": "好食材",
+            "en": "SOURCE"
+          },
+          {
+            "zh": "好味道",
+            "en": "TASTE"
+          },
+          {
+            "zh": "好口碑",
+            "en": "REPUTATION"
+          },
+          {
+            "zh": "好门店",
+            "en": "GROWTH"
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page034",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "禾口",
+        "railText": "2026 年度关键指标",
+        "navCurrent": 0,
+        "ixNo": "06",
+        "ixLabel": "年度指标",
+        "lead": "四个数字，看我们这一年",
+        "headingHtml": "四个数字，<b>看我们这一年</b>",
+        "lede": "与 2025 年同期对比",
+        "deltaSuffix": "同比",
+        "metaLeft": "禾口餐饮连锁 · 2026 年度感恩盛典",
+        "metaMid": "杭州西湖文化广场",
+        "navItems": [
+          "年度回顾"
+        ],
+        "rings": [
+          {
+            "pct": 96.8,
+            "name": "顾客满意度",
+            "en": "SATISFACTION",
+            "delta": "+1.2pt"
+          },
+          {
+            "pct": 38,
+            "name": "外卖营收占比",
+            "en": "DELIVERY",
+            "delta": "+6pt"
+          },
+          {
+            "pct": 105,
+            "name": "新店目标达成率",
+            "en": "NEW STORES",
+            "delta": "21÷20 家"
+          },
+          {
+            "pct": 88,
+            "name": "员工留存率",
+            "en": "RETENTION",
+            "delta": "+3pt"
+          }
+        ],
+        "ringCount": 4
+      }
+    },
+    {
+      "layout": "theme11_page040",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "禾口",
+        "railText": "营收五年跃迁",
+        "navCurrent": 0,
+        "ixNo": "07",
+        "ixLabel": "营收增长",
+        "lead": "五年，从 1.8 亿到 5.2 亿",
+        "headingHtml": "营收<b>一年一个台阶</b>",
+        "lede": "单位：亿元 · 2022—2026",
+        "metaLeft": "禾口餐饮连锁 · 2026 年度感恩盛典",
+        "metaMid": "单位：亿元",
+        "navItems": [
+          "年度回顾"
+        ],
+        "steps": [
+          {
+            "zh": "2023 年",
+            "en": "+33.3%",
+            "v": 0.6
+          },
+          {
+            "zh": "2024 年",
+            "en": "+29.2%",
+            "v": 0.7
+          },
+          {
+            "zh": "2025 年",
+            "en": "+25.8%",
+            "v": 0.8
+          },
+          {
+            "zh": "2026 年",
+            "en": "+33.3%",
+            "v": 1.3
+          }
+        ],
+        "stepCount": 4
+      }
+    },
+    {
+      "layout": "theme11_page054",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "禾口",
+        "railText": "月度营收趋势",
+        "navCurrent": 0,
+        "ixNo": "08",
+        "ixLabel": "月度趋势",
+        "eyebrowNo": "08",
+        "eyebrowEn": "MONTHLY REVENUE",
+        "headingHtml": "月度营收，<b>越走越稳</b>",
+        "lede": "一年更比一年高",
+        "cardTitle": "2026 / 2025 / 2024 月度营收",
+        "cardNote": "单位：百万元",
+        "metaLeft": "禾口餐饮连锁 · 2026 年度感恩盛典",
+        "metaMid": "月度营收",
+        "navItems": [
+          "年度回顾"
+        ],
+        "series": [
+          {
+            "nm": "2026 年",
+            "en": "2026",
+            "data": [
+              33,
+              35,
+              38,
+              40,
+              42,
+              43,
+              45,
+              44,
+              46,
+              48,
+              50,
+              56
+            ]
+          },
+          {
+            "nm": "2025 年",
+            "en": "2025",
+            "data": [
+              26,
+              27,
+              28,
+              30,
+              31,
+              32,
+              33,
+              33,
+              34,
+              36,
+              38,
+              42
+            ]
+          },
+          {
+            "nm": "2024 年",
+            "en": "2024",
+            "data": [
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              26,
+              27,
+              28,
+              30,
+              38
+            ]
+          }
+        ],
+        "seriesCount": 3,
+        "xLabels": [
+          "1 月",
+          "4 月",
+          "7 月",
+          "10 月",
+          "12 月"
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page079",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "禾口",
+        "railText": "城市门店构成",
+        "navCurrent": 0,
+        "ixNo": "09",
+        "ixLabel": "城市分布",
+        "eyebrowNo": "09",
+        "eyebrowEn": "CITIES",
+        "headingHtml": "86 家门店，<b>落在 6 座城</b>",
+        "lede": "另有湖州 4 家，长三角连成一片",
+        "metaLeft": "禾口餐饮连锁 · 2026 年度感恩盛典",
+        "metaMid": "门店分布",
+        "navItems": [
+          "年度回顾"
+        ],
+        "cats": [
+          {
+            "nm": "杭州",
+            "share": 47.67
+          },
+          {
+            "nm": "苏州",
+            "share": 16.28
+          },
+          {
+            "nm": "宁波",
+            "share": 13.95
+          },
+          {
+            "nm": "绍兴",
+            "share": 10.47
+          },
+          {
+            "nm": "嘉兴",
+            "share": 6.98
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page064",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "禾口",
+        "railText": "门店营收排行",
+        "navCurrent": 0,
+        "ixNo": "10",
+        "ixLabel": "营收排行",
+        "eyebrowNo": "10",
+        "eyebrowEn": "TOP 5 STORES",
+        "headingHtml": "门店月均营收 <b>TOP5</b>",
+        "noteHtml": "口径：2026 年全年月均，含堂食与外卖",
+        "unit": "万元",
+        "metaLeft": "禾口餐饮连锁 · 2026 年度感恩盛典",
+        "metaMid": "单位：万元",
+        "navItems": [
+          "年度回顾"
+        ],
+        "rows": [
+          {
+            "nm": "湖滨店",
+            "en": "HUBIN",
+            "val": 96,
+            "d": "+18%"
+          },
+          {
+            "nm": "滨江店",
+            "en": "BINJIANG",
+            "val": 88.5,
+            "d": "+15%"
+          },
+          {
+            "nm": "西溪店",
+            "en": "XIXI",
+            "val": 82.4,
+            "d": "+21%"
+          },
+          {
+            "nm": "金鸡湖店（苏州）",
+            "en": "JINJI LAKE",
+            "val": 71.2,
+            "d": "+34%"
+          },
+          {
+            "nm": "天一广场店（宁波）",
+            "en": "TIANYI",
+            "val": 65.8,
+            "d": "+27%"
+          }
+        ],
+        "rowCount": 5
+      }
+    },
+    {
+      "layout": "theme11_page085",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "2026",
+        "railText": "大事记",
+        "navCurrent": 0,
+        "ixNo": "11",
+        "ixLabel": "年度大事记",
+        "eyebrowNo": "11",
+        "eyebrowEn": "MILESTONES",
+        "headingHtml": "2026，我们走过的 5 个瞬间",
+        "noteHtml": "大事记",
+        "metaLeft": "禾口餐饮连锁",
+        "metaMid": "2026 年度感恩盛典",
+        "navItems": [
+          "开场·回顾·表彰·展望"
+        ],
+        "eraCount": 5,
+        "eras": [
+          {
+            "yr": "3 月",
+            "tt": "第 70 家门店开业",
+            "dd": "版图再扩，长三角加密",
+            "tag": "版图"
+          },
+          {
+            "yr": "5 月",
+            "tt": "中央厨房投产",
+            "dd": "供应链自持，出品更稳",
+            "tag": "供应链"
+          },
+          {
+            "yr": "8 月",
+            "tt": "外卖小程序上线",
+            "dd": "38% 营收来自线上",
+            "tag": "数字化"
+          },
+          {
+            "yr": "11 月",
+            "tt": "进入苏州市场",
+            "dd": "首店金鸡湖店开业",
+            "tag": "新市场"
+          },
+          {
+            "yr": "12 月",
+            "tt": "全年营收 5.2 亿元",
+            "dd": "同比 +33.3%，历史最高",
+            "tag": "里程碑"
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page052",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "2026",
+        "railText": "表彰",
+        "navCurrent": 0,
+        "ixNo": "12",
+        "ixLabel": "年度表彰",
+        "lead": "6 项荣誉，6 个名字——最佳团队是西溪店",
+        "headingHtml": "你们，是禾口最热的温度",
+        "statValue": "6",
+        "statLabel": "年度荣誉",
+        "leadRating": "由 1340 位伙伴共同见证",
+        "metaLeft": "禾口餐饮连锁",
+        "metaMid": "2026 年度感恩盛典",
+        "navItems": [
+          "开场·回顾·表彰·展望"
+        ],
+        "quoteCount": 5,
+        "quotes": [
+          {
+            "q": "把每一桌客人都当成自家人",
+            "nm": "刘芳",
+            "rl": "金牌店长",
+            "mono": "滨江店"
+          },
+          {
+            "q": "微笑是最好的调味料",
+            "nm": "陈小雨",
+            "rl": "服务之星",
+            "mono": "湖滨店"
+          },
+          {
+            "q": "从第一天起，就学着把事做好",
+            "nm": "赵磊",
+            "rl": "最佳新人",
+            "mono": "中央厨房"
+          },
+          {
+            "q": "一锅好汤，靠的是每天不将就",
+            "nm": "王建华",
+            "rl": "匠心厨师",
+            "mono": "中央厨房"
+          },
+          {
+            "q": "新的城市，我们一起去闯",
+            "nm": "李敏",
+            "rl": "年度合伙人",
+            "mono": "苏州区域"
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page059",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "2026",
+        "railText": "抽奖",
+        "navCurrent": 0,
+        "ixNo": "13",
+        "ixLabel": "幸运抽奖",
+        "eyebrowNo": "13",
+        "eyebrowEn": "LUCKY DRAW",
+        "headingHtml": "47 份幸运，今晚送出",
+        "lede": "20:00 抽奖开始，凭签到手环参与",
+        "metaLeft": "禾口餐饮连锁",
+        "metaMid": "2026 年度感恩盛典",
+        "navItems": [
+          "开场·回顾·表彰·展望"
+        ],
+        "data": [
+          {
+            "nm": "特等奖",
+            "v": 2
+          },
+          {
+            "nm": "一等奖",
+            "v": 5
+          },
+          {
+            "nm": "二等奖",
+            "v": 10
+          },
+          {
+            "nm": "三等奖",
+            "v": 30
+          },
+          {
+            "nm": "合计",
+            "v": 47
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page077",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "2027",
+        "railText": "展望",
+        "navCurrent": 0,
+        "ixNo": "14",
+        "ixLabel": "2027 目标",
+        "tagText": "2027 年，我们这样走",
+        "headingHtml": "把一碗热饭端到更多城市",
+        "lede": "从长三角出发，去上海",
+        "arrowGlyph": "→",
+        "whenLeft": "2027 年 1 月",
+        "whenRight": "2027 年 12 月",
+        "metaLeft": "禾口餐饮连锁",
+        "metaMid": "2026 年度感恩盛典",
+        "navItems": [
+          "开场·回顾·表彰·展望"
+        ],
+        "stepCount": 3,
+        "steps": [
+          {
+            "t": "门店 120 家",
+            "d": "在 86 家基础上净增 34 家"
+          },
+          {
+            "t": "进入上海",
+            "d": "首店落地，站稳长三角"
+          },
+          {
+            "t": "营收 7 亿元",
+            "d": "同比 +34.6%"
+          }
+        ]
+      }
+    },
+    {
+      "layout": "theme11_page069",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "2026 年度感恩盛典",
+        "ghostMark": "2026",
+        "railText": "感恩",
+        "navCurrent": 0,
+        "ixNo": "15",
+        "ixLabel": "收束",
+        "kickerNo": "15",
+        "kickerEn": "THANK YOU",
+        "quoteHtml": "一碗热饭，一路同行",
+        "arrowGlyph": "→",
+        "signoffHtml": "禾口餐饮连锁 · 2026 年度感恩盛典",
+        "metaLeft": "禾口餐饮连锁",
+        "metaMid": "2026 年度感恩盛典",
+        "navItems": [
+          "开场·回顾·表彰·展望"
+        ]
+      }
+    }
+  ]
+}

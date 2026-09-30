@@ -1,0 +1,9 @@
+dist/
+node_modules/
+work/
+.DS_Store
+*.log
+.browser-tmp/
+app/runtime/node_modules/
+app/runtime/scripts/render-goal-deck.bundle.mjs
+app/runtime/output/

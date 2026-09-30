@@ -1,0 +1,26 @@
+{
+  "theme": "theme11",
+  "exclude": [
+    {
+      "layout": "theme11_page008",
+      "reason": "组件写死 IGNIS 燃点"
+    },
+    {
+      "layout": "theme11_page013",
+      "reason": "品牌字标写死改不掉（P0 gala-deck2 实测）"
+    },
+    {
+      "layout": "theme11_page071",
+      "reason": "刻度写死，与数值对不上（P0 gala-deck2 实测）"
+    },
+    {
+      "layout": "theme11_page083",
+      "reason": "元数据与真实契约不符（P0 gala-deck2 实测）"
+    }
+  ],
+  "notes": {
+    "theme11_page040": "瀑布图：steps 第 1 项是起点（基线），其余每项是在前一项基础上的增量，最后一根总计柱由组件自动求和（起点+全部增量），不要自己写总计项。最多 4 项（含起点）；数据点多于可用项时，合并相邻年份/项目，使 起点 + 各增量之和 = 最终总数。",
+    "theme11_page059": "占比方块图：data 各项是并列类别，v 按占比画面积，合计约 100；不要把「合计/总计」当成一项。"
+  },
+  "styleControls": {}
+}

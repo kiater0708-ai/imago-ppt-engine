@@ -1,0 +1,11 @@
+{
+  "theme": "theme08",
+  "exclude": [
+    {
+      "layout": "theme08_page082",
+      "reason": "照片墙，页面显示「// 图片数量 = 0」占位文字"
+    }
+  ],
+  "notes": {},
+  "styleControls": {}
+}

@@ -1,0 +1,60 @@
+{
+  "title": "绘境 PPT 插件自检",
+  "goal": "插件安装后的自检样张：一页封面加一页正文，走完校验与导出",
+  "audience": "插件自检",
+  "owner": "绘境",
+  "randomSeed": "selftest",
+  "pageCount": 2,
+  "themePack": "theme11",
+  "slides": [
+    {
+      "layout": "theme11_page001",
+      "role": "cover",
+      "props": {
+        "wordmarkLabel": "绘境自检",
+        "wordmarkSub": "自检",
+        "railText": "插件自检样张",
+        "statusText": "SELFTEST",
+        "deckLabel": "SELF CHECK",
+        "deckYear": "2026",
+        "kickerLabel": "绘境 PPT 插件",
+        "kickerText": "Render, check, export",
+        "ghostMark": "检",
+        "headlineHtml": "渲染，<br>校验，导出。",
+        "ledeHtml": "这是一份内置的两页样张，用来确认插件在这台电脑上能正常出稿。",
+        "ticker": ["渲染", "校验", "导出", "截图", "完成"],
+        "tickerCount": 5,
+        "pageLabel": "↓ 开始"
+      }
+    },
+    {
+      "layout": "theme11_page007",
+      "role": "agenda",
+      "props": {
+        "wordmarkLabel": "绘境自检",
+        "wordmarkSub": "自检",
+        "ghostMark": "序",
+        "railText": "自检 · 流程",
+        "navItems": ["流程"],
+        "navCurrent": 0,
+        "ixNo": "01",
+        "ixLabel": "Steps",
+        "lead": "Self check flow.",
+        "headingHtml": "自检，<br>分几步。",
+        "lede": "五个步骤，从读取样张到写出文件，任何一步失败都会给出原因。",
+        "parts": [
+          {"t": "读取样张", "en": "Load"},
+          {"t": "渲染页面", "en": "Render"},
+          {"t": "内容校验", "en": "Check"},
+          {"t": "导出文件", "en": "Export"},
+          {"t": "逐页截图", "en": "Shots"}
+        ],
+        "partCount": 5,
+        "emphasis": true,
+        "emphasisIndex": 2,
+        "metaLeft": "绘境 · 插件自检",
+        "metaMid": "渲染，校验，导出"
+      }
+    }
+  ]
+}

@@ -1,0 +1,817 @@
+{
+  "title": "禾口餐饮连锁 · 2026 年度感恩盛典",
+  "goal": "面向全体员工的年会主视觉 PPT：回顾 2026 年度经营成果与大事记，表彰年度先进个人与团队，公布抽奖奖品与 2027 年度目标",
+  "audience": "禾口餐饮连锁全体员工 / 门店伙伴 / 区域合伙人",
+  "owner": "禾口餐饮连锁 · 品牌部",
+  "randomSeed": "theme11-20260930-hk7",
+  "pageCount": 16,
+  "themePack": "theme11",
+  "slides": [
+    {
+      "layout": "theme11_page001",
+      "role": "cover",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "railText": "2026 年度感恩盛典",
+        "statusText": "2027.01.22 · 杭州",
+        "deckLabel": "ANNUAL GALA 2026",
+        "deckYear": "2026",
+        "kickerLabel": "禾口餐饮连锁",
+        "kickerText": "One warm meal, a long road",
+        "ghostMark": "禾",
+        "headlineHtml": "一碗热饭，<br>一路同行。",
+        "ledeHtml": "2026 年，86 家门店、520 万人次，谢谢每一位把热饭端上桌的人。",
+        "ticker": [
+          "感恩",
+          "86 家门店",
+          "520 万人次",
+          "1,340 位伙伴",
+          "一路同行"
+        ],
+        "tickerCount": 5,
+        "pageLabel": "↓ 开场"
+      }
+    },
+    {
+      "layout": "theme11_page007",
+      "role": "agenda",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "序",
+        "railText": "禾口 · 议程",
+        "navItems": [
+          "议程"
+        ],
+        "navCurrent": 0,
+        "ixNo": "01",
+        "ixLabel": "Agenda",
+        "lead": "Tonight's flow.",
+        "headingHtml": "这一程，<br>怎么走。",
+        "lede": "五个环节，从签到到散场，把一年的感谢说完。",
+        "parts": [
+          {
+            "t": "签到入场",
+            "en": "Check-in"
+          },
+          {
+            "t": "董事长致辞",
+            "en": "Chairman"
+          },
+          {
+            "t": "年度表彰",
+            "en": "Awards"
+          },
+          {
+            "t": "门店节目",
+            "en": "Shows"
+          },
+          {
+            "t": "抽奖 · 散场",
+            "en": "Lucky Draw"
+          }
+        ],
+        "partCount": 5,
+        "emphasis": true,
+        "emphasisIndex": 2,
+        "metaLeft": "禾口餐饮 · 年会议程",
+        "metaMid": "一碗热饭，一路同行"
+      }
+    },
+    {
+      "layout": "theme11_page083",
+      "role": "quote",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "谢",
+        "railText": "禾口 · 致辞",
+        "navItems": [
+          "致辞"
+        ],
+        "navCurrent": 0,
+        "ixNo": "02",
+        "ixLabel": "致辞",
+        "markGlyph": "“",
+        "quotePre": "每一碗热饭，都是一次认真。",
+        "bigValue": "1,340",
+        "bigUnit": "位伙伴",
+        "bigInline": "1,340 位伙伴",
+        "quotePost": "把它端到你面前。",
+        "attrName": "周建国 · 董事长",
+        "attrRole": "禾口餐饮连锁",
+        "attrSrc": "2026 年度感恩盛典",
+        "metaLeft": "禾口餐饮 · 董事长致辞",
+        "metaMid": "每一碗热饭，都是一次认真"
+      }
+    },
+    {
+      "layout": "theme11_page085",
+      "role": "history",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "年",
+        "railText": "禾口 · 历程",
+        "navItems": [
+          "历程"
+        ],
+        "navCurrent": 0,
+        "ixNo": "03",
+        "ixLabel": "Era",
+        "eyebrowNo": "一路走来",
+        "eyebrowEn": "Our story",
+        "headingHtml": "从一间小店，到 86 家门店。",
+        "noteHtml": "七年时间，把一口锅做成一张网。",
+        "eras": [
+          {
+            "yr": "2019",
+            "tt": "起步",
+            "dd": "第一家门店在杭州湖滨开业，8 张桌子，一口锅。",
+            "tag": "1 家门店"
+          },
+          {
+            "yr": "2021",
+            "tt": "打磨",
+            "dd": "把后厨手艺写成标准手册，开出第 10 家店。",
+            "tag": "10 家门店"
+          },
+          {
+            "yr": "2023",
+            "tt": "复制",
+            "dd": "区域供应链跑通，一口气开到第 40 家。",
+            "tag": "40 家门店"
+          },
+          {
+            "yr": "2025",
+            "tt": "提效",
+            "dd": "会员储值上线，老客回头率过了七成。",
+            "tag": "65 家门店"
+          },
+          {
+            "yr": "2026",
+            "tt": "规模化",
+            "dd": "86 家门店、520 万人次，进入苏州市场。",
+            "tag": "86 家门店"
+          }
+        ],
+        "eraCount": 5,
+        "currentIndex": 4,
+        "metaLeft": "禾口餐饮 · 发展历程",
+        "metaMid": "慢慢熬，才够味"
+      }
+    },
+    {
+      "layout": "theme11_page045",
+      "role": "metrics",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "数",
+        "railText": "禾口 · 年度数字",
+        "navItems": [
+          "数字"
+        ],
+        "navCurrent": 0,
+        "ixNo": "04",
+        "ixLabel": "Numbers",
+        "leadEn": "By the numbers",
+        "leadZh": "三个数字",
+        "headingHtml": "不用形容词，用三个数字说话。",
+        "stats": [
+          {
+            "num": "520",
+            "u": "万人次",
+            "delta": "↑ 同比 +30%",
+            "cap": "全年服务顾客，日均 1.42 万人次"
+          },
+          {
+            "num": "86",
+            "u": "家门店",
+            "delta": "↑ 新开 21 家",
+            "cap": "覆盖 6 座城市，杭州大本营 41 家"
+          },
+          {
+            "num": "1,340",
+            "u": "人",
+            "delta": "↑ 同比 +31%",
+            "cap": "门店与中央厨房伙伴，一起上桌"
+          }
+        ],
+        "statCount": 3,
+        "orientation": "row",
+        "metaLeft": "禾口餐饮 · 2026 年度关键数字",
+        "metaMid": "数字不会说客套话"
+      }
+    },
+    {
+      "layout": "theme11_page034",
+      "role": "scoreboard",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "环",
+        "railText": "禾口 · 指标",
+        "navItems": [
+          "指标"
+        ],
+        "navCurrent": 0,
+        "ixNo": "05",
+        "ixLabel": "Scoreboard",
+        "lead": "Four dials, all up.",
+        "headingHtml": "每一项，都在往上走。",
+        "lede": "不是某一项好看，是四块表同时抬起来了。",
+        "rings": [
+          {
+            "pct": 96.8,
+            "name": "顾客满意度",
+            "en": "Satisfaction",
+            "delta": "+2.6"
+          },
+          {
+            "pct": 38,
+            "name": "外卖营收占比",
+            "en": "Delivery Mix",
+            "delta": "+7.0"
+          },
+          {
+            "pct": 24.4,
+            "name": "新开门店占比",
+            "en": "New Stores",
+            "delta": "+6.1"
+          },
+          {
+            "pct": 91.2,
+            "name": "员工留存率",
+            "en": "Retention",
+            "delta": "+3.4"
+          }
+        ],
+        "ringCount": 4,
+        "deltaSuffix": " pts · 同比",
+        "metaLeft": "禾口餐饮 · 2026 年度指标记分牌",
+        "metaMid": "同时抬升，才叫好年"
+      }
+    },
+    {
+      "layout": "theme11_page054",
+      "role": "trend",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "↗",
+        "railText": "禾口 · 趋势",
+        "navItems": [
+          "趋势"
+        ],
+        "navCurrent": 0,
+        "ixNo": "06",
+        "ixLabel": "Trend",
+        "eyebrowNo": "营收趋势",
+        "eyebrowEn": "12-month revenue",
+        "headingHtml": "十二个月，<br>一条上坡路。",
+        "lede": "把 2026 拆成 12 个月：每一个月，都比去年同期高。",
+        "cardTitle": "月度营收 · 万元",
+        "cardNote": "全年 5.2 亿元",
+        "series": [
+          {
+            "nm": "2024 年",
+            "en": "2024",
+            "data": [
+              2504,
+              2742,
+              2325,
+              2385,
+              2563,
+              2444,
+              2504,
+              2683,
+              2563,
+              2862,
+              2623,
+              2802
+            ]
+          },
+          {
+            "nm": "2025 年",
+            "en": "2025",
+            "data": [
+              3150,
+              3450,
+              2925,
+              3000,
+              3225,
+              3075,
+              3150,
+              3375,
+              3225,
+              3600,
+              3300,
+              3525
+            ]
+          },
+          {
+            "nm": "2026 年",
+            "en": "2026",
+            "data": [
+              4200,
+              4600,
+              3900,
+              4000,
+              4300,
+              4100,
+              4200,
+              4500,
+              4300,
+              4800,
+              4400,
+              4700
+            ]
+          }
+        ],
+        "seriesCount": 3,
+        "xLabels": [
+          "1月",
+          "4月",
+          "7月",
+          "10月",
+          "12月"
+        ],
+        "metaLeft": "禾口餐饮 · 2026 月度营收（万元）",
+        "metaMid": "十二个月，没有一个月回头"
+      }
+    },
+    {
+      "layout": "theme11_page057",
+      "role": "cities",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "城",
+        "railText": "禾口 · 城市",
+        "navItems": [
+          "城市"
+        ],
+        "navCurrent": 0,
+        "ixNo": "07",
+        "ixLabel": "Cities",
+        "eyebrowNo": "城市分布",
+        "eyebrowEn": "By city",
+        "headingHtml": "六座城市，86 家门店。",
+        "noteHtml": "杭州一家占近一半，前两城合计 64%。",
+        "cols": [
+          "城市 · City",
+          "门店数 · Stores",
+          "门店占比 · Share",
+          "全年营收 · Revenue"
+        ],
+        "rows": [
+          {
+            "mn": "杭州",
+            "me": "HANGZHOU",
+            "cad": "41 家",
+            "dl": "占全司 48%",
+            "mb": "2.48 亿元"
+          },
+          {
+            "mn": "苏州",
+            "me": "SUZHOU",
+            "cad": "14 家",
+            "dl": "占全司 16%",
+            "mb": "0.85 亿元"
+          },
+          {
+            "mn": "宁波",
+            "me": "NINGBO",
+            "cad": "12 家",
+            "dl": "占全司 14%",
+            "mb": "0.73 亿元"
+          },
+          {
+            "mn": "绍兴",
+            "me": "SHAOXING",
+            "cad": "9 家",
+            "dl": "占全司 10%",
+            "mb": "0.54 亿元"
+          },
+          {
+            "mn": "嘉兴",
+            "me": "JIAXING",
+            "cad": "6 家",
+            "dl": "占全司 7%",
+            "mb": "0.36 亿元"
+          },
+          {
+            "mn": "湖州",
+            "me": "HUZHOU",
+            "cad": "4 家",
+            "dl": "占全司 5%",
+            "mb": "0.24 亿元"
+          }
+        ],
+        "rowCount": 6,
+        "emphasis": true,
+        "emphasisIndex": 0,
+        "footNote": "全司 5.20 亿元营收摊到 86 家门店，店均年营收约 605 万元。",
+        "metaLeft": "禾口餐饮 · 城市门店分布",
+        "metaMid": "越是主场，越要站稳"
+      }
+    },
+    {
+      "layout": "theme11_page079",
+      "role": "channel",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "百",
+        "railText": "禾口 · 渠道",
+        "navItems": [
+          "渠道"
+        ],
+        "navCurrent": 0,
+        "ixNo": "08",
+        "ixLabel": "Channel Mix",
+        "eyebrowNo": "渠道构成",
+        "eyebrowEn": "Out of 100",
+        "headingHtml": "每 100 元营收，这样分。",
+        "lede": "把一年的营收摊成 100 格：堂食还是底盘，外卖已经顶上来。",
+        "cats": [
+          {
+            "nm": "堂食",
+            "share": 52
+          },
+          {
+            "nm": "外卖",
+            "share": 38
+          },
+          {
+            "nm": "团餐",
+            "share": 6
+          },
+          {
+            "nm": "零售",
+            "share": 4
+          }
+        ],
+        "categoryCount": 4,
+        "emphasis": true,
+        "emphasisIndex": 1,
+        "metaLeft": "禾口餐饮 · 营收渠道构成",
+        "metaMid": "堂食是根，外卖是翼"
+      }
+    },
+    {
+      "layout": "theme11_page064",
+      "role": "ranking",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "#1",
+        "railText": "禾口 · 排行",
+        "navItems": [
+          "排行"
+        ],
+        "navCurrent": 0,
+        "ixNo": "09",
+        "ixLabel": "Ranking",
+        "eyebrowNo": "门店排行 · 日均",
+        "eyebrowEn": "Top stores",
+        "headingHtml": "按日均营收，排个座次。",
+        "noteHtml": "全司单店日均 1.66 万元，前三名都在杭州。",
+        "unit": "元",
+        "rows": [
+          {
+            "nm": "湖滨店",
+            "en": "Hubin",
+            "val": 35200,
+            "d": "杭州 · 同比 +12.4%"
+          },
+          {
+            "nm": "滨江店",
+            "en": "Binjiang",
+            "val": 31800,
+            "d": "杭州 · 同比 +15.8%"
+          },
+          {
+            "nm": "西溪店",
+            "en": "Xixi",
+            "val": 29400,
+            "d": "杭州 · 同比 +9.6%"
+          },
+          {
+            "nm": "金鸡湖店",
+            "en": "Jinji Lake",
+            "val": 28600,
+            "d": "苏州 · 新店即上榜"
+          },
+          {
+            "nm": "天一广场店",
+            "en": "Tianyi",
+            "val": 25900,
+            "d": "宁波 · 同比 +11.3%"
+          }
+        ],
+        "rowCount": 5,
+        "metaLeft": "禾口餐饮 · 门店日均营收 TOP5",
+        "metaMid": "把好店的样子亮出来"
+      }
+    },
+    {
+      "layout": "theme11_page021",
+      "role": "milestones",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "记",
+        "railText": "禾口 · 大事记",
+        "navItems": [
+          "大事记"
+        ],
+        "navCurrent": 0,
+        "ixNo": "10",
+        "ixLabel": "Milestones",
+        "lead": "The year in five stops.",
+        "headingHtml": "2026，<br>五个大日子。",
+        "lede": "每往前一步，都有一家店、一批人在托着。",
+        "miles": [
+          {
+            "day": "3 月",
+            "t": "第 70 家门店开业",
+            "en": "Store #70",
+            "d": "宁波天一广场店开门，门店数破 70。"
+          },
+          {
+            "day": "5 月",
+            "t": "中央厨房投产",
+            "en": "Central kitchen",
+            "d": "一天 12 万份出品，口味不再靠师傅手感。"
+          },
+          {
+            "day": "8 月",
+            "t": "外卖小程序上线",
+            "en": "Delivery app",
+            "d": "会员、积分、外卖，装进一个入口。"
+          },
+          {
+            "day": "11 月",
+            "t": "进入苏州市场",
+            "en": "Suzhou",
+            "d": "首批门店落地金鸡湖，区域再下一城。"
+          },
+          {
+            "day": "12 月",
+            "t": "营收突破 5 亿",
+            "en": "5.2 亿元",
+            "d": "全年 5.2 亿元，比去年多出 1.3 亿。"
+          }
+        ],
+        "milestoneCount": 5,
+        "metaLeft": "禾口餐饮 · 2026 大事记",
+        "metaMid": "每一步，都算数"
+      }
+    },
+    {
+      "layout": "theme11_page028",
+      "role": "awards",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "奖",
+        "railText": "禾口 · 表彰",
+        "navItems": [
+          "表彰"
+        ],
+        "navCurrent": 0,
+        "ixNo": "11",
+        "ixLabel": "Awards",
+        "lead": "Who we celebrate.",
+        "headingHtml": "这一年，把名字写在了店里。",
+        "lede": "六个名字，六种把一碗饭做好的方式。",
+        "principles": [
+          {
+            "t": "金牌店长 刘芳",
+            "d": "滨江店 · 全年日均营收 3.18 万元"
+          },
+          {
+            "t": "服务之星 陈小雨",
+            "d": "湖滨店 · 全年顾客点名表扬 214 次"
+          },
+          {
+            "t": "最佳新人 赵磊",
+            "d": "中央厨房 · 入职 8 个月，把关 12 万份出品"
+          },
+          {
+            "t": "最佳团队 西溪店",
+            "d": "西溪店 · 全年零投诉，满意度 98.6%"
+          },
+          {
+            "t": "匠心厨师 王建华",
+            "d": "中央厨房 · 20 年手艺，带出 9 名徒弟"
+          },
+          {
+            "t": "年度合伙人 李敏",
+            "d": "苏州区域 · 11 月带队落地，首批门店开业"
+          }
+        ],
+        "principleCount": 6,
+        "metaLeft": "禾口餐饮 · 年度表彰",
+        "metaMid": "写在每一次出餐里"
+      }
+    },
+    {
+      "layout": "theme11_page062",
+      "role": "lucky-draw",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "奖",
+        "railText": "禾口 · 抽奖",
+        "navItems": [
+          "抽奖"
+        ],
+        "navCurrent": 0,
+        "ixNo": "12",
+        "ixLabel": "Prize",
+        "eyebrowNo": "幸运抽奖",
+        "eyebrowEn": "Lucky draw",
+        "headingHtml": "手气这件事，<br>今晚人人有份。",
+        "lede": "四档奖品、47 个名额，从入场券到特等奖。",
+        "axisTop": "↑ 越往上，越难得",
+        "axisBot": "↓ 越往下，越多人中",
+        "layers": [
+          {
+            "nm": "特等奖 华为 MateBook",
+            "vv": "2 名",
+            "share": 4
+          },
+          {
+            "nm": "一等奖 · iPhone",
+            "vv": "5 名",
+            "share": 11
+          },
+          {
+            "nm": "二等奖 · 戴森吹风机",
+            "vv": "10 名",
+            "share": 21
+          },
+          {
+            "nm": "三等奖 · 京东卡 1000 元",
+            "vv": "30 名",
+            "share": 64
+          }
+        ],
+        "layerCount": 4,
+        "metaLeft": "禾口餐饮 · 抽奖奖品层级",
+        "metaMid": "47 个名额，等着你"
+      }
+    },
+    {
+      "layout": "theme11_page075",
+      "role": "targets",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "◎",
+        "railText": "禾口 · 达成",
+        "navItems": [
+          "达成"
+        ],
+        "navCurrent": 0,
+        "ixNo": "13",
+        "ixLabel": "Targets",
+        "eyebrowNo": "目标对账",
+        "eyebrowEn": "Vs target",
+        "headingHtml": "年初定的目标，今晚对个账。",
+        "noteHtml": "浅色区为去年到目标之间的区间，越过那条线才算数。",
+        "targetLabel": "目标线",
+        "statusHit": "✓ 达成",
+        "statusMiss": "◷ 在途",
+        "rows": [
+          {
+            "nm": "顾客满意度",
+            "en": "Satisfaction",
+            "meas": 96.8,
+            "target": 96,
+            "b2": 94.2,
+            "b3": 96,
+            "disp": "96.8",
+            "u": "%",
+            "hit": true
+          },
+          {
+            "nm": "员工留存率",
+            "en": "Retention",
+            "meas": 91.2,
+            "target": 90,
+            "b2": 87.8,
+            "b3": 90,
+            "disp": "91.2",
+            "u": "%",
+            "hit": true
+          },
+          {
+            "nm": "顾客回头率",
+            "en": "Repeat rate",
+            "meas": 71.4,
+            "target": 70,
+            "b2": 65,
+            "b3": 70,
+            "disp": "71.4",
+            "u": "%",
+            "hit": true
+          },
+          {
+            "nm": "会员复购率",
+            "en": "Repurchase",
+            "meas": 62,
+            "target": 60,
+            "b2": 55,
+            "b3": 60,
+            "disp": "62.0",
+            "u": "%",
+            "hit": true
+          },
+          {
+            "nm": "外卖营收占比",
+            "en": "Delivery mix",
+            "meas": 38,
+            "target": 40,
+            "b2": 31,
+            "b3": 40,
+            "disp": "38.0",
+            "u": "%",
+            "hit": false
+          }
+        ],
+        "metricCount": 5,
+        "metaLeft": "禾口餐饮 · 2026 关键指标达成",
+        "metaMid": "越过那条线，才算交付"
+      }
+    },
+    {
+      "layout": "theme11_page077",
+      "role": "next",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "↗",
+        "railText": "禾口 · 2027",
+        "navItems": [
+          "目标"
+        ],
+        "navCurrent": 0,
+        "ixNo": "14",
+        "ixLabel": "Next",
+        "tagText": "2027 · 往哪走",
+        "headingHtml": "从 86 家，<br>到 120 家。",
+        "lede": "三件事，一件比一件大，但都排进了日程。",
+        "arrowGlyph": "→",
+        "whenLeft": "2027 年 1 月起",
+        "whenRight": "年底对账",
+        "steps": [
+          {
+            "t": "门店开到 120 家",
+            "d": "全年新开 34 家，长三角继续加密。"
+          },
+          {
+            "t": "进入上海",
+            "d": "上海首店落地，把长三角补成一张网。"
+          },
+          {
+            "t": "营收做到 7 亿",
+            "d": "在 5.2 亿的基础上，再增 34.6%。"
+          }
+        ],
+        "stepCount": 3,
+        "emphasis": true,
+        "emphasisIndex": 0,
+        "metaLeft": "禾口餐饮 · 2027 目标",
+        "metaMid": "少说一句，多开一家"
+      }
+    },
+    {
+      "layout": "theme11_page069",
+      "role": "closing",
+      "props": {
+        "wordmarkLabel": "禾口餐饮",
+        "wordmarkSub": "禾口",
+        "ghostMark": "合",
+        "railText": "禾口 · 谢幕",
+        "navItems": [
+          "谢幕"
+        ],
+        "navCurrent": 0,
+        "ixNo": "15",
+        "ixLabel": "Coda",
+        "kickerNo": "散场",
+        "kickerEn": "See you next year",
+        "quoteHtml": "明年今晚，还在这张桌子上，<br>一起吃口热的。",
+        "arrowGlyph": "→",
+        "signoffHtml": "禾口餐饮连锁 · 2026 年度感恩盛典",
+        "metaLeft": "禾口餐饮 · 谢幕",
+        "metaMid": "一碗热饭，一路同行"
+      }
+    }
+  ]
+}

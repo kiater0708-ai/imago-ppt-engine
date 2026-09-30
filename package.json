@@ -1,0 +1,16 @@
+{
+  "name": "imago-ppt-plugin",
+  "version": "0.1.0",
+  "description": "绘境（Imago）AI 出 PPT 插件：主题渲染、校验与可编辑 PPTX 导出，命令行 + JSON 协议",
+  "type": "module",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "setup": "npm --prefix app/runtime ci --no-audit --no-fund",
+    "test": "node --test --test-concurrency=1 test/*.test.mjs",
+    "build:win": "node scripts/build-win.mjs"
+  }
+}
