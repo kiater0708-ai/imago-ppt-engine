@@ -1,7 +1,7 @@
 // 各命令的实现。每个命令返回 result 事件里除 event/ok 外的字段。
 import fs from 'node:fs';
 import path from 'node:path';
-import { PluginError } from './errors.mjs';
+import { PluginError, toPluginError } from './errors.mjs';
 import { PROTOCOL_VERSION, progress } from './protocol.mjs';
 import { pluginVersion, APP_DIR } from './paths.mjs';
 import { requireAbsolute, requireString } from './request.mjs';
@@ -10,7 +10,7 @@ import { loadCuration } from './curation.mjs';
 import { loadEngine, listThemes, assertTheme, prepareLayouts, buildCatalog, buildContracts } from './layouts.mjs';
 import { runCheck } from './check.mjs';
 import { runWorker } from './worker-client.mjs';
-import { ensureDir, copyFile, samePath } from './fsutil.mjs';
+import { ensureDir, copyFile, samePath, assertPlainFileOrMissing, assertNoLinksInside } from './fsutil.mjs';
 
 export const ENGINE_NAME = 'html-deck-to-pptx 0.2.7+imago';
 export const EXPORT_TIMEOUT_MS = Number(process.env.IMAGO_TEST_TIMEOUT_MS) || 300000; // IMAGO_TEST_TIMEOUT_MS 仅测试用
@@ -97,6 +97,10 @@ export async function cmdCheck(request) {
   return runCheck({ goalSrc, workDir });
 }
 
+function isLink(file) {
+  try { return fs.lstatSync(file).isSymbolicLink(); } catch { return false; }
+}
+
 /** deckDir 下要有 ppt/index.html（check 的输出结构）；也接受直接给 ppt 目录（含 index.html）。 */
 export function resolveDeckPptDir(deckDir) {
   const nested = path.join(deckDir, 'ppt');
@@ -115,14 +119,31 @@ export async function cmdExport(request, { browserDetector = detectBrowser } = {
     if (request[key] !== undefined && typeof request[key] !== 'string') throw new PluginError('BAD_REQUEST', `请求字段 ${key} 必须是字符串`);
   }
   const deckPptDir = resolveDeckPptDir(deckDir);
+  // 输出路径不能是链接：目标 pptx 自身、截图目录（及其中任何链接）
+  assertPlainFileOrMissing(pptx, 'pptx 输出文件');
+  if (fs.existsSync(shotsDir) || isLink(shotsDir)) {
+    if (isLink(shotsDir)) throw new PluginError('BAD_REQUEST', `shotsDir 是符号链接或联接点，拒绝写入：${shotsDir}`, { path: shotsDir });
+    assertNoLinksInside(shotsDir, 'shotsDir');
+  }
   const browser = await browserDetector();
   if (!browser.found) throw new PluginError('NO_BROWSER', '没有找到 Edge 或 Chrome，无法导出', { tried: browser.tried });
   const started = Date.now();
   progress('export', 0, 100);
+  // 临时 PPTX 的名字由父进程定：和目标同目录（同一文件系统，改名是原子的），worker 被强杀时由父进程删
+  const partFile = path.join(path.dirname(pptx), `.${path.basename(pptx, '.pptx')}.part-${process.pid}-${Math.random().toString(36).slice(2, 8)}.pptx`);
+  // 输出目录能不能写，先探一下（失败直接报 IO / DISK_FULL，不必先跑 30 秒再失败）
+  try {
+    ensureDir(path.dirname(pptx));
+    fs.writeFileSync(partFile, '', { flag: 'wx' });
+    fs.rmSync(partFile, { force: true });
+  } catch (error) {
+    try { fs.rmSync(partFile, { force: true }); } catch { /* 探测文件删不掉不影响报错 */ }
+    throw toPluginError(error);
+  }
   const result = await runWorker('export', {
     deckPptDir, pptx, shotsDir, title: request.title, author: request.author, application: request.application,
-    browserPath: browser.path, tmpBase: deckDir, waitStrategy: request.waitStrategy === 'fixed1500' ? 'fixed1500' : 'adaptive',
-  }, { timeoutMs: EXPORT_TIMEOUT_MS, failCode: 'EXPORT_FAILED', label: '导出', browserPath: browser.path });
+    browserPath: browser.path, waitStrategy: request.waitStrategy === 'fixed1500' ? 'fixed1500' : 'adaptive', partFile,
+  }, { timeoutMs: EXPORT_TIMEOUT_MS, failCode: 'EXPORT_FAILED', label: '导出', browserPath: browser.path, tmpBase: deckDir, cleanupFiles: [partFile] });
   return {
     pptx: result.pptx,
     pages: result.pages,

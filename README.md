@@ -11,7 +11,9 @@
 node app/cli.mjs <命令> --request <请求.json>      # info 可不带 --request
 ```
 
-- 请求是 JSON 文件，**必带 `"protocol": 1`**，否则报 `BAD_REQUEST`。**所有路径都必须是绝对路径**（包括 `--request` 本身）。插件只把输出写进请求指定的目录。
+- 请求是 JSON 文件，**必带 `"protocol": 1`**，否则报 `BAD_REQUEST`。**所有路径都必须是绝对路径**（包括 `--request` 本身）；Windows 上必须带盘符（`C:\dir`）或是 UNC 路径，`\dir`、`/dir` 这类依赖当前盘符的写法一律拒绝。
+- 插件只把输出写进请求指定的目录。输出目录里出现符号链接 / 联接点、目标文件是链接或与原 goal 是同一文件（含硬链接），一律 `BAD_REQUEST`。每次浏览器任务的临时文件放在 `<workDir 或 deckDir>/.tmp/<随机>/`，任务结束（含超时、被强杀）后由父进程删除。插件安装目录只读也能正常运行。
+- **协议 v1 只支持单主题**：`check` 要求 goal 里所有版式属于同一主题（与 `themePack` 一致），否则 `BAD_REQUEST`。
 - stdout **每行一个 JSON**，其他输出（子进程、调试）只走 stderr：
 
   ```json
@@ -34,7 +36,7 @@ node app/cli.mjs <命令> --request <请求.json>      # info 可不带 --reques
   | 5 | `EXPORT_FAILED` | 导出失败 |
   | 6 | `DISK_FULL` / `IO` | 磁盘写入失败（空间不足 / 其他读写错误） |
 
-- 超时：渲染 120 秒、浏览器检查 180 秒、导出 300 秒。超时会结束子进程与浏览器（整棵进程树），并报对应错误码（`detail.timeout = true`）。
+- 超时：渲染 120 秒、浏览器检查 180 秒、导出 300 秒。超时会结束子进程与浏览器（POSIX 进程组 + 记录的后代 PID；Windows `taskkill /T /F` + 记录的后代 PID），并报对应错误码（`detail.timeout = true`）。收到 SIGTERM / SIGINT / SIGHUP 时同样先结束子进程、清临时目录再退出（退出码 130）。宿主端仍应用作业对象兜底。
 
 ### 命令
 
@@ -53,7 +55,7 @@ node app/cli.mjs <命令> --request <请求.json>      # info 可不带 --reques
 
 **check**：把 goal 复制进 workDir 再处理，**不改原文件**（workDir 里的 goal.json 不能就是原文件）。步骤：数值规整（只修浮点尾差，如 5.199999999999999 → 5.2）→ 完整性 → write-safe-props（`layoutChanges`）→ validate-goal-spec → 渲染 → swiss → goal-copy → 浏览器可见文字检查。前三步已发现问题时不再渲染，直接返回（`rendered:false`）。`deckDir` 就是 workDir（内含 `goal.json`、`ppt/index.html`）。
 
-`issues[]`：`{index(0 起，未知为 null), layout, field|null, code, message(中文，附大师原文), fixable}`。`code` 固定集合：
+`issues[]`：`{index(0 起，未知为 null), layout, field|null, code, message(中文，附大师原文), fixable}`。deck 级问题（如同一版式多页使用、核心文案重复）按大师原文点名的页逐页展开，没点名页号则 `index:null`。禁用词（Roadmap 等）如果出现在我们写入该页 props 的任意字段里，不算模板残留。`code` 固定集合：
 
 | code | 含义 | fixable |
 |---|---|---|
@@ -92,4 +94,4 @@ node scripts/compare-shots.mjs --deck <目录> --out <目录>   # 截图等待�
 node scripts/build-win.mjs --version 0.1.0 --out dist
 ```
 
-产出 `dist/imago-ppt-plugin-<版本>-win-x64.zip`：`node/node.exe`（Node v24.21.0，下载后校验 sha256）、`app/`（含只含运行时依赖的 `node_modules`，全部纯 JS）、许可文件、`manifest.json`（各文件 sha256 与大小）。下载或 npm 失败会报错退出，不留半成品 zip。
+产出 `dist/imago-ppt-plugin-<版本>-win-x64.zip`：`node/node.exe` 与 `node/LICENSE`（Node v24.21.0，下载后校验 sha256）、`app/`（含只含运行时依赖的 `node_modules`，用 `scripts/prod-deps` 的完整 lock 经 `npm ci --omit=dev --omit=optional` 安装，全部纯 JS）、`licenses/OFL-1.1.txt`、许可文件、`manifest.json`（各文件 sha256 与大小）。THIRD-PARTY.md 逐个读字体 name 表生成版权与许可条目，**读不到许可信息的字体会让打包失败**。下载或 npm 失败会报错退出，不留半成品 zip。

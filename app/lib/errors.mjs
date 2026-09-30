@@ -24,6 +24,7 @@ export class PluginError extends Error {
 
 const DISK_FULL_ERRNO = new Set(['ENOSPC', 'EDQUOT']);
 const IO_ERRNO = new Set(['EACCES', 'EPERM', 'EROFS', 'EIO', 'EMFILE', 'ENFILE', 'ENOTDIR', 'EISDIR', 'ENAMETOOLONG', 'EBUSY']);
+const ERRNO_TEXT_RE = /\b(ENOSPC|EDQUOT|EACCES|EPERM|EROFS|EIO|EMFILE|ENFILE|EBUSY)\b/;
 
 /** 把 Node 文件系统错误归类为 DISK_FULL / IO；不是文件系统写入错误返回 null。 */
 export function classifyFsError(error) {
@@ -33,7 +34,19 @@ export function classifyFsError(error) {
   return null;
 }
 
-/** 任何异常 → PluginError。文件系统写入类错误归 6，其余归 INTERNAL。 */
+/** 从子进程 stderr / 错误文字里认 errno（渲染脚本只把错误写成文字）。认不出返回 null。 */
+export function classifyErrnoText(text) {
+  const match = ERRNO_TEXT_RE.exec(String(text || ''));
+  if (!match) return null;
+  return DISK_FULL_ERRNO.has(match[1]) ? 'DISK_FULL' : 'IO';
+}
+
+export function errnoFromText(text) {
+  const match = ERRNO_TEXT_RE.exec(String(text || ''));
+  return match ? match[1] : null;
+}
+
+/** 任何异常 → PluginError。文件系统写入类错误归 6（保留 errno），其余归 INTERNAL。 */
 export function toPluginError(error) {
   if (error instanceof PluginError) return error;
   const fsCode = classifyFsError(error);

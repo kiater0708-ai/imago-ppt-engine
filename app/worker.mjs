@@ -1,12 +1,11 @@
 // 浏览器任务的子进程入口。由 cli.mjs 通过 `node app/worker.mjs <任务>`（参数放环境变量 IMAGO_WORKER_ARGS） 启动，
 // 这样超时时父进程能杀掉整棵进程树（含 Edge/Chrome）。stdout 也是 JSON 行协议：progress / result / error。
-import { PluginError, toPluginError } from './lib/errors.mjs';
+import { PluginError, toPluginError, classifyErrnoText, errnoFromText } from './lib/errors.mjs';
 import { emit, redirectConsoleToStderr, exitAfterFlush } from './lib/protocol.mjs';
 import { runResidueTask, runExportTask } from './lib/browser-tasks.mjs';
 
 redirectConsoleToStderr();
 
-const DISK_TEXT = /ENOSPC|no space left|磁盘空间不足/i;
 
 async function main() {
   const task = process.argv[2];
@@ -28,7 +27,9 @@ main().then(
     exitAfterFlush(0);
   },
   error => {
-    const failure = DISK_TEXT.test(String(error?.message)) && !(error instanceof PluginError) ? new PluginError('DISK_FULL', `磁盘空间不足：${error.message}`) : toPluginError(error);
+    // 磁盘类错误保留 errno 走结构化错误通道；其余按 toPluginError
+    const textClass = !(error instanceof PluginError) && !error?.code ? classifyErrnoText(error?.message) : null;
+    const failure = textClass ? new PluginError(textClass, `磁盘读写失败：${String(error.message).split('\n')[0]}`, { errno: errnoFromText(error.message) }) : toPluginError(error);
     emit({ event: 'error', code: failure.code, message: failure.message, detail: failure.detail });
     exitAfterFlush(failure.exitCode);
   },

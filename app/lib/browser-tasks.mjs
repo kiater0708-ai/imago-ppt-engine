@@ -1,7 +1,7 @@
 // worker 里跑的两个浏览器任务：运行时文字检查（check 的最后一步）与 PPTX 导出 + 逐页截图（export）。
 import fs from 'node:fs';
 import path from 'node:path';
-import { PluginError } from './errors.mjs';
+import { PluginError, classifyFsError, classifyErrnoText, errnoFromText } from './errors.mjs';
 import { progress } from './protocol.mjs';
 import { importFromRuntime } from './paths.mjs';
 import { readJson, ensureDir, copyFile } from './fsutil.mjs';
@@ -72,18 +72,40 @@ export async function runResidueTask({ goalFile, deckPptDir, browserPath, tmpBas
   });
 }
 
+/** 导出阶段的任何异常 → 协议错误：磁盘类先按 errno 归 6（保留 errno），其余才是 EXPORT_FAILED。 */
+export function wrapExportError(error, what = 'PPTX 导出失败') {
+  if (error instanceof PluginError) return error;
+  const fsCode = classifyFsError(error) || classifyErrnoText(error?.message);
+  if (fsCode) {
+    return new PluginError(fsCode, `磁盘读写失败：${String(error.message || error).split('\n')[0]}`, { errno: error.code || errnoFromText(error?.message), path: error.path });
+  }
+  return new PluginError('EXPORT_FAILED', `${what}：${String(error?.message || error).split('\n')[0]}`);
+}
+
+/** 临时 PPTX 改成正式文件名。失败时删掉临时文件，并保留 errno 分类。fsImpl 可注入（测试）。 */
+export function finalizePptx(part, pptx, fsImpl = fs) {
+  try {
+    if (!fsImpl.existsSync(part) || fsImpl.statSync(part).size <= 0) throw new PluginError('EXPORT_FAILED', '导出结束但没有生成 PPTX 文件');
+    fsImpl.renameSync(part, pptx);
+  } catch (error) {
+    try { fsImpl.rmSync(part, { force: true }); } catch { /* 临时文件由父进程兜底清理 */ }
+    throw wrapExportError(error);
+  }
+}
+
 /**
  * 导出：同一个浏览器会话、同一个静态服务，先导出可编辑 PPTX，再逐页截图。
- * PPTX 先写临时名，成功后改名，失败不留半成品。
+ * PPTX 先写临时名（partFile，由父进程指定并负责兜底清理），成功后改名，失败不留半成品。
  */
-export async function runExportTask({ deckPptDir, pptx, shotsDir, title, author, application, browserPath, tmpBase, waitStrategy = 'adaptive' }) {
+export async function runExportTask({ deckPptDir, pptx, shotsDir, title, author, application, browserPath, tmpBase, waitStrategy = 'adaptive', partFile }) {
   const engine = await importFromRuntime('packages/html-deck-to-pptx/src/editable.mjs');
   const { brandPptxFile } = await importFromRuntime('scripts/pptx-metadata.mjs');
   ensureDir(path.dirname(pptx));
   // pptxgenjs 会给不以 .pptx 结尾的文件名补后缀，所以临时名也以 .pptx 结尾
-  const part = path.join(path.dirname(pptx), `.${path.basename(pptx, '.pptx')}.part-${process.pid}.pptx`);
+  const part = partFile || path.join(path.dirname(pptx), `.${path.basename(pptx, '.pptx')}.part-${process.pid}.pptx`);
   return withDeckBrowser({ deckPptDir, browserPath, tmpBase }, async ({ browser, url }) => {
     await testHang('export');
+    await testHang('export-part', { beforeHang: () => fs.writeFileSync(part, 'partial') });
     let result;
     try {
       result = await engine.exportEditablePptxFromUrl(browser, url, {
@@ -97,12 +119,11 @@ export async function runExportTask({ deckPptDir, pptx, shotsDir, title, author,
       if (author) brandOptions.author = author;
       if (application) brandOptions.application = application;
       await brandPptxFile(part, brandOptions);
-      if (!fs.existsSync(part) || fs.statSync(part).size <= 0) throw new Error('导出结束但没有生成 PPTX 文件');
-      fs.renameSync(part, pptx);
     } catch (error) {
-      try { fs.rmSync(part, { force: true }); } catch { /* 半成品删不掉，下次导出会覆盖同名 .part */ }
-      throw error instanceof PluginError ? error : new PluginError('EXPORT_FAILED', `PPTX 导出失败：${String(error.message || error).split('\n')[0]}`);
+      try { fs.rmSync(part, { force: true }); } catch { /* 父进程兜底 */ }
+      throw wrapExportError(error);
     }
+    finalizePptx(part, pptx);
     const { page, context, total } = await openDeckPageForShots(browser, url);
     try {
       const { files, waits } = await captureShots(page, total, shotsDir, { waitStrategy, expectFullSize: true, onPage: (done, all) => progress('screenshots', done, all) });
@@ -114,6 +135,8 @@ export async function runExportTask({ deckPptDir, pptx, shotsDir, title, author,
         textObjects: result.textObjects ?? null,
         settleWaitsMs: waits,
       };
+    } catch (error) {
+      throw wrapExportError(error, '逐页截图失败');
     } finally {
       await context.close().catch(() => {});
     }

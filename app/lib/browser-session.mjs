@@ -6,10 +6,11 @@ import path from 'node:path';
 import { PluginError } from './errors.mjs';
 import { importFromRuntime, requireFromRuntime } from './paths.mjs';
 import { ensureDir } from './fsutil.mjs';
+import { emit } from './protocol.mjs';
+import { snapshotProcesses, descendantsOf } from './procs.mjs';
 
 export const SLIDE_SELECTOR = '#deck > .slide';
 export const VIEWPORT = { width: 1920, height: 1080 };
-const TEXT_WAIT_MS = 8000;
 export const SETTLE_CAP_MS = 2000;
 export const FIXED_WAIT_MS = 1500;
 
@@ -20,36 +21,53 @@ const MIME = {
   '.mp4': 'video/mp4', '.webm': 'video/webm', '.gif': 'image/gif', '.ico': 'image/x-icon', '.wasm': 'application/wasm',
 };
 
-/** 静态服务：只服务 root 目录内的文件（路径穿越、目录前缀相似的兄弟目录都拒绝）。 */
+/**
+ * 静态服务：只服务 root 目录内的文件。
+ * 用真实路径（realpath）判断：符号链接 / Windows 联接点指到目录外的文件一律 403；
+ * 目录前缀相似的兄弟目录（/a/ppt 与 /a/ppt-evil）也拒绝。
+ */
 export function startStaticServer(root) {
-  const resolvedRoot = path.resolve(root);
+  let realRoot;
+  try {
+    realRoot = fs.realpathSync(path.resolve(root));
+  } catch (error) {
+    return Promise.reject(error);
+  }
+  const inside = file => file === realRoot || file.startsWith(realRoot + path.sep);
   const server = http.createServer((req, res) => {
+    const reply = (status, headers, body) => {
+      res.writeHead(status, headers);
+      res.end(body);
+    };
     try {
       const rel = decodeURIComponent((req.url || '/').split('?')[0]);
-      const file = path.resolve(resolvedRoot, `.${rel === '/' ? '/index.html' : rel}`);
-      if (file !== resolvedRoot && !file.startsWith(resolvedRoot + path.sep)) {
-        res.writeHead(403);
-        res.end();
-        return;
-      }
-      fs.readFile(file, (error, data) => {
-        if (error) {
-          res.writeHead(error.code === 'ENOENT' || error.code === 'EISDIR' ? 404 : 500);
-          res.end();
-          return;
-        }
-        res.writeHead(200, { 'Content-Type': MIME[path.extname(file).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-store' });
-        res.end(data);
+      const wanted = path.resolve(realRoot, `.${rel === '/' ? '/index.html' : rel}`);
+      if (!inside(wanted)) return reply(403);
+      fs.realpath(wanted, (realError, real) => {
+        if (realError) return reply(realError.code === 'ENOENT' || realError.code === 'ENOTDIR' ? 404 : 500);
+        if (!inside(real)) return reply(403);
+        fs.readFile(real, (error, data) => {
+          if (error) return reply(error.code === 'ENOENT' || error.code === 'EISDIR' ? 404 : 500);
+          return reply(200, { 'Content-Type': MIME[path.extname(real).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-store' }, data);
+        });
       });
     } catch {
-      res.writeHead(400);
-      res.end();
+      reply(400);
     }
   });
   return new Promise((resolve, reject) => {
     server.once('error', reject);
     server.listen(0, '127.0.0.1', () => resolve({ server, url: `http://127.0.0.1:${server.address().port}/` }));
   });
+}
+
+/** 浏览器刚启动：把本进程的后代（浏览器进程）报给父进程，父进程强杀 worker 后按这个名单结束它们。 */
+function reportBrowserPids() {
+  if (!process.env.IMAGO_WORKER_ARGS) return; // 只有 worker 子进程的 stdout 是事件通道
+  try {
+    const rows = descendantsOf(process.pid, snapshotProcesses());
+    if (rows.length) emit({ event: 'pids', pids: rows.map(row => ({ pid: row.pid, command: row.command })) });
+  } catch { /* 记录失败不影响任务，父进程还有定期轮询 */ }
 }
 
 async function closeQuietly(browser) {
@@ -85,6 +103,7 @@ export async function withDeckBrowser({ deckPptDir, browserPath, tmpBase }, fn) 
     } catch (error) {
       throw new PluginError('NO_BROWSER', `浏览器启动失败：${String(error.message || error).split('\n')[0]}`, { browserPath });
     }
+    reportBrowserPids();
     return await fn({ browser, url: served.url });
   } finally {
     await closeQuietly(browser);
@@ -114,16 +133,30 @@ async function activeIndex(page) {
   return page.evaluate(selector => [...document.querySelectorAll(selector)].findIndex(slide => slide.classList.contains('active')), SLIDE_SELECTOR);
 }
 
-/** 逐页翻到（键盘右键），对每页执行 visit(index)。 */
-export async function walkSlides(page, total, visit) {
+/**
+ * 逐页翻到，对每页执行 visit(index)。
+ * 默认用键盘右键（真实观看时的路径，含翻页动画，截图用）；instant:true 时用页面自己的 go(i, {animate:false})
+ * （导出引擎也是这样翻页的），不播翻页动画，文字检查用它，省掉每页约 1 秒的动画时间。
+ */
+export async function walkSlides(page, total, visit, { instant = false } = {}) {
   const results = [];
   for (let i = 0; i < total; i += 1) {
+    if (instant && i > 0) {
+      const moved = await page.evaluate(index => {
+        if (typeof window.go !== 'function') return false;
+        window.go(index, { animate: false, force: true });
+        const slides = window.__getVisibleSlides?.() || [...document.querySelectorAll('#deck > .slide')];
+        window.__ensureRuntimeSlideRendered?.(slides[index]); // 懒渲染的页面：和导出引擎一样先让它渲染出来
+        return true;
+      }, i);
+      if (!moved) await page.keyboard.press('ArrowRight');
+    }
     const deadline = Date.now() + 5000;
     while (Date.now() < deadline && (await activeIndex(page)) !== i) await page.waitForTimeout(100);
     const active = await activeIndex(page);
     if (active !== i) throw new PluginError('RENDER_FAILED', `翻页失败：应在第 ${i + 1} 页，当前激活的是第 ${active + 1} 页`);
     results.push(await visit(i));
-    if (i < total - 1) await page.keyboard.press('ArrowRight');
+    if (!instant && i < total - 1) await page.keyboard.press('ArrowRight');
   }
   return results;
 }
@@ -165,23 +198,35 @@ export async function waitSettled(page, capMs = SETTLE_CAP_MS) {
   }, capMs);
 }
 
-/** 取每页运行时可见文字：[{index, layout, text, waitedMs}]。页面是懒渲染的，空文本会等到 TEXT_WAIT_MS。 */
-export async function extractSlideTexts(page, total, onPage) {
+export const TEXT_STABLE_MS = 300;
+export const TEXT_CAP_MS = 3000;
+const TEXT_POLL_MS = 100;
+
+/**
+ * 取每页运行时可见文字：[{index, layout, text, waitedMs}]。
+ * 等待策略：等字体、等动画结束，再等可见文字稳定（连续读数一致 ≥300ms），每页总上限 3 秒。
+ * 到上限仍在变化就取最后一次读数；一直是空的返回空文本（由调用方判空页）。
+ */
+export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_MS, stableMs = TEXT_STABLE_MS } = {}) {
   return walkSlides(page, total, async index => {
     const started = Date.now();
-    let text = '';
-    let layout = '';
-    for (;;) {
-      ({ text, layout } = await page.evaluate(({ selector, i }) => {
-        const slide = document.querySelectorAll(selector)[i];
-        return { text: slide.innerText.replace(/\s+/g, ' ').trim(), layout: slide.dataset.vmLayout || '' };
-      }, { selector: SLIDE_SELECTOR, i: index }));
-      if (text.length > 0 || Date.now() - started > TEXT_WAIT_MS) break;
-      await page.waitForTimeout(200);
+    const read = () => page.evaluate(({ selector, i }) => {
+      const slide = document.querySelectorAll(selector)[i];
+      return { text: slide.innerText.replace(/\s+/g, ' ').trim(), layout: slide.dataset.vmLayout || '' };
+    }, { selector: SLIDE_SELECTOR, i: index });
+    await waitSettled(page, Math.min(SETTLE_CAP_MS, capMs));
+    let current = await read();
+    let lastChange = Date.now();
+    while (Date.now() - started < capMs) {
+      if (current.text.length > 0 && Date.now() - lastChange >= stableMs) break;
+      await page.waitForTimeout(TEXT_POLL_MS);
+      const next = await read();
+      if (next.text !== current.text) lastChange = Date.now();
+      current = next;
     }
     onPage?.(index + 1, total);
-    return { index, layout, text, waitedMs: Date.now() - started };
-  });
+    return { index, layout: current.layout, text: current.text, waitedMs: Date.now() - started };
+  }, { instant: true });
 }
 
 /** 读 PNG 头里的宽高（IHDR），不解码整张图。 */
@@ -258,6 +303,9 @@ export async function captureShots(page, total, shotsDir, { waitStrategy = 'adap
 }
 
 /** 仅测试用：IMAGO_TEST_HANG=<任务名> 时在浏览器已启动后永远挂起，用来验证超时会杀掉浏览器进程树。 */
-export async function testHang(task) {
-  if (process.env.IMAGO_TEST_HANG === task) await new Promise(() => {});
+export async function testHang(task, { beforeHang } = {}) {
+  if (process.env.IMAGO_TEST_HANG === task) {
+    if (beforeHang) beforeHang();
+    await new Promise(() => {});
+  }
 }

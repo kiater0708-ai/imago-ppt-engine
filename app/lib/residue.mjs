@@ -98,6 +98,8 @@ export function checkSlideResidue({ text, props, defaultProps, info }) {
   for (const word of FORBIDDEN_TEXT) {
     const needle = word.toLowerCase();
     if (!visible.includes(needle)) continue;
+    // 我们写进该页 props 的文字（任意字段）里就有这个词：是作者主动写的，不是模板残留
+    if (ours.includes(needle)) continue;
     const paths = locate(needle);
     const fixable = paths.length > 0 && paths.every(path => allowed.has(topKey(path)));
     seen.add(needle);

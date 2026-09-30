@@ -32,18 +32,62 @@ export function parseRegDefault(output) {
   return '';
 }
 
+/** 展开 %VAR% 环境变量（REG_EXPAND_SZ 的值）。变量不存在时原样保留。 */
+export function expandEnvVars(text, env = process.env) {
+  const lower = new Map(Object.entries(env).map(([key, value]) => [key.toLowerCase(), value]));
+  return String(text).replace(/%([^%]+)%/g, (whole, name) => (lower.has(name.toLowerCase()) ? lower.get(name.toLowerCase()) : whole));
+}
+
+/** reg.exe 的输出字节 → 字符串：先按 UTF-8 严格解码，不是合法 UTF-8（中文 Windows 的 GBK）就按 GBK 解码。 */
+export function decodeRegOutput(buffer) {
+  const bytes = Buffer.isBuffer(buffer) ? buffer : Buffer.from(String(buffer), 'utf8');
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(bytes).replace(/^\uFEFF/, '');
+  } catch {
+    try {
+      return new TextDecoder('gbk').decode(bytes);
+    } catch {
+      return bytes.toString('latin1');
+    }
+  }
+}
+
+/** 用 PowerShell 读注册表默认值的参数：输出强制 UTF-8，值里的环境变量在 PowerShell 里展开。view 为 '32' 时读 32 位注册表视图。 */
+export function buildRegPowerShellArgs(hive, view = '') {
+  const hiveDrive = hive === 'HKCU' ? 'HKCU:' : 'HKLM:';
+  const key = `SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\msedge.exe`.replace(/\\\\/g, '\\');
+  const read = view === '32'
+    ? `$k=[Microsoft.Win32.RegistryKey]::OpenBaseKey('${hive === 'HKCU' ? 'CurrentUser' : 'LocalMachine'}','Registry32').OpenSubKey('${key}'); $v=if($k){$k.GetValue('')}else{$null}`
+    : `$v=(Get-ItemProperty '${hiveDrive}\\${key}').'(default)'`;
+  const script = `[Console]::OutputEncoding=[Text.Encoding]::UTF8; $ErrorActionPreference='Stop'; try { ${read}; if ($v) { [Environment]::ExpandEnvironmentVariables([string]$v).Trim('"') } } catch { }`;
+  return ['-NoProfile', '-NonInteractive', '-Command', script];
+}
+
+/** PowerShell 读取（首选：Unicode 安全，中文路径不乱码）。失败返回 ''。 */
+function defaultPsRegQuery(hive, view = '') {
+  try {
+    const out = execFileSync('powershell', buildRegPowerShellArgs(hive, view), {
+      encoding: 'buffer', stdio: ['ignore', 'pipe', 'ignore'], timeout: 15000, windowsHide: true,
+    });
+    return decodeRegOutput(out).split(/\r?\n/).map(line => line.trim()).find(Boolean) || '';
+  } catch {
+    return '';
+  }
+}
+
+/** reg query 读取（回落）。输出按 UTF-8 / GBK 解码，REG_EXPAND_SZ 的环境变量展开。 */
 function defaultRegQuery(hive, extra = []) {
   try {
     const output = execFileSync('reg', ['query', `${hive}\\${APP_PATHS_KEY}`, '/ve', ...extra], {
-      encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], timeout: 5000, windowsHide: true,
+      encoding: 'buffer', stdio: ['ignore', 'pipe', 'ignore'], timeout: 5000, windowsHide: true,
     });
-    return parseRegDefault(output);
+    return expandEnvVars(parseRegDefault(decodeRegOutput(output)));
   } catch {
     return ''; // 键不存在或 reg 不可用：跳过
   }
 }
 
-export async function detectBrowser({ env = process.env, platform = process.platform, regQuery = defaultRegQuery, exists = isFile } = {}) {
+export async function detectBrowser({ env = process.env, platform = process.platform, regQuery = defaultRegQuery, psRegQuery = defaultPsRegQuery, exists = isFile } = {}) {
   const tried = [];
   // IMAGO_TEST_NO_BROWSER=1 仅测试用：模拟「本机没有任何浏览器」
   if (env.IMAGO_TEST_NO_BROWSER === '1') return { found: false, path: null, kind: null, source: null, tried };
@@ -58,8 +102,16 @@ export async function detectBrowser({ env = process.env, platform = process.plat
   }
 
   if (platform === 'win32') {
-    for (const [hive, extra] of [['HKLM', []], ['HKLM', ['/reg:32']], ['HKCU', []]]) {
-      const hit = accept(regQuery(hive, extra), `registry:${hive}${extra.length ? extra[0] : ''}`);
+    // 每个位置先用 PowerShell（Unicode 安全），读不到或出错再回落 reg query
+    for (const [hive, view, extra] of [['HKLM', '', []], ['HKLM', '32', ['/reg:32']], ['HKCU', '', []]]) {
+      const source = `registry:${hive}${view ? `/${view}` : ''}`;
+      let value = '';
+      try { value = psRegQuery(hive, view) || ''; } catch { value = ''; }
+      let hit = value ? accept(value, `${source}(powershell)`) : null;
+      if (hit) return hit;
+      let fallback = '';
+      try { fallback = regQuery(hive, extra) || ''; } catch { fallback = ''; }
+      hit = accept(fallback, `${source}(reg)`);
       if (hit) return hit;
     }
   }

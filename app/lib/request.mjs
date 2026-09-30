@@ -22,10 +22,26 @@ export function parseArgv(argv) {
   return args;
 }
 
-export function requireAbsolute(value, name) {
+/**
+ * 完整路径判断。Windows 必须带盘符（C:\x、C:/x）或 UNC（\\server\share\…）：
+ * `\work`、`/work` 依赖当前盘符，父进程与子进程盘符不同时会指向不同位置，一律拒绝。
+ */
+export function isFullyQualifiedPath(value, platform = process.platform) {
+  if (typeof value !== 'string' || !value) return false;
+  if (platform === 'win32') {
+    if (/^[A-Za-z]:[\\/]/.test(value)) return true;
+    return /^\\\\[^\\/?]+[\\/][^\\/]+/.test(value);
+  }
+  return path.posix.isAbsolute(value);
+}
+
+export function requireAbsolute(value, name, platform = process.platform) {
   if (typeof value !== 'string' || !value.trim()) throw new PluginError('BAD_REQUEST', `请求字段 ${name} 必须是非空字符串`);
-  if (!path.isAbsolute(value)) throw new PluginError('BAD_REQUEST', `请求字段 ${name} 必须是绝对路径，收到：${value}`);
-  return path.normalize(value);
+  if (!isFullyQualifiedPath(value, platform)) {
+    const hint = platform === 'win32' ? '（Windows 需要带盘符的完整路径，如 C:\\dir，或 UNC 路径 \\\\server\\share）' : '';
+    throw new PluginError('BAD_REQUEST', `请求字段 ${name} 必须是绝对路径${hint}，收到：${value}`);
+  }
+  return platform === 'win32' && process.platform !== 'win32' ? value : path.normalize(value);
 }
 
 /** 读取 --request 文件并检查 protocol。required=false 时（info）没有 request 返回 {protocol}。 */

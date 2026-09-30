@@ -4,14 +4,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { RUNTIME_DIR, SCRIPTS_DIR, RENDER_BUNDLE, RENDER_SOURCE } from './paths.mjs';
-import { PluginError } from './errors.mjs';
+import { PluginError, classifyErrnoText, errnoFromText } from './errors.mjs';
+import { createTaskTmp } from './tasktmp.mjs';
+import { registerCleanup } from './cleanup.mjs';
 import { runProcess } from './proc.mjs';
 import { progress, log } from './protocol.mjs';
-import { readJson, writeJson, ensureDir, samePath, tail } from './fsutil.mjs';
+import { readJson, sameFile, tail, ensureRealDir, assertNoLinksInside, assertPlainFileOrMissing, writeJsonAtomic } from './fsutil.mjs';
 import { loadEngine } from './layouts.mjs';
 import { checkGoalCompleteness } from './completeness.mjs';
 import { normalizeNumbers } from './rounding.mjs';
-import { bulletLines, issueFromValidatorLine, safePropsErrors } from './issues.mjs';
+import { bulletLines, issuesFromValidatorLine, safePropsErrors } from './issues.mjs';
 import { detectBrowser } from './browser-detect.mjs';
 import { runWorker } from './worker-client.mjs';
 
@@ -34,6 +36,24 @@ export function loadGoal(file) {
   return goal;
 }
 
+const THEME_OF_LAYOUT = /^(theme\d{2})_page\d+$/;
+
+/**
+ * 协议 v1 只支持单主题：goal 里所有 layout 必须属于同一主题，且与 themePack（如果写了）一致。
+ * 认不出主题前缀的 layout 不在这里报（交给 validate-goal-spec 报 unknown layout）。
+ */
+export function assertSingleTheme(goal) {
+  const themes = new Set();
+  for (const slide of goal.slides) {
+    const match = THEME_OF_LAYOUT.exec(String(slide.layout));
+    if (match) themes.add(match[1]);
+  }
+  if (goal.themePack !== undefined && typeof goal.themePack === 'string' && goal.themePack) themes.add(goal.themePack);
+  if (themes.size > 1) {
+    throw new PluginError('BAD_REQUEST', `协议 v1 只支持单主题：goal 里同时出现了 ${[...themes].sort().join('、')}（版式前缀与 themePack 必须一致）。请让每份 goal 只用一个主题`, { themes: [...themes].sort() });
+  }
+}
+
 function renderCommand(goalFile, htmlFile) {
   if (fs.existsSync(RENDER_BUNDLE)) return { command: process.execPath, args: [RENDER_BUNDLE, goalFile, htmlFile], mode: 'bundle' };
   const tsxCli = path.join(RUNTIME_DIR, 'node_modules', 'tsx', 'dist', 'cli.mjs');
@@ -51,13 +71,39 @@ async function runScript(name, args, { timeoutMs = VALIDATOR_TIMEOUT_MS, env } =
   return res;
 }
 
-function failedStep(name, res) {
-  return new PluginError('RENDER_FAILED', `${name} 异常退出（退出码 ${res.code}${res.signal ? `，信号 ${res.signal}` : ''}），没有可解析的校验结果`, {
-    step: name, code: res.code, stderrTail: tail(res.stderr), stdoutTail: tail(res.stdout, 600),
-  });
+/** 子进程失败的错误类别：stderr 里认得出磁盘 errno 就归 6，否则是流程失败。 */
+function stepError(step, message, res, extra = {}) {
+  const errnoClass = classifyErrnoText(`${res.stderr}\n${res.stdout}`);
+  const detail = { step, code: res.code, stderrTail: tail(res.stderr), ...extra };
+  if (errnoClass) return new PluginError(errnoClass, `${message}（磁盘错误 ${errnoFromText(`${res.stderr}\n${res.stdout}`)}）`, { ...detail, errno: errnoFromText(`${res.stderr}\n${res.stdout}`) });
+  return new PluginError('RENDER_FAILED', message, detail);
 }
 
-export async function runCheck({ goalSrc, workDir, browserDetector = detectBrowser }) {
+function failedStep(name, res) {
+  return stepError(name, `${name} 异常退出（退出码 ${res.code}${res.signal ? `，信号 ${res.signal}` : ''}），没有可解析的校验结果`, res, { stdoutTail: tail(res.stdout, 600) });
+}
+
+export async function runCheck({ goalSrc, workDir: requestedWorkDir, browserDetector = detectBrowser }) {
+  const goal = loadGoal(goalSrc);
+  assertSingleTheme(goal); // 先于任何写入：多主题的 goal 直接拒绝
+  const workDir = ensureRealDir(requestedWorkDir);
+  const goalFile = path.join(workDir, 'goal.json');
+  if (sameFile(goalSrc, goalFile)) {
+    throw new PluginError('BAD_REQUEST', 'workDir 里的 goal.json 就是原文件（同一个文件或硬链接）；check 不改原文件，请换一个 workDir', { goal: goalSrc, workDir });
+  }
+  assertNoLinksInside(workDir, 'workDir');
+  assertPlainFileOrMissing(goalFile, 'workDir/goal.json');
+  const taskTmp = createTaskTmp(workDir);
+  const unregister = registerCleanup(() => taskTmp.cleanup());
+  try {
+    return await runCheckInner({ goal, goalSrc, workDir, goalFile, taskTmp, browserDetector, requestedWorkDir });
+  } finally {
+    unregister();
+    taskTmp.cleanup();
+  }
+}
+
+async function runCheckInner({ goal, goalSrc, workDir, goalFile, taskTmp, browserDetector, requestedWorkDir }) {
   const timings = {};
   const timed = async (name, fn) => {
     const started = Date.now();
@@ -70,13 +116,7 @@ export async function runCheck({ goalSrc, workDir, browserDetector = detectBrows
   let stepNo = 0;
   const step = name => progress(name, ++stepNo, TOTAL_STEPS);
 
-  const goal = loadGoal(goalSrc);
-  const goalFile = path.join(workDir, 'goal.json');
-  if (samePath(goalSrc, goalFile)) {
-    throw new PluginError('BAD_REQUEST', 'workDir 里的 goal.json 就是原文件；check 不改原文件，请换一个 workDir', { goal: goalSrc, workDir });
-  }
-  ensureDir(workDir);
-  const deckDir = workDir;
+  const taskEnv = { ...process.env, ...taskTmp.env() }; // 渲染与校验的临时文件、缓存都落在 workDir/.tmp/<随机>
   const pptDir = path.join(workDir, 'ppt');
   const htmlFile = path.join(pptDir, 'index.html');
   const slideLayouts = goal.slides.map(slide => slide.layout);
@@ -88,14 +128,14 @@ export async function runCheck({ goalSrc, workDir, browserDetector = detectBrows
     seen.add(key);
     issues.push(issue);
   };
-  const addValidatorLines = (lines, opts) => lines.forEach(line => addIssue(issueFromValidatorLine(line, slideLayouts, opts)));
+  const addValidatorLines = (lines, opts) => lines.forEach(line => issuesFromValidatorLine(line, slideLayouts, opts).forEach(addIssue));
 
   // 0. 数值规整 + 复制进 workDir
   const numberChanges = [];
   goal.slides.forEach((slide, index) => {
     if (slide.props) for (const change of normalizeNumbers(slide.props, '', [])) numberChanges.push({ index, ...change });
   });
-  writeJson(goalFile, goal);
+  writeJsonAtomic(goalFile, goal);
   if (numberChanges.length) log(`规整了 ${numberChanges.length} 个浮点尾差数值`);
 
   // 1. 完整性（程序判定）
@@ -107,7 +147,7 @@ export async function runCheck({ goalSrc, workDir, browserDetector = detectBrows
   }
   const completeness = await timed('completeness', async () => {
     const result = checkGoalCompleteness(goal, infos);
-    if (result.filled.length) writeJson(goalFile, goal); // 补写了数量字段，落盘
+    if (result.filled.length) writeJsonAtomic(goalFile, goal); // 补写了数量字段，落盘
     return result;
   });
   for (const item of completeness.errors) {
@@ -116,24 +156,29 @@ export async function runCheck({ goalSrc, workDir, browserDetector = detectBrows
 
   // 2. write-safe-props（会改写 goal：属性规整、版式微调）
   step('write-safe-props');
-  const safe = await timed('safeProps', () => runScript('write-safe-props.mjs', ['--goal', goalFile, '--write']));
-  const safeParsed = safePropsErrors(safe.stdout);
-  const layoutChanges = safeParsed.data?.layoutChanges || [];
-  if (!safe.ok) {
-    if (!safeParsed.data || !safeParsed.lines.length) throw failedStep('write-safe-props', safe);
-    addValidatorLines(safeParsed.lines);
+  const safe = await timed('safeProps', () => runScript('write-safe-props.mjs', ['--goal', goalFile, '--write'], { env: taskEnv }));
+  // 输出必须是合法 JSON 且结构正确（无论退出码），否则是流程失败
+  let safeParsed;
+  try {
+    safeParsed = safePropsErrors(safe.stdout, { exitOk: safe.ok, truncated: safe.truncated });
+  } catch (error) {
+    if (error instanceof PluginError && !safe.ok) throw failedStep('write-safe-props', safe);
+    throw error;
   }
+  const layoutChanges = safeParsed.data.layoutChanges || [];
+  if (!safe.ok) addValidatorLines(safeParsed.lines);
 
   // 3. validate-goal-spec
   step('validate-goal-spec');
-  const spec = await timed('goalSpec', () => runScript('validate-goal-spec.mjs', [goalFile]));
+  const spec = await timed('goalSpec', () => runScript('validate-goal-spec.mjs', [goalFile], { env: taskEnv }));
   if (!spec.ok) {
     const lines = bulletLines(spec.stdout, spec.stderr);
     if (!lines.length) throw failedStep('validate-goal-spec', spec);
     addValidatorLines(lines);
   }
 
-  const base = { goal: goalFile, deckDir, layoutChanges, numberChanges: numberChanges.length, filledCountKeys: completeness.filled, timings };
+  // 返回给调用方的路径沿用请求里的写法（内部操作用的是解析过符号链接的真实路径）
+  const base = { goal: path.join(requestedWorkDir, 'goal.json'), deckDir: requestedWorkDir, layoutChanges, numberChanges: numberChanges.length, filledCountKeys: completeness.filled, timings };
   if (issues.length) {
     // 内容有问题时不渲染（渲染会用同一份规则再报一遍，且可能崩溃）
     return { ok: false, ...base, rendered: false, issues };
@@ -141,23 +186,23 @@ export async function runCheck({ goalSrc, workDir, browserDetector = detectBrows
 
   // 4. 渲染。DASHI_PPT_THEME_RUNTIME=prebuilt：只拷贝预构建的主题 bundle，不依赖 esbuild
   step('render');
-  const renderEnv = { ...process.env, DASHI_PPT_THEME_RUNTIME: 'prebuilt' };
+  const renderEnv = { ...taskEnv, DASHI_PPT_THEME_RUNTIME: 'prebuilt' };
   const cmd = renderCommand(goalFile, htmlFile);
   const render = await timed('render', () => runProcess(cmd.command, cmd.args, { cwd: RUNTIME_DIR, timeoutMs: RENDER_TIMEOUT_MS, env: renderEnv }));
   if (render.timedOut) throw new PluginError('RENDER_FAILED', `渲染超过 ${RENDER_TIMEOUT_MS / 1000} 秒未完成，已终止`, { step: 'render', timeout: true, stderrTail: tail(render.stderr) });
-  if (!render.ok) throw new PluginError('RENDER_FAILED', `渲染失败（退出码 ${render.code}）：${tail(render.stderr || render.stdout, 600)}`, { step: 'render', mode: cmd.mode });
+  if (!render.ok) throw stepError('render', `渲染失败（退出码 ${render.code}）：${tail(render.stderr || render.stdout, 600)}`, render, { mode: cmd.mode });
   if (!fs.existsSync(htmlFile)) throw new PluginError('RENDER_FAILED', `渲染退出码为 0，但没有生成 ${htmlFile}`, { step: 'render' });
 
   // 5. swiss（模板级检查，内容修不了）与 6. goal-copy（内容）
   step('validate-swiss');
-  const swiss = await timed('swiss', () => runScript('validate-swiss-deck.mjs', [htmlFile]));
+  const swiss = await timed('swiss', () => runScript('validate-swiss-deck.mjs', [htmlFile], { env: taskEnv }));
   if (!swiss.ok) {
     const lines = bulletLines(swiss.stdout, swiss.stderr);
     if (!lines.length) throw failedStep('validate-swiss-deck', swiss);
     addValidatorLines(lines, { fixable: false });
   }
   step('validate-goal-copy');
-  const copy = await timed('goalCopy', () => runScript('validate-goal-copy.mjs', [goalFile, htmlFile]));
+  const copy = await timed('goalCopy', () => runScript('validate-goal-copy.mjs', [goalFile, htmlFile], { env: taskEnv }));
   if (!copy.ok) {
     const lines = bulletLines(copy.stdout, copy.stderr);
     if (!lines.length) throw failedStep('validate-goal-copy', copy);
@@ -168,7 +213,8 @@ export async function runCheck({ goalSrc, workDir, browserDetector = detectBrows
   step('residue');
   const browser = await browserDetector();
   if (!browser.found) throw new PluginError('NO_BROWSER', '没有找到 Edge 或 Chrome，无法做浏览器可见文字检查', { tried: browser.tried });
-  const residue = await timed('residue', () => runWorker('residue', { goalFile, deckPptDir: pptDir, browserPath: browser.path, tmpBase: workDir }, {
+  const residue = await timed('residue', () => runWorker('residue', { goalFile, deckPptDir: pptDir, browserPath: browser.path }, {
+    tmpBase: workDir,
     timeoutMs: BROWSER_CHECK_TIMEOUT_MS, failCode: 'RENDER_FAILED', label: '浏览器检查', browserPath: browser.path,
   }));
   residue.issues.forEach(addIssue);

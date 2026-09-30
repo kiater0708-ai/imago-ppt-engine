@@ -57,10 +57,9 @@ for (const scenario of ['check', 'export']) {
   test(`浏览器阶段超时（${scenario}）：报对应错误码，并结束浏览器进程`, { timeout: 120000 }, async (t) => {
     if (process.platform === 'win32') return t.skip('用 ps 统计浏览器进程，Windows 另测');
     const root = tmpDir('imago-timeout-');
-    const tmpMarkerDir = path.join(root, 'tmpbase'); // 浏览器的 --user-data-dir 会落在 TMPDIR 下，用它当进程标记
-    fs.mkdirSync(tmpMarkerDir);
-    const env = { IMAGO_TEST_HANG: scenario === 'check' ? 'residue' : 'export', IMAGO_TEST_TIMEOUT_MS: '12000', TMPDIR: tmpMarkerDir };
-    const workDir = path.join(root, 'w');
+    const workDir = path.join(root, 'w'); // 浏览器的 --user-data-dir 在 <workDir>/.tmp/<随机>/ 下，用 workDir 路径当进程标记
+    const tmpMarkerDir = workDir;
+    const env = { IMAGO_TEST_HANG: scenario === 'check' ? 'residue' : 'export', IMAGO_TEST_TIMEOUT_MS: '12000' };
     // export 需要先有渲染好的 deck
     if (scenario === 'export') {
       const prep = await runCli('check', { request: { protocol: 1, goal: fixture('gala-deck2'), workDir } });

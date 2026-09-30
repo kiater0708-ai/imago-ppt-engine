@@ -8,9 +8,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
-import { spawnSync } from 'node:child_process';
 import { bundleRender } from './bundle-render.mjs';
-import { generateThirdParty, RUNTIME_DEPS } from './gen-third-party.mjs';
+import { generateThirdParty } from './gen-third-party.mjs';
+import { runProcess } from '../app/lib/proc.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PLUG = path.resolve(HERE, '..');
@@ -52,13 +52,14 @@ function walk(dir, out = []) {
   return out;
 }
 
-function runNpm(args, cwd) {
+async function runNpm(args, cwd) {
   const isWin = process.platform === 'win32';
-  const res = spawnSync(isWin ? 'cmd' : 'npm', isWin ? ['/c', 'npm', ...args] : args, {
-    cwd, encoding: 'utf8', timeout: 600000, env: { ...process.env, PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1' }, maxBuffer: 64 * 1024 * 1024,
+  const res = await runProcess(isWin ? 'cmd' : 'npm', isWin ? ['/c', 'npm', ...args] : args, {
+    cwd, timeoutMs: 600000, graceMs: 5000, trackTree: true, env: { ...process.env, PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1' },
   });
-  if (res.error) fail(`npm 无法运行：${res.error.message}`);
-  if (res.status !== 0) fail(`npm ${args.join(' ')} 失败（退出码 ${res.status}）：\n${String(res.stderr || res.stdout).slice(-1500)}`);
+  if (res.timedOut) fail(`npm ${args.join(' ')} 超过 600 秒，已结束进程树`);
+  if (res.spawnError) fail(`npm 无法运行：${res.spawnError}`);
+  if (!res.ok) fail(`npm ${args.join(' ')} 失败（退出码 ${res.code}）：\n${String(res.stderr || res.stdout).slice(-1500)}`);
   return res;
 }
 
@@ -105,16 +106,22 @@ async function fetchNode(nodeVersion, cacheDir) {
   return { buffer, sha256: expected, zipName };
 }
 
-async function extractNodeExe(JSZip, nodeZip, zipName, target) {
+/** 从 Node 官方 zip 取出 node.exe 和 LICENSE（许可原文必须随包），写进 targetDir。缺任何一个都报错。 */
+export async function extractNodeFiles(JSZip, nodeZip, zipName, targetDir, { minExeBytes = 10 * 1024 * 1024 } = {}) {
   const zip = await JSZip.loadAsync(nodeZip);
-  const entryName = `${zipName.replace(/\.zip$/, '')}/node.exe`;
-  const entry = zip.file(entryName);
-  if (!entry) fail(`Node 压缩包里没有 ${entryName}`);
-  const data = await entry.async('nodebuffer');
-  if (data.length < 10 * 1024 * 1024 || data.subarray(0, 2).toString('latin1') !== 'MZ') fail(`node.exe 内容异常（${data.length} 字节）`);
-  fs.mkdirSync(path.dirname(target), { recursive: true });
-  fs.writeFileSync(target, data);
-  return { size: data.length, sha256: crypto.createHash('sha256').update(data).digest('hex') };
+  const prefix = zipName.replace(/\.zip$/, '');
+  const exeEntry = zip.file(`${prefix}/node.exe`);
+  if (!exeEntry) fail(`Node 压缩包里没有 ${prefix}/node.exe`);
+  const licenseEntry = zip.file(`${prefix}/LICENSE`);
+  if (!licenseEntry) fail(`Node 压缩包里没有 ${prefix}/LICENSE（许可原文必须随包分发）`);
+  const exe = await exeEntry.async('nodebuffer');
+  if (exe.length < minExeBytes || exe.subarray(0, 2).toString('latin1') !== 'MZ') fail(`node.exe 内容异常（${exe.length} 字节）`);
+  const license = await licenseEntry.async('nodebuffer');
+  if (license.length < 100) fail(`Node LICENSE 内容异常（${license.length} 字节）`);
+  fs.mkdirSync(targetDir, { recursive: true });
+  fs.writeFileSync(path.join(targetDir, 'node.exe'), exe);
+  fs.writeFileSync(path.join(targetDir, 'LICENSE'), license);
+  return { size: exe.length, sha256: crypto.createHash('sha256').update(exe).digest('hex'), licenseSize: license.length };
 }
 
 function copyApp(staging) {
@@ -128,17 +135,18 @@ function copyApp(staging) {
     if (!fs.existsSync(from)) fail(`缺少 ${name}`);
     fs.copyFileSync(from, path.join(staging, name));
   }
+  const licensesDir = path.join(PLUG, 'licenses');
+  if (!fs.existsSync(path.join(licensesDir, 'OFL-1.1.txt'))) fail('缺少 licenses/OFL-1.1.txt');
+  fs.cpSync(licensesDir, path.join(staging, 'licenses'), { recursive: true });
 }
 
-function runtimePackageJson(version) {
-  const lock = JSON.parse(fs.readFileSync(path.join(PLUG, 'app', 'runtime', 'package-lock.json'), 'utf8'));
-  const dependencies = {};
-  for (const name of RUNTIME_DEPS) {
-    const entry = lock.packages?.[`node_modules/${name}`];
-    if (!entry?.version) fail(`runtime/package-lock.json 里找不到依赖 ${name}`);
-    dependencies[name] = entry.version; // 精确版本：与开发时验证过的版本一致
+/** 发布用的完整生产依赖清单与 lock（scripts/prod-deps），npm ci 严格按 lock 安装（含传递依赖与 integrity）。 */
+function copyProdDeps(stagingRuntime) {
+  const dir = path.join(HERE, 'prod-deps');
+  for (const name of ['package.json', 'package-lock.json']) {
+    if (!fs.existsSync(path.join(dir, name))) fail(`缺少 scripts/prod-deps/${name}`);
+    fs.copyFileSync(path.join(dir, name), path.join(stagingRuntime, name));
   }
-  return { name: 'imago-ppt-plugin-runtime', version, private: true, type: 'module', license: 'AGPL-3.0-only', dependencies };
 }
 
 function assertNoNative(nodeModules) {
@@ -206,12 +214,12 @@ async function main() {
     copyApp(staging);
     fs.writeFileSync(path.join(staging, 'app', 'version.json'), `${JSON.stringify({ version: args.version, protocol: PROTOCOL }, null, 2)}\n`);
 
-    console.log('[3/9] 安装运行时依赖（npm install --omit=dev --omit=optional）');
+    console.log('[3/9] 安装运行时依赖（npm ci --omit=dev --omit=optional，按 scripts/prod-deps 的完整 lock）');
     const stagingRuntime = path.join(staging, 'app', 'runtime');
     fs.rmSync(path.join(stagingRuntime, 'package-lock.json'), { force: true });
-    fs.writeFileSync(path.join(stagingRuntime, 'package.json'), `${JSON.stringify(runtimePackageJson(args.version), null, 2)}\n`);
-    runNpm(['install', '--omit=dev', '--omit=optional', '--no-package-lock', '--no-audit', '--no-fund', '--ignore-scripts'], stagingRuntime);
-    if (!fs.existsSync(path.join(stagingRuntime, 'node_modules'))) fail('npm install 结束但没有生成 node_modules');
+    copyProdDeps(stagingRuntime);
+    await runNpm(['ci', '--omit=dev', '--omit=optional', '--ignore-scripts', '--no-audit', '--no-fund'], stagingRuntime);
+    if (!fs.existsSync(path.join(stagingRuntime, 'node_modules'))) fail('npm ci 结束但没有生成 node_modules');
     fs.rmSync(path.join(stagingRuntime, 'node_modules', '.package-lock.json'), { force: true });
     fs.rmSync(path.join(stagingRuntime, 'node_modules', '.bin'), { recursive: true, force: true }); // .bin 是符号链接，运行时用不到
 
@@ -224,14 +232,18 @@ async function main() {
 
     console.log(`[6/9] 下载 Node ${args.nodeVersion} win-x64 并校验 sha256`);
     const nodeInfo = await fetchNode(args.nodeVersion, path.join(args.out, 'cache'));
-    const exe = await extractNodeExe(JSZip, nodeInfo.buffer, nodeInfo.zipName, path.join(staging, 'node', 'node.exe'));
+    const exe = await extractNodeFiles(JSZip, nodeInfo.buffer, nodeInfo.zipName, path.join(staging, 'node'));
 
     console.log('[7/9] 生成 THIRD-PARTY.md');
-    fs.writeFileSync(path.join(staging, 'THIRD-PARTY.md'), generateThirdParty(stagingRuntime).text);
+    const third = generateThirdParty(stagingRuntime, { node: { version: args.nodeVersion, licensePath: 'node/LICENSE' } });
+    if (third.fontProblems.length) {
+      fail(`有 ${third.fontProblems.length} 个字体读不到许可信息，打包中止（请移除字体或补许可资料）：\n${third.fontProblems.map(item => `  ${item.file}：${item.reason}`).join('\n')}`);
+    }
+    fs.writeFileSync(path.join(staging, 'THIRD-PARTY.md'), third.text);
 
     if (args.smoke) {
       console.log('[8/9] 冒烟：用本机 node 跑 staging 里的 info 与 selftest');
-      smoke(staging, args.out);
+      await smoke(staging, args.out);
     } else console.log('[8/9] 跳过冒烟（--no-smoke）');
 
     console.log('[9/9] 生成 manifest.json 并打 zip');
@@ -242,7 +254,7 @@ async function main() {
       version: args.version,
       protocol: PROTOCOL,
       platform: 'win-x64',
-      node: { version: args.nodeVersion, archive: nodeInfo.zipName, archiveSha256: nodeInfo.sha256, exeSha256: exe.sha256, exeSize: exe.size },
+      node: { version: args.nodeVersion, archive: nodeInfo.zipName, archiveSha256: nodeInfo.sha256, exeSha256: exe.sha256, exeSize: exe.size, licenseFile: 'node/LICENSE', licenseSize: exe.licenseSize },
       engine: 'html-deck-to-pptx 0.2.7+imago',
       files: entries,
     };
@@ -264,7 +276,7 @@ async function main() {
     const verify = await JSZip.loadAsync(fs.readFileSync(zipPart));
     const names = Object.keys(verify.files).filter(name => !verify.files[name].dir);
     if (names.length !== allFiles.length) fail(`zip 条目数 ${names.length} 与文件数 ${allFiles.length} 不一致`);
-    for (const need of ['node/node.exe', 'manifest.json', 'app/cli.mjs', 'app/runtime/scripts/render-goal-deck.bundle.mjs']) {
+    for (const need of ['node/node.exe', 'node/LICENSE', 'licenses/OFL-1.1.txt', 'manifest.json', 'app/cli.mjs', 'app/runtime/scripts/render-goal-deck.bundle.mjs']) {
       if (!verify.file(need)) fail(`zip 里缺少 ${need}`);
     }
     fs.renameSync(zipPart, zipFinal);
@@ -288,35 +300,44 @@ async function main() {
   }
 }
 
-function smoke(staging, out) {
+/** 冒烟：用本机 node 跑 staging 里的 info 与 selftest。用和插件同一个执行器（超时结束整棵进程树，含浏览器）。 */
+async function smoke(staging, out) {
   const cli = path.join(staging, 'app', 'cli.mjs');
-  const run = (command, request) => {
+  const run = async (command, request, timeoutMs) => {
     const args = [cli, command];
+    let requestFile = null;
     if (request) {
-      const file = path.join(out, `smoke-${command}.json`);
-      fs.writeFileSync(file, JSON.stringify(request));
-      args.push('--request', file);
+      requestFile = path.join(out, `smoke-${command}.json`);
+      fs.writeFileSync(requestFile, JSON.stringify(request));
+      args.push('--request', requestFile);
     }
-    const res = spawnSync(process.execPath, args, { encoding: 'utf8', timeout: 240000, maxBuffer: 64 * 1024 * 1024 });
-    if (res.error) fail(`冒烟 ${command} 无法运行：${res.error.message}`);
-    const last = String(res.stdout).trim().split('\n').filter(Boolean).pop() || '';
-    let event;
-    try { event = JSON.parse(last); } catch { fail(`冒烟 ${command} 的最后一行不是 JSON：${last.slice(0, 200)}\n${String(res.stderr).slice(-600)}`); }
-    return { event, status: res.status };
+    try {
+      const res = await runProcess(process.execPath, args, { timeoutMs, graceMs: 5000, trackTree: true });
+      if (res.timedOut) fail(`冒烟 ${command} 超过 ${Math.round(timeoutMs / 1000)} 秒，已结束进程树：\n${String(res.stderr).slice(-600)}`);
+      if (res.spawnError) fail(`冒烟 ${command} 无法运行：${res.spawnError}`);
+      const last = String(res.stdout).trim().split('\n').filter(Boolean).pop() || '';
+      let event;
+      try { event = JSON.parse(last); } catch { fail(`冒烟 ${command} 的最后一行不是 JSON：${last.slice(0, 200)}\n${String(res.stderr).slice(-600)}`); }
+      return { event, status: res.code };
+    } finally {
+      if (requestFile) fs.rmSync(requestFile, { force: true });
+    }
   };
-  const info = run('info');
+  const info = await run('info', null, 60000);
   if (info.status !== 0 || info.event.event !== 'result') fail(`冒烟 info 失败：${JSON.stringify(info.event).slice(0, 300)}`);
   const workDir = path.join(out, 'smoke-work');
   fs.rmSync(workDir, { recursive: true, force: true });
-  const self = run('selftest', { protocol: PROTOCOL, workDir });
+  // 内层：check（渲染 120s + 校验 + 浏览器 180s）+ export（300s）；外层要比它们的总和长
+  const self = await run('selftest', { protocol: PROTOCOL, workDir }, 1200000);
   if (self.event.event === 'error' && self.event.code === 'NO_BROWSER') console.warn('      本机没有浏览器，跳过 selftest 冒烟');
   else if (self.status !== 0 || self.event.ok !== true) fail(`冒烟 selftest 失败：${JSON.stringify(self.event).slice(0, 500)}`);
   else console.log(`      selftest 通过，用时 ${self.event.durationMs} ms`);
   fs.rmSync(workDir, { recursive: true, force: true });
-  for (const name of ['smoke-selftest.json', 'smoke-info.json']) fs.rmSync(path.join(out, name), { force: true });
 }
 
-main().catch(error => {
-  console.error(`\n打包失败：${error.message}`);
-  process.exit(1);
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch(error => {
+    console.error(`\n打包失败：${error.message}`);
+    process.exit(1);
+  });
+}

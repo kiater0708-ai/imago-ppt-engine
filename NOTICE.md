@@ -35,6 +35,6 @@
 本软件使用了 **OPPO Sans 4.0** 字体（Guangdong OPPO Mobile Telecommunications Corp., Ltd.），
 未做任何修改，随主题页面一起分发；许可原文见
 `app/runtime/assets/vendor/fonts/oppo-sans-4.0-license-notice.txt`。
-其余第三方组件与素材见 `THIRD-PARTY.md`。
+其余字体为 SIL OFL 1.1（全文 `licenses/OFL-1.1.txt`，逐字体版权见 `THIRD-PARTY.md`）。Windows 发布包随附 Node.js（`node/node.exe`），许可原文见 `node/LICENSE`。其余第三方组件与素材见 `THIRD-PARTY.md`。
 
 > 本文件是对来源与许可的说明，不是法律意见。
