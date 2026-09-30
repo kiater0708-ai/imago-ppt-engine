@@ -6,6 +6,9 @@ test('parseRegDefault：解析 reg query 输出（英文 / 中文系统 / 带引
   assert.equal(parseRegDefault('\r\nHKEY_LOCAL_MACHINE\\SOFTWARE\\...\\msedge.exe\r\n    (Default)    REG_SZ    C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\r\n'), 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe');
   assert.equal(parseRegDefault('    (默认)    REG_SZ    "D:\\Edge\\msedge.exe"'), 'D:\\Edge\\msedge.exe');
   assert.equal(parseRegDefault(''), '');
+  // 中文系统 reg 输出 GBK，按 UTF-8 解码后值名是乱码（X99 实测），仍要取到路径
+  assert.equal(parseRegDefault('\r\nHKEY_LOCAL_MACHINE\\SOFTWARE\\...\\msedge.exe\r\n    (\ufffd\ufffd\ufffd\ufffd)    REG_SZ    C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\r\n'), 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe');
+  assert.equal(parseRegDefault('HKEY_LOCAL_MACHINE\\X REG_SZ not-a-value'), '');
   assert.equal(parseRegDefault('错误: 系统找不到指定的注册表项或值'), '');
 });
 

@@ -22,10 +22,11 @@ function isFile(file) {
   }
 }
 
-/** 解析 `reg query ... /ve` 的输出，取默认值。失败或没有返回 ''。 */
+/** 解析 `reg query ... /ve` 的输出，取默认值。失败或没有返回 ''。
+ * /ve 只输出默认值这一行；中文 Windows 上 reg 按 GBK 输出，「(默认)」按 UTF-8 解码会成乱码，所以不认值名，取第一条 REG_SZ 行。 */
 export function parseRegDefault(output) {
   for (const line of String(output).split(/\r?\n/)) {
-    const match = /^\s*(?:\(Default\)|\(默认\)|<NO NAME>)\s+REG_(?:EXPAND_)?SZ\s+(.+?)\s*$/i.exec(line);
+    const match = /^\s+\S.*?\s+REG_(?:EXPAND_)?SZ\s+(.+?)\s*$/i.exec(line);
     if (match) return match[1].replace(/^"(.*)"$/, '$1');
   }
   return '';
