@@ -1,0 +1,2350 @@
+{
+  "theme": "theme10",
+  "counts": {
+    "total": 95,
+    "audited": 75,
+    "ruleExcluded": 20,
+    "hardcoded": 6,
+    "media": 0,
+    "brandIcon": 0,
+    "autoExcluded": 6,
+    "manualExcluded": 0,
+    "renderFailed": 1,
+    "uncertain": 0,
+    "styleControls": 74,
+    "selectControls": 92
+  },
+  "timings": {
+    "markerMs": 24202,
+    "controlMs": 104901,
+    "totalMs": 129163,
+    "markerPages": 75,
+    "controlPages": 264
+  },
+  "ruleExcluded": [
+    {
+      "layout": "theme10_page011",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page023",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page024",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 2，不能隐藏为 0"
+    },
+    {
+      "layout": "theme10_page041",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page042",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 2，不能隐藏为 0"
+    },
+    {
+      "layout": "theme10_page043",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 2，不能隐藏为 0"
+    },
+    {
+      "layout": "theme10_page045",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 2，不能隐藏为 0"
+    },
+    {
+      "layout": "theme10_page046",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page047",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page048",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 2，不能隐藏为 0"
+    },
+    {
+      "layout": "theme10_page050",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page051",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page076",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 3，不能隐藏为 0"
+    },
+    {
+      "layout": "theme10_page077",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page078",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page079",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page084",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page085",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page092",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme10_page095",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    }
+  ],
+  "layouts": {
+    "theme10_page001": {
+      "label": "暮光对角",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "渐变情绪",
+          "values": [
+            "dusk",
+            "midnight",
+            "dawn"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "文本对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 4 个元素 x 相差 808.5px"
+        }
+      ]
+    },
+    "theme10_page002": {
+      "label": "渐变色场分栏",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "色场情绪",
+          "values": [
+            "dusk",
+            "dawn",
+            "mono"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "fieldSide",
+          "publicKey": "fieldSide",
+          "label": "色场位置",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": false,
+          "reason": "取值 \"left\"：第 2 个元素 宽 相差 153.6px"
+        }
+      ]
+    },
+    "theme10_page003": {
+      "label": "满版渐变大字",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "渐变情绪",
+          "values": [
+            "dusk",
+            "dawn",
+            "mono"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page004": {
+      "label": "地平线渐变",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "地平线色",
+          "values": [
+            "dawn",
+            "dusk",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page005": {
+      "label": "封面",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "背景主题",
+          "values": [
+            "dusk",
+            "midnight",
+            "graphite",
+            "dawn",
+            "paper"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "文本对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 5 个元素 x 相差 808.5px"
+        }
+      ]
+    },
+    "theme10_page006": {
+      "label": "章节索引",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "背景主题",
+          "values": [
+            "midnight",
+            "dusk",
+            "graphite",
+            "dawn",
+            "vapor",
+            "paper"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "标题对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：元素数量 29 → 9"
+        }
+      ]
+    },
+    "theme10_page007": {
+      "label": "核心数据",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "area",
+            "bars",
+            "line"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page008": {
+      "label": "风险光谱",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page009": {
+      "label": "策略象限",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page010": {
+      "label": "账本表",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page012": {
+      "label": "构成对比",
+      "status": "renderFailed",
+      "error": "渲染失败（退出码 1）：…mismatch segmentCount=4; bars[0].parts has 5; countBinding mismatch segmentCount=4; bars[1].parts has 5; countBinding mismatch segmentCount=4; bars[2].parts has 5; countBinding mismatch segmentCount=4; bars[3].parts has 5 - slide 1 theme theme10 layout theme10_page012 field props.segmentCount: coun",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme10_page013": {
+      "label": "占比树图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page014": {
+      "label": "份额矩阵",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page015": {
+      "label": "分组柱图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page016": {
+      "label": "核心卫星",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "布局",
+          "values": [
+            "top",
+            "side"
+          ],
+          "safe": false,
+          "reason": "取值 \"top\"：第 2 个元素 y 相差 390.2px"
+        }
+      ]
+    },
+    "theme10_page017": {
+      "label": "方案对照",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page018": {
+      "label": "抉择双栏",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "三年累计回报"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme10_page019": {
+      "label": "能力对照",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page020": {
+      "label": "排名变化",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page021": {
+      "label": "目标进度",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page022": {
+      "label": "目标子弹图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page025": {
+      "label": "数据仪表盘",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "area",
+            "bars",
+            "line"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page026": {
+      "label": "收益归因",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page027": {
+      "label": "净值曲线",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page028": {
+      "label": "堆叠面积",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page029": {
+      "label": "收益分布",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page030": {
+      "label": "复利阶梯",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page031": {
+      "label": "横向时间轴",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "节点排布",
+          "values": [
+            "alternate",
+            "below"
+          ],
+          "safe": false,
+          "reason": "取值 \"below\"：第 4 个元素 y 相差 60.5px"
+        }
+      ]
+    },
+    "theme10_page032": {
+      "label": "排期甘特",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page033": {
+      "label": "运作机制",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page034": {
+      "label": "转化漏斗",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page035": {
+      "label": "闭环循环",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "布局",
+          "values": [
+            "top",
+            "side"
+          ],
+          "safe": false,
+          "reason": "取值 \"side\"：第 2 个元素 y 相差 391.3px"
+        }
+      ]
+    },
+    "theme10_page036": {
+      "label": "职责泳道",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page037": {
+      "label": "投资原则",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page038": {
+      "label": "序号分章",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "背景主题",
+          "values": [
+            "midnight",
+            "dusk",
+            "graphite",
+            "dawn",
+            "vapor",
+            "paper"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "numberSide",
+          "publicKey": "numberSide",
+          "label": "序号位置",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": false,
+          "reason": "取值 \"right\"：第 2 个元素 x 相差 580.2px"
+        }
+      ]
+    },
+    "theme10_page039": {
+      "label": "引言",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "背景主题",
+          "values": [
+            "vapor",
+            "dusk",
+            "midnight",
+            "graphite",
+            "dawn",
+            "paper"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 3 个元素 x 相差 803.5px"
+        }
+      ]
+    },
+    "theme10_page040": {
+      "label": "编排图文",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageSide",
+          "publicKey": "imageSide",
+          "label": "图片位置",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page044": {
+      "label": "持仓小图集",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "trendStyle",
+          "publicKey": "trendStyle",
+          "label": "走势样式",
+          "values": [
+            "area",
+            "line",
+            "bars"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page049": {
+      "label": "影像长卷",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page052": {
+      "label": "宣言章节",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "背景主题",
+          "values": [
+            "dusk",
+            "midnight",
+            "graphite",
+            "dawn",
+            "vapor",
+            "paper"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 6 个元素 x 相差 701.3px"
+        }
+      ]
+    },
+    "theme10_page053": {
+      "label": "声明金句",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "背景主题",
+          "values": [
+            "graphite",
+            "midnight",
+            "dusk",
+            "dawn",
+            "vapor",
+            "paper"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "mode",
+          "publicKey": "mode",
+          "label": "版式模式",
+          "values": [
+            "quote",
+            "figure"
+          ],
+          "safe": false,
+          "reason": "取值 \"figure\"：元素数量 8 → 7"
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 3 个元素 x 相差 803.8px"
+        }
+      ]
+    },
+    "theme10_page054": {
+      "label": "影像集",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "构图方式",
+          "values": [
+            "justified",
+            "grid",
+            "feature"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page055": {
+      "label": "常见问题",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "答疑 COMMON QUESTIONS",
+          "你可能正想问的",
+          "个常见问题"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "Q0"
+      ],
+      "controls": []
+    },
+    "theme10_page056": {
+      "label": "大字指标",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "背景主题",
+          "values": [
+            "dusk",
+            "midnight",
+            "graphite",
+            "dawn",
+            "paper"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page057": {
+      "label": "巨幅数字",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "背景主题",
+          "values": [
+            "dusk",
+            "midnight",
+            "graphite",
+            "dawn",
+            "vapor",
+            "paper"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 2 个元素 x 相差 802.7px"
+        }
+      ]
+    },
+    "theme10_page058": {
+      "label": "风险气泡",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "均值"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme10_page059": {
+      "label": "年度盈亏",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page060": {
+      "label": "区间对比",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page061": {
+      "label": "极坐标花瓣",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "布局",
+          "values": [
+            "top",
+            "side"
+          ],
+          "safe": false,
+          "reason": "取值 \"side\"：第 2 个元素 y 相差 391.3px"
+        }
+      ]
+    },
+    "theme10_page062": {
+      "label": "相关性热力",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "分散度 CORRELATION",
+          "它们彼此独立吗",
+          "全球股票",
+          "科技成长",
+          "投资级债",
+          "另类对冲",
+          "黄金",
+          "现金"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme10_page063": {
+      "label": "因子雷达",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "组合体检 FACTOR PROFILE",
+          "六个维度的均衡",
+          "回报",
+          "抗跌",
+          "分散度",
+          "流动性",
+          "税务效率",
+          "成本",
+          "本组合",
+          "市场基准"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme10_page064": {
+      "label": "区域敞口",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page065": {
+      "label": "行情板",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page066": {
+      "label": "排行榜",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page067": {
+      "label": "资金流向",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page068": {
+      "label": "旅程进度",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "卡片排布",
+          "values": [
+            "alternate",
+            "below"
+          ],
+          "safe": false,
+          "reason": "取值 \"below\"：第 6 个元素 x 相差 21.2px"
+        }
+      ]
+    },
+    "theme10_page069": {
+      "label": "回报日历",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page070": {
+      "label": "图文马赛克",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "railSide",
+          "publicKey": "railSide",
+          "label": "文字栏位置",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page071": {
+      "label": "行动清单",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "checkedMode",
+          "publicKey": "checkedMode",
+          "label": "勾选状态",
+          "values": [
+            "data",
+            "all",
+            "none"
+          ],
+          "safe": false,
+          "reason": "取值 \"all\"：元素数量 34 → 37"
+        }
+      ]
+    },
+    "theme10_page072": {
+      "label": "K线蜡烛",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page073": {
+      "label": "资金桑基",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page074": {
+      "label": "半环量规",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page075": {
+      "label": "条款明细",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page080": {
+      "label": "象形占比",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page081": {
+      "label": "名次走势",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page082": {
+      "label": "财富金字塔",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "side",
+          "publicKey": "side",
+          "label": "标注方向",
+          "values": [
+            "right",
+            "left"
+          ],
+          "safe": false,
+          "reason": "取值 \"left\"：第 4 个元素 x 相差 920.0px"
+        }
+      ]
+    },
+    "theme10_page083": {
+      "label": "同心环",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page086": {
+      "label": "策略交集",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page087": {
+      "label": "权衡天平",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "tilt",
+          "publicKey": "tilt",
+          "label": "天平倾向",
+          "values": [
+            "left",
+            "level",
+            "right"
+          ],
+          "safe": false,
+          "reason": "取值 \"left\"：第 5 个元素 y 相差 65.3px"
+        }
+      ]
+    },
+    "theme10_page088": {
+      "label": "敏感性分析",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "下行情形",
+          "上行情形"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme10_page089": {
+      "label": "主题河流",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page090": {
+      "label": "资产拼花",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page091": {
+      "label": "蜂窝指标",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page093": {
+      "label": "圆形图集",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme10_page094": {
+      "label": "名词释义",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    }
+  },
+  "curation": {
+    "added": 6,
+    "removed": 6,
+    "styleControls": 74,
+    "droppedForContract": []
+  }
+}

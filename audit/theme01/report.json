@@ -1,0 +1,2817 @@
+{
+  "theme": "theme01",
+  "counts": {
+    "total": 84,
+    "audited": 81,
+    "ruleExcluded": 3,
+    "hardcoded": 8,
+    "media": 1,
+    "brandIcon": 0,
+    "autoExcluded": 9,
+    "manualExcluded": 0,
+    "renderFailed": 0,
+    "uncertain": 0,
+    "styleControls": 95,
+    "selectControls": 116
+  },
+  "timings": {
+    "markerMs": 26368,
+    "controlMs": 218677,
+    "totalMs": 245155,
+    "markerPages": 81,
+    "controlPages": 660
+  },
+  "ruleExcluded": [
+    {
+      "layout": "theme01_page020",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 1，不能隐藏为 0"
+    },
+    {
+      "layout": "theme01_page076",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 2，不能隐藏为 0"
+    },
+    {
+      "layout": "theme01_page081",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 1，不能隐藏为 0"
+    }
+  ],
+  "layouts": {
+    "theme01_page001": {
+      "label": "封面 · 编辑式双栏",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page002": {
+      "label": "封面 · 居中极简",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page003": {
+      "label": "封面 · 模块化便当格",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#e0a23a",
+            "#5b8def",
+            "#46b083",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page004": {
+      "label": "封面 · 磨砂玻璃刊头",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page005": {
+      "label": "封面",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page006": {
+      "label": "大数字 · 资本体量",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#e8503a",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "center",
+            "left"
+          ],
+          "safe": false,
+          "reason": "取值 \"left\"：第 2 个元素 x 相差 810.0px"
+        }
+      ]
+    },
+    "theme01_page007": {
+      "label": "关键数字一览",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "columns",
+          "publicKey": "columns",
+          "label": "每行列数",
+          "values": [
+            2,
+            4
+          ],
+          "safe": false,
+          "reason": "取值 4：第 8 个元素 宽 相差 433.0px"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#e8503a",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#7a5ae0",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page008": {
+      "label": "便当速览 · 一图读懂",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page009": {
+      "label": "报告导览 · 目录",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page010": {
+      "label": "横纵分析法",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "交叉"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page011": {
+      "label": "章节 · 市场全景",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page012": {
+      "label": "纵向趋势",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "bar",
+            "line",
+            "area"
+          ],
+          "safe": false,
+          "reason": "取值 \"line\"：元素数量 37 → 29"
+        }
+      ]
+    },
+    "theme01_page013": {
+      "label": "章节 · 横向透视",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page014": {
+      "label": "产业链分层",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "palette",
+          "publicKey": "palette",
+          "label": "分层配色",
+          "values": [
+            [
+              "#5b8def",
+              "#46b083",
+              "#e0a23a"
+            ],
+            [
+              "#7a5ae0",
+              "#5b8def",
+              "#46b083"
+            ],
+            [
+              "#e8503a",
+              "#e0a23a",
+              "#46b083"
+            ],
+            [
+              "#3a3a42",
+              "#6b6b78",
+              "#a0a0ad"
+            ]
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page015": {
+      "label": "算力上游 · 卖铲子",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageLayout",
+          "publicKey": "imageLayout",
+          "label": "图片版式",
+          "values": [
+            "normal",
+            "collage"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "版式",
+          "values": [
+            "split-right",
+            "split-left",
+            "overlay"
+          ],
+          "safe": false,
+          "reason": "取值 \"overlay\"：第 5 个元素 宽 相差 624.0px"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page016": {
+      "label": "赛道分布 · 融资额占比",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "donut",
+            "pie",
+            "bar"
+          ],
+          "safe": false,
+          "reason": "取值 \"pie\"：元素数量 40 → 37"
+        }
+      ]
+    },
+    "theme01_page017": {
+      "label": "赛道资金 · 矩形树图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page018": {
+      "label": "资金流向 · 桑基图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page019": {
+      "label": "头部玩家",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page021": {
+      "label": "表格 · Top 10",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "emphasizeCol",
+          "publicKey": "emphasizeCol",
+          "label": "强调列",
+          "values": [
+            -1,
+            1,
+            2
+          ],
+          "safe": false,
+          "reason": "取值 -1：元素数量 69 → 49"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page022": {
+      "label": "资金集中度 · 漏斗",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page023": {
+      "label": "估值梯队 · 金字塔",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page024": {
+      "label": "章节 · 典型案例",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page025": {
+      "label": "三强横向对比",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "contain",
+            "cover"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page026": {
+      "label": "典型案例",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageLayout",
+          "publicKey": "imageLayout",
+          "label": "图片版式",
+          "values": [
+            "normal",
+            "collage"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page027": {
+      "label": "金句 · CEO 视角",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "荧光色",
+          "values": [
+            "#c9f24d",
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 2 个元素 x 相差 978.0px"
+        }
+      ]
+    },
+    "theme01_page028": {
+      "label": "里程碑时间轴",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#e8503a",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#7a5ae0",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "节点排布",
+          "values": [
+            "zigzag",
+            "below"
+          ],
+          "safe": false,
+          "reason": "取值 \"below\"：第 7 个元素 x 相差 193.2px"
+        }
+      ]
+    },
+    "theme01_page029": {
+      "label": "核心竞争力",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageSide",
+          "publicKey": "imageSide",
+          "label": "图片位置",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageLayout",
+          "publicKey": "imageLayout",
+          "label": "图片版式",
+          "values": [
+            "normal",
+            "collage"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page030": {
+      "label": "前沿赛道 · 具身智能",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundMode",
+          "publicKey": "backgroundMode",
+          "label": "背景替换",
+          "values": [
+            "unicorn",
+            "media"
+          ],
+          "safe": false,
+          "reason": "取值 \"media\"：第 3 个元素 x 相差 736.2px"
+        },
+        {
+          "key": "unicornScene",
+          "publicKey": "dynamicVisual",
+          "label": "动态场景",
+          "values": [
+            "tech",
+            "automations",
+            "moving",
+            "goey"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "plate",
+          "publicKey": "plate",
+          "label": "信息卡位置",
+          "values": [
+            "bottom-left",
+            "bottom-right",
+            "center-left"
+          ],
+          "safe": false,
+          "reason": "取值 \"bottom-right\"：第 6 个元素 x 相差 856.0px"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page031": {
+      "label": "资本四象限",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page032": {
+      "label": "轮次结构",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "barColor",
+          "publicKey": "barColor",
+          "label": "柱状颜色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#7a5ae0",
+            "#e0a23a"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "lineColor",
+          "publicKey": "lineColor",
+          "label": "折线颜色",
+          "values": [
+            "#e8503a",
+            "#e0a23a",
+            "#7a5ae0",
+            "#46b083"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page033": {
+      "label": "表格 · 轮次明细",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "emphasizeCol",
+          "publicKey": "emphasizeCol",
+          "label": "强调列",
+          "values": [
+            -1,
+            1,
+            2
+          ],
+          "safe": false,
+          "reason": "取值 -1：元素数量 48 → 41"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page034": {
+      "label": "地区分布",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page035": {
+      "label": "湾区 · 地理护城河",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageLayout",
+          "publicKey": "imageLayout",
+          "label": "图片版式",
+          "values": [
+            "normal",
+            "collage"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "版式",
+          "values": [
+            "split-right",
+            "split-left",
+            "overlay"
+          ],
+          "safe": false,
+          "reason": "取值 \"overlay\"：第 5 个元素 宽 相差 624.0px"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page036": {
+      "label": "章节 · 风险与展望",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page037": {
+      "label": "大数字 · 估值泡沫",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#e8503a",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page038": {
+      "label": "风险研判",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page039": {
+      "label": "投资展望",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "highlightColumn",
+          "publicKey": "highlightColumn",
+          "label": "重点强调",
+          "values": [
+            "none",
+            "bullish",
+            "cautious"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page040": {
+      "label": "阶段性策略路线图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page041": {
+      "label": "满版图片 · IPO 退出窗口",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundMode",
+          "publicKey": "backgroundMode",
+          "label": "背景替换",
+          "values": [
+            "unicorn",
+            "media"
+          ],
+          "safe": false,
+          "reason": "取值 \"media\"：第 3 个元素 x 相差 736.2px"
+        },
+        {
+          "key": "unicornScene",
+          "publicKey": "dynamicVisual",
+          "label": "动态场景",
+          "values": [
+            "tech",
+            "automations",
+            "moving",
+            "goey"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "plate",
+          "publicKey": "plate",
+          "label": "信息卡位置",
+          "values": [
+            "bottom-left",
+            "bottom-right",
+            "center-left"
+          ],
+          "safe": false,
+          "reason": "取值 \"center-left\"：第 6 个元素 x 相差 856.0px"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page042": {
+      "label": "三个数字 · 资本格局",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "其余"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "controls": []
+    },
+    "theme01_page043": {
+      "label": "满版对比 · 双联画面",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片裁切",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "highlightSide",
+          "publicKey": "highlightSide",
+          "label": "点亮一侧",
+          "values": [
+            "left",
+            "right",
+            "none"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#e8503a",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#7a5ae0",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page044": {
+      "label": "月度节奏",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "heatmap",
+            "bar",
+            "area"
+          ],
+          "safe": false,
+          "reason": "取值 \"bar\"：第 5 个元素 y 相差 96.4px"
+        }
+      ]
+    },
+    "theme01_page045": {
+      "label": "典型案例 · xAI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageLayout",
+          "publicKey": "imageLayout",
+          "label": "图片版式",
+          "values": [
+            "normal",
+            "collage"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page046": {
+      "label": "典型案例 · CoreWeave",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageLayout",
+          "publicKey": "imageLayout",
+          "label": "图片版式",
+          "values": [
+            "normal",
+            "collage"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page047": {
+      "label": "金句 · 一句话总结",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "荧光色",
+          "values": [
+            "#c9f24d",
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 2 个元素 x 相差 978.0px"
+        }
+      ]
+    },
+    "theme01_page048": {
+      "label": "全球版图 · 资金分布",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#e8503a",
+            "#46b083",
+            "#e0a23a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page049": {
+      "label": "活跃投资机构榜",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page050": {
+      "label": "标的评分卡 · 尽调五维",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#e8503a",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#7a5ae0",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page051": {
+      "label": "市销率天梯 · 估值 vs 收入",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "估值 收入"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page052": {
+      "label": "贴纸拼贴 · 前沿掠影",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片",
+          "点击上传"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page053": {
+      "label": "资金热力矩阵",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "合计",
+          "单位 美元"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page054": {
+      "label": "增速排行 · 条形图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page055": {
+      "label": "吸金力排行 · 棒棒糖图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page056": {
+      "label": "资金迁移 · 斜率图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "聚焦色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page057": {
+      "label": "标签化特写 · 前沿掠影",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageSide",
+          "publicKey": "imageSide",
+          "label": "图片位置",
+          "values": [
+            "right",
+            "left"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#c9f24d",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page058": {
+      "label": "年度关键节点 · 纵向时间线",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#e0a23a",
+            "#5b8def",
+            "#46b083",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page059": {
+      "label": "流式面积图 · 构成演变",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page060": {
+      "label": "子弹图 · 目标达成度",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "目标"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page061": {
+      "label": "甘特排期 · IPO 上市窗口",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "M0"
+      ],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#e8503a",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page062": {
+      "label": "满版图片 · 算力新基建",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundMode",
+          "publicKey": "backgroundMode",
+          "label": "背景替换",
+          "values": [
+            "unicorn",
+            "media"
+          ],
+          "safe": false,
+          "reason": "取值 \"media\"：元素数量 26 → 22"
+        },
+        {
+          "key": "unicornScene",
+          "publicKey": "dynamicVisual",
+          "label": "动态场景",
+          "values": [
+            "tech",
+            "automations",
+            "moving",
+            "goey"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片适配",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#e0a23a",
+            "#5b8def",
+            "#46b083",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page063": {
+      "label": "杂志封面 · 算力军备竞赛",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundMode",
+          "publicKey": "backgroundMode",
+          "label": "背景替换",
+          "values": [
+            "unicorn",
+            "media"
+          ],
+          "safe": false,
+          "reason": "取值 \"media\"：元素数量 21 → 20"
+        },
+        {
+          "key": "unicornScene",
+          "publicKey": "dynamicVisual",
+          "label": "动态场景",
+          "values": [
+            "tech",
+            "automations",
+            "moving",
+            "goey"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "荧光色",
+          "values": [
+            "#c9f24d",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page064": {
+      "label": "关键占比 · 柱状图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#c9f24d"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page065": {
+      "label": "三强能力雷达",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "均分"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page066": {
+      "label": "能力对比矩阵",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page067": {
+      "label": "资金瀑布 · 构成",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "分类色",
+          "values": [
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#7a5ae0",
+            "#e8503a"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "totalColor",
+          "publicKey": "totalColor",
+          "label": "合计柱色",
+          "values": [
+            "#2b2b30",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#7a5ae0",
+            "#e8503a"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page068": {
+      "label": "估值跃迁 · 哑铃图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "估值",
+          "估值 美元"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page069": {
+      "label": "年度热词 · 标签墙",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "荧光色",
+          "values": [
+            "#c9f24d",
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page070": {
+      "label": "排位赛 · 座次变化",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page071": {
+      "label": "构成演变 · 百分比堆叠",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page072": {
+      "label": "像形方格图 · 资金去向",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page073": {
+      "label": "专题特写 · AI Agent",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "imageSide",
+          "publicKey": "imageSide",
+          "label": "图片位置",
+          "values": [
+            "right",
+            "left"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageFit",
+          "publicKey": "imageFit",
+          "label": "图片填充",
+          "values": [
+            "cover",
+            "contain"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page074": {
+      "label": "环形仪表 · 关键比率",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page075": {
+      "label": "同比对比 · 分组柱状图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "单位 美元"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page077": {
+      "label": "多空信号 · 双向条形",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme01_page078": {
+      "label": "玫瑰图 · 赛道占比",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "radiusScale",
+          "publicKey": "radiusScale",
+          "label": "半径标度",
+          "values": [
+            "area",
+            "linear"
+          ],
+          "safe": false,
+          "reason": "取值 \"linear\"：第 7 个元素 宽 相差 10.4px"
+        }
+      ]
+    },
+    "theme01_page079": {
+      "label": "甜甜圈 · 资金来源占比",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "donut",
+            "pie"
+          ],
+          "safe": false,
+          "reason": "取值 \"pie\"：元素数量 58 → 55"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page080": {
+      "label": "赛道 × 阶段 · 可变宽堆叠",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "palette",
+          "publicKey": "palette",
+          "label": "阶段配色",
+          "values": [
+            [
+              "#5b8def",
+              "#46b083",
+              "#e0a23a"
+            ],
+            [
+              "#7a5ae0",
+              "#5b8def",
+              "#46b083"
+            ],
+            [
+              "#e8503a",
+              "#e0a23a",
+              "#46b083"
+            ],
+            [
+              "#2b2b30",
+              "#5b8def",
+              "#9aa0ad"
+            ]
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page082": {
+      "label": "大字主张 · 从叙事到兑现",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 2 个元素 x 相差 808.4px"
+        }
+      ]
+    },
+    "theme01_page083": {
+      "label": "结论",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "colorMode",
+          "publicKey": "colorMode",
+          "label": "配色模式",
+          "values": [
+            "series",
+            "mono"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme01_page084": {
+      "label": "附录 · 数据来源",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    }
+  },
+  "curation": {
+    "added": 9,
+    "removed": 9,
+    "styleControls": 95,
+    "droppedForContract": []
+  }
+}

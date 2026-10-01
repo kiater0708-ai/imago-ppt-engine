@@ -1,0 +1,1795 @@
+{
+  "theme": "theme11",
+  "counts": {
+    "total": 87,
+    "audited": 63,
+    "ruleExcluded": 24,
+    "hardcoded": 12,
+    "media": 1,
+    "brandIcon": 0,
+    "autoExcluded": 10,
+    "manualExcluded": 4,
+    "renderFailed": 0,
+    "uncertain": 0,
+    "styleControls": 50,
+    "selectControls": 55
+  },
+  "timings": {
+    "markerMs": 17825,
+    "controlMs": 57812,
+    "totalMs": 75702,
+    "markerPages": 63,
+    "controlPages": 208
+  },
+  "ruleExcluded": [
+    {
+      "layout": "theme11_page002",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page009",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 1，不能隐藏为 0"
+    },
+    {
+      "layout": "theme11_page010",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page014",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page016",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page017",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page036",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page038",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page041",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 2，不能隐藏为 0"
+    },
+    {
+      "layout": "theme11_page046",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page050",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page055",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page058",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page061",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page065",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page068",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 3，不能隐藏为 0"
+    },
+    {
+      "layout": "theme11_page070",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page073",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page076",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 2，不能隐藏为 0"
+    },
+    {
+      "layout": "theme11_page078",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page081",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page084",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page086",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme11_page087",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    }
+  ],
+  "layouts": {
+    "theme11_page001": {
+      "label": "封面 · 海报",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page003": {
+      "label": "封面 · 陈述",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page004": {
+      "label": "封面 · 分栏",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page005": {
+      "label": "封面",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page006": {
+      "label": "序章",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page007": {
+      "label": "纲目",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page008": {
+      "label": "大势",
+      "status": "ok",
+      "manualExclude": "组件写死 IGNIS 燃点",
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page011": {
+      "label": "方法",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page012": {
+      "label": "实证",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page013": {
+      "label": "渠道",
+      "status": "ok",
+      "manualExclude": "品牌字标写死改不掉（P0 gala-deck2 实测）",
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page015": {
+      "label": "漏斗",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page018": {
+      "label": "价值",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page019": {
+      "label": "格局",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page020": {
+      "label": "服务",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page021": {
+      "label": "路线",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page022": {
+      "label": "图辑",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page023": {
+      "label": "流程",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page024": {
+      "label": "诊断",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page025": {
+      "label": "对比",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page026": {
+      "label": "清单",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page027": {
+      "label": "套餐",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page028": {
+      "label": "原则",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page029": {
+      "label": "作品",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page030": {
+      "label": "行动",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page031": {
+      "label": "能力",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page032": {
+      "label": "对照",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page033": {
+      "label": "团队",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "portraitShape",
+          "publicKey": "portraitShape",
+          "label": "头像形状",
+          "values": [
+            "rounded",
+            "circle"
+          ],
+          "safe": false,
+          "reason": "取值 \"circle\"：第 19 个元素 y 相差 35.2px"
+        }
+      ]
+    },
+    "theme11_page034": {
+      "label": "指标",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page035": {
+      "label": "账目",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page037": {
+      "label": "宣言",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 16 个元素 x 相差 721.8px"
+        }
+      ]
+    },
+    "theme11_page039": {
+      "label": "叠加",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page040": {
+      "label": "拆解",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page042": {
+      "label": "信任",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page043": {
+      "label": "异议",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page044": {
+      "label": "章节",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page045": {
+      "label": "数字",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "orientation",
+          "publicKey": "orientation",
+          "label": "排列方向",
+          "values": [
+            "row",
+            "stack"
+          ],
+          "safe": false,
+          "reason": "取值 \"stack\"：第 21 个元素 x 相差 1014.5px"
+        }
+      ]
+    },
+    "theme11_page047": {
+      "label": "留存",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page048": {
+      "label": "优先级",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page049": {
+      "label": "路线",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page051": {
+      "label": "对比",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "IGNIS 燃点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page052": {
+      "label": "证言",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page053": {
+      "label": "飞轮",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page054": {
+      "label": "趋势",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartVariant",
+          "publicKey": "chartVariant",
+          "label": "图表类型",
+          "values": [
+            "area",
+            "lines"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page056": {
+      "label": "数字",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 16 个元素 x 相差 726.8px"
+        }
+      ]
+    },
+    "theme11_page057": {
+      "label": "明细",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page059": {
+      "label": "构成",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page060": {
+      "label": "痛点",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page062": {
+      "label": "层级",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page063": {
+      "label": "现场",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded",
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "门店开业",
+          "首店 当天售罄",
+          "产品特写",
+          "复购率",
+          "团队现场",
+          "上线第"
+        ],
+        "media": [
+          "点击 拖拽上传"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page064": {
+      "label": "排行",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page066": {
+      "label": "跃迁",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page067": {
+      "label": "术语",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page069": {
+      "label": "收束",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 16 个元素 x 相差 729.7px"
+        }
+      ]
+    },
+    "theme11_page071": {
+      "label": "量级",
+      "status": "ok",
+      "manualExclude": "刻度写死，与数值对不上（P0 gala-deck2 实测）",
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page072": {
+      "label": "累计",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page074": {
+      "label": "排期",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page075": {
+      "label": "达成",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page077": {
+      "label": "下一步",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page079": {
+      "label": "构成",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page080": {
+      "label": "评分",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page082": {
+      "label": "前后",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme11_page083": {
+      "label": "金句",
+      "status": "ok",
+      "manualExclude": "元数据与真实契约不符（P0 gala-deck2 实测）",
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme11_page085": {
+      "label": "历程",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "surface",
+          "publicKey": "surface",
+          "label": "背景基调",
+          "values": [
+            "ink",
+            "paper",
+            "ember"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    }
+  },
+  "curation": {
+    "added": 10,
+    "removed": 10,
+    "styleControls": 50,
+    "droppedForContract": []
+  }
+}

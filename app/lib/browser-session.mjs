@@ -308,10 +308,11 @@ function pageBusy(page) {
  * 距上次变化 ≥ rereadMs，就取；否则每 30ms 再读，单页上限 capMs。
  * 上限到了仍在变化就取最后一次读数；一直是空的返回空文本（由调用方判空页）。
  */
-export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_MS, settleMs = TEXT_SETTLE_MS, rereadMs = TEXT_REREAD_MS, indexes = null } = {}) {
+export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_MS, settleMs = TEXT_SETTLE_MS, rereadMs = TEXT_REREAD_MS, reader = null, indexes = null } = {}) {
   void settleMs;
   await prepareAnimationSpeed(page);
-  const read = () => page.evaluate(selector => {
+  // reader：审计脚本用，返回 {text, layout, ...额外字段}；稳定判断只看 text，额外字段随最后一次读数带回
+  const read = reader ? () => reader(page) : () => page.evaluate(selector => {
     const slide = document.querySelector(`${selector}.active`) || document.querySelectorAll(selector)[0];
     return { text: slide.innerText.replace(/\s+/g, ' ').trim(), layout: slide.dataset.vmLayout || '' };
   }, SLIDE_SELECTOR);
@@ -330,7 +331,7 @@ export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_
       current = next;
     }
     onPage?.(index + 1, total);
-    return { index, layout: current.layout, text: current.text, waitedMs: Date.now() - started };
+    return { ...current, index, layout: current.layout, text: current.text, waitedMs: Date.now() - started };
   }, { instant: true, indexes });
 }
 

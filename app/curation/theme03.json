@@ -1,6 +1,822 @@
 {
   "theme": "theme03",
-  "exclude": [],
+  "exclude": [
+    {
+      "layout": "theme03_page021",
+      "reason": "auto:hardcoded「亿美元」"
+    },
+    {
+      "layout": "theme03_page024",
+      "reason": "auto:hardcoded「高亮」"
+    },
+    {
+      "layout": "theme03_page037",
+      "reason": "auto:hardcoded「当下兑现」「确定性」「赔率」"
+    },
+    {
+      "layout": "theme03_page038",
+      "reason": "auto:hardcoded「集中」「节奏」「分层」"
+    },
+    {
+      "layout": "theme03_page045",
+      "reason": "auto:hardcoded「内部 增益」「内部 损害」「外部 增益」"
+    },
+    {
+      "layout": "theme03_page050",
+      "reason": "auto:hardcoded「高增长 高份额」「高增长 低份额」「低增长 高份额」"
+    },
+    {
+      "layout": "theme03_page073",
+      "reason": "auto:hardcoded「信任 渠道」「数据 协同」「资源锁定」"
+    }
+  ],
   "notes": {},
-  "styleControls": {}
+  "styleControls": {
+    "theme03_page001": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page002": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page003": [
+      {
+        "key": "unicornScene",
+        "values": [
+          "tech",
+          "automations",
+          "moving",
+          "goey"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page004": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page005": [
+      {
+        "key": "unicornScene",
+        "values": [
+          "tech",
+          "automations",
+          "moving",
+          "goey"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page006": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page007": [
+      {
+        "key": "diagramStyle1",
+        "values": [
+          "auto",
+          "radial",
+          "burst",
+          "orbit",
+          "mesh",
+          "spiral",
+          "constellation"
+        ]
+      },
+      {
+        "key": "diagramStyle2",
+        "values": [
+          "auto",
+          "radial",
+          "burst",
+          "orbit",
+          "mesh",
+          "spiral",
+          "constellation"
+        ]
+      },
+      {
+        "key": "diagramStyle3",
+        "values": [
+          "auto",
+          "radial",
+          "burst",
+          "orbit",
+          "mesh",
+          "spiral",
+          "constellation"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page008": [
+      {
+        "key": "chartType",
+        "values": [
+          "line",
+          "bar",
+          "area"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page009": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page010": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page011": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page012": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page013": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page014": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page015": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page016": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page017": [
+      {
+        "key": "layout",
+        "values": [
+          "row",
+          "column"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page018": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page019": [
+      {
+        "key": "layout",
+        "values": [
+          "row",
+          "column"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page020": [
+      {
+        "key": "layout",
+        "values": [
+          "row",
+          "column"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page022": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page023": [
+      {
+        "key": "chartType",
+        "values": [
+          "bar",
+          "lollipop"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page025": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page026": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page027": [
+      {
+        "key": "chartType",
+        "values": [
+          "area",
+          "line"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page028": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page029": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page031": [
+      {
+        "key": "chartType",
+        "values": [
+          "bar",
+          "step",
+          "area"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page032": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page033": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page034": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page035": [
+      {
+        "key": "focusSide",
+        "values": [
+          "none",
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page036": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page039": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page040": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page041": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page042": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page043": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page044": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page046": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page047": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page048": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page049": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page051": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page052": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page053": [
+      {
+        "key": "chartType",
+        "values": [
+          "bar",
+          "lollipop"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page054": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page055": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page056": [
+      {
+        "key": "focusSide",
+        "values": [
+          "none",
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page057": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page058": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page059": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page060": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page061": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page062": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page063": [
+      {
+        "key": "layout",
+        "values": [
+          "row",
+          "column"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page064": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page065": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page066": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page067": [
+      {
+        "key": "layout",
+        "values": [
+          "row",
+          "column"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page068": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page069": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page070": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page071": [
+      {
+        "key": "unicornScene",
+        "values": [
+          "tech",
+          "automations",
+          "moving",
+          "goey"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page072": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page074": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page075": [
+      {
+        "key": "layout",
+        "values": [
+          "row",
+          "column"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page076": [
+      {
+        "key": "layout",
+        "values": [
+          "row",
+          "column"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page077": [
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ]
+  }
 }

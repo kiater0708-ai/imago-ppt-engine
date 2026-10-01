@@ -1,6 +1,1070 @@
 {
   "theme": "theme01",
-  "exclude": [],
+  "exclude": [
+    {
+      "layout": "theme01_page010",
+      "reason": "auto:hardcoded「交叉」"
+    },
+    {
+      "layout": "theme01_page042",
+      "reason": "auto:hardcoded「其余」"
+    },
+    {
+      "layout": "theme01_page051",
+      "reason": "auto:hardcoded「估值 收入」"
+    },
+    {
+      "layout": "theme01_page052",
+      "reason": "auto:media「图片」「点击上传」"
+    },
+    {
+      "layout": "theme01_page053",
+      "reason": "auto:hardcoded「合计」「单位 美元」"
+    },
+    {
+      "layout": "theme01_page060",
+      "reason": "auto:hardcoded「目标」"
+    },
+    {
+      "layout": "theme01_page065",
+      "reason": "auto:hardcoded「均分」"
+    },
+    {
+      "layout": "theme01_page068",
+      "reason": "auto:hardcoded「估值」「估值 美元」"
+    },
+    {
+      "layout": "theme01_page075",
+      "reason": "auto:hardcoded「单位 美元」"
+    }
+  ],
   "notes": {},
-  "styleControls": {}
+  "styleControls": {
+    "theme01_page001": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page002": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page003": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#e0a23a",
+          "#5b8def",
+          "#46b083",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page004": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a"
+        ]
+      }
+    ],
+    "theme01_page005": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page006": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#e8503a",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page007": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#e8503a",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#7a5ae0",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page008": [
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page009": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page011": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      }
+    ],
+    "theme01_page013": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      }
+    ],
+    "theme01_page014": [
+      {
+        "key": "palette",
+        "values": [
+          [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a"
+          ],
+          [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083"
+          ],
+          [
+            "#e8503a",
+            "#e0a23a",
+            "#46b083"
+          ],
+          [
+            "#3a3a42",
+            "#6b6b78",
+            "#a0a0ad"
+          ]
+        ]
+      }
+    ],
+    "theme01_page015": [
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "imageLayout",
+        "values": [
+          "normal",
+          "collage"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page018": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page021": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page022": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page023": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page024": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      }
+    ],
+    "theme01_page025": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "contain",
+          "cover"
+        ]
+      }
+    ],
+    "theme01_page026": [
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "imageLayout",
+        "values": [
+          "normal",
+          "collage"
+        ]
+      }
+    ],
+    "theme01_page027": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#c9f24d",
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page028": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#e8503a",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#7a5ae0",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page029": [
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "imageLayout",
+        "values": [
+          "normal",
+          "collage"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a"
+        ]
+      }
+    ],
+    "theme01_page030": [
+      {
+        "key": "unicornScene",
+        "values": [
+          "tech",
+          "automations",
+          "moving",
+          "goey"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page032": [
+      {
+        "key": "barColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#7a5ae0",
+          "#e0a23a"
+        ]
+      },
+      {
+        "key": "lineColor",
+        "values": [
+          "#e8503a",
+          "#e0a23a",
+          "#7a5ae0",
+          "#46b083"
+        ]
+      }
+    ],
+    "theme01_page033": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page035": [
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "imageLayout",
+        "values": [
+          "normal",
+          "collage"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page036": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      }
+    ],
+    "theme01_page037": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#e8503a",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page039": [
+      {
+        "key": "highlightColumn",
+        "values": [
+          "none",
+          "bullish",
+          "cautious"
+        ]
+      }
+    ],
+    "theme01_page040": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page041": [
+      {
+        "key": "unicornScene",
+        "values": [
+          "tech",
+          "automations",
+          "moving",
+          "goey"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page043": [
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "highlightSide",
+        "values": [
+          "left",
+          "right",
+          "none"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#e8503a",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#7a5ae0",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page045": [
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "imageLayout",
+        "values": [
+          "normal",
+          "collage"
+        ]
+      }
+    ],
+    "theme01_page046": [
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "imageLayout",
+        "values": [
+          "normal",
+          "collage"
+        ]
+      }
+    ],
+    "theme01_page047": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#c9f24d",
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page048": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#e8503a",
+          "#46b083",
+          "#e0a23a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page049": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a"
+        ]
+      }
+    ],
+    "theme01_page050": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#e8503a",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#7a5ae0",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page054": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page055": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page056": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a"
+        ]
+      }
+    ],
+    "theme01_page057": [
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#c9f24d",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page058": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#e0a23a",
+          "#5b8def",
+          "#46b083",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page059": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page061": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#e8503a",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page062": [
+      {
+        "key": "unicornScene",
+        "values": [
+          "tech",
+          "automations",
+          "moving",
+          "goey"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#e0a23a",
+          "#5b8def",
+          "#46b083",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page063": [
+      {
+        "key": "unicornScene",
+        "values": [
+          "tech",
+          "automations",
+          "moving",
+          "goey"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#c9f24d",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page064": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#c9f24d"
+        ]
+      }
+    ],
+    "theme01_page066": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page067": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#7a5ae0",
+          "#e8503a"
+        ]
+      },
+      {
+        "key": "totalColor",
+        "values": [
+          "#2b2b30",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#7a5ae0",
+          "#e8503a"
+        ]
+      }
+    ],
+    "theme01_page069": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#c9f24d",
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page070": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page071": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page072": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a"
+        ]
+      }
+    ],
+    "theme01_page073": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "imageFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#46b083",
+          "#5b8def",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page074": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page079": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a"
+        ]
+      }
+    ],
+    "theme01_page080": [
+      {
+        "key": "palette",
+        "values": [
+          [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a"
+          ],
+          [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083"
+          ],
+          [
+            "#e8503a",
+            "#e0a23a",
+            "#46b083"
+          ],
+          [
+            "#2b2b30",
+            "#5b8def",
+            "#9aa0ad"
+          ]
+        ]
+      }
+    ],
+    "theme01_page082": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#7a5ae0",
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a"
+        ]
+      }
+    ],
+    "theme01_page083": [
+      {
+        "key": "colorMode",
+        "values": [
+          "series",
+          "mono"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page084": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#5b8def",
+          "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ]
+  }
 }

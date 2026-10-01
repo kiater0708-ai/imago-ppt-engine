@@ -1,0 +1,2074 @@
+{
+  "theme": "theme08",
+  "counts": {
+    "total": 84,
+    "audited": 82,
+    "ruleExcluded": 2,
+    "hardcoded": 19,
+    "media": 22,
+    "brandIcon": 0,
+    "autoExcluded": 36,
+    "manualExcluded": 1,
+    "renderFailed": 0,
+    "uncertain": 1,
+    "styleControls": 43,
+    "selectControls": 59
+  },
+  "timings": {
+    "markerMs": 25417,
+    "controlMs": 46826,
+    "totalMs": 72318,
+    "markerPages": 82,
+    "controlPages": 144
+  },
+  "ruleExcluded": [
+    {
+      "layout": "theme08_page044",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 1，不能隐藏为 0"
+    },
+    {
+      "layout": "theme08_page077",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 1，不能隐藏为 0"
+    }
+  ],
+  "layouts": {
+    "theme08_page001": {
+      "label": "补充封面-① 智联万物",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page002": {
+      "label": "补充封面-② 深耕教学",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page003": {
+      "label": "补充封面-③ 新机遇新赛道",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page004": {
+      "label": "封面2-③ 链通全国",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page005": {
+      "label": "① 封面 · Cover",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page006": {
+      "label": "② 摘要 · Overview",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "摘要",
+          "重点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page007": {
+      "label": "③ 结构 · Contents",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "重点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page008": {
+      "label": "⑤ 趋势 · Trend",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "融资额",
+          "事件数",
+          "峰值"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page009": {
+      "label": "⑥ 透视 · Cross",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "donut",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 52 → 53"
+        }
+      ]
+    },
+    "theme08_page010": {
+      "label": "⑦ 产业链 · Chain",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page011": {
+      "label": "⑧ 案例 · Cases",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page012": {
+      "label": "⑨ 热力 · Heatmap",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "columnCount",
+          "publicKey": "columnCount",
+          "label": "网格列数",
+          "values": [
+            4,
+            6
+          ],
+          "safe": false,
+          "reason": "取值 4：第 7 个元素 宽 相差 137.5px"
+        }
+      ]
+    },
+    "theme08_page013": {
+      "label": "⑩ 排名 · Ranking",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "榜首"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page014": {
+      "label": "⑪ 象限 · Quadrant",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "看好象限"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page015": {
+      "label": "⑬ 策略 · Strategy",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page016": {
+      "label": "⑭ 金句 · Quote",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": false,
+          "reason": "取值 \"primary\"：元素数量 18 → 19"
+        }
+      ]
+    },
+    "theme08_page017": {
+      "label": "⑮ 章节 · Chapter",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page018": {
+      "label": "⑯ 气泡图 · Deal Map",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page019": {
+      "label": "⑰ 季度聚焦 · Spotlight",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "column",
+            "area",
+            "line"
+          ],
+          "safe": false,
+          "reason": "取值 \"area\"：第 29 个元素 x 相差 38.0px"
+        }
+      ]
+    },
+    "theme08_page020": {
+      "label": "⑱ 指标对比 · Delta",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page021": {
+      "label": "⑲ 峰值聚焦 · Peak",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page022": {
+      "label": "⑳ 回落时间轴 · Pullback",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page023": {
+      "label": "㉑ 峰谷对比 · Peak/Trough",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "单位",
+          "均值"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page024": {
+      "label": "㉒ 贡献瀑布 · Waterfall",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page025": {
+      "label": "㉓ 区间结构 · Size Split",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "mirror",
+            "grouped"
+          ],
+          "safe": false,
+          "reason": "取值 \"grouped\"：元素数量 53 → 51"
+        }
+      ]
+    },
+    "theme08_page026": {
+      "label": "㉔ 大数字 · Big Number",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page027": {
+      "label": "㉕ 累计曲线 · Capital Curve",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "累计资金占比"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page028": {
+      "label": "㉖ 章节 · Chapter",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page029": {
+      "label": "㉗ 雷达图 · Radar",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page030": {
+      "label": "㉘ 赛道卡 · Segment",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page031": {
+      "label": "㉙ 知识入口 · Portal",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page032": {
+      "label": "㉚ 场景矩阵 · Matrix",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "高客单价"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page033": {
+      "label": "㉛ 分支三联 · Triptych",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page034": {
+      "label": "㉜ 场景占比 · Scene Split",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page035": {
+      "label": "㉝ 金句 · Statement",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": false,
+          "reason": "取值 \"ink\"：元素数量 19 → 18"
+        }
+      ]
+    },
+    "theme08_page036": {
+      "label": "㉞ 数据底座 · Pipeline",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "column",
+            "area",
+            "line"
+          ],
+          "safe": false,
+          "reason": "取值 \"column\"：第 33 个元素 x 相差 51.9px"
+        }
+      ]
+    },
+    "theme08_page037": {
+      "label": "㉟ 架构 · Architecture",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "L5",
+        "L4",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "controls": []
+    },
+    "theme08_page038": {
+      "label": "㊱ 供应链 · Supply",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page039": {
+      "label": "㊲ 算力网格 · Compute",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "grid",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 144 → 70"
+        }
+      ]
+    },
+    "theme08_page040": {
+      "label": "㊳ 芯片层级 · Chip Tiers",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "长期确定性"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page041": {
+      "label": "㊴ 具身智能 · Embodied",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page042": {
+      "label": "㊶ 安全防线 · Safety",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "pie",
+            "gate"
+          ],
+          "safe": false,
+          "reason": "取值 \"gate\"：元素数量 73 → 76"
+        }
+      ]
+    },
+    "theme08_page043": {
+      "label": "㊷ 内容生成 · Generative",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page045": {
+      "label": "㊹ 降本场景 · Support",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page046": {
+      "label": "㊻ 流程嵌入 · Low Code",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "LAYER"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page047": {
+      "label": "㊼ 社区变现 · Open Source",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded",
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "COMMUNITY ENTERPRISE",
+          "仅展示社区数据"
+        ],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page048": {
+      "label": "㊽ 安全对齐 · Alignment",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page049": {
+      "label": "㊾ 章节 · Chapter",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page050": {
+      "label": "㊿ 早期轮 · Early Stage",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "新主题"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page051": {
+      "label": "(52) 资本来源 · Investor Mix",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "donut",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 45 → 44"
+        }
+      ]
+    },
+    "theme08_page052": {
+      "label": "(53) 资源绑定 · Resource Map",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片可选"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page053": {
+      "label": "(54) 算力闭环 · Closed Loop",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "donut",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 50 → 49"
+        }
+      ]
+    },
+    "theme08_page054": {
+      "label": "(55) GPU 生态 · Ecosystem",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page055": {
+      "label": "(56) 大数字 · Geo Anchor",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page056": {
+      "label": "(57) 地理卡 · New York",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded",
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "重点"
+        ],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page057": {
+      "label": "(58) 地理卡 · Seattle",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page058": {
+      "label": "(59) 地理卡 · Boston",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page059": {
+      "label": "(60) 点阵图 · Other Regions",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "重点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page060": {
+      "label": "(61) 金句 · Resources",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": false,
+          "reason": "取值 \"primary\"：元素数量 22 → 23"
+        }
+      ]
+    },
+    "theme08_page061": {
+      "label": "(64) 案例卡 · xAI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "核心资产"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page062": {
+      "label": "(65) 案例卡 · CoreWeave",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page063": {
+      "label": "(66) 案例表 · Scale AI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page064": {
+      "label": "(67) 案例卡 · Perplexity",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page065": {
+      "label": "(68) 案例卡 · Databricks",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "延展"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "NRR"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page066": {
+      "label": "(69) 案例卡 · Glean",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page067": {
+      "label": "(71) 案例卡 · SSI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded",
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "抽象技术意象"
+        ],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page068": {
+      "label": "(73) 收入兑现 · Revenue",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "funnel",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：第 8 个元素 宽 相差 417.8px"
+        }
+      ]
+    },
+    "theme08_page069": {
+      "label": "(74) 合规台账 · Regulation",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page070": {
+      "label": "(76) 壁垒压缩 · Squeeze",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "pincer",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 69 → 72"
+        }
+      ]
+    },
+    "theme08_page071": {
+      "label": "(77) 策略卡 · Budget",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page072": {
+      "label": "(78) 嵌入流程 · Workflow",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "无图片 mediaCount"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page073": {
+      "label": "(79) 时间轴 · Repricing",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page074": {
+      "label": "(80) 金句 · Verdict",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasisStyle",
+          "publicKey": "emphasisStyle",
+          "label": "强调样式",
+          "values": [
+            "band",
+            "underline"
+          ],
+          "safe": false,
+          "reason": "取值 \"underline\"：第 13 个元素 x 相差 2.0px"
+        }
+      ]
+    },
+    "theme08_page075": {
+      "label": "(81) 展望主线 · Mainlines",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded",
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "主线"
+        ],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page076": {
+      "label": "(82) 迁移图 · Migration",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "slope",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 62 → 57"
+        }
+      ]
+    },
+    "theme08_page078": {
+      "label": "(84) 大数字 · Gauge",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "numberStyle",
+          "publicKey": "numberStyle",
+          "label": "数字样式",
+          "values": [
+            "solid",
+            "outline"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page079": {
+      "label": "(85) 跨页 · Hero Split",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page080": {
+      "label": "(86) 哑铃图 · Range",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "跨度"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page081": {
+      "label": "(87) 路线图 · Roadmap",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "关键节点"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page082": {
+      "label": "(88) 照片墙 · Photo Wall",
+      "status": "ok",
+      "manualExclude": "照片墙，页面显示「// 图片数量 = 0」占位文字",
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "图片数量"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme08_page083": {
+      "label": "(90) 记分卡 · Scorecard",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme08_page084": {
+      "label": "(91) 金句 · Two-Field",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted",
+            "ink"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    }
+  },
+  "curation": {
+    "added": 36,
+    "removed": 36,
+    "styleControls": 43,
+    "droppedForContract": []
+  }
+}

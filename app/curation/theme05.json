@@ -1,6 +1,1499 @@
 {
   "theme": "theme05",
-  "exclude": [],
+  "exclude": [
+    {
+      "layout": "theme05_page001",
+      "reason": "auto:hardcoded「项指标」"
+    },
+    {
+      "layout": "theme05_page003",
+      "reason": "auto:hardcoded「SUPPLY NET」「打通物流脉络」「构筑产业护城河」"
+    },
+    {
+      "layout": "theme05_page004",
+      "reason": "auto:hardcoded「PRESS MENU TO BEGIN SERVE WITH」"
+    },
+    {
+      "layout": "theme05_page010",
+      "reason": "auto:hardcoded「通用大模型」"
+    },
+    {
+      "layout": "theme05_page011",
+      "reason": "auto:hardcoded「重点」"
+    },
+    {
+      "layout": "theme05_page012",
+      "reason": "auto:hardcoded「重点」"
+    },
+    {
+      "layout": "theme05_page015",
+      "reason": "auto:hardcoded「重点」「高热度 高兑现」「明星兑现」"
+    },
+    {
+      "layout": "theme05_page016",
+      "reason": "auto:hardcoded「风险传导链」「重点」「风险」"
+    },
+    {
+      "layout": "theme05_page017",
+      "reason": "auto:hardcoded「PHASE TIMELINE」"
+    },
+    {
+      "layout": "theme05_page020",
+      "reason": "auto:hardcoded「金额区间 笔数」「合计」"
+    },
+    {
+      "layout": "theme05_page023",
+      "reason": "auto:hardcoded「峰值」"
+    },
+    {
+      "layout": "theme05_page024",
+      "reason": "auto:hardcoded「基准 Q1」"
+    },
+    {
+      "layout": "theme05_page025",
+      "reason": "auto:hardcoded「月度均值」「均值」"
+    },
+    {
+      "layout": "theme05_page026",
+      "reason": "auto:hardcoded「赛道贡献明细」"
+    },
+    {
+      "layout": "theme05_page027",
+      "reason": "auto:hardcoded「分布」「合计」"
+    },
+    {
+      "layout": "theme05_page029",
+      "reason": "auto:hardcoded「头部集中度」"
+    },
+    {
+      "layout": "theme05_page036",
+      "reason": "auto:hardcoded「场景占比」"
+    },
+    {
+      "layout": "theme05_page037",
+      "reason": "auto:hardcoded「研发效率」「Developer Productivity」"
+    },
+    {
+      "layout": "theme05_page041",
+      "reason": "auto:hardcoded「占用 单元」「闲置 单元」"
+    },
+    {
+      "layout": "theme05_page045",
+      "reason": "auto:hardcoded「外层 通用防护」「内层 核心合规」"
+    },
+    {
+      "layout": "theme05_page048",
+      "reason": "auto:hardcoded「基准 pt」"
+    },
+    {
+      "layout": "theme05_page060",
+      "reason": "auto:hardcoded「占比构成」「SHARE OF TOTAL」"
+    },
+    {
+      "layout": "theme05_page065",
+      "reason": "auto:hardcoded「AI 竞争首先是资源组织能力竞争」「EXPANDED SLIDE P6」"
+    },
+    {
+      "layout": "theme05_page072",
+      "reason": "auto:hardcoded「AI 延展」"
+    },
+    {
+      "layout": "theme05_page077",
+      "reason": "auto:hardcoded「较上一阶段流失」"
+    },
+    {
+      "layout": "theme05_page078",
+      "reason": "auto:hardcoded「判断」"
+    },
+    {
+      "layout": "theme05_page080",
+      "reason": "auto:hardcoded「残余」「RESIDUAL MOAT」"
+    },
+    {
+      "layout": "theme05_page082",
+      "reason": "auto:hardcoded「宿主刚性流程 HOST PROCESS」"
+    },
+    {
+      "layout": "theme05_page088",
+      "reason": "auto:media「SET 图片槽数量 拖入影像」"
+    },
+    {
+      "layout": "theme05_page091",
+      "reason": "auto:hardcoded「TOP 公司」「拿走全年大额融资的六成以上」「其余 公司」"
+    },
+    {
+      "layout": "theme05_page092",
+      "reason": "auto:hardcoded「资本不再为故事付费 AI 公司必须 自己配得上这个价格」"
+    }
+  ],
   "notes": {},
-  "styleControls": {}
+  "styleControls": {
+    "theme05_page005": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "sidePanelTheme",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme05_page006": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page008": [
+      {
+        "key": "panelColor",
+        "values": [
+          "#2c44a0",
+          "#7a3c90",
+          "#3c9a52",
+          "#d8402e",
+          "#1a1814"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page009": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page013": [
+      {
+        "key": "colorScale",
+        "values": [
+          "warm",
+          "cool",
+          "mono"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page014": [
+      {
+        "key": "colorMode",
+        "values": [
+          "category",
+          "accent",
+          "mono"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page018": [
+      {
+        "key": "theme",
+        "values": [
+          "paper",
+          "dark"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page019": [
+      {
+        "key": "theme",
+        "values": [
+          "dark",
+          "paper",
+          "color"
+        ]
+      },
+      {
+        "key": "bgColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page021": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page022": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page028": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page030": [
+      {
+        "key": "theme",
+        "values": [
+          "dark",
+          "paper",
+          "color"
+        ]
+      },
+      {
+        "key": "bgColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page031": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page032": [
+      {
+        "key": "cardTheme",
+        "values": [
+          "color",
+          "dark",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page033": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "color",
+          "dark",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page034": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page035": [
+      {
+        "key": "colorMode",
+        "values": [
+          "category",
+          "accent",
+          "mono"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "color",
+          "dark",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page038": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page039": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "color",
+          "dark",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page040": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "colorMode",
+        "values": [
+          "category",
+          "accent",
+          "mono"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page042": [
+      {
+        "key": "colorMode",
+        "values": [
+          "category",
+          "accent",
+          "mono"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page043": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "color",
+          "dark",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page044": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "color",
+          "dark",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page046": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page047": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page049": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page050": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page051": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "emphasize",
+        "values": [
+          "source",
+          "dest"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page052": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page053": [
+      {
+        "key": "theme",
+        "values": [
+          "dark",
+          "paper",
+          "color"
+        ]
+      },
+      {
+        "key": "bgColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page054": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page055": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page056": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page057": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page058": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page059": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page061": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "paper",
+          "dark",
+          "color"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page062": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page063": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page064": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page066": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "color",
+          "dark",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page067": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "dark",
+          "color",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page068": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "color",
+          "dark",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page069": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "dark",
+          "color",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page070": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page071": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "color",
+          "dark",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page073": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "dark",
+          "color",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page074": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page075": [
+      {
+        "key": "imageSide",
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      {
+        "key": "cardTheme",
+        "values": [
+          "dark",
+          "color",
+          "paper"
+        ]
+      },
+      {
+        "key": "curveStyle",
+        "values": [
+          "dashed",
+          "solid"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page076": [
+      {
+        "key": "theme",
+        "values": [
+          "dark",
+          "paper",
+          "color"
+        ]
+      },
+      {
+        "key": "bgColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page079": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page081": [
+      {
+        "key": "panelTheme",
+        "values": [
+          "dark",
+          "color",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page083": [
+      {
+        "key": "panelTheme",
+        "values": [
+          "dark",
+          "color",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page084": [
+      {
+        "key": "theme",
+        "values": [
+          "paper",
+          "dark",
+          "color"
+        ]
+      },
+      {
+        "key": "bgColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page085": [
+      {
+        "key": "colorMode",
+        "values": [
+          "change",
+          "category",
+          "mono"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page086": [
+      {
+        "key": "colorScale",
+        "values": [
+          "heat",
+          "accent",
+          "mono"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page087": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page089": [
+      {
+        "key": "unicornScene",
+        "values": [
+          "tech",
+          "automations",
+          "moving",
+          "goey"
+        ]
+      },
+      {
+        "key": "textColor",
+        "values": [
+          "white",
+          "black"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page090": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page093": [
+      {
+        "key": "panelTheme",
+        "values": [
+          "dark",
+          "color",
+          "paper"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page094": [
+      {
+        "key": "theme",
+        "values": [
+          "dark",
+          "paper",
+          "color"
+        ]
+      },
+      {
+        "key": "bgColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ]
+  }
 }

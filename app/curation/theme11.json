@@ -6,8 +6,48 @@
       "reason": "组件写死 IGNIS 燃点"
     },
     {
+      "layout": "theme11_page011",
+      "reason": "auto:hardcoded「IGNIS 燃点」"
+    },
+    {
+      "layout": "theme11_page012",
+      "reason": "auto:hardcoded「IGNIS 燃点」"
+    },
+    {
       "layout": "theme11_page013",
       "reason": "品牌字标写死改不掉（P0 gala-deck2 实测）"
+    },
+    {
+      "layout": "theme11_page015",
+      "reason": "auto:hardcoded「IGNIS 燃点」"
+    },
+    {
+      "layout": "theme11_page026",
+      "reason": "auto:hardcoded「IGNIS 燃点」"
+    },
+    {
+      "layout": "theme11_page029",
+      "reason": "auto:hardcoded「IGNIS 燃点」"
+    },
+    {
+      "layout": "theme11_page032",
+      "reason": "auto:hardcoded「IGNIS 燃点」"
+    },
+    {
+      "layout": "theme11_page035",
+      "reason": "auto:hardcoded「IGNIS 燃点」"
+    },
+    {
+      "layout": "theme11_page043",
+      "reason": "auto:hardcoded「IGNIS 燃点」"
+    },
+    {
+      "layout": "theme11_page051",
+      "reason": "auto:hardcoded「IGNIS 燃点」"
+    },
+    {
+      "layout": "theme11_page063",
+      "reason": "auto:media「点击 拖拽上传」；hardcoded「门店开业」「首店 当天售罄」「产品特写」"
     },
     {
       "layout": "theme11_page071",
@@ -22,5 +62,503 @@
     "theme11_page040": "瀑布图：steps 第 1 项是起点（基线），其余每项是在前一项基础上的增量，最后一根总计柱由组件自动求和（起点+全部增量），不要自己写总计项。最多 4 项（含起点）；数据点多于可用项时，合并相邻年份/项目，使 起点 + 各增量之和 = 最终总数。",
     "theme11_page059": "占比方块图：data 各项是并列类别，v 按占比画面积，合计约 100；不要把「合计/总计」当成一项。"
   },
-  "styleControls": {}
+  "styleControls": {
+    "theme11_page001": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page003": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page004": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page005": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page006": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page007": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page018": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page019": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page020": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page021": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page022": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page023": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page024": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page025": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page027": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page028": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page030": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page031": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page033": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page034": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page037": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page039": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page040": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page042": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page044": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page045": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page047": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page048": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page049": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page052": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page053": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page054": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      },
+      {
+        "key": "chartVariant",
+        "values": [
+          "area",
+          "lines"
+        ]
+      }
+    ],
+    "theme11_page056": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page057": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page059": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page060": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page062": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page064": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page066": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page067": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page069": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page072": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page074": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page075": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page077": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page079": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page080": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page082": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ],
+    "theme11_page085": [
+      {
+        "key": "surface",
+        "values": [
+          "ink",
+          "paper",
+          "ember"
+        ]
+      }
+    ]
+  }
 }

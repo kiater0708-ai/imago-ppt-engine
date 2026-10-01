@@ -1,6 +1,954 @@
 {
   "theme": "theme12",
-  "exclude": [],
+  "exclude": [
+    {
+      "layout": "theme12_page036",
+      "reason": "auto:hardcoded「LANES QUARTERS」"
+    },
+    {
+      "layout": "theme12_page047",
+      "reason": "auto:hardcoded「收入 到手」"
+    },
+    {
+      "layout": "theme12_page060",
+      "reason": "auto:hardcoded「家对照」"
+    }
+  ],
   "notes": {},
-  "styleControls": {}
+  "styleControls": {
+    "theme12_page001": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#d61fb5",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page002": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#d61fb5",
+          "#f15a29",
+          "#3bb6ec",
+          "#baf04f"
+        ]
+      }
+    ],
+    "theme12_page004": [
+      {
+        "key": "theme",
+        "values": [
+          "accent",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#5a138e",
+          "#f15a29",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page005": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      },
+      {
+        "key": "mediaFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      }
+    ],
+    "theme12_page006": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page007": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page008": [
+      {
+        "key": "theme",
+        "values": [
+          "accent",
+          "dark",
+          "light"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page009": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page010": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page011": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page012": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page013": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#5a138e",
+          "#f15a29",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page019": [
+      {
+        "key": "mediaFit",
+        "values": [
+          "cover",
+          "contain"
+        ]
+      },
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page032": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page033": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#5a138e",
+          "#f15a29",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page034": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#3bb6ec",
+          "#f15a29",
+          "#5a138e",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page035": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page037": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#1f6b2a",
+          "#5a138e",
+          "#3bb6ec"
+        ]
+      }
+    ],
+    "theme12_page038": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page039": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page040": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page041": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page042": [
+      {
+        "key": "theme",
+        "values": [
+          "dark",
+          "color"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page043": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page044": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page045": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#1f6b2a",
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec"
+        ]
+      }
+    ],
+    "theme12_page046": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#1f6b2a",
+          "#f15a29",
+          "#3bb6ec",
+          "#5a138e"
+        ]
+      }
+    ],
+    "theme12_page048": [
+      {
+        "key": "chartType",
+        "values": [
+          "area",
+          "line",
+          "bars"
+        ]
+      },
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page049": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page050": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page051": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page052": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page053": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#5a138e",
+          "#f15a29",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page054": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page055": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page056": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page057": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#1f6b2a",
+          "#f15a29",
+          "#3bb6ec",
+          "#5a138e"
+        ]
+      }
+    ],
+    "theme12_page058": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page059": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#5a138e",
+          "#f15a29",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page062": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#3bb6ec",
+          "#f15a29",
+          "#5a138e",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page063": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page064": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page074": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#5a138e",
+          "#d61fb5",
+          "#f15a29",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page076": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page078": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#c44ee0",
+          "#fbb24d",
+          "#74d2f0",
+          "#bcee54"
+        ]
+      }
+    ],
+    "theme12_page079": [
+      {
+        "key": "accent",
+        "values": [
+          "#5a138e",
+          "#f15a29",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page080": [
+      {
+        "key": "theme",
+        "values": [
+          "dark",
+          "accent"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page081": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page082": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page085": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#5a138e",
+          "#f15a29",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
+    "theme12_page086": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#f15a29",
+          "#5a138e",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ]
+  }
 }

@@ -1,6 +1,990 @@
 {
   "theme": "theme02",
-  "exclude": [],
+  "exclude": [
+    {
+      "layout": "theme02_page004",
+      "reason": "auto:media「上传主视觉 需切到 上传 显示」"
+    },
+    {
+      "layout": "theme02_page011",
+      "reason": "auto:hardcoded「占比」"
+    },
+    {
+      "layout": "theme02_page019",
+      "reason": "auto:hardcoded「带宽 融资额 全年合计」「汇入 占全年」"
+    },
+    {
+      "layout": "theme02_page026",
+      "reason": "auto:media「上传主图 需切到 上传 显示」"
+    },
+    {
+      "layout": "theme02_page029",
+      "reason": "auto:media「纯标题版式 图片数量为」"
+    },
+    {
+      "layout": "theme02_page031",
+      "reason": "auto:hardcoded「结论」"
+    },
+    {
+      "layout": "theme02_page033",
+      "reason": "auto:hardcoded「占全部」"
+    },
+    {
+      "layout": "theme02_page037",
+      "reason": "auto:hardcoded「留存」"
+    },
+    {
+      "layout": "theme02_page038",
+      "reason": "auto:hardcoded「估值 ARR 十亿美元 营收倍数」"
+    },
+    {
+      "layout": "theme02_page039",
+      "reason": "auto:hardcoded「贡献」"
+    },
+    {
+      "layout": "theme02_page041",
+      "reason": "auto:hardcoded「目标」"
+    },
+    {
+      "layout": "theme02_page055",
+      "reason": "auto:hardcoded「横向看集中」「纵向看节奏」「结构看分层」"
+    },
+    {
+      "layout": "theme02_page060",
+      "reason": "auto:hardcoded「前三家合计」"
+    },
+    {
+      "layout": "theme02_page062",
+      "reason": "auto:hardcoded「面积 吸纳资金 全年合计」"
+    },
+    {
+      "layout": "theme02_page064",
+      "reason": "auto:hardcoded「金额份额 放大」"
+    },
+    {
+      "layout": "theme02_page069",
+      "reason": "auto:hardcoded「全年上升」"
+    },
+    {
+      "layout": "theme02_page070",
+      "reason": "auto:media「纯标题版式 图片数量为」"
+    }
+  ],
   "notes": {},
-  "styleControls": {}
+  "styleControls": {
+    "theme02_page001": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page002": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page003": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page005": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page006": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page007": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page008": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page009": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page010": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page012": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page013": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "layout",
+        "values": [
+          "split",
+          "full"
+        ]
+      }
+    ],
+    "theme02_page014": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page015": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page016": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page017": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page018": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page020": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page021": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page022": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "emphasize",
+        "values": [
+          "to",
+          "from",
+          "both"
+        ]
+      }
+    ],
+    "theme02_page023": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page024": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      }
+    ],
+    "theme02_page025": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "overlay",
+        "values": [
+          "corner",
+          "bar",
+          "none"
+        ]
+      }
+    ],
+    "theme02_page032": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page034": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page035": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page036": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page040": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page042": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      }
+    ],
+    "theme02_page044": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page045": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page046": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page047": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page048": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page049": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page050": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page051": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "focusSide",
+        "values": [
+          "none",
+          "left",
+          "right"
+        ]
+      }
+    ],
+    "theme02_page052": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      }
+    ],
+    "theme02_page053": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page054": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "sortBy",
+        "values": [
+          "none",
+          "to",
+          "delta"
+        ]
+      }
+    ],
+    "theme02_page056": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page057": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page058": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "faceTexture",
+        "values": [
+          "gloss",
+          "duotone",
+          "hatched"
+        ]
+      }
+    ],
+    "theme02_page059": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      }
+    ],
+    "theme02_page061": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      },
+      {
+        "key": "scaleMode",
+        "values": [
+          "radius",
+          "area"
+        ]
+      }
+    ],
+    "theme02_page063": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page065": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page066": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page067": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page071": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page072": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page073": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page074": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ]
+  }
 }

@@ -1,0 +1,2658 @@
+{
+  "theme": "theme02",
+  "counts": {
+    "total": 74,
+    "audited": 70,
+    "ruleExcluded": 4,
+    "hardcoded": 13,
+    "media": 4,
+    "brandIcon": 0,
+    "autoExcluded": 17,
+    "manualExcluded": 0,
+    "renderFailed": 1,
+    "uncertain": 0,
+    "styleControls": 115,
+    "selectControls": 135
+  },
+  "timings": {
+    "markerMs": 22860,
+    "controlMs": 80228,
+    "totalMs": 103145,
+    "markerPages": 70,
+    "controlPages": 292
+  },
+  "ruleExcluded": [
+    {
+      "layout": "theme02_page027",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme02_page028",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme02_page030",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    },
+    {
+      "layout": "theme02_page043",
+      "category": "media",
+      "reason": "媒体槽 images 留空会显示占位框"
+    }
+  ],
+  "layouts": {
+    "theme02_page001": {
+      "label": "封面 · Cover",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "版式",
+          "values": [
+            "split",
+            "centered"
+          ],
+          "safe": false,
+          "reason": "取值 \"centered\"：第 2 个元素 x 相差 797.0px"
+        }
+      ]
+    },
+    "theme02_page002": {
+      "label": "封面 A · 居中聚光",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page003": {
+      "label": "封面 B · 大数主视觉",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "statSide",
+          "publicKey": "statSide",
+          "label": "巨数侧别",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": false,
+          "reason": "取值 \"left\"：第 2 个元素 y 相差 63.7px"
+        }
+      ]
+    },
+    "theme02_page004": {
+      "label": "封面 C · 满幅图海报",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "上传主视觉 需切到 上传 显示"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page005": {
+      "label": "封面 D · 模块网格",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page006": {
+      "label": "研究方法 · Method",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page007": {
+      "label": "报告目录 · Agenda",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page008": {
+      "label": "市场全景 · Trend",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "bar",
+            "line",
+            "area"
+          ],
+          "safe": false,
+          "reason": "取值 \"bar\"：第 11 个元素 y 相差 11.7px"
+        }
+      ]
+    },
+    "theme02_page009": {
+      "label": "月度热力 · Heatmap",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page010": {
+      "label": "行业占比 · Share",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "donut",
+            "pie",
+            "bar"
+          ],
+          "safe": false,
+          "reason": "取值 \"pie\"：元素数量 36 → 34"
+        }
+      ]
+    },
+    "theme02_page011": {
+      "label": "融资榜单 · Leaderboard",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "占比"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page012": {
+      "label": "时间轴 · Timeline",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "orientation",
+          "publicKey": "orientation",
+          "label": "轴向",
+          "values": [
+            "horizontal",
+            "vertical"
+          ],
+          "safe": false,
+          "reason": "取值 \"vertical\"：第 6 个元素 x 相差 156.4px"
+        }
+      ]
+    },
+    "theme02_page013": {
+      "label": "案例图景 · Showcase",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "版式",
+          "values": [
+            "split",
+            "full"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page014": {
+      "label": "章节页 · Section",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 2 个元素 x 相差 357.3px"
+        }
+      ]
+    },
+    "theme02_page015": {
+      "label": "四象限 · Matrix",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page016": {
+      "label": "能力雷达 · Radar",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page017": {
+      "label": "评级矩阵 · Rating",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page018": {
+      "label": "产业链分层 · Chain",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page019": {
+      "label": "资金流向 · Sankey",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "带宽 融资额 全年合计",
+          "汇入 占全年"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page020": {
+      "label": "关键数字 · Metrics",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "版式",
+          "values": [
+            "row",
+            "feature"
+          ],
+          "safe": false,
+          "reason": "取值 \"feature\"：第 6 个元素 宽 相差 531.6px"
+        }
+      ]
+    },
+    "theme02_page021": {
+      "label": "巨型数字 · Big Number",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "版式",
+          "values": [
+            "split",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：元素数量 20 → 18"
+        }
+      ]
+    },
+    "theme02_page022": {
+      "label": "今昔对照 · Delta",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasize",
+          "publicKey": "emphasize",
+          "label": "强调侧",
+          "values": [
+            "to",
+            "from",
+            "both"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page023": {
+      "label": "数据看板 · Bento",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "版式",
+          "values": [
+            "hero-left",
+            "hero-right"
+          ],
+          "safe": false,
+          "reason": "取值 \"hero-right\"：第 6 个元素 宽 相差 495.3px"
+        },
+        {
+          "key": "heroExtra",
+          "publicKey": "heroExtra",
+          "label": "主单元底部",
+          "values": [
+            "tags",
+            "spark",
+            "none"
+          ],
+          "safe": false,
+          "reason": "取值 \"spark\"：元素数量 32 → 34"
+        }
+      ]
+    },
+    "theme02_page024": {
+      "label": "案例聚焦 · Spotlight",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageSide",
+          "publicKey": "imageSide",
+          "label": "图片位置",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page025": {
+      "label": "沉浸大图 · Feature",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "overlay",
+          "publicKey": "overlay",
+          "label": "标题蒙层",
+          "values": [
+            "corner",
+            "bar",
+            "none"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page026": {
+      "label": "主题海报 · Poster",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "上传主图 需切到 上传 显示"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page029": {
+      "label": "案例图集 · Gallery",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "纯标题版式 图片数量为"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page031": {
+      "label": "双图对比 · Compare",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "结论"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "VS"
+      ],
+      "controls": []
+    },
+    "theme02_page032": {
+      "label": "轮次结构 · Rounds",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page033": {
+      "label": "笔数分布 · Pictogram",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "占全部"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page034": {
+      "label": "特性对照 · Compare Table",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page035": {
+      "label": "地区分布 · Region",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page036": {
+      "label": "市场结构 · Marimekko",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page037": {
+      "label": "资本漏斗 · Funnel",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "留存"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page038": {
+      "label": "估值散点 · Scatter",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "估值 ARR 十亿美元 营收倍数"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page039": {
+      "label": "资本桥 · Waterfall",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "贡献"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page040": {
+      "label": "达成率 · Gauge",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "版式",
+          "values": [
+            "ring",
+            "gauges"
+          ],
+          "safe": false,
+          "reason": "取值 \"gauges\"：元素数量 34 → 27"
+        }
+      ]
+    },
+    "theme02_page041": {
+      "label": "达成度 · Progress",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "目标"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page042": {
+      "label": "人物金句 · Portrait",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageSide",
+          "publicKey": "imageSide",
+          "label": "头像位置",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page044": {
+      "label": "判断框架 · Process",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "orientation",
+          "publicKey": "orientation",
+          "label": "排布方向",
+          "values": [
+            "horizontal",
+            "vertical"
+          ],
+          "safe": false,
+          "reason": "取值 \"vertical\"：第 6 个元素 宽 相差 1337.5px"
+        }
+      ]
+    },
+    "theme02_page045": {
+      "label": "核心结论 · Takeaways",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page046": {
+      "label": "风险研判 · Risk",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "版式",
+          "values": [
+            "list",
+            "grid"
+          ],
+          "safe": false,
+          "reason": "取值 \"grid\"：第 6 个元素 宽 相差 863.0px"
+        }
+      ]
+    },
+    "theme02_page047": {
+      "label": "结语金句 · Quote",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 2 个元素 x 相差 797.0px"
+        }
+      ]
+    },
+    "theme02_page048": {
+      "label": "资本结构 · Stacked Bar",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表形态",
+          "values": [
+            "area",
+            "stacked",
+            "norm",
+            "grouped"
+          ],
+          "safe": false,
+          "reason": "取值 \"stacked\"：元素数量 44 → 45"
+        }
+      ]
+    },
+    "theme02_page049": {
+      "label": "案例拼贴 · Mosaic",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "titlePlacement",
+          "publicKey": "titlePlacement",
+          "label": "标题位置",
+          "values": [
+            "tl",
+            "bl",
+            "tr"
+          ],
+          "safe": false,
+          "reason": "取值 \"bl\"：第 3 个元素 y 相差 648.6px"
+        },
+        {
+          "key": "overlayStyle",
+          "publicKey": "overlayStyle",
+          "label": "浮层样式",
+          "values": [
+            "panel",
+            "plain"
+          ],
+          "safe": false,
+          "reason": "取值 \"plain\"：元素数量 9 → 8"
+        }
+      ]
+    },
+    "theme02_page050": {
+      "label": "明细表 · Data Table",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page051": {
+      "label": "多空对照 · Versus",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "VS"
+      ],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "focusSide",
+          "publicKey": "focusSide",
+          "label": "重点强调",
+          "values": [
+            "none",
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page052": {
+      "label": "公司档案 · Profile",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageSide",
+          "publicKey": "imageSide",
+          "label": "图片位置",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page053": {
+      "label": "进程图带 · Storyboard",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page054": {
+      "label": "差距图 · Dumbbell",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "sortBy",
+          "publicKey": "sortBy",
+          "label": "排序方式",
+          "values": [
+            "none",
+            "to",
+            "delta"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page055": {
+      "label": "结论主张 · Manifesto",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "横向看集中",
+          "纵向看节奏",
+          "结构看分层"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page056": {
+      "label": "策略路线 · Roadmap",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page057": {
+      "label": "月度气泡 · Bubble TL",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page058": {
+      "label": "优先金字塔 · Pyramid",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "faceTexture",
+          "publicKey": "faceTexture",
+          "label": "表面质感",
+          "values": [
+            "gloss",
+            "duotone",
+            "hatched"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page059": {
+      "label": "杂志大图 · Editorial",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "imageSide",
+          "publicKey": "imageSide",
+          "label": "图片位置",
+          "values": [
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page060": {
+      "label": "集中度 · Pareto",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "前三家合计"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page061": {
+      "label": "节律玫瑰 · Rose",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "scaleMode",
+          "publicKey": "scaleMode",
+          "label": "半径映射",
+          "values": [
+            "radius",
+            "area"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page062": {
+      "label": "赛道版图 · Treemap",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "面积 吸纳资金 全年合计"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page063": {
+      "label": "资本飞轮 · Cycle",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page064": {
+      "label": "斜率图 · Slope",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "金额份额 放大"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page065": {
+      "label": "径向枢纽 · Orbit",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page066": {
+      "label": "三球串联 · Spheres",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page067": {
+      "label": "机会图谱 · Mindmap",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page068": {
+      "label": "资本去向 · Sunburst",
+      "status": "renderFailed",
+      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme02_page068 field props.groups[1].children: too many items (3 > 2); use at most fillPlan.maxCount or choose another layout - slide 1 layout theme02_page068 field props.groups[2].children: too many items (3 > 2); use at most fillPlan.maxCount or choos",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page069": {
+      "label": "名次变迁 · Bump",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "全年上升"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page070": {
+      "label": "瀑布流图墙 · Masonry",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "media"
+      ],
+      "evidence": {
+        "hardcoded": [],
+        "media": [
+          "纯标题版式 图片数量为"
+        ],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme02_page071": {
+      "label": "维恩交集 · Venn",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme02_page072": {
+      "label": "主题河流 · Stream",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "baseline",
+          "publicKey": "baseline",
+          "label": "基线形态",
+          "values": [
+            "center",
+            "bottom"
+          ],
+          "safe": false,
+          "reason": "取值 \"bottom\"：第 7 个元素 y 相差 38.1px"
+        }
+      ]
+    },
+    "theme02_page073": {
+      "label": "规模分布 · Distribution",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "版式",
+          "values": [
+            "split",
+            "stack"
+          ],
+          "safe": false,
+          "reason": "取值 \"stack\"：元素数量 29 → 26"
+        }
+      ]
+    },
+    "theme02_page074": {
+      "label": "封底结语 · Closing",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：元素数量 13 → 12"
+        }
+      ]
+    }
+  },
+  "curation": {
+    "added": 17,
+    "removed": 17,
+    "styleControls": 115,
+    "droppedForContract": []
+  }
+}

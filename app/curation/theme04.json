@@ -1,6 +1,299 @@
 {
   "theme": "theme04",
-  "exclude": [],
+  "exclude": [
+    {
+      "layout": "theme04_page016",
+      "reason": "auto:hardcoded「全年 AI 风投总额 美元」「亿美元事件」「钱在追少数人」"
+    },
+    {
+      "layout": "theme04_page019",
+      "reason": "auto:hardcoded「占比」"
+    },
+    {
+      "layout": "theme04_page027",
+      "reason": "auto:hardcoded「风险投资」「战略投资」「成长基金」"
+    },
+    {
+      "layout": "theme04_page028",
+      "reason": "auto:hardcoded「领先」「具备」「偏弱」"
+    },
+    {
+      "layout": "theme04_page038",
+      "reason": "auto:hardcoded「基础设施」「模型层」「应用层」"
+    },
+    {
+      "layout": "theme04_page065",
+      "reason": "auto:hardcoded「叙事驱动」「算力卡位」「兑现为王」"
+    }
+  ],
   "notes": {},
-  "styleControls": {}
+  "styleControls": {
+    "theme04_page001": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page002": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page003": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page004": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      },
+      {
+        "key": "paletteVariant",
+        "values": [
+          "multi",
+          "mono"
+        ]
+      }
+    ],
+    "theme04_page007": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page008": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page031": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page035": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page047": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page050": [
+      {
+        "key": "mediaLayout",
+        "values": [
+          "stack",
+          "row"
+        ]
+      }
+    ],
+    "theme04_page051": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page055": [
+      {
+        "key": "unicornScene",
+        "values": [
+          "tech",
+          "automations",
+          "moving",
+          "goey"
+        ]
+      },
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page056": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page058": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page060": [
+      {
+        "key": "mediaLayout",
+        "values": [
+          "scatter",
+          "row"
+        ]
+      }
+    ],
+    "theme04_page061": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page062": [
+      {
+        "key": "focusSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      }
+    ],
+    "theme04_page069": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page071": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page072": [
+      {
+        "key": "accentTone",
+        "values": [
+          "green",
+          "yellow",
+          "blue",
+          "pink"
+        ]
+      }
+    ],
+    "theme04_page073": [
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      }
+    ]
+  }
 }

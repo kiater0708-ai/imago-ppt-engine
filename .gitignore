@@ -7,3 +7,8 @@ work/
 app/runtime/node_modules/
 app/runtime/scripts/render-goal-deck.bundle.mjs
 app/runtime/output/
+
+# 版式审计：大图与中间文件不提交（report.json / report.md / README.md 提交）
+audit/**/*.jpg
+audit/**/.shots/
+audit/.work/

@@ -54,7 +54,7 @@ export function assertSingleTheme(goal) {
   }
 }
 
-function renderCommand(goalFile, htmlFile) {
+export function renderCommand(goalFile, htmlFile) {
   if (fs.existsSync(RENDER_BUNDLE)) return { command: process.execPath, args: [RENDER_BUNDLE, goalFile, htmlFile], mode: 'bundle' };
   const tsxCli = path.join(RUNTIME_DIR, 'node_modules', 'tsx', 'dist', 'cli.mjs');
   if (!fs.existsSync(tsxCli)) {

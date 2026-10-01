@@ -2,10 +2,548 @@
   "theme": "theme08",
   "exclude": [
     {
+      "layout": "theme08_page006",
+      "reason": "auto:hardcoded「摘要」「重点」"
+    },
+    {
+      "layout": "theme08_page007",
+      "reason": "auto:hardcoded「重点」"
+    },
+    {
+      "layout": "theme08_page008",
+      "reason": "auto:hardcoded「融资额」「事件数」「峰值」"
+    },
+    {
+      "layout": "theme08_page011",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page013",
+      "reason": "auto:hardcoded「榜首」"
+    },
+    {
+      "layout": "theme08_page014",
+      "reason": "auto:hardcoded「看好象限」"
+    },
+    {
+      "layout": "theme08_page021",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page023",
+      "reason": "auto:hardcoded「单位」「均值」"
+    },
+    {
+      "layout": "theme08_page027",
+      "reason": "auto:hardcoded「累计资金占比」"
+    },
+    {
+      "layout": "theme08_page030",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page031",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page032",
+      "reason": "auto:hardcoded「高客单价」"
+    },
+    {
+      "layout": "theme08_page034",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page037",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page038",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page040",
+      "reason": "auto:hardcoded「长期确定性」"
+    },
+    {
+      "layout": "theme08_page041",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page043",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page047",
+      "reason": "auto:media「图片数量」；hardcoded「COMMUNITY ENTERPRISE」「仅展示社区数据」"
+    },
+    {
+      "layout": "theme08_page048",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page050",
+      "reason": "auto:hardcoded「新主题」"
+    },
+    {
+      "layout": "theme08_page052",
+      "reason": "auto:media「图片可选」"
+    },
+    {
+      "layout": "theme08_page056",
+      "reason": "auto:media「图片数量」；hardcoded「重点」"
+    },
+    {
+      "layout": "theme08_page057",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page058",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page059",
+      "reason": "auto:hardcoded「重点」"
+    },
+    {
+      "layout": "theme08_page061",
+      "reason": "auto:hardcoded「核心资产」"
+    },
+    {
+      "layout": "theme08_page062",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page064",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page065",
+      "reason": "auto:hardcoded「延展」"
+    },
+    {
+      "layout": "theme08_page066",
+      "reason": "auto:media「图片数量」"
+    },
+    {
+      "layout": "theme08_page067",
+      "reason": "auto:media「图片数量」；hardcoded「抽象技术意象」"
+    },
+    {
+      "layout": "theme08_page072",
+      "reason": "auto:media「无图片 mediaCount」"
+    },
+    {
+      "layout": "theme08_page075",
+      "reason": "auto:media「图片数量」；hardcoded「主线」"
+    },
+    {
+      "layout": "theme08_page080",
+      "reason": "auto:hardcoded「跨度」"
+    },
+    {
+      "layout": "theme08_page081",
+      "reason": "auto:hardcoded「关键节点」"
+    },
+    {
       "layout": "theme08_page082",
       "reason": "照片墙，页面显示「// 图片数量 = 0」占位文字"
     }
   ],
   "notes": {},
-  "styleControls": {}
+  "styleControls": {
+    "theme08_page001": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page002": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page003": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page004": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page005": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page009": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page010": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page012": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page015": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page017": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted",
+          "ink"
+        ]
+      }
+    ],
+    "theme08_page018": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page019": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page020": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page022": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page024": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page025": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page026": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted",
+          "ink"
+        ]
+      }
+    ],
+    "theme08_page028": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted",
+          "ink"
+        ]
+      }
+    ],
+    "theme08_page029": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page033": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page036": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page039": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page042": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page045": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page046": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page049": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted",
+          "ink"
+        ]
+      }
+    ],
+    "theme08_page051": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page053": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page054": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page055": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted",
+          "ink"
+        ]
+      }
+    ],
+    "theme08_page063": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page068": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page069": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page070": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page071": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page073": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page074": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted",
+          "ink"
+        ]
+      }
+    ],
+    "theme08_page076": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page078": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted",
+          "ink"
+        ]
+      },
+      {
+        "key": "numberStyle",
+        "values": [
+          "solid",
+          "outline"
+        ]
+      }
+    ],
+    "theme08_page079": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page083": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page084": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted",
+          "ink"
+        ]
+      }
+    ]
+  }
 }

@@ -84,7 +84,8 @@ test('seededShuffle：确定性，不改原数组，是排列', () => {
 
 test('catalog：stats 给出被排除原因计数', async () => {
   const result = await catalog('theme11', 'seed-A');
-  assert.equal(result.stats.excludedByReason.curation, 4);
+  const t11File = JSON.parse(fs.readFileSync(path.join(PLUG, 'app', 'curation', 'theme11.json'), 'utf8'));
+  assert.equal(result.stats.excludedByReason.curation, t11File.exclude.length, '清单里的排除项（手工 + 审计自动写入）都按 curation 计');
   assert.ok(result.stats.excludedByReason.media > 0);
   assert.equal(result.stats.total, result.stats.candidates + result.stats.excluded);
   for (const item of result.layouts) {
@@ -143,8 +144,9 @@ test('curation：12 个文件格式正确，引用的版式都真实存在；the
     }
   }
   const t11 = JSON.parse(fs.readFileSync(path.join(PLUG, 'app', 'curation', 'theme11.json'), 'utf8'));
-  assert.deepEqual(t11.exclude.map(item => item.layout).sort(), ['theme11_page008', 'theme11_page013', 'theme11_page071', 'theme11_page083']);
+  const manual = list => list.filter(item => !item.reason.startsWith('auto:'));
+  assert.deepEqual(manual(t11.exclude).map(item => item.layout).sort(), ['theme11_page008', 'theme11_page013', 'theme11_page071', 'theme11_page083'], '手工条目保持不动');
   assert.deepEqual(Object.keys(t11.notes).sort(), ['theme11_page040', 'theme11_page059']);
   const t08 = JSON.parse(fs.readFileSync(path.join(PLUG, 'app', 'curation', 'theme08.json'), 'utf8'));
-  assert.deepEqual(t08.exclude.map(item => item.layout), ['theme08_page082']);
+  assert.deepEqual(manual(t08.exclude).map(item => item.layout), ['theme08_page082']);
 });

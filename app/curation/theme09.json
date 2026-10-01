@@ -1,6 +1,331 @@
 {
   "theme": "theme09",
-  "exclude": [],
+  "exclude": [
+    {
+      "layout": "theme09_page018",
+      "reason": "auto:hardcoded「亿美元 全年」"
+    },
+    {
+      "layout": "theme09_page019",
+      "reason": "auto:hardcoded「据此推演如右」"
+    },
+    {
+      "layout": "theme09_page034",
+      "reason": "auto:hardcoded「各轮次 分布」"
+    },
+    {
+      "layout": "theme09_page036",
+      "reason": "auto:hardcoded「名次第 在顶部」「条赛道」「轨迹」"
+    },
+    {
+      "layout": "theme09_page037",
+      "reason": "auto:hardcoded「单位」"
+    },
+    {
+      "layout": "theme09_page045",
+      "reason": "auto:hardcoded「大模型」「基础设施」「垂直应用」"
+    },
+    {
+      "layout": "theme09_page047",
+      "reason": "auto:hardcoded「转化」"
+    },
+    {
+      "layout": "theme09_page049",
+      "reason": "auto:hardcoded「目标」"
+    },
+    {
+      "layout": "theme09_page052",
+      "reason": "auto:hardcoded「看好」「谨慎」「中性」"
+    },
+    {
+      "layout": "theme09_page062",
+      "reason": "auto:hardcoded「赛道」"
+    },
+    {
+      "layout": "theme09_page067",
+      "reason": "auto:hardcoded「综合」「等级」「卓越」"
+    },
+    {
+      "layout": "theme09_page069",
+      "reason": "auto:hardcoded「渗透」"
+    },
+    {
+      "layout": "theme09_page070",
+      "reason": "auto:media「图片槽数量 调大以拼贴影像」「图片为示意 槽位按比例自适应」"
+    },
+    {
+      "layout": "theme09_page071",
+      "reason": "auto:hardcoded「口径说明」"
+    },
+    {
+      "layout": "theme09_page075",
+      "reason": "auto:media「图片槽数量 调大以走带」「图片为示意 画格按比例自适应」"
+    },
+    {
+      "layout": "theme09_page076",
+      "reason": "auto:hardcoded「单位 合计」「合计」「全年合计」"
+    },
+    {
+      "layout": "theme09_page083",
+      "reason": "auto:hardcoded「升至」"
+    },
+    {
+      "layout": "theme09_page084",
+      "reason": "auto:hardcoded「单位」"
+    },
+    {
+      "layout": "theme09_page089",
+      "reason": "auto:hardcoded「单位」"
+    },
+    {
+      "layout": "theme09_page090",
+      "reason": "auto:hardcoded「峰位」"
+    },
+    {
+      "layout": "theme09_page094",
+      "reason": "auto:hardcoded「占比」"
+    },
+    {
+      "layout": "theme09_page110",
+      "reason": "auto:media「图片槽数量为 Tweaks 中调高 图片槽数量 以展示企业图」"
+    }
+  ],
   "notes": {},
-  "styleControls": {}
+  "styleControls": {
+    "theme09_page008": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page012": [
+      {
+        "key": "chartType",
+        "values": [
+          "面积",
+          "折线",
+          "柱状"
+        ]
+      }
+    ],
+    "theme09_page013": [
+      {
+        "key": "offset",
+        "values": [
+          "居中",
+          "基线"
+        ]
+      }
+    ],
+    "theme09_page017": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page023": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page028": [
+      {
+        "key": "focusIndex",
+        "values": [
+          "左侧",
+          "右侧"
+        ]
+      }
+    ],
+    "theme09_page030": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page032": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page035": [
+      {
+        "key": "sort",
+        "values": [
+          "降序",
+          "升序",
+          "原序"
+        ]
+      }
+    ],
+    "theme09_page038": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page041": [
+      {
+        "key": "pivot",
+        "values": [
+          "VS",
+          "÷",
+          "→",
+          "/"
+        ]
+      }
+    ],
+    "theme09_page046": [
+      {
+        "key": "sort",
+        "values": [
+          "降序",
+          "原序"
+        ]
+      }
+    ],
+    "theme09_page051": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page056": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page059": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page066": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page073": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page079": [
+      {
+        "key": "sort",
+        "values": [
+          "降序",
+          "原序"
+        ]
+      }
+    ],
+    "theme09_page081": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page093": [
+      {
+        "key": "direction",
+        "values": [
+          "升序",
+          "原序"
+        ]
+      }
+    ],
+    "theme09_page095": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page101": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page103": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
+    "theme09_page106": [
+      {
+        "key": "imgSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      }
+    ]
+  }
 }

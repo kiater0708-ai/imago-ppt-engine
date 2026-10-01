@@ -1,0 +1,2645 @@
+{
+  "theme": "theme06",
+  "counts": {
+    "total": 83,
+    "audited": 82,
+    "ruleExcluded": 1,
+    "hardcoded": 26,
+    "media": 0,
+    "brandIcon": 0,
+    "autoExcluded": 26,
+    "manualExcluded": 0,
+    "renderFailed": 0,
+    "uncertain": 23,
+    "styleControls": 66,
+    "selectControls": 98
+  },
+  "timings": {
+    "markerMs": 25431,
+    "controlMs": 141538,
+    "totalMs": 167069,
+    "markerPages": 82,
+    "controlPages": 462
+  },
+  "ruleExcluded": [
+    {
+      "layout": "theme06_page028",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 1，不能隐藏为 0"
+    }
+  ],
+  "layouts": {
+    "theme06_page001": {
+      "label": "封面A · 智联万物 / PRODUCT LAUNCH",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#d2fb30",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page002": {
+      "label": "封面B · 新机遇 / BUSINESS PLAN",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#d2fb30",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page003": {
+      "label": "封面C · 精益智造 / LEAN MFG",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#d2fb30",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page004": {
+      "label": "封面D · 品牌整合营销 / BRAND MKT",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#d2fb30",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page005": {
+      "label": "01 · 封面 / COVER",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "MENU"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page006": {
+      "label": "02 · 报告摘要 / OVERVIEW",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "全年融资 TOTAL",
+          "大额事件 DEALS",
+          "平均单笔 AVG TICKET",
+          "湾区占比 BAY AREA"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page007": {
+      "label": "03 · 报告结构 / STRUCTURE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "章节"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page008": {
+      "label": "04 · 研究方法 / METHODOLOGY",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "stackStyle",
+          "publicKey": "stackStyle",
+          "label": "卡片样式",
+          "values": [
+            "stack",
+            "list"
+          ],
+          "safe": false,
+          "reason": "取值 \"list\"：第 14 个元素 y 相差 54.0px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page009": {
+      "label": "05 · 市场全景 / TREND",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "PEAK",
+        "TREND"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "area",
+            "bars",
+            "line"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 37 → 40"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page010": {
+      "label": "06 · 市场数据深拆 / CHAPTER",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "background",
+          "publicKey": "background",
+          "label": "背景形态",
+          "values": [
+            "glow",
+            "solid",
+            "panel"
+          ],
+          "safe": false,
+          "reason": "取值 \"solid\"：元素数量 22 → 21"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page011": {
+      "label": "07 · 规模分层 / DEAL MAP",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "TIERS"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "bubbles",
+            "dots",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"dots\"：第 17 个元素 x 相差 8.0px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page012": {
+      "label": "08 · 冷启动季度 / Q1 BREAKDOWN",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CHART"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "指标呈现",
+          "values": [
+            "chart",
+            "table"
+          ],
+          "safe": false,
+          "reason": "取值 \"table\"：元素数量 46 → 47"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page013": {
+      "label": "09 · 加速季度 / Q2 BREAKDOWN",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "TABLE"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "指标呈现",
+          "values": [
+            "chart",
+            "table"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page014": {
+      "label": "10 · 峰值季度 / Q3 PEAK",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "高亮面积图 PEAK CURVE"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CURVE"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page015": {
+      "label": "11 · 回落季度 / Q4 PULLBACK",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "阶段"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page016": {
+      "label": "12 · 峰值与低位 / PEAK & TROUGH",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "均值",
+          "峰谷差 COLUMNS"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page017": {
+      "label": "13 · 赛道贡献 / WATERFALL",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "合计 WATERFALL"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "TOTAL"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page018": {
+      "label": "14 · 金额区间结构 / SIZE SPLIT",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "COUNT",
+        "AMOUNT",
+        "DIVERGING"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "diverging",
+            "grouped",
+            "stacked"
+          ],
+          "safe": false,
+          "reason": "取值 \"grouped\"：元素数量 43 → 45"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page019": {
+      "label": "15 · 赛道平均融资额 / AVG TICKET",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page020": {
+      "label": "16 · 累计资金分布 / CAPITAL CURVE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "AREA"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "area",
+            "line",
+            "steps"
+          ],
+          "safe": false,
+          "reason": "取值 \"line\"：第 50 个元素 x 相差 13.0px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page021": {
+      "label": "17 · 赛道结构细分 / CHAPTER 03",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "background",
+          "publicKey": "background",
+          "label": "背景形态",
+          "values": [
+            "glow",
+            "solid",
+            "panel"
+          ],
+          "safe": false,
+          "reason": "取值 \"solid\"：元素数量 24 → 23"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page022": {
+      "label": "18 · 模型实验室竞争 / MODEL LAB RACE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "RADAR"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "radar",
+            "bars",
+            "dots"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 44 → 60"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page023": {
+      "label": "19 · 工作流自动化 / AI AGENTS",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "SEG SPLIT"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page024": {
+      "label": "20 · 知识入口 / ENTERPRISE SEARCH",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "SEG SPLIT"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page025": {
+      "label": "21 · 专业服务 / LEGAL AI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "SEG TABLE"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page026": {
+      "label": "22 · 融资排名 / RANKING",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "TOP SCALE"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图形类型",
+          "values": [
+            "bars",
+            "dots"
+          ],
+          "safe": false,
+          "reason": "取值 \"dots\"：元素数量 72 → 376"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page027": {
+      "label": "23 · 产业链分层 / VALUE CHAIN",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "TIERS"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "排布方式",
+          "values": [
+            "stack",
+            "columns"
+          ],
+          "safe": false,
+          "reason": "取值 \"columns\"：第 14 个元素 y 相差 140.5px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page029": {
+      "label": "25 · 机会矩阵 / QUADRANT",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page030": {
+      "label": "26 · 风险研判 / RISK",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "中风险",
+          "综合风险水位",
+          "项风险 RISKS"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page031": {
+      "label": "27 · 投资建议 / OUTLOOK",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "对比侧重",
+          "values": [
+            "none",
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page032": {
+      "label": "28 · 大数字 / BIG NUMBER",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 13 个元素 x 相差 352.5px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page033": {
+      "label": "29 · 慢变量高壁垒 / HEALTHCARE AI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "STRUCTURE"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page034": {
+      "label": "30 · 投研风控合规 / FINANCE AI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "DONUT"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "donut",
+            "ring",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"ring\"：第 15 个元素 x 相差 57.1px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page035": {
+      "label": "31 · 研发效率提升 / DEV TOOLS",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 13 个元素 x 相差 815.8px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page036": {
+      "label": "32 · 企业 AI 底座 / DATA INFRA",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "STAGE",
+        "FLOW"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "flow",
+            "steps"
+          ],
+          "safe": false,
+          "reason": "取值 \"steps\"：元素数量 63 → 51"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page037": {
+      "label": "33 · 增长效率工具 / GROWTH",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "FUNNEL"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "funnel",
+            "bars",
+            "steps"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 39 → 48"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page038": {
+      "label": "34 · 企业流程嵌入 / LOW CODE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "SEG SPLIT"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page039": {
+      "label": "35 · 社区影响力变现 / OPEN SOURCE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CONVERT"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page040": {
+      "label": "36 · 安全与对齐工具 / ALIGNMENT",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "STAGE",
+        "FLOW"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "flow",
+            "steps"
+          ],
+          "safe": false,
+          "reason": "取值 \"steps\"：元素数量 63 → 51"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page041": {
+      "label": "37 · 资本与地区结构 / CHAPTER 04",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "background",
+          "publicKey": "background",
+          "label": "背景形态",
+          "values": [
+            "glow",
+            "solid",
+            "panel"
+          ],
+          "safe": false,
+          "reason": "取值 \"solid\"：元素数量 24 → 23"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page042": {
+      "label": "38 · 新主题萌芽 / EARLY-STAGE SIGNAL",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "BUBBLES"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "规模可视化",
+          "values": [
+            "bubbles",
+            "bars",
+            "dots"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：第 23 个元素 y 相差 39.0px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page043": {
+      "label": "39 · 复杂交易结构 / DEAL STRUCTURE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "合计",
+          "STRUCT STACKED"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page044": {
+      "label": "40 · 资本来源结构 / INVESTOR MIX",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "DONUT"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "donut",
+            "ring",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"ring\"：第 15 个元素 x 相差 57.1px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page045": {
+      "label": "41 · 钱以外的资源 / STRATEGIC RESOURCES",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "授信",
+          "渠道",
+          "供应",
+          "数据",
+          "类资源 FULL"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "R0"
+      ],
+      "controls": []
+    },
+    "theme06_page046": {
+      "label": "42 · 投资与算力消费闭环 / CLOUD ALLIANCES",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "FLOW"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "flow",
+            "bars",
+            "dots"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 43 → 46"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page047": {
+      "label": "43 · GPU 资源链条 / NVIDIA ECOSYSTEM",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "STRUCTURE"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page048": {
+      "label": "44 · 最大地理中心 / BAY AREA",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page049": {
+      "label": "45 · 行业客户优势 / NEW YORK",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "REGIONS PANEL"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page050": {
+      "label": "46 · 云计算人才外溢 / SEATTLE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "REGIONS PANEL"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page051": {
+      "label": "47 · 科研与硬科技 / BOSTON",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "REGIONS PANEL"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page052": {
+      "label": "48 · 分散型应用落地 / OTHER REGIONS",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "REGIONS MAP"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page053": {
+      "label": "49 · 三类关键资源 / TALENT·CAPITAL·COMPUTE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page054": {
+      "label": "50 · 商业化标杆 / OPENAI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "FIGURES MOSAIC"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CASE"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page055": {
+      "label": "51 · 安全可靠模型 / ANTHROPIC",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "FIGURES MOSAIC"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CASE"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page056": {
+      "label": "52 · 实时数据生态 / XAI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "FIGURES MOSAIC"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CASE"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page057": {
+      "label": "53 · 算力基础设施 / COREWEAVE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "FIGURES MOSAIC"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CASE"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page058": {
+      "label": "54 · 数据基础设施 / SCALE AI · TABLE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CASE"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page059": {
+      "label": "55 · AI 搜索入口 / PERPLEXITY",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "FIGURES MOSAIC"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CASE"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page060": {
+      "label": "56 · 数据平台延展 / DATABRICKS",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "FIGURES MOSAIC"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CASE"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page061": {
+      "label": "57 · 企业知识入口 / GLEAN",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "FIGURES MOSAIC"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CASE"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page062": {
+      "label": "58 · 人形机器人 / FIGURE AI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page063": {
+      "label": "59 · 强叙事模型实验室 / SSI",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "FIGURES MOSAIC"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "CASE"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page064": {
+      "label": "60 · 风险与策略 / CHAPTER 05",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "background",
+          "publicKey": "background",
+          "label": "背景形态",
+          "values": [
+            "glow",
+            "solid",
+            "panel"
+          ],
+          "safe": false,
+          "reason": "取值 \"solid\"：元素数量 23 → 22"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page065": {
+      "label": "61 · 从试点到稳定收入 / REVENUE RISK",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "meters",
+            "columns",
+            "dots"
+          ],
+          "safe": false,
+          "reason": "取值 \"columns\"：元素数量 60 → 48"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page066": {
+      "label": "62 · 隐私版权与安全 / REGULATION · TABLE",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page067": {
+      "label": "63 · 毛利天花板 / COMPUTE COST",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page068": {
+      "label": "64 · 壁垒被压缩 / OPEN SOURCE RISK",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "meters",
+            "columns",
+            "dots"
+          ],
+          "safe": false,
+          "reason": "取值 \"columns\"：元素数量 60 → 48"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page069": {
+      "label": "65 · 确定性预算 / INFRA STRATEGY",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "方向排布",
+          "values": [
+            "cards",
+            "rows"
+          ],
+          "safe": false,
+          "reason": "取值 \"rows\"：元素数量 64 → 60"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page070": {
+      "label": "66 · 嵌入工作流 / VERTICAL STRATEGY",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "方向排布",
+          "values": [
+            "cards",
+            "rows"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page071": {
+      "label": "67 · 结论 / CONCLUSION",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 13 个元素 x 相差 815.8px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page072": {
+      "label": "68 · 估值锚重定价 / IPO WATCH",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "时间轴形态",
+          "values": [
+            "timeline",
+            "stack"
+          ],
+          "safe": false,
+          "reason": "取值 \"stack\"：元素数量 75 → 71"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page073": {
+      "label": "69 · 数据附录精读 / CHAPTER 06",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "background",
+          "publicKey": "background",
+          "label": "背景形态",
+          "values": [
+            "glow",
+            "solid",
+            "panel"
+          ],
+          "safe": false,
+          "reason": "取值 \"solid\"：元素数量 22 → 21"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page074": {
+      "label": "70 · 全年月度热力 / MONTHLY HEAT",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "峰值 PEAK",
+          "低位 TROUGH"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "HIGH"
+      ],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme06_page075": {
+      "label": "71 · 超级交易画像 / MEGA DEALS",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "WALL"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page076": {
+      "label": "72 · 超级交易均值 / MEGA AVG",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page077": {
+      "label": "73 · 全景速览 / YEAR IN ONE VIEW",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "排布形态",
+          "values": [
+            "hero",
+            "grid",
+            "row"
+          ],
+          "safe": false,
+          "reason": "取值 \"grid\"：元素数量 39 → 40"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page078": {
+      "label": "74 · 数据来源与口径 / SOURCES",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page079": {
+      "label": "75 · 最终判断 / FINAL VERDICT",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page080": {
+      "label": "76 · 前瞻信号 / CHAPTER 07",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "background",
+          "publicKey": "background",
+          "label": "背景形态",
+          "values": [
+            "glow",
+            "solid",
+            "panel"
+          ],
+          "safe": false,
+          "reason": "取值 \"solid\"：元素数量 23 → 22"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page081": {
+      "label": "77 · 资本流向预测 / CAPITAL FLOW",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表形态",
+          "values": [
+            "treemap",
+            "bars",
+            "grid"
+          ],
+          "safe": false,
+          "reason": "取值 \"bars\"：元素数量 62 → 56"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page082": {
+      "label": "78 · 前瞻主题 / FORWARD STATEMENT",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "STATEMENT"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme06_page083": {
+      "label": "79 · 里程碑节奏 / MILESTONES 2025",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "时间轴形态",
+          "values": [
+            "timeline",
+            "stack"
+          ],
+          "safe": false,
+          "reason": "取值 \"stack\"：元素数量 75 → 71"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    }
+  },
+  "curation": {
+    "added": 26,
+    "removed": 26,
+    "styleControls": 66,
+    "droppedForContract": []
+  }
+}

@@ -1,0 +1,2354 @@
+{
+  "theme": "theme03",
+  "counts": {
+    "total": 77,
+    "audited": 76,
+    "ruleExcluded": 1,
+    "hardcoded": 7,
+    "media": 0,
+    "brandIcon": 0,
+    "autoExcluded": 7,
+    "manualExcluded": 0,
+    "renderFailed": 0,
+    "uncertain": 1,
+    "styleControls": 89,
+    "selectControls": 100
+  },
+  "timings": {
+    "markerMs": 29062,
+    "controlMs": 146107,
+    "totalMs": 175239,
+    "markerPages": 76,
+    "controlPages": 252
+  },
+  "ruleExcluded": [
+    {
+      "layout": "theme03_page030",
+      "category": "media",
+      "reason": "媒体槽 images 数量下限为 2，不能隐藏为 0"
+    }
+  ],
+  "layouts": {
+    "theme03_page001": {
+      "label": "封面",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page002": {
+      "label": "封面·横向",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page003": {
+      "label": "封面·海报",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundMode",
+          "publicKey": "backgroundMode",
+          "label": "背景替换",
+          "values": [
+            "unicorn",
+            "media"
+          ],
+          "safe": false,
+          "reason": "取值 \"media\"：元素数量 25 → 21"
+        },
+        {
+          "key": "unicornScene",
+          "publicKey": "dynamicVisual",
+          "label": "动态场景",
+          "values": [
+            "tech",
+            "automations",
+            "moving",
+            "goey"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page004": {
+      "label": "封面·网格",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page005": {
+      "label": "封面·影像",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundMode",
+          "publicKey": "backgroundMode",
+          "label": "背景替换",
+          "values": [
+            "unicorn",
+            "media"
+          ],
+          "safe": false,
+          "reason": "取值 \"media\"：元素数量 25 → 23"
+        },
+        {
+          "key": "unicornScene",
+          "publicKey": "dynamicVisual",
+          "label": "动态场景",
+          "values": [
+            "tech",
+            "automations",
+            "moving",
+            "goey"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page006": {
+      "label": "导览",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "columns",
+          "publicKey": "columns",
+          "label": "栏目布局",
+          "values": [
+            "1",
+            "2"
+          ],
+          "safe": false,
+          "reason": "取值 \"2\"：元素数量 41 → 42"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page007": {
+      "label": "研究方法",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "diagramStyle1",
+          "publicKey": "diagramStyle1",
+          "label": "图形类型 1",
+          "values": [
+            "auto",
+            "radial",
+            "burst",
+            "orbit",
+            "mesh",
+            "spiral",
+            "constellation"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "diagramStyle2",
+          "publicKey": "diagramStyle2",
+          "label": "图形类型 2",
+          "values": [
+            "auto",
+            "radial",
+            "burst",
+            "orbit",
+            "mesh",
+            "spiral",
+            "constellation"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "diagramStyle3",
+          "publicKey": "diagramStyle3",
+          "label": "图形类型 3",
+          "values": [
+            "auto",
+            "radial",
+            "burst",
+            "orbit",
+            "mesh",
+            "spiral",
+            "constellation"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page008": {
+      "label": "市场全景",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "line",
+            "bar",
+            "area"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page009": {
+      "label": "年度编年",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page010": {
+      "label": "横向透视",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "donut",
+            "pie",
+            "bar"
+          ],
+          "safe": false,
+          "reason": "取值 \"pie\"：元素数量 40 → 38"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page011": {
+      "label": "头部玩家",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "bar",
+            "lollipop"
+          ],
+          "safe": false,
+          "reason": "取值 \"lollipop\"：元素数量 58 → 66"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page012": {
+      "label": "速查表",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page013": {
+      "label": "融资体量",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page014": {
+      "label": "选题四象限",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page015": {
+      "label": "产业链分层",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page016": {
+      "label": "产业链速查",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page017": {
+      "label": "应用层",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "图片排布",
+          "values": [
+            "row",
+            "column"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page018": {
+      "label": "典型案例",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page019": {
+      "label": "案例聚焦",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "图片排布",
+          "values": [
+            "row",
+            "column"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page020": {
+      "label": "卖铲赢家",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "图片排布",
+          "values": [
+            "row",
+            "column"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page021": {
+      "label": "案例对比",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "亿美元"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme03_page022": {
+      "label": "章节页",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page023": {
+      "label": "轮次结构",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "bar",
+            "lollipop"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page024": {
+      "label": "轮次单位图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "高亮"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme03_page025": {
+      "label": "月度明细",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page026": {
+      "label": "单月峰值",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page027": {
+      "label": "资金累积",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "主系列样式",
+          "values": [
+            "area",
+            "line"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page028": {
+      "label": "核心数据",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page029": {
+      "label": "地区分布",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "bar",
+            "lollipop"
+          ],
+          "safe": false,
+          "reason": "取值 \"lollipop\"：第 13 个元素 y 相差 6.5px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page031": {
+      "label": "估值跃迁",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "bar",
+            "step",
+            "area"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page032": {
+      "label": "估值之谜",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page033": {
+      "label": "风险研判",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "columns",
+          "publicKey": "columns",
+          "label": "网格列数",
+          "values": [
+            "2",
+            "4"
+          ],
+          "safe": false,
+          "reason": "取值 \"4\"：第 7 个元素 x 相差 420.0px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page034": {
+      "label": "风险传导",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page035": {
+      "label": "投资建议",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "focusSide",
+          "publicKey": "focusSide",
+          "label": "突出栏目",
+          "values": [
+            "none",
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page036": {
+      "label": "策略时间轴",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "orientation",
+          "publicKey": "orientation",
+          "label": "排布方向",
+          "values": [
+            "horizontal",
+            "vertical"
+          ],
+          "safe": false,
+          "reason": "取值 \"vertical\"：元素数量 33 → 26"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page037": {
+      "label": "三视野",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "当下兑现",
+          "确定性",
+          "赔率",
+          "现金流",
+          "高增长主战场",
+          "前沿期权"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme03_page038": {
+      "label": "核心结论",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "集中",
+          "节奏",
+          "分层"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme03_page039": {
+      "label": "金句页",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "对齐方式",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：第 5 个元素 x 相差 787.0px"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page040": {
+      "label": "AARRR",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page041": {
+      "label": "RFM",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page042": {
+      "label": "MABA",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page043": {
+      "label": "建仓甘特",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page044": {
+      "label": "决策双钻",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page045": {
+      "label": "SWOT",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "内部 增益",
+          "内部 损害",
+          "外部 增益",
+          "外部 损害"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme03_page046": {
+      "label": "五力",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page047": {
+      "label": "画布",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page048": {
+      "label": "旅程图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page049": {
+      "label": "金字塔",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5"
+      ],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page050": {
+      "label": "波士顿矩阵",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "高增长 高份额",
+          "高增长 低份额",
+          "低增长 高份额",
+          "低增长 低份额"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme03_page051": {
+      "label": "飞轮",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page052": {
+      "label": "PEST",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [
+        "PEST"
+      ],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page053": {
+      "label": "资本集中度",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "柱样式",
+          "values": [
+            "bar",
+            "lollipop"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page054": {
+      "label": "风险雷达",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page055": {
+      "label": "风险登记册",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page056": {
+      "label": "范式转变",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "focusSide",
+          "publicKey": "focusSide",
+          "label": "重点突出",
+          "values": [
+            "none",
+            "left",
+            "right"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page057": {
+      "label": "成熟度曲线",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page058": {
+      "label": "决策矩阵",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page059": {
+      "label": "资本大年",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page060": {
+      "label": "季度节奏",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page061": {
+      "label": "资金版图",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page062": {
+      "label": "单笔阶梯",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page063": {
+      "label": "实验室影像",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "图片排布",
+          "values": [
+            "row",
+            "column"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page064": {
+      "label": "资本流向",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page065": {
+      "label": "投资记分卡",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page066": {
+      "label": "泡沫温度计",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page067": {
+      "label": "具身智能",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "图片排布",
+          "values": [
+            "row",
+            "column"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page068": {
+      "label": "月度玫瑰",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page069": {
+      "label": "资金矩阵",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page070": {
+      "label": "三重集中",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page071": {
+      "label": "资本主张",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "backgroundMode",
+          "publicKey": "backgroundMode",
+          "label": "背景替换",
+          "values": [
+            "unicorn",
+            "media"
+          ],
+          "safe": false,
+          "reason": "取值 \"media\"：元素数量 23 → 21"
+        },
+        {
+          "key": "unicornScene",
+          "publicKey": "dynamicVisual",
+          "label": "动态场景",
+          "values": [
+            "tech",
+            "automations",
+            "moving",
+            "goey"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "align",
+          "publicKey": "align",
+          "label": "文案对齐",
+          "values": [
+            "left",
+            "center"
+          ],
+          "safe": false,
+          "reason": "取值 \"center\"：元素数量 23 → 21"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page072": {
+      "label": "轮次背向",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page073": {
+      "label": "护城河",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [
+        "hardcoded"
+      ],
+      "evidence": {
+        "hardcoded": [
+          "信任 渠道",
+          "数据 协同",
+          "资源锁定"
+        ],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": []
+    },
+    "theme03_page074": {
+      "label": "算力卡脖",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page075": {
+      "label": "AI 芯片",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "图片排布",
+          "values": [
+            "row",
+            "column"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page076": {
+      "label": "算力军备",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "图片排布",
+          "values": [
+            "row",
+            "column"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme03_page077": {
+      "label": "封底",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    }
+  },
+  "curation": {
+    "added": 7,
+    "removed": 7,
+    "styleControls": 89,
+    "droppedForContract": []
+  }
+}

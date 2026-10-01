@@ -1,6 +1,724 @@
 {
   "theme": "theme10",
-  "exclude": [],
+  "exclude": [
+    {
+      "layout": "theme10_page018",
+      "reason": "auto:hardcoded「三年累计回报」"
+    },
+    {
+      "layout": "theme10_page055",
+      "reason": "auto:hardcoded「答疑 COMMON QUESTIONS」「你可能正想问的」「个常见问题」"
+    },
+    {
+      "layout": "theme10_page058",
+      "reason": "auto:hardcoded「均值」"
+    },
+    {
+      "layout": "theme10_page062",
+      "reason": "auto:hardcoded「分散度 CORRELATION」「它们彼此独立吗」「全球股票」"
+    },
+    {
+      "layout": "theme10_page063",
+      "reason": "auto:hardcoded「组合体检 FACTOR PROFILE」「六个维度的均衡」「回报」"
+    },
+    {
+      "layout": "theme10_page088",
+      "reason": "auto:hardcoded「下行情形」「上行情形」"
+    }
+  ],
   "notes": {},
-  "styleControls": {}
+  "styleControls": {
+    "theme10_page001": [
+      {
+        "key": "theme",
+        "values": [
+          "dusk",
+          "midnight",
+          "dawn"
+        ]
+      }
+    ],
+    "theme10_page002": [
+      {
+        "key": "theme",
+        "values": [
+          "dusk",
+          "dawn",
+          "mono"
+        ]
+      }
+    ],
+    "theme10_page003": [
+      {
+        "key": "theme",
+        "values": [
+          "dusk",
+          "dawn",
+          "mono"
+        ]
+      }
+    ],
+    "theme10_page004": [
+      {
+        "key": "theme",
+        "values": [
+          "dawn",
+          "dusk",
+          "ember"
+        ]
+      }
+    ],
+    "theme10_page005": [
+      {
+        "key": "theme",
+        "values": [
+          "dusk",
+          "midnight",
+          "graphite",
+          "dawn",
+          "paper"
+        ]
+      }
+    ],
+    "theme10_page006": [
+      {
+        "key": "theme",
+        "values": [
+          "midnight",
+          "dusk",
+          "graphite",
+          "dawn",
+          "vapor",
+          "paper"
+        ]
+      }
+    ],
+    "theme10_page007": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      },
+      {
+        "key": "chartType",
+        "values": [
+          "area",
+          "bars",
+          "line"
+        ]
+      }
+    ],
+    "theme10_page008": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page009": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page010": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page013": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page014": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page015": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page016": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page017": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page019": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page020": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page021": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page022": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page025": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      },
+      {
+        "key": "chartType",
+        "values": [
+          "area",
+          "bars",
+          "line"
+        ]
+      }
+    ],
+    "theme10_page026": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page027": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page028": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page029": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page030": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page031": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page032": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page033": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page034": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page035": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page036": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page037": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page038": [
+      {
+        "key": "theme",
+        "values": [
+          "midnight",
+          "dusk",
+          "graphite",
+          "dawn",
+          "vapor",
+          "paper"
+        ]
+      }
+    ],
+    "theme10_page039": [
+      {
+        "key": "theme",
+        "values": [
+          "vapor",
+          "dusk",
+          "midnight",
+          "graphite",
+          "dawn",
+          "paper"
+        ]
+      }
+    ],
+    "theme10_page040": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      },
+      {
+        "key": "imageSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      }
+    ],
+    "theme10_page044": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      },
+      {
+        "key": "trendStyle",
+        "values": [
+          "area",
+          "line",
+          "bars"
+        ]
+      }
+    ],
+    "theme10_page049": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page052": [
+      {
+        "key": "theme",
+        "values": [
+          "dusk",
+          "midnight",
+          "graphite",
+          "dawn",
+          "vapor",
+          "paper"
+        ]
+      }
+    ],
+    "theme10_page053": [
+      {
+        "key": "theme",
+        "values": [
+          "graphite",
+          "midnight",
+          "dusk",
+          "dawn",
+          "vapor",
+          "paper"
+        ]
+      }
+    ],
+    "theme10_page054": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      },
+      {
+        "key": "layout",
+        "values": [
+          "justified",
+          "grid",
+          "feature"
+        ]
+      }
+    ],
+    "theme10_page056": [
+      {
+        "key": "theme",
+        "values": [
+          "dusk",
+          "midnight",
+          "graphite",
+          "dawn",
+          "paper"
+        ]
+      }
+    ],
+    "theme10_page057": [
+      {
+        "key": "theme",
+        "values": [
+          "dusk",
+          "midnight",
+          "graphite",
+          "dawn",
+          "vapor",
+          "paper"
+        ]
+      }
+    ],
+    "theme10_page059": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page060": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page061": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page064": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page065": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page066": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page067": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page068": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page069": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page070": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      },
+      {
+        "key": "railSide",
+        "values": [
+          "left",
+          "right"
+        ]
+      }
+    ],
+    "theme10_page071": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page072": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page073": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page074": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page075": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page080": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page081": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page082": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page083": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page086": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page087": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page089": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page090": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page091": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page093": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page094": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ]
+  }
 }
