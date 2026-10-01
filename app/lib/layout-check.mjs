@@ -149,9 +149,8 @@ export function analyzeSlideLayout({ index, layout, probe, props }) {
     const ratio = Math.min(...causes.map(cause => cause.ratio));
     const main = locateFields(item.text, leaves)[0] || null;
     const shown = shortText(item.text, 16);
-    // 被裁掉的文字，缩短建议 ≥ 当前字数（2 字的文字没有可缩的）：让模型「缩短」没有意义，按没法用 props 修报
-    const clipCause = worst.how === '被裁掉一截' || worst.how === '超出所在卡片被裁掉';
-    const shrinkable = main && !(clipCause && targetLength(main, ratio) >= main.plain.length);
+    // 缩短建议 ≥ 当前字数（1–2 字的文字没有可缩的）：不论哪种成因，让模型「缩短」都没有意义，按没法用 props 修报
+    const shrinkable = main && targetLength(main, ratio) < main.plain.length;
     const message = shrinkable
       ? `${where}：字段 ${main.path} 的文字太长，${worst.how}（页面上显示为『${shown}』），请缩短到约 ${targetLength(main, ratio)} 字`
       : main
