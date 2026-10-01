@@ -9,7 +9,7 @@ import { createTaskTmp } from './tasktmp.mjs';
 import { registerCleanup } from './cleanup.mjs';
 import { runProcess } from './proc.mjs';
 import { progress, log } from './protocol.mjs';
-import { readJson, sameFile, tail, ensureRealDir, assertNoLinksInside, assertPlainFileOrMissing, writeJsonAtomic } from './fsutil.mjs';
+import { readJson, sameFile, tail, ensureRealDir, assertNoLinksInside, assertPlainFileOrMissing, writeJsonAtomic, removeOutputDir } from './fsutil.mjs';
 import { loadEngine } from './layouts.mjs';
 import { checkGoalCompleteness } from './completeness.mjs';
 import { normalizeNumbers } from './rounding.mjs';
@@ -186,6 +186,7 @@ async function runCheckInner({ goal, goalSrc, workDir, goalFile, taskTmp, browse
 
   // 4. 渲染。DASHI_PPT_THEME_RUNTIME=prebuilt：只拷贝预构建的主题 bundle，不依赖 esbuild
   step('render');
+  removeOutputDir(pptDir, 'workDir/ppt'); // 整体重建：里面的硬链接只是被摘掉目录项，不会被原地改写
   const renderEnv = { ...taskEnv, DASHI_PPT_THEME_RUNTIME: 'prebuilt' };
   const cmd = renderCommand(goalFile, htmlFile);
   const render = await timed('render', () => runProcess(cmd.command, cmd.args, { cwd: RUNTIME_DIR, timeoutMs: RENDER_TIMEOUT_MS, env: renderEnv }));

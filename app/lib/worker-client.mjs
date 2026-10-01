@@ -21,6 +21,20 @@ export function pluginErrorFromWorkerEvent(event, failCode, label, stderrTail) {
 }
 
 /**
+ * 任务结束后清理临时目录：只有确认进程都结束了（没有存活的记录进程）才删，
+ * 否则保留目录并写日志（它们可能还在往里写，删了也删不干净，下次同目录的任务会各用各的 .tmp/<随机>）。
+ */
+export function cleanupAfterRun(taskTmp, cleanupFiles, res, log = message => process.stderr.write(`${message}\n`)) {
+  const survivors = res?.survivors || [];
+  if (survivors.length) {
+    log(`[临时目录] 仍有进程存活（pid ${survivors.join(', ')}），不删除 ${taskTmp.dir}`);
+    return false;
+  }
+  taskTmp.cleanup(cleanupFiles);
+  return true;
+}
+
+/**
  * 跑一个 worker 任务。tmpBase：任务临时目录的父目录（请求里的 workDir / deckDir，必须已存在）。
  * cleanupFiles：任务的临时文件（如 PPTX 的 .part），进程树结束后由父进程兜底删除。
  */
@@ -28,6 +42,7 @@ export async function runWorker(task, args, { timeoutMs, failCode, label, browse
   let resultEvent = null;
   let errorEvent = null;
   let handle = null;
+  let runResult = null;
   const taskTmp = createTaskTmp(tmpBase);
   const unregister = registerCleanup(() => taskTmp.cleanup(cleanupFiles));
   const env = { ...process.env, ...taskTmp.env(), IMAGO_WORKER_ARGS: JSON.stringify({ ...args, tmpBase: taskTmp.dir }) };
@@ -44,11 +59,12 @@ export async function runWorker(task, args, { timeoutMs, failCode, label, browse
         let event;
         try { event = JSON.parse(line); } catch { return; }
         if (event.event === 'progress') emit(event);
-        else if (event.event === 'pids') for (const item of event.pids || []) handle?.track(item.pid, item.command);
+        else if (event.event === 'pids') for (const item of event.pids || []) handle?.track(item.pid, { command: item.command, start: item.start });
         else if (event.event === 'result') resultEvent = event;
         else if (event.event === 'error') errorEvent = event;
       },
     });
+    runResult = res;
     const stderrTail = tail(res.stderr, 1500);
     if (res.timedOut) {
       throw new PluginError(failCode, `${label}超过 ${Math.round(timeoutMs / 1000)} 秒未完成，已终止浏览器和子进程`, { timeout: true, timeoutMs, stderrTail, killedPids: res.killedPids });
@@ -63,6 +79,6 @@ export async function runWorker(task, args, { timeoutMs, failCode, label, browse
   } finally {
     // runProcess 返回时进程树已结束（或已强制收尾）：现在清理临时目录与临时文件
     unregister();
-    taskTmp.cleanup(cleanupFiles);
+    cleanupAfterRun(taskTmp, cleanupFiles, runResult);
   }
 }

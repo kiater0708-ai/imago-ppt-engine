@@ -74,12 +74,12 @@ test('审查15：write-safe-props 退出码 0 但输出不是合法 JSON / 被�
   for (const stdout of bad) {
     assert.throws(() => safePropsErrors(stdout, { exitOk: true }), error => error.code === 'RENDER_FAILED', `输出 ${JSON.stringify(stdout)} 应报 RENDER_FAILED`);
   }
-  assert.throws(() => safePropsErrors('{"ok":true,"layoutChanges":[]}', { exitOk: true, truncated: true }), error => error.code === 'RENDER_FAILED');
-  const good = safePropsErrors('{"ok":true,"layoutChanges":[{"slide":1}],"slides":[]}', { exitOk: true });
-  assert.deepEqual(good.data.layoutChanges, [{ slide: 1 }]);
+  assert.throws(() => safePropsErrors('{"goal":"/x/goal.json","slideCount":0,"goalSpecErrorCount":0,"propErrorCount":0,"warningCount":0,"ok":true,"layoutChanges":[],"slides":[]}', { exitOk: true, truncated: true }), error => error.code === 'RENDER_FAILED');
+  const good = safePropsErrors('{"goal":"/x/goal.json","slideCount":0,"goalSpecErrorCount":0,"propErrorCount":0,"warningCount":0,"ok":true,"layoutChanges":[{"slide":1,"from":"a","to":"b","reason":"r"}],"slides":[]}', { exitOk: true });
+  assert.deepEqual(good.data.layoutChanges, [{ slide: 1, from: 'a', to: 'b', reason: 'r' }]);
   // 退出码非 0：JSON 里要有错误行，否则同样是流程失败
-  assert.throws(() => safePropsErrors('{"ok":false,"layoutChanges":[],"slides":[]}', { exitOk: false }), error => error.code === 'RENDER_FAILED');
-  const withErrors = safePropsErrors('{"ok":false,"layoutChanges":[],"goalSpecErrors":["slide 1 layout x field a: unknown prop for this layout"],"slides":[]}', { exitOk: false });
+  assert.throws(() => safePropsErrors('{"goal":"/x/goal.json","slideCount":0,"goalSpecErrorCount":0,"propErrorCount":0,"warningCount":0,"ok":false,"layoutChanges":[],"slides":[]}', { exitOk: false }), error => error.code === 'RENDER_FAILED');
+  const withErrors = safePropsErrors('{"goal":"/x/goal.json","slideCount":0,"goalSpecErrorCount":0,"propErrorCount":0,"warningCount":0,"ok":false,"layoutChanges":[],"goalSpecErrors":["slide 1 layout x field a: unknown prop for this layout"],"slides":[]}', { exitOk: false });
   assert.equal(withErrors.lines.length, 1);
 });
 

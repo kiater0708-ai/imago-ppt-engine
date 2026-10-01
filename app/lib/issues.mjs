@@ -21,6 +21,7 @@ export function classifyValidatorLine(line) {
   if (/too many items|fixed length mismatch|countBinding mismatch|lengthBinding mismatch|too many media items/i.test(line)) {
     return { code: 'BAD_ARRAY_COUNT', text: '数组项数不符合版式要求', fixable: true };
   }
+  if (/media asset .* is used \d+ times/i.test(line)) return { code: 'VALIDATOR', text: '同一个媒体素材被多页重复使用', fixable: true };
   if (/duplicate layout/i.test(line)) return { code: 'VALIDATOR', text: '同一个版式被多页使用，需要换版式或去页', fixable: true };
   if (/repeated (core|visible) copy|重复/i.test(line)) return { code: 'VALIDATOR', text: '多处出现重复的文案，需要改写', fixable: true };
   if (/only one cover candidate|cover-like layouts must/i.test(line)) return { code: 'VALIDATOR', text: '封面版式使用不合规', fixable: true };
@@ -52,10 +53,11 @@ export function issuesFromValidatorLine(line, slideLayouts, { fixable } = {}) {
   const layoutInLine = (line.match(LAYOUT_RE) || [])[0] || null;
   const isDeckLevel = /^\s*deck\b/i.test(line);
   const numbers = mentionedSlideNumbers(line).filter(n => n >= 1 && n <= slideLayouts.length);
+  // 点名了多页（含没有 deck 前缀的 `(slide 2 …, slide 4 …)`）一律按页展开；点名一页就是那一页；没点名页号则 index:null
   let indexes;
-  if (isDeckLevel) indexes = numbers.length ? numbers.map(n => n - 1) : [null];
-  else if (numbers.length) indexes = [numbers[0] - 1];
-  else if (layoutInLine && slideLayouts.filter(item => item === layoutInLine).length === 1) indexes = [slideLayouts.indexOf(layoutInLine)];
+  if (numbers.length > 1) indexes = numbers.map(n => n - 1);
+  else if (numbers.length === 1) indexes = [numbers[0] - 1];
+  else if (!isDeckLevel && layoutInLine && slideLayouts.filter(item => item === layoutInLine).length === 1) indexes = [slideLayouts.indexOf(layoutInLine)];
   else indexes = [null];
   return indexes.map(index => {
     const layout = index !== null ? slideLayouts[index] : (isDeckLevel ? null : layoutInLine);
@@ -83,9 +85,45 @@ export function bulletLines(...texts) {
   return out;
 }
 
+const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+const isInt = value => Number.isInteger(value) && value >= 0;
+const isStringArray = value => Array.isArray(value) && value.every(item => typeof item === 'string');
+
+/** 严格结构校验：写出第一个不符的位置，全部符合返回 null。字段与类型对照 write-safe-props.mjs 的实际输出。 */
+function safePropsShapeProblem(data) {
+  if (!isObject(data)) return '顶层不是对象';
+  if (typeof data.ok !== 'boolean') return 'ok 不是布尔';
+  if (typeof data.goal !== 'string') return 'goal 不是字符串';
+  for (const key of ['slideCount', 'goalSpecErrorCount', 'propErrorCount', 'warningCount']) {
+    if (!isInt(data[key])) return `${key} 不是非负整数`;
+  }
+  if (data.written !== undefined && typeof data.written !== 'string') return 'written 不是字符串';
+  if (!Array.isArray(data.layoutChanges)) return 'layoutChanges 不是数组';
+  for (const [i, change] of data.layoutChanges.entries()) {
+    if (!isObject(change)) return `layoutChanges[${i}] 不是对象`;
+    if (!isInt(change.slide) || typeof change.from !== 'string' || typeof change.to !== 'string' || typeof change.reason !== 'string') {
+      return `layoutChanges[${i}] 缺 slide(整数) / from / to / reason(字符串)`;
+    }
+  }
+  for (const key of ['goalSpecErrors', 'propErrors']) {
+    if (data[key] !== undefined && !isStringArray(data[key])) return `${key} 不是字符串数组`;
+  }
+  if (!Array.isArray(data.slides)) return 'slides 不是数组';
+  for (const [i, slide] of data.slides.entries()) {
+    if (!isObject(slide)) return `slides[${i}] 不是对象`;
+    if (!isInt(slide.slide) || slide.slide < 1) return `slides[${i}].slide 不是正整数`;
+    if (slide.layout !== null && typeof slide.layout !== 'string') return `slides[${i}].layout 不是字符串或 null`;
+    if (!isInt(slide.warningCount) || !isInt(slide.errorCount)) return `slides[${i}] 的 warningCount / errorCount 不是非负整数`;
+    for (const key of ['warnings', 'errors']) {
+      if (slide[key] !== undefined && !isStringArray(slide[key])) return `slides[${i}].${key} 不是字符串数组`;
+    }
+  }
+  return null;
+}
+
 /**
- * write-safe-props 的 JSON 输出：必须是合法 JSON、结构正确，且没被截断，否则是流程失败（RENDER_FAILED）。
- * 退出码 0：要求 { ok:true, layoutChanges:数组 }；退出码非 0：要求带错误行。
+ * write-safe-props 的 JSON 输出：必须是合法 JSON、结构严格符合（必需字段与类型逐个检查）、没被截断，
+ * 否则是流程失败（RENDER_FAILED）。退出码 0：要求 ok:true；退出码非 0：要求带错误行。
  */
 export function safePropsErrors(stdout, { exitOk = true, truncated = false } = {}) {
   const fail = reason => new PluginError('RENDER_FAILED', `write-safe-props 的输出不可用：${reason}`, { stdoutTail: String(stdout || '').slice(-600) });
@@ -96,17 +134,14 @@ export function safePropsErrors(stdout, { exitOk = true, truncated = false } = {
   } catch (error) {
     throw fail(`不是合法 JSON（${error.message}）`);
   }
-  if (!data || typeof data !== 'object' || Array.isArray(data)) throw fail('顶层不是对象');
-  if (data.layoutChanges !== undefined && !Array.isArray(data.layoutChanges)) throw fail('layoutChanges 不是数组');
-  if (data.slides !== undefined && !Array.isArray(data.slides)) throw fail('slides 不是数组');
-  if (typeof data.ok !== 'boolean') throw fail('缺少布尔字段 ok');
+  const problem = safePropsShapeProblem(data);
+  if (problem) throw fail(problem);
   const lines = [];
-  for (const item of data.goalSpecErrors || []) lines.push(String(item));
-  for (const item of data.propErrors || []) lines.push(typeof item === 'string' ? item : JSON.stringify(item));
-  for (const slide of data.slides || []) {
+  for (const item of data.goalSpecErrors || []) lines.push(item);
+  for (const item of data.propErrors || []) lines.push(item);
+  for (const slide of data.slides) {
     for (const item of slide.errors || []) lines.push(`slide ${slide.slide} layout ${slide.layout}: ${item}`);
   }
-  for (const item of data.errors || []) lines.push(String(item));
   if (exitOk && data.ok !== true) throw fail('退出码为 0 但 ok 不是 true');
   if (!exitOk && !lines.length) throw fail('退出码非 0，但输出里没有任何错误行');
   return { data, lines };

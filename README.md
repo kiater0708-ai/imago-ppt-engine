@@ -54,9 +54,9 @@ node app/cli.mjs <命令> --request <请求.json>      # info 可不带 --reques
 
 **contracts**：每个版式 ≤1500 字符。`forcedProps` 是必须强制写入的数量字段（媒体数量=0），`mediaFields` 里的媒体字段不要写。被排除或不属于该主题的版式报 `BAD_REQUEST`。
 
-**check**：把 goal 复制进 workDir 再处理，**不改原文件**（workDir 里的 goal.json 不能就是原文件）。步骤：数值规整（只修浮点尾差，如 5.199999999999999 → 5.2）→ 完整性 → write-safe-props（`layoutChanges`）→ validate-goal-spec → 渲染 → swiss → goal-copy → 浏览器可见文字检查。前三步已发现问题时不再渲染，直接返回（`rendered:false`）。`deckDir` 就是 workDir（内含 `goal.json`、`ppt/index.html`）。
+**check**：把 goal 复制进 workDir 再处理，**不改原文件**（workDir 里的 goal.json 不能就是原文件）。步骤：数值规整（只修浮点尾差，如 5.199999999999999 → 5.2）→ 完整性 → write-safe-props（`layoutChanges`；输出必须是结构严格正确的 JSON，否则 `RENDER_FAILED`）→ validate-goal-spec → 渲染（渲染前把 `workDir/ppt/` 整体删除重建，里面的硬链接不会被原地改写）→ swiss → goal-copy → 浏览器可见文字检查。前三步已发现问题时不再渲染，直接返回（`rendered:false`）。`deckDir` 就是 workDir（内含 `goal.json`、`ppt/index.html`）。
 
-`issues[]`：`{index(0 起，未知为 null), layout, field|null, code, message(中文，附大师原文), fixable}`。deck 级问题（如同一版式多页使用、核心文案重复）按大师原文点名的页逐页展开，没点名页号则 `index:null`。禁用词（Roadmap 等）如果出现在我们写入该页 props 的任意字段里，不算模板残留。`code` 固定集合：
+`issues[]`：`{index(0 起，未知为 null), layout, field|null, code, message(中文，附大师原文), fixable}`。deck 级问题（如同一版式多页使用、核心文案重复）按大师原文点名的页逐页展开，没点名页号则 `index:null`。禁用词（Roadmap 等）按出现次数核对：页面可见次数 > 我们写入该页 props 文字里的次数，多出来的才算模板残留（所以同一个词在版式里被显示两次而作者只写了一次，会被报）。`code` 固定集合：
 
 | code | 含义 | fixable |
 |---|---|---|
@@ -76,6 +76,10 @@ node app/cli.mjs <命令> --request <请求.json>      # info 可不带 --reques
 ### 浏览器探测顺序
 
 环境变量 `IMAGO_PPT_BROWSER` → Windows 注册表 `HKLM` / `HKCU` 的 `App Paths\msedge.exe` → 运行时 `chrome-path.mjs` 的候选（Chrome、Edge 固定路径）→ 非 Windows 开发机可用 playwright 缓存里的 headless shell。都没有报 `NO_BROWSER`。
+
+### 浏览器可见文字检查怎么等
+
+动画不强行快进（避免触发业务回调、改变内容），而是把页面动画调成 10 倍速（CDP `Animation.setPlaybackRate`，gsap 全局时间线 `timeScale` 同样 10 倍）。逐页翻到后重新计时：有限动画/补间跑完、字体加载完，且可见文字稳定 800ms 不变就读，单页上限 1.5 秒。为了 16 页 deck 的 `check` 在约 6 秒内完成，用最多 8 个标签页并行，每个标签页只管一部分页、只往前翻一遍。限制：访问页面后超过约 0.8 秒才由 `setTimeout` 之类挂上来的内容读不到；页面里的无限循环动画不会被等待。
 
 ## 开发
 

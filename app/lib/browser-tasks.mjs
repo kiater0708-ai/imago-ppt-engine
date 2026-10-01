@@ -7,7 +7,7 @@ import { importFromRuntime } from './paths.mjs';
 import { readJson, ensureDir, copyFile } from './fsutil.mjs';
 import { loadEngine } from './layouts.mjs';
 import { checkSlideResidue, findMediaPlaceholder, norm, stringLeaves } from './residue.mjs';
-import { withDeckBrowser, openDeckPage, openDeckPageForShots, extractSlideTexts, captureShots, testHang, SLIDE_SELECTOR } from './browser-session.mjs';
+import { withDeckBrowser, openDeckPage, openDeckPageForShots, extractSlideTextsParallel, RESIDUE_TEXT_OPTIONS, captureShots, testHang, SLIDE_SELECTOR } from './browser-session.mjs';
 
 /**
  * 运行时文字检查。返回 { issues, slideCount, texts:[{index,layout,waitedMs,length}] }。
@@ -23,10 +23,13 @@ export async function runResidueTask({ goalFile, deckPptDir, browserPath, tmpBas
     }
   }
   return withDeckBrowser({ deckPptDir, browserPath, tmpBase }, async ({ browser, url }) => {
-    const { page, context, total } = await openDeckPage(browser, url);
     await testHang('residue');
-    try {
-      const texts = await extractSlideTexts(page, total, (done, all) => progress('residue', done, all));
+    {
+      const { texts } = await extractSlideTextsParallel(browser, url, {
+        expectedTotal: goal.slides.length,
+        onPage: (done, all) => progress('residue', done, all),
+        options: RESIDUE_TEXT_OPTIONS,
+      });
       const issues = [];
       if (texts.length !== goal.slides.length) {
         issues.push({ index: null, layout: null, field: null, code: 'VALIDATOR', fixable: false, message: `浏览器里有 ${texts.length} 页，goal 有 ${goal.slides.length} 页，无法逐页核对` });
@@ -66,8 +69,6 @@ export async function runResidueTask({ goalFile, deckPptDir, browserPath, tmpBas
         }
       });
       return { issues, slideCount: texts.length, texts: texts.map(({ text, ...rest }) => ({ ...rest, length: text.length })) };
-    } finally {
-      await context.close().catch(() => {});
     }
   });
 }

@@ -15,6 +15,14 @@ const NUMERIC_ONLY = /^[\d\s.,%+\-–—:/·×÷→↑↓]+$/;
 const COLOR = /^(#[0-9a-f]{3,8}|rgba?\(.*\)|hsla?\(.*\))$/i;
 const PATHLIKE = /(^|\s)(\/|\.\/|\.\.\/|https?:\/\/|file:\/\/)|\.(png|jpe?g|gif|svg|webp|mp4|woff2?|ttf)(\?|$)/i;
 
+/** needle 在 haystack 里不重叠出现的次数。 */
+export function countOccurrences(haystack, needle) {
+  if (!needle) return 0;
+  let count = 0;
+  for (let index = haystack.indexOf(needle); index >= 0; index = haystack.indexOf(needle, index + needle.length)) count += 1;
+  return count;
+}
+
 export function norm(text) {
   return String(text).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
 }
@@ -98,8 +106,9 @@ export function checkSlideResidue({ text, props, defaultProps, info }) {
   for (const word of FORBIDDEN_TEXT) {
     const needle = word.toLowerCase();
     if (!visible.includes(needle)) continue;
-    // 我们写进该页 props 的文字（任意字段）里就有这个词：是作者主动写的，不是模板残留
-    if (ours.includes(needle)) continue;
+    // 按出现次数核对：页面上该词出现的次数 > 我们写入该页 props 文字里的次数，多出来的才是模板残留。
+    // （只看「有没有」会让作者在备注里写一次，就盖住组件另一处写死的同一个词）
+    if (countOccurrences(visible, needle) <= countOccurrences(ours, needle)) continue;
     const paths = locate(needle);
     const fixable = paths.length > 0 && paths.every(path => allowed.has(topKey(path)));
     seen.add(needle);

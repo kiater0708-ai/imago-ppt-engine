@@ -140,7 +140,7 @@ for (const signal of ['SIGTERM', 'SIGINT']) {
     });
     let stdout = '';
     child.stdout.on('data', chunk => { stdout += chunk; });
-    const ps = () => execFileSync('ps', ['-Ao', 'pid,command'], { encoding: 'utf8', maxBuffer: 1 << 26 }).split('\n').filter(l => l.includes('worker.mjs'));
+    const ps = () => execFileSync('ps', ['-Ao', 'pid,command'], { encoding: 'utf8', maxBuffer: 1 << 26 }).split('\n').filter(l => l.includes(`${path.join(PLUG, 'app', 'worker.mjs')}`)); // 只认本仓库 app/worker.mjs（别的会话的 worker 不算）
     const pidOf = line => Number(line.trim().split(/\s+/)[0]);
     const stale = new Set(ps().map(pidOf)); // 与本用例无关的旧进程不计
     const mine = () => ps().filter(l => !stale.has(pidOf(l)));

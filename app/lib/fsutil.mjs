@@ -116,6 +116,26 @@ export function ensureRealDir(dir) {
   }
 }
 
+/**
+ * 渲染前把插件要写的输出目录（如 ppt/）整体删除，由渲染重新创建。
+ * 这样里面任何文件（包括指向别处的硬链接）都只是被摘掉目录项，不会被原地改写。目录本身是符号链接则拒绝。
+ */
+export function removeOutputDir(dir, what = '输出目录') {
+  let stat;
+  try {
+    stat = fs.lstatSync(dir);
+  } catch (error) {
+    if (error.code === 'ENOENT') return;
+    throw toPluginError(error);
+  }
+  if (stat.isSymbolicLink()) throw new PluginError('BAD_REQUEST', `${what}是符号链接或联接点，拒绝写入：${dir}`, { path: dir });
+  try {
+    fs.rmSync(dir, { recursive: true, force: true, maxRetries: 3, retryDelay: 100 });
+  } catch (error) {
+    throw toPluginError(error);
+  }
+}
+
 /** 临时文件 + 原子替换：不跟随目标处已有的链接，硬链接的另一端不受影响。 */
 export function writeFileAtomic(file, content) {
   assertPlainFileOrMissing(file);

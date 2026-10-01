@@ -66,7 +66,7 @@ function reportBrowserPids() {
   if (!process.env.IMAGO_WORKER_ARGS) return; // 只有 worker 子进程的 stdout 是事件通道
   try {
     const rows = descendantsOf(process.pid, snapshotProcesses());
-    if (rows.length) emit({ event: 'pids', pids: rows.map(row => ({ pid: row.pid, command: row.command })) });
+    if (rows.length) emit({ event: 'pids', pids: rows.map(row => ({ pid: row.pid, command: row.command, start: row.start })) });
   } catch { /* 记录失败不影响任务，父进程还有定期轮询 */ }
 }
 
@@ -111,11 +111,11 @@ export async function withDeckBrowser({ deckPptDir, browserPath, tmpBase }, fn) 
   }
 }
 
-export async function openDeckPage(browser, url, { deviceScaleFactor = 1 } = {}) {
+export async function openDeckPage(browser, url, { deviceScaleFactor = 1, waitUntil = 'networkidle' } = {}) {
   const context = await browser.newContext({ viewport: VIEWPORT, ignoreHTTPSErrors: true, deviceScaleFactor });
   const page = await context.newPage();
   try {
-    await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+    await page.goto(url, { waitUntil, timeout: 60000 });
     await page.evaluate(() => document.fonts.ready);
   } catch (error) {
     await context.close().catch(() => {});
@@ -133,13 +133,26 @@ async function activeIndex(page) {
   return page.evaluate(selector => [...document.querySelectorAll(selector)].findIndex(slide => slide.classList.contains('active')), SLIDE_SELECTOR);
 }
 
+/** 没有 window.go 时用键盘翻页：回首页用 Home（不认 Home 就连按 ArrowLeft），其余按方向键走差值。 */
+async function pressToward(page, from, to) {
+  if (to === from) return;
+  if (to === 0) {
+    await page.keyboard.press('Home');
+    if ((await activeIndex(page)) === 0) return;
+    from = Math.max(0, await activeIndex(page));
+  }
+  const key = to > from ? 'ArrowRight' : 'ArrowLeft';
+  for (let n = 0; n < Math.min(Math.abs(to - from), 500); n += 1) await page.keyboard.press(key);
+}
+
 /**
  * 逐页翻到，对每页执行 visit(index)。
  * 默认用键盘右键（真实观看时的路径，含翻页动画，截图用）；instant:true 时用页面自己的 go(i, {animate:false})
- * （导出引擎也是这样翻页的），不播翻页动画，文字检查用它，省掉每页约 1 秒的动画时间。
+ * （导出引擎也是这样翻页的），不播翻页动画，文字检查用它；页面没有 go 就退回键盘（含往回翻）。
  */
-export async function walkSlides(page, total, visit, { instant = false } = {}) {
+export async function walkSlides(page, total, visit, { instant = false, indexes = null } = {}) {
   const results = [];
+  const order = indexes ? [...indexes].sort((x, y) => x - y) : Array.from({ length: total }, (_, k) => k);
   const goInstant = index => page.evaluate(i => {
     if (typeof window.go !== 'function') return false;
     window.go(i, { animate: false, force: true });
@@ -147,12 +160,13 @@ export async function walkSlides(page, total, visit, { instant = false } = {}) {
     window.__ensureRuntimeSlideRendered?.(slides[i]); // 懒渲染的页面：和导出引擎一样先让它渲染出来
     return true;
   }, index);
-  for (let i = 0; i < total; i += 1) {
+  for (const i of order) {
     if (instant) {
       // go() 偶尔会赶上上一次切换还没提交而被覆盖（从末页翻回首页时出现过）：没到位就重发，最多 5 次
       for (let attempt = 0; attempt < 5 && (await activeIndex(page)) !== i; attempt += 1) {
+        const before = await activeIndex(page);
         const moved = await goInstant(i);
-        if (!moved) await page.keyboard.press('ArrowRight');
+        if (!moved) await pressToward(page, before, i);
         const settle = Date.now() + 600;
         while (Date.now() < settle && (await activeIndex(page)) !== i) await page.waitForTimeout(50);
       }
@@ -205,11 +219,19 @@ export async function waitSettled(page, capMs = SETTLE_CAP_MS) {
 }
 
 export const TEXT_CAP_MS = 1500;
-export const TEXT_SETTLE_MS = 500;
-export const TEXT_REREAD_MS = 60;
-const TEXT_POLL_MS = 100;
+export const TEXT_SETTLE_MS = 500; // 兼容旧调用方（审计脚本）的选项名，已不再使用
+export const TEXT_REREAD_MS = 300; // 默认稳定窗口（审计脚本等）；残留检查用 RESIDUE_TEXT_OPTIONS
+export const ANIMATION_RATE = 10;
+const TEXT_POLL_MS = 30;
 
-/** 在页面里把动画快进到结束状态（只为读文字，不用于截图）：WAAPI 逐个 finish()，gsap 补间 progress(1)；无限循环的跳过。 */
+/** 残留文字检查的取文字参数：稳定窗口 800ms（能等到 setTimeout 之类 700ms 内的延迟挂载），单页上限 1.5 秒，8 个标签页并行。 */
+export const RESIDUE_TEXT_OPTIONS = { capMs: 1500, rereadMs: 800 };
+export const RESIDUE_TABS = 8;
+
+/**
+ * 仅审计脚本使用（scripts/audit）：把动画强行快进到结束状态。会触发业务回调、改变内容，
+ * 残留文字检查不再用它（改用 prepareAnimationSpeed 加速）。
+ */
 export function fastForwardAnimations(page) {
   return page.evaluate(() => {
     const finite = timing => !(timing && (timing.iterations === Infinity || timing.endTime === Infinity));
@@ -231,38 +253,115 @@ export function fastForwardAnimations(page) {
 }
 
 /**
- * 取每页运行时可见文字：[{index, layout, text, waitedMs}]。分两遍，把等待重叠起来：
- *   第一遍：逐页翻到（go，不播翻页动画）→ 让懒渲染的页面渲染 → 动画快进到结束，记下访问时间；
- *   第二遍：逐页翻回来，再快进一次动画；该页访问满 settleMs（让 setTimeout 之类延迟挂载的内容有时间出现）后读两次，
- *          两次一致就取；不一致或还是空的才每 100ms 再读，直到连续两次一致，单页上限 capMs。
+ * 加速页面动画（不改变内容，回调照常执行，只是跑得更快）：
+ * CDP Animation.setPlaybackRate 调 WAAPI/CSS 动画的播放倍速，gsap 全局时间线 timeScale 调到同样倍数。
+ * 失败（非 Chromium、CDP 不可用）只写日志，按原速等（有单页上限兜底）。返回是否生效。
+ */
+export async function prepareAnimationSpeed(page, rate = ANIMATION_RATE) {
+  try {
+    const session = await page.context().newCDPSession(page);
+    await session.send('Animation.enable');
+    await session.send('Animation.setPlaybackRate', { playbackRate: rate });
+    return true;
+  } catch (error) {
+    process.stderr.write(`[浏览器] 设置动画倍速失败，按原速等待：${String(error.message || error).split('\n')[0]}\n`);
+    return false;
+  }
+}
+
+/** gsap 可能在页面里晚一点才加载或被替换：每页都把全局时间线 timeScale 设一遍。 */
+function applyGsapRate(page, rate) {
+  return page.evaluate(r => {
+    try { window.gsap?.globalTimeline?.timeScale?.(r); } catch { /* 没有 gsap 或不支持 */ }
+  }, rate).catch(() => {});
+}
+
+/** 页面还有没有在跑的东西：有限的 WAAPI 动画、有限且没有无限父级的 gsap 补间、字体加载。 */
+function pageBusy(page) {
+  return page.evaluate(() => {
+    const finite = timing => !(timing && (timing.iterations === Infinity || timing.endTime === Infinity));
+    const animations = document.getAnimations().filter(a => (a.playState === 'running' || a.playState === 'pending') && finite(a.effect?.getComputedTiming?.())).length;
+    let tweens = 0;
+    const g = window.gsap;
+    if (g?.globalTimeline?.getChildren) {
+      const infiniteAncestor = child => {
+        for (let parent = child.parent; parent && parent !== g.globalTimeline; parent = parent.parent) {
+          if (parent.repeat?.() === -1 || !Number.isFinite(parent.totalDuration())) return true;
+        }
+        return false;
+      };
+      for (const child of g.globalTimeline.getChildren(true, true, true)) {
+        try {
+          if (child.isActive() && child.repeat?.() !== -1 && Number.isFinite(child.totalDuration()) && !infiniteAncestor(child)) tweens += 1;
+        } catch { /* 个别补间读不了状态，当没有 */ }
+      }
+    }
+    const fonts = document.fonts && document.fonts.status === 'loading' ? 1 : 0;
+    return animations + tweens + fonts;
+  });
+}
+
+/**
+ * 取每页运行时可见文字：[{index, layout, text, waitedMs}]。
+ * 先把动画调成 10 倍速（回调照常执行，不强行快进）；逐页翻到后重新计时：
+ * 页面「不忙」（有限动画/补间跑完、没有未触发的短 setTimeout、字体加载完）且可见文字连续两次读数一致、
+ * 距上次变化 ≥ rereadMs，就取；否则每 30ms 再读，单页上限 capMs。
  * 上限到了仍在变化就取最后一次读数；一直是空的返回空文本（由调用方判空页）。
  */
-export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_MS, settleMs = TEXT_SETTLE_MS, rereadMs = TEXT_REREAD_MS } = {}) {
-  const visitedAt = [];
-  await walkSlides(page, total, async index => {
-    await fastForwardAnimations(page);
-    visitedAt[index] = Date.now();
-  }, { instant: true });
+export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_MS, settleMs = TEXT_SETTLE_MS, rereadMs = TEXT_REREAD_MS, indexes = null } = {}) {
+  void settleMs;
+  await prepareAnimationSpeed(page);
   const read = () => page.evaluate(selector => {
     const slide = document.querySelector(`${selector}.active`) || document.querySelectorAll(selector)[0];
     return { text: slide.innerText.replace(/\s+/g, ' ').trim(), layout: slide.dataset.vmLayout || '' };
   }, SLIDE_SELECTOR);
   return walkSlides(page, total, async index => {
-    const started = Date.now();
-    await fastForwardAnimations(page);
-    const wait = visitedAt[index] + settleMs - Date.now();
-    if (wait > 0) await page.waitForTimeout(Math.min(wait, capMs));
-    let previous = await read();
-    await page.waitForTimeout(rereadMs);
+    const started = Date.now(); // 翻页之后才开始计时：每页的挂载、动画都是这次激活重新开始的
+    await applyGsapRate(page, ANIMATION_RATE);
     let current = await read();
-    while (Date.now() - started < capMs && (current.text !== previous.text || current.text.length === 0)) {
+    let lastChange = Date.now();
+    for (;;) {
+      const busy = await pageBusy(page).catch(() => 0);
+      if (current.text.length > 0 && !busy && Date.now() - lastChange >= rereadMs) break;
+      if (Date.now() - started >= capMs) break;
       await page.waitForTimeout(TEXT_POLL_MS);
-      previous = current;
-      current = await read();
+      const next = await read();
+      if (next.text !== current.text) lastChange = Date.now();
+      current = next;
     }
     onPage?.(index + 1, total);
     return { index, layout: current.layout, text: current.text, waitedMs: Date.now() - started };
-  }, { instant: true });
+  }, { instant: true, indexes });
+}
+
+/**
+ * 多个标签页并行取文字：同时打开 min(tabs, expectedTotal) 个标签页（加载时间重叠），
+ * 第 k 个标签页负责页号 % count === k 的那些页（每个标签页只往前翻一遍，翻页后各自重新计时），
+ * 所以每页都等得起完整的稳定窗口，总耗时 ≈ 窗口 × 页数 / 标签页数。
+ * 返回 { texts（按页号排好）, total }；任何一个标签页失败就整体失败，额外开的标签页一律关掉。
+ */
+export async function extractSlideTextsParallel(browser, url, { expectedTotal, onPage, options = {}, tabs = RESIDUE_TABS }) {
+  const count = Math.max(1, Math.min(tabs, expectedTotal || 1));
+  const opened = [];
+  try {
+    const results = await Promise.allSettled(Array.from({ length: count }, () => openDeckPage(browser, url, { waitUntil: 'load' })));
+    for (const item of results) if (item.status === 'fulfilled') opened.push(item.value);
+    const failed = results.find(item => item.status === 'rejected');
+    if (failed) throw failed.reason;
+    const total = opened[0].total;
+    if (opened.some(item => item.total !== total)) throw new PluginError('RENDER_FAILED', `并行打开的标签页里幻灯片数量不一致：${opened.map(item => item.total).join('、')}`);
+    const active = Math.min(count, total);
+    let done = 0;
+    const tick = () => { done += 1; onPage?.(done, total); };
+    const jobs = opened.slice(0, active).map((item, k) => {
+      const indexes = Array.from({ length: total }, (_, i) => i).filter(i => i % active === k);
+      return extractSlideTexts(item.page, total, tick, { ...options, indexes });
+    });
+    const parts = await Promise.all(jobs);
+    return { texts: parts.flat().sort((x, y) => x.index - y.index), total };
+  } finally {
+    await Promise.all(opened.map(item => item.context.close().catch(() => {})));
+  }
 }
 
 /** 读 PNG 头里的宽高（IHDR），不解码整张图。 */
