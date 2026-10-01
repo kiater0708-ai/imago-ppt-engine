@@ -32,9 +32,27 @@
     {
       "layout": "theme04_page066",
       "reason": "auto:renderFailed「渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout th」"
+    },
+    {
+      "layout": "theme04_page031",
+      "reason": "大数 / 标签 / 进度条槽位语义不清，数字与标签错配（看图 A13）"
+    },
+    {
+      "layout": "theme04_page010",
+      "reason": "列表里占比与年份粘连重叠（看图 A14）"
+    },
+    {
+      "layout": "theme04_page053",
+      "reason": "斜线图右端出画，单位与数值次序颠倒（看图 A14）"
+    },
+    {
+      "layout": "theme04_page022",
+      "reason": "12 个月瓦片每格都带「开门最多的月份」，合计行只有标签没有值（看图 B4）"
     }
   ],
-  "notes": {},
+  "notes": {
+    "theme04_page051": "text010 是评分项名称、text011 是对应评分（形如「4 / 5」），不是页码，不要写页码。"
+  },
   "styleControls": {
     "theme04_page001": [
       {

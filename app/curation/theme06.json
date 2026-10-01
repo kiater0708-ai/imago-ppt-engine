@@ -80,9 +80,19 @@
     {
       "layout": "theme06_page063",
       "reason": "auto:hardcoded「FIGURES MOSAIC」"
+    },
+    {
+      "layout": "theme06_page068",
+      "reason": "三条进度条共用一把刻度，不同单位无法比较（看图 A9）"
+    },
+    {
+      "layout": "theme06_page009",
+      "reason": "折线 PEAK 标注不取最大值（看图 A21）"
     }
   ],
-  "notes": {},
+  "notes": {
+    "theme06_page003": "steps 是封面右侧「篇章索引」：本次年会 / 汇报的 4 个章节，si 序号（01–04）、st 章节名（2–4 字，如「回望」「致敬」「展望」，不要写年份或金额）、sen 对应英文；第 3 项会被高亮，放最重要的章节。lede 两行是左侧导语。"
+  },
   "styleControls": {
     "theme06_page001": [
       {

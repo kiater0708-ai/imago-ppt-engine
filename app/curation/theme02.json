@@ -62,7 +62,13 @@
       "reason": "auto:media「纯标题版式 图片数量为」"
     }
   ],
-  "notes": {},
+  "notes": {
+    "theme02_page011": "title 与 titleEm 在页面上首尾相接成一行标题：titleEm 是标题末尾要变色的几个字，title 只写它前面的部分，不要把整句写进 title 后又在 titleEm 重复末尾。例：title「门店营收榜：」，titleEm「湖滨店夺冠」。",
+    "theme02_page012": "title 与 titleEm 在页面上首尾相接成一行标题：titleEm 是标题末尾要变色的几个字，title 只写它前面的部分，不要把整句写进 title 后又在 titleEm 重复末尾。例：title「这一年，我们把热饭」，titleEm「端得更远」。",
+    "theme02_page035": "title 与 titleEm 在页面上首尾相接成一行标题：titleEm 是标题末尾要变色的几个字，title 只写它前面的部分，不要把整句写进 title 后又在 titleEm 重复末尾。例：title「86 家店，长在」，titleEm「6 座城市里」。",
+    "theme02_page047": "quote、quoteEm、quoteTail 在页面上依次首尾相接成一句话：quote 写前半句，quoteEm 写中间要变色的几个字，quoteTail 写后半句（可留空）；已经写进 quote 的词不要在 quoteEm 再写一遍。例：quote「每一碗热饭，都是」，quoteEm「一次认真」。",
+    "theme02_page074": "statement 与 statementEm 在页面上首尾相接成一句话：statementEm 是末尾要变色的几个字，statement 只写它前面的部分，不要重复。例：statement「一路同行，」，statementEm「明年再聚」。"
+  },
   "styleControls": {
     "theme02_page001": [
       {

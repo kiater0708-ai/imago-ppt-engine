@@ -95,25 +95,29 @@ test('catalog：stats 给出被排除原因计数', async () => {
   assert.equal(wf.category, 'curation');
 });
 
-test('catalog：summary 里带清单说明（theme11 page040 / page059）', async () => {
+test('catalog：summary 里带清单说明（theme11 page059 / page064）；page040 已排除', async () => {
   const result = await catalog('theme11', 'seed-A', { sampleRatio: 1 });
-  const p40 = result.layouts.find(item => item.layout === 'theme11_page040');
-  assert.ok(p40 && p40.summary.includes('说明 瀑布图'));
+  const p59 = result.layouts.find(item => item.layout === 'theme11_page059');
+  assert.ok(p59 && p59.summary.includes('说明 占比方块图'));
+  const p64 = result.layouts.find(item => item.layout === 'theme11_page064');
+  assert.ok(p64 && p64.summary.includes('说明 rows[].val'));
+  assert.equal(result.layouts.some(item => item.layout === 'theme11_page040'), false, '瀑布图 page040 总计柱被画成增量，已排除');
 });
 
 test('contracts：≤1500 字符、嵌套路径按嵌套结构、notes 与 styleControls 来自清单', async () => {
-  const res = await runCli('contracts', { request: { protocol: 1, theme: 'theme11', layouts: ['theme11_page040', 'theme11_page059', 'theme11_page001'] } });
+  const res = await runCli('contracts', { request: { protocol: 1, theme: 'theme11', layouts: ['theme11_page064', 'theme11_page059', 'theme11_page001'] } });
   assert.equal(res.status, 0, res.stderr.slice(0, 400));
   const { contracts } = res.last;
-  assert.deepEqual(Object.keys(contracts).sort(), ['theme11_page001', 'theme11_page040', 'theme11_page059']);
+  assert.deepEqual(Object.keys(contracts).sort(), ['theme11_page001', 'theme11_page059', 'theme11_page064']);
   for (const [id, contract] of Object.entries(contracts)) {
     assert.ok(JSON.stringify(contract).length <= 1500, `${id} 契约超过 1500 字符`);
     for (const key of ['fields', 'arrays', 'examples', 'notes', 'styleControls']) assert.ok(key in contract, `${id} 缺 ${key}`);
     assert.ok(Array.isArray(contract.styleControls));
   }
-  assert.match(contracts.theme11_page040.notes, /瀑布图/);
+  assert.match(contracts.theme11_page064.notes, /固定加「\+」/);
+  assert.match(contracts.theme11_page059.notes, /占比方块图/);
   assert.equal(contracts.theme11_page001.notes, null);
-  assert.ok(contracts.theme11_page040.examples['不可写的结构字段']);
+  assert.ok(contracts.theme11_page064.examples['不可写的结构字段']);
 });
 
 test('contracts：12 套主题所有可用版式的契约都 ≤1500 字符（无 oversize）', async () => {
@@ -145,8 +149,8 @@ test('curation：12 个文件格式正确，引用的版式都真实存在；the
   }
   const t11 = JSON.parse(fs.readFileSync(path.join(PLUG, 'app', 'curation', 'theme11.json'), 'utf8'));
   const manual = list => list.filter(item => !item.reason.startsWith('auto:'));
-  assert.deepEqual(manual(t11.exclude).map(item => item.layout).sort(), ['theme11_page008', 'theme11_page013', 'theme11_page071', 'theme11_page083'], '手工条目保持不动');
-  assert.deepEqual(Object.keys(t11.notes).sort(), ['theme11_page040', 'theme11_page059']);
+  assert.deepEqual(manual(t11.exclude).map(item => item.layout).sort(), ['theme11_page008', 'theme11_page013', 'theme11_page040', 'theme11_page071', 'theme11_page083'], '原有手工条目保持不动，加看图批量修复排除的 page040');
+  assert.deepEqual(Object.keys(t11.notes).sort(), ['theme11_page059', 'theme11_page064']);
   const t08 = JSON.parse(fs.readFileSync(path.join(PLUG, 'app', 'curation', 'theme08.json'), 'utf8'));
   assert.deepEqual(manual(t08.exclude).map(item => item.layout), ['theme08_page082']);
 });

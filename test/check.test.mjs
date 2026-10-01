@@ -24,6 +24,7 @@ test('check：gala-deck2（16 页）→ ok:true、issues 为空，原文件不�
   assert.equal(result.ok, true);
   assert.deepEqual(result.issues, []);
   assert.equal(result.slideCount, 16);
+  assert.deepEqual(result.normalized, [], '没有页码字段时 normalized 为空数组');
   assert.equal(result.deckDir, workDir);
   assert.equal(result.goal, path.join(workDir, 'goal.json'));
   assert.ok(fs.existsSync(path.join(workDir, 'ppt', 'index.html')));

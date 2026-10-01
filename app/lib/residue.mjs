@@ -11,6 +11,14 @@ export function findMediaPlaceholder(text) {
   return match ? match[0].trim() : null;
 }
 
+// 长尾小数：组件自己求和后把 JS 浮点原样画出来（5.199999999999999 / 3.9000000000000004），小数位 ≥ 6 就判为浮点尾差。
+export const FLOAT_ARTIFACT_RE = /\d+\.\d{6,}/g;
+
+/** 页面可见文字里的长尾小数片段，去重，保持出现顺序。 */
+export function findFloatArtifacts(text) {
+  return [...new Set(String(text).match(FLOAT_ARTIFACT_RE) || [])];
+}
+
 const NUMERIC_ONLY = /^[\d\s.,%+\-–—:/·×÷→↑↓]+$/;
 const COLOR = /^(#[0-9a-f]{3,8}|rgba?\(.*\)|hsla?\(.*\))$/i;
 const PATHLIKE = /(^|\s)(\/|\.\/|\.\.\/|https?:\/\/|file:\/\/)|\.(png|jpe?g|gif|svg|webp|mp4|woff2?|ttf)(\?|$)/i;

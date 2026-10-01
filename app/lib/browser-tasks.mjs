@@ -6,7 +6,7 @@ import { progress } from './protocol.mjs';
 import { importFromRuntime } from './paths.mjs';
 import { readJson, ensureDir, copyFile } from './fsutil.mjs';
 import { loadEngine } from './layouts.mjs';
-import { checkSlideResidue, findMediaPlaceholder, norm, stringLeaves } from './residue.mjs';
+import { checkSlideResidue, findFloatArtifacts, findMediaPlaceholder, norm, stringLeaves } from './residue.mjs';
 import { withDeckBrowser, openDeckPage, openDeckPageForShots, extractSlideTextsParallel, RESIDUE_TEXT_OPTIONS, captureShots, testHang, SLIDE_SELECTOR } from './browser-session.mjs';
 
 /**
@@ -57,6 +57,10 @@ export async function runResidueTask({ goalFile, deckPptDir, browserPath, tmpBas
         const placeholderReal = placeholder && !ours.includes(norm(placeholder).slice(0, 4));
         if (placeholderReal) {
           issues.push({ index, layout: slide.layout, field: null, code: 'MEDIA_PLACEHOLDER', fixable: false, message: `${where}：页面出现媒体占位文字『${placeholder}』，该版式以图片/视频为主体，无图时无法使用，应换版式` });
+        }
+        const floats = findFloatArtifacts(shown.text);
+        if (floats.length) {
+          issues.push({ index, layout: slide.layout, field: null, code: 'FLOAT_ARTIFACT', fixable: false, message: `${where}：页面可见文字出现长尾小数『${floats.slice(0, 3).join('』『')}』${floats.length > 3 ? `等 ${floats.length} 处` : ''}，疑似组件求和未取整的浮点尾差，props 修不了` });
         }
         for (const hit of checkSlideResidue({ text: shown.text, props: slide.props || {}, defaultProps: record.defaultProps || {}, info })) {
           if (placeholderReal && findMediaPlaceholder(hit.text)) continue; // 已按媒体占位报过

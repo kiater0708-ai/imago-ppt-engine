@@ -84,9 +84,15 @@
     {
       "layout": "theme09_page111",
       "reason": "写死示例品牌名 AInsight"
+    },
+    {
+      "layout": "theme09_page012",
+      "reason": "轴范围固定 0–350，多指标共用刻度，高亮错位（看图 A8）"
     }
   ],
-  "notes": {},
+  "notes": {
+    "theme09_page072": "items[].val 的单位由组件固定显示为「亿$」，只能填以亿美元计的金额；客户数、门店数、台数等其他单位的数据不要用本版式。"
+  },
   "styleControls": {
     "theme09_page008": [
       {

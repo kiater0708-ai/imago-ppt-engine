@@ -92,6 +92,26 @@
     {
       "layout": "theme05_page092",
       "reason": "auto:hardcoded「资本不再为故事付费 AI 公司必须 自己配得上这个价格」"
+    },
+    {
+      "layout": "theme05_page025",
+      "reason": "柱高与数值倒置，图例与列表标签错位（看图 A10）"
+    },
+    {
+      "layout": "theme05_page085",
+      "reason": "排名斜线图名次重复，与结论矛盾（看图 A11）"
+    },
+    {
+      "layout": "theme05_page006",
+      "reason": "导语里数字与标签错配，表格下大片空白（看图 A30）"
+    },
+    {
+      "layout": "theme05_page074",
+      "reason": "标题槽位缺失时只显示淡灰「12」，色块无标签，中部大面积空（看图 B8）"
+    },
+    {
+      "layout": "theme05_page038",
+      "reason": "附带一个与内容无关的小柱图，含义不明（看图 B9）"
     }
   ],
   "notes": {},

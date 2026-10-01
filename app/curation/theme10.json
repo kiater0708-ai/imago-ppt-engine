@@ -20,9 +20,24 @@
     {
       "layout": "theme10_page088",
       "reason": "auto:hardcoded「下行情形」「上行情形」"
+    },
+    {
+      "layout": "theme10_page020",
+      "reason": "左右两侧标签被页面边缘截断，求和有浮点尾差（看图 A2）"
+    },
+    {
+      "layout": "theme10_page093",
+      "reason": "无图时正文区整页空白，只剩一行小字（看图 A5）"
+    },
+    {
+      "layout": "theme10_page069",
+      "reason": "月度瓦片的数值固定带 %，把亿元画成增长率，底部结论互相矛盾（看图 A3）"
     }
   ],
-  "notes": {},
+  "notes": {
+    "theme10_page013": "weight 是各格占比，组件在数字后固定显示「%」：只能填百分数（各项之和约 100），不能填门店数、金额、人数；这类数据请换版式。",
+    "theme10_page065": "quotes[].up 决定 ▲/▼ 箭头与涨跌颜色，必须与 change 的正负号一致：change 为「+x」或上涨写 up:true，为「-x」或下降写 up:false；up 只表示数值涨跌，不表示好坏；change 里不要再写箭头符号。标题不要写具体的升降个数。"
+  },
   "styleControls": {
     "theme10_page001": [
       {

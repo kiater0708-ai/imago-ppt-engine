@@ -36,6 +36,10 @@
     {
       "layout": "theme07_page064",
       "reason": "auto:hardcoded「确定性」"
+    },
+    {
+      "layout": "theme07_page010",
+      "reason": "大数槽位不显示数字，单位与标签冲突（看图 A22）"
     }
   ],
   "notes": {},

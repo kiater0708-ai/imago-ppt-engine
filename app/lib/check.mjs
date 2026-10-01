@@ -1,5 +1,5 @@
 // check 命令：把 goal 复制进 workDir 再处理（不改原文件），顺序：
-// 数值规整 → 完整性 → write-safe-props → validate-goal-spec → 渲染 → swiss → goal-copy → 浏览器可见文字残留。
+// 数值规整 + 页码规整 → 完整性 → write-safe-props → validate-goal-spec → 渲染 → swiss → goal-copy → 浏览器可见文字残留。
 // 校验发现的内容问题不算失败（按 issues 返回）；校验流程自身失败（脚本崩溃、超时、没输出）才抛 RENDER_FAILED。
 import fs from 'node:fs';
 import path from 'node:path';
@@ -13,6 +13,7 @@ import { readJson, sameFile, tail, ensureRealDir, assertNoLinksInside, assertPla
 import { loadEngine } from './layouts.mjs';
 import { checkGoalCompleteness } from './completeness.mjs';
 import { normalizeNumbers } from './rounding.mjs';
+import { normalizePageNumbers } from './pagenum.mjs';
 import { bulletLines, issuesFromValidatorLine, safePropsErrors } from './issues.mjs';
 import { detectBrowser } from './browser-detect.mjs';
 import { runWorker } from './worker-client.mjs';
@@ -135,8 +136,10 @@ async function runCheckInner({ goal, goalSrc, workDir, goalFile, taskTmp, browse
   goal.slides.forEach((slide, index) => {
     if (slide.props) for (const change of normalizeNumbers(slide.props, '', [])) numberChanges.push({ index, ...change });
   });
+  const normalized = normalizePageNumbers(goal); // 去页后页码「NN / 总数」按实际页序重写
   writeJsonAtomic(goalFile, goal);
   if (numberChanges.length) log(`规整了 ${numberChanges.length} 个浮点尾差数值`);
+  if (normalized.length) log(`按实际页数重写了 ${normalized.length} 处页码`);
 
   // 1. 完整性（程序判定）
   step('completeness');
@@ -178,7 +181,7 @@ async function runCheckInner({ goal, goalSrc, workDir, goalFile, taskTmp, browse
   }
 
   // 返回给调用方的路径沿用请求里的写法（内部操作用的是解析过符号链接的真实路径）
-  const base = { goal: path.join(requestedWorkDir, 'goal.json'), deckDir: requestedWorkDir, layoutChanges, numberChanges: numberChanges.length, filledCountKeys: completeness.filled, timings };
+  const base = { goal: path.join(requestedWorkDir, 'goal.json'), deckDir: requestedWorkDir, layoutChanges, numberChanges: numberChanges.length, normalized, filledCountKeys: completeness.filled, timings };
   if (issues.length) {
     // 内容有问题时不渲染（渲染会用同一份规则再报一遍，且可能崩溃）
     return { ok: false, ...base, rendered: false, issues };

@@ -47,14 +47,16 @@ node app/cli.mjs <命令> --request <请求.json>      # info 可不带 --reques
 | `selftest` | `{protocol, workDir}` | `ok`、`steps`（各步耗时）、`pptx`、`pages` |
 | `catalog` | `{protocol, theme, seed, sampleRatio?=0.7}` | `layouts:[{layout,label,roles,cover,summary}]`、`coverCandidates`（同结构，全量）、`stats` |
 | `contracts` | `{protocol, theme, layouts:[...]}` | `contracts:{<layout>:{label,fields,arrays,forcedProps,examples,notes,styleControls,...}}` |
-| `check` | `{protocol, goal, workDir}` | `ok`、`goal`、`deckDir`、`layoutChanges`、`issues`、`timings` |
+| `check` | `{protocol, goal, workDir}` | `ok`、`goal`、`deckDir`、`layoutChanges`、`numberChanges`、`normalized`、`issues`、`timings` |
 | `export` | `{protocol, deckDir, pptx, shotsDir?, title?, author?, application?}` | `pptx`、`pages`、`slideCount`、`warnings`、`durationMs` |
 
 **catalog**：先按版式清单（`app/curation/<theme>.json`）与全局规则排除（媒体槽不能隐藏到 0 的版式、contentLocked）；再按 seed 确定性打乱（同 seed 结果完全相同）；按主角色（`roles[0]`，没有角色的归 `_none` 组）分组，每组保留 ⌈ratio×组大小⌉ 个且至少 2 个（组不足 2 个全留）；`coverCandidates` 是排除后的 page001–005 全量。`stats.excludedByReason` 给出被排除原因计数（`curation` / `media` / `contentLocked` / `inspectFailed`）。
 
 **contracts**：每个版式 ≤1500 字符。`forcedProps` 是必须强制写入的数量字段（媒体数量=0），`mediaFields` 里的媒体字段不要写。被排除或不属于该主题的版式报 `BAD_REQUEST`。
 
-**check**：把 goal 复制进 workDir 再处理，**不改原文件**（workDir 里的 goal.json 不能就是原文件）。步骤：数值规整（只修浮点尾差，如 5.199999999999999 → 5.2）→ 完整性 → write-safe-props（`layoutChanges`；输出必须是结构严格正确的 JSON，否则 `RENDER_FAILED`）→ validate-goal-spec → 渲染（渲染前把 `workDir/ppt/` 整体删除重建，里面的硬链接不会被原地改写）→ swiss → goal-copy → 浏览器可见文字检查。前三步已发现问题时不再渲染，直接返回（`rendered:false`）。`deckDir` 就是 workDir（内含 `goal.json`、`ppt/index.html`）。
+**check**：把 goal 复制进 workDir 再处理，**不改原文件**（workDir 里的 goal.json 不能就是原文件）。步骤：数值规整（只修浮点尾差，如 5.199999999999999 → 5.2）+ 页码规整 → 完整性 → write-safe-props（`layoutChanges`；输出必须是结构严格正确的 JSON，否则 `RENDER_FAILED`）→ validate-goal-spec → 渲染（渲染前把 `workDir/ppt/` 整体删除重建，里面的硬链接不会被原地改写）→ swiss → goal-copy → 浏览器可见文字检查。前三步已发现问题时不再渲染，直接返回（`rendered:false`）。`deckDir` 就是 workDir（内含 `goal.json`、`ppt/index.html`）。
+
+**页码规整**：去页之后，模型按计划页数写的页码（如「05 / 15」）与实际页数对不上。`check` 在 workDir 的 goal 副本里按实际页序与实际页数重写这几个字段（不改原文件）：theme02 的 `index`（「NN / 总数」）、theme12 的 `page`（当前页）与 `total`（总页数），保留原有补零宽度与分隔写法；其他主题的页码由组件运行时自己算。改动记在 result 的 `normalized:[{index, layout, field, from, to}]`（没改动为空数组）。同形但不是页码的字段（如 theme04_page051 的评分「5 / 5」）不碰。
 
 `issues[]`：`{index(0 起，未知为 null), layout, field|null, code, message(中文，附大师原文), fixable}`。deck 级问题（如同一版式多页使用、核心文案重复）按大师原文点名的页逐页展开，没点名页号则 `index:null`。禁用词（Roadmap 等）按出现次数核对：页面可见次数 > 我们写入该页 props 文字里的次数，多出来的才算模板残留（所以同一个词在版式里被显示两次而作者只写了一次，会被报）。`code` 固定集合：
 
@@ -69,7 +71,10 @@ node app/cli.mjs <命令> --request <请求.json>      # info 可不带 --reques
 | `HARDCODED_TEXT` | 组件写死的文字（如 IGNIS 燃点），props 修不了 | false |
 | `MEDIA_PLACEHOLDER` | 页面出现「图片数量」类占位文字 | false |
 | `EMPTY_PAGE` | 运行时页面为空 | false |
+| `FLOAT_ARTIFACT` | 页面可见文字出现长尾小数（`\d+\.\d{6,}`，如 5.199999999999999），疑似组件求和未取整；message 带原文片段，按页定位 | false |
 | `VALIDATOR` | 大师校验原文（尽量解析出页号与字段；模板级问题 fixable:false） | 视情况 |
+
+`FLOAT_ARTIFACT` 是后加的 code（协议版本不变，新增 code 属于向后兼容）：调用方遇到不认识的 code，一律按「不可修」处理（等同 `HARDCODED_TEXT`），不要因此报错。
 
 **export**：同一个浏览器会话、同一个静态服务，先导出 PPTX（先写临时名，成功后改名），再逐页截图 1920×1080 到 `shotsDir`（默认 `<deckDir>/shots`）`p01.png…`。`deckDir` 需含 `ppt/index.html`。截图等待：`document.fonts.ready` + 当前页动画（CSS 动画与 gsap）结束，封顶 2 秒。PPTX 元数据作者默认沿用大师原值，可用 `author` / `application` 覆盖。
 

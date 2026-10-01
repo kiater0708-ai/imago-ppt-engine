@@ -24,6 +24,34 @@
     {
       "layout": "theme03_page073",
       "reason": "auto:hardcoded「信任 渠道」「数据 协同」「资源锁定」"
+    },
+    {
+      "layout": "theme03_page027",
+      "reason": "坐标轴固定 0–1000 压扁数据，标注文字拼接错乱（看图 A7）"
+    },
+    {
+      "layout": "theme03_page031",
+      "reason": "左右轴范围固定（0–1 万 / 0–300），柱子几乎看不见（看图 A7）"
+    },
+    {
+      "layout": "theme03_page039",
+      "reason": "金句页把全部 copy 槽位拼进金句，槽位语义不清（看图 A28）"
+    },
+    {
+      "layout": "theme03_page077",
+      "reason": "结尾页标题折行不当、奖杯贴纸盖住正文，口径说明只有字段名（看图 A29）"
+    },
+    {
+      "layout": "theme03_page020",
+      "reason": "无图时显示占位文字「现场照片待补 / 暂无图片」（看图 B3）"
+    },
+    {
+      "layout": "theme03_page068",
+      "reason": "极坐标每个月份标签后都拼「单位：百万元」，花瓣图很小（看图 A12）"
+    },
+    {
+      "layout": "theme03_page006",
+      "reason": "时间描边大字叠在右侧标题上，右列只有「—」（看图 D1）"
     }
   ],
   "notes": {},

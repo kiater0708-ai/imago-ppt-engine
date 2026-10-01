@@ -28,9 +28,17 @@
     {
       "layout": "theme01_page075",
       "reason": "auto:hardcoded「单位 美元」"
+    },
+    {
+      "layout": "theme01_page037",
+      "reason": "贴纸压住底部说明文字并向左右溢出（看图 A19）"
     }
   ],
-  "notes": {},
+  "notes": {
+    "theme01_page016": "segments[].value 的单位由组件固定显示为「亿」（右列「xx 亿」），只能填以亿元计的金额；人数、名额、家数等其他单位的数据不要用本版式。",
+    "theme01_page077": "factors[].value 大于 0 画在右侧（rightLabel 一侧），小于 0 画在左侧（leftLabel 一侧），条上只显示绝对值、不带负号。rightLabel 写正值一侧的含义（如「推力」），leftLabel 写负值一侧的含义（如「阻力」）；下降项必须填负数，并在 note 里写明（如「同比 -20.6%」）。",
+    "theme01_page003": "en 是标题下方的英文副标（全大写显示）：品牌 / 公司名用需求里给的英文写法，没有就只写活动类型（如 ANNUAL GALA 2026），不要自行翻译品牌名；年份与 kicker 里的年会年度一致。"
+  },
   "styleControls": {
     "theme01_page001": [
       {

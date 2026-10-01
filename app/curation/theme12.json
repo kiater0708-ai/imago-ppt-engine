@@ -12,9 +12,20 @@
     {
       "layout": "theme12_page060",
       "reason": "auto:hardcoded「家对照」"
+    },
+    {
+      "layout": "theme12_page048",
+      "reason": "季度图 Y 轴固定 0–100，数据被裁出图框（看图 A16）"
+    },
+    {
+      "layout": "theme12_page034",
+      "reason": "城市榜条形越过页面右缘，数值被横线穿过（看图 A17）"
     }
   ],
-  "notes": {},
+  "notes": {
+    "theme12_page055": "每行条末显示的是 share（如「15%」），v 只决定条的长度、页面上不显示。caption 若写了指标或单位（如「月均营收（万元）」），share 就必须是该指标的数值（如「36 万元」，≤9 字）；只有占比时 caption 只写「占全年营收比」这类，不要提金额单位。",
+    "theme12_page005": "index 是封面右侧「篇章索引」：本次年会 / 汇报的 4 个章节，n 序号、t 章节名、e 对应英文、d 一句说明，必须贴合主题（如「回顾 · 致敬 · 同庆 · 启程」），不要写与主题不符的词（如 HALF-YEAR REVIEW）。titleEn 用需求里给的英文名，不要自行翻译品牌名。"
+  },
   "styleControls": {
     "theme12_page001": [
       {

@@ -20,6 +20,7 @@
   3. 字体映射：`OPPO Sans → Microsoft YaHei`，WPS 等环境不再把字体替换成手写体/宋体；
   4. 大字基线对齐：固定行距小于字号的大字，按 OPPO Sans 字体上沿重算位置；
   5. 上沿比例改为在浏览器里实测（Windows 与 Mac 的字体度量不同），量不到才回落 Mac 值。
+- **主题组件 3 处「imago 改」**（`app/runtime/dist/theme-runtime/` 内，搜索「imago 改」可见；每处同时改了 `themeNN.module.mjs` 与 `imported-theme-runtime.themeNN.js` 两份）：求和结果取整，防浮点尾差——`theme06`（page017 瀑布图合计）、`theme08`（page024 贡献瀑布总计）、`theme11`（page039 叠加柱柱顶合计）。共 6 个文件：`theme06.module.mjs`、`imported-theme-runtime.theme06.js`、`theme08.module.mjs`、`imported-theme-runtime.theme08.js`、`theme11.module.mjs`、`imported-theme-runtime.theme11.js`。
 - **命令行程序**（`app/cli.mjs`、`app/worker.mjs`、`app/lib/`）：`info` / `selftest` / `catalog` / `contracts` / `check` / `export` 六个命令与 JSON 协议。
 - **版式清单**（`app/curation/`）：每套主题的排除表、版式说明、可随机控件白名单。
 - **预打包**：渲染脚本由 esbuild 预打包成 `render-goal-deck.bundle.mjs`（源码 `render-goal-deck.jsx` 保留），发布包不带 tsx / esbuild。
