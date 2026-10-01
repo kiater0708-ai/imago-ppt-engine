@@ -120,7 +120,7 @@ test('审查5：export 输出目录不可写（EACCES）→ 退出码 6（IO）�
   if (!posix) return t.skip('需要非 root 的 POSIX 环境');
   const workDir = path.join(root, 'w-disk');
   const prep = await runCli('check', { request: { protocol: 1, goal: fixture('gala-deck2'), workDir } });
-  assert.equal(prep.last.ok, true);
+  assert.equal(prep.last.ok, true, `prep check：${JSON.stringify(prep.last).slice(0, 400)}；stderr=${prep.stderr.slice(-300)}`);
   const ro = path.join(root, 'readonly-out');
   fs.mkdirSync(ro);
   fs.chmodSync(ro, 0o555);

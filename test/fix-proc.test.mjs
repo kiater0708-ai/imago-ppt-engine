@@ -124,33 +124,49 @@ test('审查4：打包脚本的冒烟用同一个执行器（不再 spawnSync �
   assert.doesNotMatch(source, /spawnSync\(process\.execPath/, '冒烟不应再用 spawnSync(process.execPath, …)');
 });
 
-test('审查3：宿主取消（SIGTERM）时，CLI 结束自己启动的 worker 和浏览器', { timeout: 90000 }, async (t) => {
-  if (posixOnly(t)) return;
-  const { spawn, execFileSync } = await import('node:child_process');
-  const { runCli, fixture, tmpDir: mk } = await import('./helpers.mjs');
-  const root = mk('imago-cancel-');
-  const workDir = path.join(root, 'w');
-  const prep = await runCli('check', { request: { protocol: 1, goal: fixture('gala-deck2'), workDir } });
-  assert.equal(prep.last.ok, true);
-  const marker = path.join(root, 'tmp-marker');
-  fs.mkdirSync(marker);
-  const reqFile = path.join(root, 'req.json');
-  fs.writeFileSync(reqFile, JSON.stringify({ protocol: 1, deckDir: workDir, pptx: path.join(root, 'a.pptx') }));
-  const child = spawn(process.execPath, [path.join(PLUG, 'app', 'cli.mjs'), 'export', '--request', reqFile], {
-    env: { ...process.env, IMAGO_TEST_HANG: 'export', TMPDIR: marker }, stdio: ['ignore', 'pipe', 'pipe'],
+for (const signal of ['SIGTERM', 'SIGINT']) {
+  test(`审查3：宿主取消（${signal}）时，CLI 结束自己启动的 worker 和浏览器，发 error 事件 code=CANCELLED，退出码 130`, { timeout: 120000 }, async (t) => {
+    if (posixOnly(t)) return;
+    const { spawn, execFileSync } = await import('node:child_process');
+    const { runCli, fixture, tmpDir: mk } = await import('./helpers.mjs');
+    const root = mk('imago-cancel-');
+    const workDir = path.join(root, 'w');
+    const prep = await runCli('check', { request: { protocol: 1, goal: fixture('gala-deck2'), workDir } });
+    assert.equal(prep.last.ok, true);
+    const reqFile = path.join(root, 'req.json');
+    fs.writeFileSync(reqFile, JSON.stringify({ protocol: 1, deckDir: workDir, pptx: path.join(root, 'a.pptx') }));
+    const child = spawn(process.execPath, [path.join(PLUG, 'app', 'cli.mjs'), 'export', '--request', reqFile], {
+      env: { ...process.env, IMAGO_TEST_HANG: 'export' }, stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    let stdout = '';
+    child.stdout.on('data', chunk => { stdout += chunk; });
+    const ps = () => execFileSync('ps', ['-Ao', 'pid,command'], { encoding: 'utf8', maxBuffer: 1 << 26 }).split('\n').filter(l => l.includes('worker.mjs'));
+    const pidOf = line => Number(line.trim().split(/\s+/)[0]);
+    const stale = new Set(ps().map(pidOf)); // 与本用例无关的旧进程不计
+    const mine = () => ps().filter(l => !stale.has(pidOf(l)));
+    let seen = 0;
+    for (let i = 0; i < 60 && !seen; i += 1) { await sleep(250); seen = mine().length; }
+    assert.ok(seen > 0, '应先看到 worker 进程');
+    child.kill(signal);
+    const status = await new Promise(resolve => child.on('close', resolve));
+    await sleep(1500);
+    assert.deepEqual(mine(), [], '取消后不应残留 worker');
+    assert.equal(status, 130, '取消的退出码保持 130');
+    const events = stdout.split('\n').filter(Boolean).map(line => JSON.parse(line));
+    const last = events[events.length - 1];
+    assert.equal(last.event, 'error');
+    assert.equal(last.code, 'CANCELLED');
+    assert.equal(last.detail.signal, signal);
+    fs.rmSync(root, { recursive: true, force: true });
   });
-  const ps = () => execFileSync('ps', ['-Ao', 'pid,command'], { encoding: 'utf8', maxBuffer: 1 << 26 }).split('\n').filter(l => l.includes('worker.mjs') || l.includes(workDir));
-  const pidOf = line => Number(line.trim().split(/\s+/)[0]);
-  const stale = new Set(ps().filter(l => l.includes('worker.mjs')).map(pidOf)); // 与本用例无关的旧进程不计
-  const mine = () => ps().filter(l => l.includes('worker.mjs')).filter(l => !stale.has(pidOf(l)));
-  let seen = 0;
-  for (let i = 0; i < 60 && !seen; i += 1) { await sleep(250); seen = mine().length; }
-  assert.ok(seen > 0, '应先看到 worker 进程');
-  child.kill('SIGTERM');
-  await new Promise(resolve => child.on('close', resolve));
-  await sleep(1500);
-  assert.deepEqual(mine(), [], '取消后不应残留 worker');
-  fs.rmSync(root, { recursive: true, force: true });
+}
+
+test('CANCELLED 是协议错误码：退出码 130，README 的错误码表里有它', async () => {
+  const { EXIT_CODES, PluginError } = await import('../app/lib/errors.mjs');
+  assert.equal(EXIT_CODES.CANCELLED, 130);
+  assert.equal(new PluginError('CANCELLED', '已取消').exitCode, 130);
+  const readme = fs.readFileSync(path.join(PLUG, 'README.md'), 'utf8');
+  assert.match(readme, /\|\s*130\s*\|\s*`CANCELLED`/);
 });
 
 void tmpDir;

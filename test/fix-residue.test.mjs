@@ -55,7 +55,7 @@ test('审查8：页面先出现标题、其余文字在开始读取后 350ms 才
   assert.match(texts[0].text, /IGNIS 燃点/, `读到的文字：${texts[0].text}`);
 });
 
-test('审查8：文字一直在变（超过总上限 3 秒）→ 到点取最后一次读数，不无限等待；空页 3 秒内判空', { timeout: 120000 }, async () => {
+test('审查8：文字一直在变（超过单页上限 1.5 秒）→ 到点取最后一次读数，不无限等待；空页 1.5 秒内判空', { timeout: 120000 }, async () => {
   const { withDeckBrowser, openDeckPage, extractSlideTexts } = await import('../app/lib/browser-session.mjs');
   const browser = await detectBrowser();
   if (!browser.found) return;
@@ -78,11 +78,94 @@ test('审查8：文字一直在变（超过总上限 3 秒）→ 到点取最后
     }
   });
   const churn = await run(deckDir);
-  assert.ok(churn.elapsed < 4500, `每页总上限约 3 秒，实际 ${churn.elapsed}ms`);
+  assert.ok(churn.elapsed < 2800, `单页上限 1.5 秒，实际 ${churn.elapsed}ms`);
   assert.ok(churn.texts[0].text.length > 0);
   const empty = await run(emptyDir);
-  assert.ok(empty.elapsed < 4500, `空页应在约 3 秒内判空，实际 ${empty.elapsed}ms`);
+  assert.ok(empty.elapsed < 2800, `空页应在 1.5 秒内判空，实际 ${empty.elapsed}ms`);
   assert.equal(empty.texts[0].text, '');
+});
+
+async function readDeck(dirName, html, { extraFiles = {} } = {}) {
+  const { withDeckBrowser, openDeckPage, extractSlideTexts } = await import('../app/lib/browser-session.mjs');
+  const browser = await detectBrowser();
+  if (!browser.found) return null;
+  const dir = path.join(root, dirName);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  for (const [name, content] of Object.entries(extraFiles)) fs.writeFileSync(path.join(dir, name), content);
+  return withDeckBrowser({ deckPptDir: dir, browserPath: browser.path, tmpBase: root }, async ({ browser: b, url }) => {
+    const { page, context, total } = await openDeckPage(b, url);
+    try {
+      const started = Date.now();
+      const texts = await extractSlideTexts(page, total);
+      return { texts, elapsed: Date.now() - started };
+    } finally {
+      await context.close();
+    }
+  });
+}
+
+test('提速：WAAPI 动画结束时才挂上的文字——getAnimations() 逐个 finish() 快进，不用等动画跑完', { timeout: 120000 }, async () => {
+  const out = await readDeck('waapi', `<!doctype html><meta charset="utf-8">
+<div id="deck"><section class="slide active" data-vm-layout="x"><h1>标题</h1><p id="late"></p></section></div>
+<script>
+const anim = document.getElementById('late').animate([{ opacity: 0 }, { opacity: 1 }], { duration: 2500 });
+anim.onfinish = () => { document.getElementById('late').textContent = 'IGNIS 燃点'; };
+</script>`);
+  if (!out) return;
+  assert.match(out.texts[0].text, /IGNIS 燃点/);
+  assert.ok(out.elapsed < 1500, `finish() 快进后应很快读到，实际 ${out.elapsed}ms`);
+});
+
+test('提速：gsap 补间结束时才挂上的文字——快进补间，不用等补间跑完', { timeout: 120000 }, async () => {
+  const gsapFile = path.join(PLUG, 'app', 'runtime', 'node_modules', 'gsap', 'dist', 'gsap.min.js');
+  const out = await readDeck('gsap', `<!doctype html><meta charset="utf-8">
+<script src="gsap.min.js"></script>
+<div id="deck"><section class="slide active" data-vm-layout="x"><h1>标题</h1><p id="late"></p></section></div>
+<script>gsap.to({ v: 0 }, { v: 1, duration: 3, onComplete: () => { document.getElementById('late').textContent = 'IGNIS 燃点'; } });</script>`,
+  { extraFiles: { 'gsap.min.js': fs.readFileSync(gsapFile) } });
+  if (!out) return;
+  assert.match(out.texts[0].text, /IGNIS 燃点/);
+  assert.ok(out.elapsed < 1500, `快进补间后应很快读到，实际 ${out.elapsed}ms`);
+});
+
+test('提速：无限循环动画不拖慢读取，也不被快进成死循环', { timeout: 120000 }, async () => {
+  const out = await readDeck('infinite', `<!doctype html><meta charset="utf-8">
+<style>@keyframes spin { to { transform: rotate(360deg); } } #spin { animation: spin 1s linear infinite; }</style>
+<div id="deck"><section class="slide active" data-vm-layout="x"><h1 id="spin">标题</h1></section></div>`);
+  if (!out) return;
+  assert.equal(out.texts[0].text, '标题');
+  assert.ok(out.elapsed < 1500, `实际 ${out.elapsed}ms`);
+});
+
+test('翻页重试：go() 偶尔被上一次未提交的切换覆盖（从末页翻回首页，真机复现过约 20%）→ 重发，不报「翻页失败」', { timeout: 120000 }, async () => {
+  const out = await readDeck('golock', `<!doctype html><meta charset="utf-8">
+<div id="deck"><section class="slide active" data-vm-layout="a"><p>第一页</p></section><section class="slide" data-vm-layout="b"><p>第二页</p></section><section class="slide" data-vm-layout="c"><p>第三页</p></section></div>
+<script>
+// 模拟：切换要 300ms 才提交；提交前再来的 go() 被丢弃（和真机上被覆盖的现象一致）
+let busyUntil = 0;
+window.go = (index) => {
+  if (Date.now() < busyUntil) return;
+  busyUntil = Date.now() + 300;
+  setTimeout(() => {
+    document.querySelectorAll('#deck > .slide').forEach((el, i) => el.classList.toggle('active', i === index));
+  }, 250);
+};
+</script>`);
+  if (!out) return;
+  assert.deepEqual(out.texts.map(item => item.text), ['第一页', '第二页', '第三页']);
+});
+
+test('提速：多页 deck 的文字检查并行等待——16 页用时 ≤ 5 秒（修前约 22 秒），结果不变', { timeout: 120000 }, async () => {
+  const { runCli, fixture } = await import('./helpers.mjs');
+  const res = await runCli('check', { request: { protocol: 1, goal: fixture('gala-deck2'), workDir: path.join(root, 'w-speed') } });
+  assert.equal(res.status, 0, res.stderr.slice(0, 300));
+  assert.equal(res.last.ok, true);
+  assert.deepEqual(res.last.issues, []);
+  assert.ok(res.last.timings.residue <= 5000, `residue 用时 ${res.last.timings.residue}ms`);
+  const total = Object.values(res.last.timings).reduce((sum, value) => sum + value, 0);
+  console.error(`check 各步合计 ${total}ms（residue ${res.last.timings.residue}ms）`);
+  assert.ok(total <= 6000, `check 合计 ${total}ms`);
 });
 
 void fileURLToPath;

@@ -140,16 +140,22 @@ async function activeIndex(page) {
  */
 export async function walkSlides(page, total, visit, { instant = false } = {}) {
   const results = [];
+  const goInstant = index => page.evaluate(i => {
+    if (typeof window.go !== 'function') return false;
+    window.go(i, { animate: false, force: true });
+    const slides = window.__getVisibleSlides?.() || [...document.querySelectorAll('#deck > .slide')];
+    window.__ensureRuntimeSlideRendered?.(slides[i]); // 懒渲染的页面：和导出引擎一样先让它渲染出来
+    return true;
+  }, index);
   for (let i = 0; i < total; i += 1) {
-    if (instant && i > 0) {
-      const moved = await page.evaluate(index => {
-        if (typeof window.go !== 'function') return false;
-        window.go(index, { animate: false, force: true });
-        const slides = window.__getVisibleSlides?.() || [...document.querySelectorAll('#deck > .slide')];
-        window.__ensureRuntimeSlideRendered?.(slides[index]); // 懒渲染的页面：和导出引擎一样先让它渲染出来
-        return true;
-      }, i);
-      if (!moved) await page.keyboard.press('ArrowRight');
+    if (instant) {
+      // go() 偶尔会赶上上一次切换还没提交而被覆盖（从末页翻回首页时出现过）：没到位就重发，最多 5 次
+      for (let attempt = 0; attempt < 5 && (await activeIndex(page)) !== i; attempt += 1) {
+        const moved = await goInstant(i);
+        if (!moved) await page.keyboard.press('ArrowRight');
+        const settle = Date.now() + 600;
+        while (Date.now() < settle && (await activeIndex(page)) !== i) await page.waitForTimeout(50);
+      }
     }
     const deadline = Date.now() + 5000;
     while (Date.now() < deadline && (await activeIndex(page)) !== i) await page.waitForTimeout(100);
@@ -198,31 +204,61 @@ export async function waitSettled(page, capMs = SETTLE_CAP_MS) {
   }, capMs);
 }
 
-export const TEXT_STABLE_MS = 300;
-export const TEXT_CAP_MS = 3000;
+export const TEXT_CAP_MS = 1500;
+export const TEXT_SETTLE_MS = 500;
+export const TEXT_REREAD_MS = 60;
 const TEXT_POLL_MS = 100;
 
+/** 在页面里把动画快进到结束状态（只为读文字，不用于截图）：WAAPI 逐个 finish()，gsap 补间 progress(1)；无限循环的跳过。 */
+export function fastForwardAnimations(page) {
+  return page.evaluate(() => {
+    const finite = timing => !(timing && (timing.iterations === Infinity || timing.endTime === Infinity));
+    for (const animation of document.getAnimations()) {
+      try {
+        if (finite(animation.effect?.getComputedTiming?.())) animation.finish();
+      } catch { /* 个别动画不能 finish（如已取消），跳过 */ }
+    }
+    const g = window.gsap;
+    if (g?.globalTimeline?.getChildren) {
+      for (const child of g.globalTimeline.getChildren(true, true, true)) {
+        try {
+          if (child.repeat?.() === -1 || !Number.isFinite(child.totalDuration())) continue;
+          child.progress(1);
+        } catch { /* 个别补间不能快进，跳过 */ }
+      }
+    }
+  });
+}
+
 /**
- * 取每页运行时可见文字：[{index, layout, text, waitedMs}]。
- * 等待策略：等字体、等动画结束，再等可见文字稳定（连续读数一致 ≥300ms），每页总上限 3 秒。
- * 到上限仍在变化就取最后一次读数；一直是空的返回空文本（由调用方判空页）。
+ * 取每页运行时可见文字：[{index, layout, text, waitedMs}]。分两遍，把等待重叠起来：
+ *   第一遍：逐页翻到（go，不播翻页动画）→ 让懒渲染的页面渲染 → 动画快进到结束，记下访问时间；
+ *   第二遍：逐页翻回来，再快进一次动画；该页访问满 settleMs（让 setTimeout 之类延迟挂载的内容有时间出现）后读两次，
+ *          两次一致就取；不一致或还是空的才每 100ms 再读，直到连续两次一致，单页上限 capMs。
+ * 上限到了仍在变化就取最后一次读数；一直是空的返回空文本（由调用方判空页）。
  */
-export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_MS, stableMs = TEXT_STABLE_MS } = {}) {
+export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_MS, settleMs = TEXT_SETTLE_MS, rereadMs = TEXT_REREAD_MS } = {}) {
+  const visitedAt = [];
+  await walkSlides(page, total, async index => {
+    await fastForwardAnimations(page);
+    visitedAt[index] = Date.now();
+  }, { instant: true });
+  const read = () => page.evaluate(selector => {
+    const slide = document.querySelector(`${selector}.active`) || document.querySelectorAll(selector)[0];
+    return { text: slide.innerText.replace(/\s+/g, ' ').trim(), layout: slide.dataset.vmLayout || '' };
+  }, SLIDE_SELECTOR);
   return walkSlides(page, total, async index => {
     const started = Date.now();
-    const read = () => page.evaluate(({ selector, i }) => {
-      const slide = document.querySelectorAll(selector)[i];
-      return { text: slide.innerText.replace(/\s+/g, ' ').trim(), layout: slide.dataset.vmLayout || '' };
-    }, { selector: SLIDE_SELECTOR, i: index });
-    await waitSettled(page, Math.min(SETTLE_CAP_MS, capMs));
+    await fastForwardAnimations(page);
+    const wait = visitedAt[index] + settleMs - Date.now();
+    if (wait > 0) await page.waitForTimeout(Math.min(wait, capMs));
+    let previous = await read();
+    await page.waitForTimeout(rereadMs);
     let current = await read();
-    let lastChange = Date.now();
-    while (Date.now() - started < capMs) {
-      if (current.text.length > 0 && Date.now() - lastChange >= stableMs) break;
+    while (Date.now() - started < capMs && (current.text !== previous.text || current.text.length === 0)) {
       await page.waitForTimeout(TEXT_POLL_MS);
-      const next = await read();
-      if (next.text !== current.text) lastChange = Date.now();
-      current = next;
+      previous = current;
+      current = await read();
     }
     onPage?.(index + 1, total);
     return { index, layout: current.layout, text: current.text, waitedMs: Date.now() - started };

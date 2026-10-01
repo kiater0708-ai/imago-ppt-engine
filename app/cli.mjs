@@ -15,7 +15,7 @@ for (const signal of ['SIGTERM', 'SIGINT', 'SIGHUP']) {
   process.on(signal, () => {
     try { killAllActive(); } catch (error) { process.stderr.write(`[取消] 结束子进程失败：${error.message}\n`); }
     try { runCleanups(); } catch (error) { process.stderr.write(`[取消] 清理临时目录失败：${error.message}\n`); }
-    emit({ event: 'error', code: 'INTERNAL', message: `收到 ${signal}，任务已取消`, detail: { signal, cancelled: true } });
+    emit({ event: 'error', code: 'CANCELLED', message: `收到 ${signal}，任务已取消`, detail: { signal } });
     exitAfterFlush(130);
   });
 }

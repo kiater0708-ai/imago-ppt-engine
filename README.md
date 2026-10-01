@@ -35,8 +35,9 @@ node app/cli.mjs <命令> --request <请求.json>      # info 可不带 --reques
   | 4 | `RENDER_FAILED` | 渲染 / 校验流程自身失败（脚本崩溃、超时）。注意：校验**发现内容问题**不算失败 |
   | 5 | `EXPORT_FAILED` | 导出失败 |
   | 6 | `DISK_FULL` / `IO` | 磁盘写入失败（空间不足 / 其他读写错误） |
+  | 130 | `CANCELLED` | 宿主取消：收到 SIGTERM / SIGINT / SIGHUP，插件已先结束自己启动的 worker 与浏览器、清理临时目录，再发 `{"event":"error","code":"CANCELLED"}` 退出 |
 
-- 超时：渲染 120 秒、浏览器检查 180 秒、导出 300 秒。超时会结束子进程与浏览器（POSIX 进程组 + 记录的后代 PID；Windows `taskkill /T /F` + 记录的后代 PID），并报对应错误码（`detail.timeout = true`）。收到 SIGTERM / SIGINT / SIGHUP 时同样先结束子进程、清临时目录再退出（退出码 130）。宿主端仍应用作业对象兜底。
+- 超时：渲染 120 秒、浏览器检查 180 秒、导出 300 秒。超时会结束子进程与浏览器（POSIX 进程组 + 记录的后代 PID；Windows `taskkill /T /F` + 记录的后代 PID），并报对应错误码（`detail.timeout = true`）。收到 SIGTERM / SIGINT / SIGHUP 时同样先结束子进程、清临时目录，再发 `CANCELLED` 错误事件并以退出码 130 退出。宿主端仍应用作业对象兜底。
 
 ### 命令
 

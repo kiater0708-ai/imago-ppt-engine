@@ -7,6 +7,7 @@ export const EXIT_CODES = {
   DISK_FULL: 6,
   IO: 6,
   INTERNAL: 1,
+  CANCELLED: 130,
 };
 
 export class PluginError extends Error {
