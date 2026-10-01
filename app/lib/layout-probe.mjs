@@ -9,7 +9,8 @@ export const PROBE_MAX_ITEMS = 800;
 /**
  * 页面里执行。返回：
  * { scale, designScale, lines:[innerText 按换行切开的行], items:[{id, text, tag, rect:[x,y,w,h], lineRects:[[x,y,w,h]…],
- *   fontSize, opacity, ariaHidden, pointerNone, anc:[祖先 item id], clipX, clipY, clipRatioX, clipRatioY, ellipsis,
+ *   fontSize, opacity, ariaHidden, pointerNone, anc:[祖先 item id], clipX, clipY, clipRatioX, clipRatioY,
+ *   clipOverEmX, clipOverEmY（clipX/clipY 成立时：文字墨迹越过元素自己裁切框的量，以字号为单位；行框的字形余量不算）, ellipsis,
  *   clipBox:[x,y,w,h]|null（最近的、设了 overflow:hidden/clip 的祖先的可见范围，不含幻灯片本身）,
  *   covered（0–1，文字取样点里被「画在它上面的不透明元素」盖住的比例）}], truncated }
  * 坐标一律换算到 1920×1080 画布（slide 左上角为原点）。
@@ -137,6 +138,23 @@ export function readLayoutProbe({ selector, maxItems }) {
     const noAnim = (clipsX || clipsY) ? !infinite(el) : true; // 跑马灯这类无限滚动的容器，被裁是设计
     const clipX = noAnim && clipsX && el.clientWidth > 0 && el.scrollWidth > el.clientWidth + 2;
     const clipY = noAnim && clipsY && el.clientHeight > 0 && el.scrollHeight > el.clientHeight + 2;
+    // 自己裁自己：scroll > client 只说明行框 / 字形余量超了（大字号 + 行高 < 1 时常见），再量文字墨迹真正越过裁切框多少
+    let clipOverEmX = 0;
+    let clipOverEmY = 0;
+    if (clipX || clipY) {
+      const eb = el.getBoundingClientRect();
+      const kx = eb.width / (el.offsetWidth || eb.width);
+      const ky = eb.height / (el.offsetHeight || eb.height);
+      const box = toCanvas({ left: eb.left + el.clientLeft * kx, top: eb.top + el.clientTop * ky, width: el.clientWidth * kx, height: el.clientHeight * ky });
+      const fontRect = parseFloat(style.fontSize) * scale;
+      const inkRatio = /\p{Script=Han}/u.test(text) ? 0.75 : 0.6; // 与 layout-check 的 INK_RATIO 保持一致
+      for (const [x, y, w, h] of lineRects) {
+        const ink = h * inkRatio;
+        const iy = y + (h - ink) / 2;
+        if (clipX && fontRect > 0) clipOverEmX = Math.max(clipOverEmX, (box[0] - x) / fontRect, (x + w - (box[0] + box[2])) / fontRect);
+        if (clipY && fontRect > 0) clipOverEmY = Math.max(clipOverEmY, (box[1] - iy) / fontRect, (iy + ink - (box[1] + box[3])) / fontRect);
+      }
+    }
     const id = items.length;
     ids.set(el, id);
     const anc = [];
@@ -156,6 +174,8 @@ export function readLayoutProbe({ selector, maxItems }) {
       clipY,
       clipRatioX: clipX ? el.clientWidth / el.scrollWidth : 1,
       clipRatioY: clipY ? el.clientHeight / el.scrollHeight : 1,
+      clipOverEmX: Math.max(0, clipOverEmX),
+      clipOverEmY: Math.max(0, clipOverEmY),
       ellipsis: style.textOverflow === 'ellipsis',
       clipBox: clipperOf(el)?.box ?? null,
       covered: opacity >= 0.3 && !el.closest('[aria-hidden="true"]') ? coveredRatio(el, lineRects) : 0, // 装饰文字被盖住不算问题，不测

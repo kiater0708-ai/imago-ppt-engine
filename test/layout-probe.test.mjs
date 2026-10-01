@@ -115,3 +115,11 @@ test('浏览器：探测数据的形状——每个元素带 1920 基准的矩�
   assert.equal(out.probe.truncated, false);
   assert.ok(Array.isArray(out.probe.lines) && out.probe.lines.length >= 1);
 });
+
+test('浏览器：巨字 + 行高 < 1 + overflow:hidden，文字完整可见（scroll 只比 client 大字形余量）→ 不报；真被裁掉照报', timeout, async () => {
+  const giant = await probeSlide('giant', '<div class="t" style="left:100px;top:200px;height:154px;line-height:0.7;overflow:hidden;font-size:220px;font-weight:900">Q3</div><div class="t" style="left:600px;top:200px;height:154px;line-height:0.7;overflow:hidden;font-size:220px">Q4</div>', { periodLabel: 'Q3', label: 'Q4' });
+  if (!giant) return;
+  assert.deepEqual(giant.issues, [], JSON.stringify(giant.probe.items.map(i => [i.text, i.clipY, i.clipOverEmY])));
+  const cut = await probeSlide('giant-cut', '<div class="t" style="left:100px;top:200px;height:80px;line-height:1;overflow:hidden;font-size:220px">Q3</div>', { periodLabel: 'Q3' });
+  assert.deepEqual(cut.issues.map(item => item.code), ['TEXT_OVERFLOW']);
+});

@@ -17,6 +17,7 @@ export const MIN_OPACITY = 0.3; // 有效透明度低于它的文字当装饰
 export const INK_RATIO_CJK = 0.75; // 文字的行框（字体的 ascent+descent，含上下留白）按这个比例收窄到墨迹范围：大字与小字上下紧挨时行框会重叠，字并不碰。汉字约占行框的 0.75
 export const INK_RATIO_LATIN = 0.6; // 数字与拉丁字母只有大写字母高度，约占行框的 0.6
 export const FAINT_OPACITY = 0.1; // 淡于它的文字是几乎看不见的水印，连「超出所在卡片」也不查
+export const CLIP_OVER_EM = 0.35; // 元素自己 overflow 裁切：文字墨迹越过裁切框 ≥ 字号的这个倍数才算（scroll > client 只是行框 / 字形余量时不算）
 export const DECOR_FONT_PX = 160; // 重叠检测里字号大于它的文字当装饰巨字（水印 / 背景大字），不参与重叠
 
 const stripTags = value => String(value).replace(/<[^>]+>/g, ' ');
@@ -130,8 +131,11 @@ export function analyzeSlideLayout({ index, layout, probe, props }) {
     if (!decor) {
       const over = canvasOverflow(item.rect);
       if (over) causes.push({ how: '超出版面', ratio: over.ratio, severity: Math.max(over.ox, over.oy) });
-      if (item.clipX || item.clipY) {
-        const ratio = Math.min(item.clipRatioX ?? 1, item.clipRatioY ?? 1);
+      // 没有 clipOverEm* 的旧探测数据按原判（只看 scroll > client）；text-overflow:ellipsis 会把末尾的字换成省略号，字已经没了，不看越界量
+      const realClipX = item.clipX && (item.ellipsis || item.clipOverEmX === undefined || item.clipOverEmX >= CLIP_OVER_EM);
+      const realClipY = item.clipY && (item.clipOverEmY === undefined || item.clipOverEmY >= CLIP_OVER_EM);
+      if (realClipX || realClipY) {
+        const ratio = Math.min(realClipX ? item.clipRatioX ?? 1 : 1, realClipY ? item.clipRatioY ?? 1 : 1);
         causes.push({ how: '被裁掉一截', ratio, severity: (1 - ratio) * 1000 });
       }
       if ((item.covered ?? 0) >= COVER_RATIO) causes.push({ how: '被页面上其他元素盖住', ratio: 1 - item.covered, severity: item.covered * 1000 });
@@ -145,10 +149,15 @@ export function analyzeSlideLayout({ index, layout, probe, props }) {
     const ratio = Math.min(...causes.map(cause => cause.ratio));
     const main = locateFields(item.text, leaves)[0] || null;
     const shown = shortText(item.text, 16);
-    const message = main
+    // 被裁掉的文字，缩短建议 ≥ 当前字数（2 字的文字没有可缩的）：让模型「缩短」没有意义，按没法用 props 修报
+    const clipCause = worst.how === '被裁掉一截' || worst.how === '超出所在卡片被裁掉';
+    const shrinkable = main && !(clipCause && targetLength(main, ratio) >= main.plain.length);
+    const message = shrinkable
       ? `${where}：字段 ${main.path} 的文字太长，${worst.how}（页面上显示为『${shown}』），请缩短到约 ${targetLength(main, ratio)} 字`
-      : `${where}：页面上的文字『${shown}』${worst.how}，找不到对应的字段，props 修不了`;
-    found.TEXT_OVERFLOW.push({ severity: worst.severity, issue: { index, layout, field: main ? main.path : null, code: 'TEXT_OVERFLOW', fixable: Boolean(main), message } });
+      : main
+        ? `${where}：字段 ${main.path} 的文字『${shown}』${worst.how}，字数已经很少，缩短修不了，props 修不了`
+        : `${where}：页面上的文字『${shown}』${worst.how}，找不到对应的字段，props 修不了`;
+    found.TEXT_OVERFLOW.push({ severity: worst.severity, issue: { index, layout, field: main ? main.path : null, code: 'TEXT_OVERFLOW', fixable: Boolean(shrinkable), message } });
   }
 
   // ② 两段文字互相压住

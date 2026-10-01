@@ -63,6 +63,23 @@ test('TEXT_OVERFLOW：被画在上面的不透明元素盖住 ≥30% → 命中�
   assert.deepEqual(codes(run([item('只盖住一点点', [300, 500, 400, 40], { covered: 0.2 })], { t: '只盖住一点点' })), []);
 });
 
+test('TEXT_OVERFLOW：巨字 + 小行高 + overflow:hidden，scroll > client 只是字形余量（墨迹越界 < 0.35 倍字号）→ 不报；真被裁掉才报', () => {
+  const giant = item('Q3', [100, 100, 330, 150], { fontSize: 220, clipY: true, clipRatioY: 0.9, clipOverEmY: 0.1 });
+  assert.deepEqual(run([giant], { periodLabel: 'Q3' }), []);
+  const cut = item('Q3', [100, 100, 330, 150], { fontSize: 220, clipY: true, clipRatioY: 0.5, clipOverEmY: 0.5 });
+  const issues = run([cut], { periodLabel: 'Q3' });
+  assert.deepEqual(issues.map(i => [i.code, i.field, i.fixable]), [['TEXT_OVERFLOW', 'periodLabel', false]]);
+  assert.doesNotMatch(issues[0].message, /请缩短/);
+  const wide = item('这一行文字比盒子宽得多', [100, 100, 400, 40], { clipX: true, clipRatioX: 0.5, clipOverEmX: 2 });
+  assert.equal(run([wide], { line: '这一行文字比盒子宽得多' })[0].fixable, true);
+});
+
+test('TEXT_OVERFLOW：text-overflow:ellipsis 的元素（末尾的字被换成省略号）即使越界量很小也报，且可缩短', () => {
+  const name = item('唐晓雯 · 华南客户成功部', [237, 471, 366, 40], { fontSize: 52, clipX: true, clipRatioX: 0.98, clipOverEmX: 0.12, ellipsis: true });
+  const issues = run([name], { rows: [{ name: '唐晓雯 · 华南客户成功部' }] });
+  assert.deepEqual(issues.map(i => [i.code, i.field, i.fixable]), [['TEXT_OVERFLOW', 'rows[0].name', true]]);
+});
+
 test('TEXT_OVERFLOW：超出所在卡片（clipBox）→ 命中；水印（opacity<0.1 / aria-hidden）与序号水印出血不报', () => {
   const box = [100, 100, 300, 400];
   const word = item('智能宠物烘干舱', [100, 80, 300, 500], { opacity: 0.15, clipBox: box, fontSize: 228 });
