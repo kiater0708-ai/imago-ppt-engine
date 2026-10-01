@@ -307,8 +307,9 @@ function pageBusy(page) {
  * 页面「不忙」（有限动画/补间跑完、没有未触发的短 setTimeout、字体加载完）且可见文字连续两次读数一致、
  * 距上次变化 ≥ rereadMs，就取；否则每 30ms 再读，单页上限 capMs。
  * 上限到了仍在变化就取最后一次读数；一直是空的返回空文本（由调用方判空页）。
+ * onStable(page, index)：读数确定后调用一次（页面已稳定，不在每 30ms 的轮询里反复跑），返回值放进结果的 probe 字段；它抛错就整体失败（不吞）。
  */
-export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_MS, settleMs = TEXT_SETTLE_MS, rereadMs = TEXT_REREAD_MS, reader = null, indexes = null } = {}) {
+export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_MS, settleMs = TEXT_SETTLE_MS, rereadMs = TEXT_REREAD_MS, reader = null, indexes = null, onStable = null } = {}) {
   void settleMs;
   await prepareAnimationSpeed(page);
   // reader：审计脚本用，返回 {text, layout, ...额外字段}；稳定判断只看 text，额外字段随最后一次读数带回
@@ -330,8 +331,9 @@ export async function extractSlideTexts(page, total, onPage, { capMs = TEXT_CAP_
       if (next.text !== current.text) lastChange = Date.now();
       current = next;
     }
+    const probe = onStable ? await onStable(page, index) : undefined;
     onPage?.(index + 1, total);
-    return { ...current, index, layout: current.layout, text: current.text, waitedMs: Date.now() - started };
+    return { ...current, index, layout: current.layout, text: current.text, waitedMs: Date.now() - started, ...(onStable ? { probe } : {}) };
   }, { instant: true, indexes });
 }
 

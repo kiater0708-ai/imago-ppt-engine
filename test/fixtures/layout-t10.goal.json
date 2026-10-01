@@ -1,0 +1,603 @@
+{
+  "title": "洛禾食品 · 2026 年度洛禾食品「禾你在一起」感恩家宴",
+  "goal": "作为「年会模板」样张，用一套彼此自洽的年度数据与年会环节，做出热烈又温情的感恩年会效果，供他人直接套用",
+  "audience": "年会模板使用者（企业行政/HR、年会策划人），以及样张里出现的同事、经销商与员工家属",
+  "owner": "洛禾食品",
+  "randomSeed": "theme10-1011",
+  "pageCount": 15,
+  "themePack": "theme10",
+  "slides": [
+    {
+      "layout": "theme10_page001",
+      "props": {
+        "wordmark": "洛禾食品",
+        "kicker": "2026 年度感恩家宴",
+        "title": "禾你在一起",
+        "sub": "2027 年 1 月 6 日 · 洛阳 · 175 位同事、312 家经销商和他们的家人",
+        "footL": "洛禾食品",
+        "footR": "2027.01.06 洛阳",
+        "idPrefix": "洛禾 · 家宴",
+        "theme": "dusk"
+      }
+    },
+    {
+      "layout": "theme10_page006",
+      "props": {
+        "kicker": "今晚，我们按顺序说五件事",
+        "idPrefix": "章节索引",
+        "chapters": [
+          {
+            "no": "01",
+            "title": "开场 · 灯火归家"
+          },
+          {
+            "no": "02",
+            "title": "回望 · 每一步都算数"
+          },
+          {
+            "no": "03",
+            "title": "致谢 · 把名字念一遍"
+          },
+          {
+            "no": "04",
+            "title": "荣耀 · 把奖颁给做事的人"
+          },
+          {
+            "no": "05",
+            "title": "展望 · 一年一级台阶"
+          }
+        ],
+        "theme": "dawn"
+      }
+    },
+    {
+      "layout": "theme10_page071",
+      "props": {
+        "overline": "2027.01.06 · 洛水雅集宴会厅",
+        "title": "今晚的安排",
+        "counterLabel": "共 7 项",
+        "tagDone": "已备好",
+        "tagPending": "待开始",
+        "idPrefix": "今晚流程",
+        "itemCount": 7,
+        "items": [
+          {
+            "task": "16:30 签到",
+            "outcome": "手写一张感谢卡",
+            "done": false
+          },
+          {
+            "task": "17:00 开场短片",
+            "outcome": "《这一年，我们一起走过》",
+            "done": false
+          },
+          {
+            "task": "17:20 创始人致辞",
+            "outcome": "陈砚舟 · 六分钟",
+            "done": false
+          },
+          {
+            "task": "17:45 年度回顾",
+            "outcome": "数字里的洛禾",
+            "done": false
+          },
+          {
+            "task": "18:10 感恩表彰",
+            "outcome": "把名字一个一个念出来",
+            "done": false
+          },
+          {
+            "task": "18:40 晚宴与抽奖",
+            "outcome": "32 份奖，桌桌有份",
+            "done": false
+          },
+          {
+            "task": "20:15 合影送别",
+            "outcome": "带着一盒糖回家",
+            "done": false
+          }
+        ],
+        "tone": "light"
+      }
+    },
+    {
+      "layout": "theme10_page039",
+      "props": {
+        "quote": "我们卖的不是一箱货，是别人家餐桌上的一口踏实。",
+        "author": "陈砚舟",
+        "role": "创始人兼总经理",
+        "idPrefix": "创始人致辞",
+        "theme": "dawn"
+      }
+    },
+    {
+      "layout": "theme10_page031",
+      "props": {
+        "overline": "2026 大事记",
+        "title": "每一步都算数",
+        "idPrefix": "大事记",
+        "nodeCount": 6,
+        "nodes": [
+          {
+            "year": "2026.03",
+            "label": "新线投产",
+            "note": "洛阳三号生产线投产，佐餐酱日产能提到 12 万瓶"
+          },
+          {
+            "year": "2026.05",
+            "label": "第300家",
+            "note": "王振海在周口签下第 300 家经销商"
+          },
+          {
+            "year": "2026.07",
+            "label": "新品上市",
+            "note": "「胡辣汤风味拌面」上市，全年共推 9 款新品"
+          },
+          {
+            "year": "2026.09",
+            "label": "中秋售罄",
+            "note": "中秋礼盒 12 天售罄，礼盒线全年 1604 万元"
+          },
+          {
+            "year": "2026.11",
+            "label": "网点站上1.3万",
+            "note": "终端网点 11 月破 1.3 万个，年末到 1.36 万个"
+          },
+          {
+            "year": "2026.12",
+            "label": "暖冬饭桌",
+            "note": "175 位同事走进洛阳 12 个社区，送出 8000 份热餐"
+          }
+        ],
+        "tone": "light"
+      }
+    },
+    {
+      "layout": "theme10_page028",
+      "props": {
+        "overline": "2020–2026 分渠道营收（万元）",
+        "title": "七年，渠道一年比一年宽",
+        "idPrefix": "渠道营收",
+        "seriesCount": 4,
+        "xLabels": [
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "series": [
+          {
+            "name": "经销商分销",
+            "data": [
+              1520,
+              2350,
+              3320,
+              4340,
+              5160,
+              5840,
+              7486
+            ]
+          },
+          {
+            "name": "商超便利",
+            "data": [
+              1080,
+              1520,
+              1980,
+              2280,
+              2420,
+              2460,
+              2521
+            ]
+          },
+          {
+            "name": "电商直播",
+            "data": [
+              380,
+              620,
+              750,
+              990,
+              1200,
+              1400,
+              1839
+            ]
+          },
+          {
+            "name": "直营团购",
+            "data": [
+              140,
+              190,
+              190,
+              250,
+              300,
+              720,
+              1018
+            ]
+          }
+        ],
+        "tone": "dark"
+      }
+    },
+    {
+      "layout": "theme10_page057",
+      "props": {
+        "overline": "2026 年度成绩单",
+        "prefix": "全年营收",
+        "figure": "12864",
+        "suffix": "万元",
+        "descriptor": "比 2025 年多出 2444 万元，增长 23.5%",
+        "idPrefix": "成绩单",
+        "statCount": 3,
+        "stats": [
+          {
+            "value": "175",
+            "label": "位洛禾同事"
+          },
+          {
+            "value": "312",
+            "label": "家签约经销商"
+          },
+          {
+            "value": "1.36",
+            "label": "万个终端网点"
+          }
+        ],
+        "theme": "midnight"
+      }
+    },
+    {
+      "layout": "theme10_page010",
+      "props": {
+        "overline": "产品线营收账本",
+        "title": "谁在扛营收",
+        "idPrefix": "产品线",
+        "total": {
+          "label": "合计",
+          "weight": "100.0",
+          "value": "12864",
+          "change": "+23.5%"
+        },
+        "columns": [
+          "产品线",
+          "营收(万元)",
+          "占比(%)",
+          "同比"
+        ],
+        "rowCount": 6,
+        "rows": [
+          {
+            "name": "佐餐酱",
+            "code": "LH-01",
+            "weight": 29.7,
+            "value": "3820",
+            "change": "+11.7%",
+            "up": true
+          },
+          {
+            "name": "面点主食",
+            "code": "LH-02",
+            "weight": 25.3,
+            "value": "3260",
+            "change": "+26.4%",
+            "up": true
+          },
+          {
+            "name": "休闲小食",
+            "code": "LH-03",
+            "weight": 17.6,
+            "value": "2260",
+            "change": "+39.5%",
+            "up": true
+          },
+          {
+            "name": "节庆礼盒",
+            "code": "LH-04",
+            "weight": 12.5,
+            "value": "1604",
+            "change": "+48.5%",
+            "up": true
+          },
+          {
+            "name": "汤料调味",
+            "code": "LH-05",
+            "weight": 9.2,
+            "value": "1180",
+            "change": "-1.7%",
+            "up": false
+          },
+          {
+            "name": "快手菜",
+            "code": "LH-06",
+            "weight": 5.7,
+            "value": "740",
+            "change": "+42.3%",
+            "up": true
+          }
+        ],
+        "tone": "dark"
+      }
+    },
+    {
+      "layout": "theme10_page080",
+      "props": {
+        "overline": "2026 年渠道结构",
+        "title": "货是从哪条路到餐桌的",
+        "lead": "经销商分销仍是最宽的那条路，电商直播第一年就做到 1839 万元。",
+        "gridCaption": "每格约代表 2.5%",
+        "idPrefix": "渠道结构",
+        "catCount": 4,
+        "cats": [
+          {
+            "name": "经销商分销",
+            "value": 58.2,
+            "note": "7486 万元"
+          },
+          {
+            "name": "商超便利",
+            "value": 19.6,
+            "note": "2521 万元"
+          },
+          {
+            "name": "电商直播",
+            "value": 14.3,
+            "note": "1839 万元"
+          },
+          {
+            "name": "直营团购",
+            "value": 7.9,
+            "note": "1018 万元"
+          }
+        ],
+        "tone": "light"
+      }
+    },
+    {
+      "layout": "theme10_page074",
+      "props": {
+        "overline": "对照年初定下的目标",
+        "title": "今年交卷",
+        "idPrefix": "目标完成",
+        "gaugeCount": 4,
+        "gauges": [
+          {
+            "label": "营业收入",
+            "value": 107.2,
+            "max": 100,
+            "unit": "%",
+            "delta": "超出目标 7.2 个百分点"
+          },
+          {
+            "label": "签约经销商",
+            "value": 104,
+            "max": 100,
+            "unit": "%",
+            "delta": "超出目标 4.0 个百分点"
+          },
+          {
+            "label": "终端网点",
+            "value": 97.1,
+            "max": 100,
+            "unit": "%",
+            "delta": "差目标 2.9 个百分点"
+          },
+          {
+            "label": "新品上市",
+            "value": 90,
+            "max": 100,
+            "unit": "%",
+            "delta": "差目标 10.0 个百分点"
+          }
+        ],
+        "tone": "light"
+      }
+    },
+    {
+      "layout": "theme10_page061",
+      "props": {
+        "overline": "2026 年区域营收（万元）",
+        "title": "花瓣最厚的那一瓣，是河南",
+        "unit": "万元",
+        "idPrefix": "区域",
+        "ringLabels": [
+          "核心根据地",
+          "稳步外拓",
+          "新开市场"
+        ],
+        "wedges": [
+          {
+            "label": "华中",
+            "value": 6820
+          },
+          {
+            "label": "华北",
+            "value": 1980
+          },
+          {
+            "label": "华东",
+            "value": 1560
+          },
+          {
+            "label": "西北",
+            "value": 1120
+          },
+          {
+            "label": "西南",
+            "value": 880
+          },
+          {
+            "label": "华南",
+            "value": 504
+          }
+        ],
+        "wedgeCount": 6,
+        "tone": "light"
+      }
+    },
+    {
+      "layout": "theme10_page094",
+      "props": {
+        "overline": "年度表彰 · 洛禾的年度词典",
+        "title": "把名字一个一个念出来",
+        "idPrefix": "洛禾词典",
+        "terms": [
+          {
+            "term": "金穗奖",
+            "en": "经销商",
+            "def": "王振海（周口）：全年进货 168 万元，成为第 300 家签约经销商"
+          },
+          {
+            "term": "匠心奖",
+            "en": "生产中心",
+            "def": "李桂芬：在岗 11 年，把佐餐酱的咸度误差守在 0.2 克以内"
+          },
+          {
+            "term": "破土奖",
+            "en": "市场部",
+            "def": "赵子墨：把电商直播从 0 做到全年 1839 万元"
+          },
+          {
+            "term": "守望奖",
+            "en": "供应链中心",
+            "def": "孙大勇：中秋礼盒 12 天战役，一次没断货"
+          },
+          {
+            "term": "暖灯奖",
+            "en": "客服中心",
+            "def": "马晓雨：一年回完 2.6 万条留言，差评 24 小时内清零"
+          },
+          {
+            "term": "同心奖",
+            "en": "员工家属",
+            "def": "12 位同事的家人：加班夜里留的那盏灯，谢谢替我们守着"
+          }
+        ],
+        "itemCount": 6,
+        "tone": "dark"
+      }
+    },
+    {
+      "layout": "theme10_page082",
+      "props": {
+        "overline": "晚宴抽奖 · 桌桌有份",
+        "title": "今晚的运气，一层一层往上",
+        "idPrefix": "抽奖",
+        "tiers": [
+          {
+            "label": "特等奖",
+            "note": "双人云南七日 · 机票加客栈",
+            "value": "1 名"
+          },
+          {
+            "label": "一等奖",
+            "note": "全自动按摩椅",
+            "value": "3 名"
+          },
+          {
+            "label": "二等奖",
+            "note": "静音破壁机 + 一年份杂粮礼盒",
+            "value": "8 名"
+          },
+          {
+            "label": "三等奖",
+            "note": "定制保温杯 + 门店同款礼盒",
+            "value": "20 名"
+          }
+        ],
+        "tierCount": 4,
+        "tone": "light"
+      }
+    },
+    {
+      "layout": "theme10_page022",
+      "props": {
+        "overline": "2027 年，往哪打",
+        "title": "明年的尺子",
+        "flagOk": "超额完成",
+        "flagNo": "还差一点",
+        "idPrefix": "目标",
+        "rows": [
+          {
+            "label": "营业收入",
+            "value": 12864,
+            "target": 15920,
+            "max": 18000,
+            "display": "12864→15920",
+            "unit": "万元"
+          },
+          {
+            "label": "签约经销商",
+            "value": 312,
+            "target": 380,
+            "max": 450,
+            "display": "312→380",
+            "unit": "家"
+          },
+          {
+            "label": "终端网点",
+            "value": 1.36,
+            "target": 1.7,
+            "max": 2,
+            "display": "1.36→1.70",
+            "unit": "万个"
+          },
+          {
+            "label": "在售单品",
+            "value": 46,
+            "target": 58,
+            "max": 70,
+            "display": "46→58",
+            "unit": "款"
+          }
+        ],
+        "rowCount": 4,
+        "tone": "dark"
+      }
+    },
+    {
+      "layout": "theme10_page030",
+      "props": {
+        "overline": "一年一级台阶",
+        "title": "2027，再往上走一格",
+        "unit": "万元",
+        "idPrefix": "阶梯",
+        "steps": [
+          {
+            "year": "2023",
+            "value": 7860,
+            "display": "7860 万元",
+            "delta": "较上年 +26.0%"
+          },
+          {
+            "year": "2024",
+            "value": 9080,
+            "display": "9080 万元",
+            "delta": "+15.5%"
+          },
+          {
+            "year": "2025",
+            "value": 10420,
+            "display": "10420 万元",
+            "delta": "+14.8%"
+          },
+          {
+            "year": "2026",
+            "value": 12864,
+            "display": "12864 万元",
+            "delta": "+23.5%"
+          },
+          {
+            "year": "2027",
+            "value": 15920,
+            "display": "15920 万元（目标）",
+            "delta": "+23.8%"
+          }
+        ],
+        "stepCount": 5,
+        "tone": "light"
+      }
+    }
+  ]
+}

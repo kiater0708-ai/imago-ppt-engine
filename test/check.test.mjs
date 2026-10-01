@@ -49,7 +49,10 @@ test('check：flow-gala-1 → 第 4 页 HARDCODED_TEXT（IGNIS / 燃点），fix
   const text = hits.map(item => item.message).join(' ');
   assert.match(text, /IGNIS/);
   assert.match(text, /燃点/);
-  assert.equal(result.issues.every(item => item.index === 3), true, '其他页不应有问题');
+  // 版面检测另查出第 13 页树图（theme11_page059）的小格子文字互相压住，是真问题，不在这里断言；这里只看模板残留类问题只出在第 4 页
+  const layoutCodes = ['TEXT_OVERFLOW', 'TEXT_OVERLAP', 'DUP_TEXT'];
+  assert.equal(result.issues.filter(item => !layoutCodes.includes(item.code)).every(item => item.index === 3), true, '其他页不应有残留类问题');
+  assert.deepEqual([...new Set(result.issues.filter(item => layoutCodes.includes(item.code)).map(item => item.index))], [12], '版面问题只在第 13 页');
 });
 
 test('check：flow-gala-t08 → 只有 theme08_page082 的 MEDIA_PLACEHOLDER', async () => {
@@ -125,3 +128,45 @@ test('check：workDir 不可写 → 退出码 6（IO / DISK_FULL）', async (t) 
 });
 
 
+
+// ---- 通用版面检测（用真实产物里查出问题的 deck 做端到端）：issues 里要有对应页的 TEXT_OVERFLOW / TEXT_OVERLAP / DUP_TEXT ----
+const layoutIssues = result => result.issues.filter(item => ['TEXT_OVERFLOW', 'TEXT_OVERLAP', 'DUP_TEXT'].includes(item.code));
+const pageCodes = (result, index) => [...new Set(layoutIssues(result).filter(item => item.index === index).map(item => item.code))].sort();
+
+test('check：版面检测——theme03 议程巨字溢出（p2）、大字压正文（p3）、巨字压数值列（p5）、刻度标签飘出画布（p6）', async () => {
+  const { res, result } = await check(fixture('layout-t03'), 'layout-t03');
+  assert.equal(res.status, 0, res.stderr.slice(0, 500));
+  assert.equal(result.ok, false);
+  assert.ok(pageCodes(result, 1).includes('TEXT_OVERFLOW'), '第 2 页议程被放成满屏巨字');
+  assert.ok(pageCodes(result, 2).includes('TEXT_OVERLAP'), '第 3 页大字压住小标签与正文');
+  assert.ok(pageCodes(result, 4).includes('TEXT_OVERLAP'), '第 5 页巨字压住数值列');
+  assert.ok(pageCodes(result, 5).includes('TEXT_OVERFLOW'), '第 6 页刻度标签在画布外');
+  const located = layoutIssues(result).filter(item => item.index === 1 && item.code === 'TEXT_OVERFLOW' && item.fixable);
+  assert.ok(located.length >= 1 && located.every(item => item.field && /^copy\./.test(item.field)), '议程文字能定位到 copy.* 字段');
+  for (const item of layoutIssues(result)) {
+    assert.match(item.message, /[一-龥]/, 'message 用中文');
+    assert.equal(typeof item.fixable, 'boolean');
+  }
+  for (const code of ['TEXT_OVERFLOW', 'TEXT_OVERLAP']) assert.ok(layoutIssues(result).filter(item => item.code === code && item.index === 1).length <= 3, '同页同 code 最多 3 条');
+});
+
+test('check：版面检测——theme10 单位重复「万元万元」（p15 DUP_TEXT）、大数字出血（p7）', async () => {
+  const { result } = await check(fixture('layout-t10'), 'layout-t10');
+  assert.equal(result.ok, false);
+  const dup = layoutIssues(result).filter(item => item.code === 'DUP_TEXT' && item.index === 14);
+  assert.equal(dup.length >= 1, true);
+  assert.equal(dup[0].fixable, true);
+  assert.match(dup[0].message, /万元/);
+  assert.ok(pageCodes(result, 6).includes('TEXT_OVERFLOW'));
+});
+
+test('check：版面检测——theme02 name 与 nameEm 填了同一个名字（p10 DUP_TEXT），其余页不报', async () => {
+  const { result } = await check(fixture('layout-t02'), 'layout-t02');
+  assert.deepEqual(layoutIssues(result).map(item => [item.index, item.code, item.field]), [[9, 'DUP_TEXT', 'name']]);
+});
+
+test('check：版面检测——gala-deck2 正常排版的 16 页不报任何版面问题；result 里不带探测原始数据', async () => {
+  const { result } = await check(fixture('gala-deck2'), 'layout-clean');
+  assert.deepEqual(layoutIssues(result), []);
+  assert.equal(JSON.stringify(result).includes('lineRects'), false);
+});

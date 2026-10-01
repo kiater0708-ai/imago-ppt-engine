@@ -1,8 +1,9 @@
 // 版式资料：读大师运行时的版式契约，按版式清单（curation）与全局规则筛候选，生成 catalog 摘要与 contracts 填写契约。不调模型。
 // 摘要/契约的格式沿用 P0 原型第二轮（lib/layouts.mjs）。
 import crypto from 'node:crypto';
-import { importFromRuntime } from './paths.mjs';
+import { importFromRuntime, CURATION_DIR } from './paths.mjs';
 import { PluginError } from './errors.mjs';
+import { isThemeEnabled } from './curation.mjs';
 import { getByPath } from './residue.mjs';
 
 // 页眉页脚类装饰文案：摘要里不需要看，契约里仍然保留。
@@ -32,13 +33,14 @@ export async function loadEngine() {
 }
 
 /** 主题列表：id、名称、场景、受众、预览图（插件内暂无预览图，恒为 null）。 */
-export function listThemes(engine) {
+export function listThemes(engine, curationDir = CURATION_DIR) {
   return engine.THEME_PACKS.map(pack => ({
     id: pack.key,
     name: pack.displayName || pack.name || pack.label || pack.key,
     scenario: pack.scenario || '',
     audience: pack.audience || '',
     preview: null,
+    enabled: isThemeEnabled(pack.key, curationDir),
   }));
 }
 

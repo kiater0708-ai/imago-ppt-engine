@@ -1,0 +1,617 @@
+{
+  "title": "沐谷食品 · 2026 年度暖冬家宴",
+  "goal": "作为 2026 年度暖冬家宴的模板样张，用热烈又克制的温情叙事回望一年、致谢同事客户与家人，并以表彰、抽奖和 2027 年目标收束全场。",
+  "audience": "沐谷食品全体员工与家属、核心经销商伙伴、供应商代表，以及使用本模板的策划人员。",
+  "owner": "沐谷食品",
+  "randomSeed": "theme02-211",
+  "pageCount": 14,
+  "themePack": "theme02",
+  "slides": [
+    {
+      "layout": "theme02_page005",
+      "props": {
+        "kicker": "沐谷食品 · 陪你走过第十年",
+        "title": "2026 年度",
+        "titleEm": "暖冬家宴",
+        "subtitle": "142 位沐谷人，和 220 家伙伴，把一口热乎送到 3.4 万个店头",
+        "index": "01 / 14",
+        "meta": [
+          "2027 年 1 月 27 日 周三",
+          "长春 · 净月暖谷宴会厅",
+          "142 位沐谷人全员到齐"
+        ],
+        "pillars": [
+          {
+            "title": "一起走过",
+            "desc": "大事记与关键数字，回望每一步"
+          },
+          {
+            "title": "谢谢你",
+            "desc": "同事、客户、家人，一年里的每一份托举"
+          },
+          {
+            "title": "为你鼓掌",
+            "desc": "六个奖项，致敬每个普通的日子"
+          },
+          {
+            "title": "明年见",
+            "desc": "2027 年四件事，热乎继续"
+          }
+        ],
+        "pillarCount": 4,
+        "scheme": "green",
+        "emphasis": "default"
+      }
+    },
+    {
+      "layout": "theme02_page007",
+      "props": {
+        "kicker": "年会流程",
+        "title": "今晚，我们",
+        "titleEm": "慢慢过",
+        "lead": "从一盏暖灯到最后一句晚安，每个环节都在说同一件事：谢谢你。",
+        "leadKicker": "今晚安排",
+        "index": "02 / 14",
+        "items": [
+          {
+            "title": "开场 · 暖灯亮起",
+            "sub": "17:30 签到入场 · 手写家书墙"
+          },
+          {
+            "title": "致辞 · 一年一句话",
+            "sub": "18:00 陈知远 创始人兼总经理"
+          },
+          {
+            "title": "回望 · 一起走过",
+            "sub": "18:20 年度大事记与关键数字"
+          },
+          {
+            "title": "致谢 · 谢谢你",
+            "sub": "18:50 并肩的同事、同行的伙伴、身后的家人"
+          },
+          {
+            "title": "表彰 · 为你鼓掌",
+            "sub": "19:20 六个奖项，六位沐谷人"
+          },
+          {
+            "title": "抽奖 · 明年见",
+            "sub": "19:50 四档好礼，2027 年四件事"
+          }
+        ],
+        "itemCount": 6,
+        "scheme": "violet",
+        "emphasis": "default"
+      }
+    },
+    {
+      "layout": "theme02_page012",
+      "props": {
+        "kicker": "年度大事记",
+        "title": "这一年，我们",
+        "titleEm": "一起走过",
+        "index": "03 / 14",
+        "items": [
+          {
+            "date": "2026-03-18",
+            "tag": "新品上市",
+            "title": "「暖谷」谷物酸奶上线",
+            "desc": "首款自研谷物酸奶上市，当月进店 3200 家"
+          },
+          {
+            "date": "2026-05-09",
+            "tag": "渠道",
+            "title": "经销商大会在长春召开",
+            "desc": "全年新签伙伴 44 家，会上定下 3.4 万个网点目标"
+          },
+          {
+            "date": "2026-07-22",
+            "tag": "产能",
+            "title": "第二条烘焙线投产",
+            "desc": "产能提升 40%，交货周期缩短到 6 天"
+          },
+          {
+            "date": "2026-09-15",
+            "tag": "网点",
+            "title": "终端网点突破 3 万个",
+            "desc": "从年初 2.6 万个走到 3 万个，北方五省同步铺开"
+          },
+          {
+            "date": "2026-11-06",
+            "tag": "品牌",
+            "title": "首支品牌短片上线",
+            "desc": "「一袋好味，暖到身边」播放量超 800 万"
+          },
+          {
+            "date": "2026-12-26",
+            "tag": "团队",
+            "title": "团队扩到 142 人",
+            "desc": "全年迎来 22 位新同事，一起守完最后一单"
+          }
+        ],
+        "itemCount": 6,
+        "scheme": "violet",
+        "emphasis": "default"
+      }
+    },
+    {
+      "layout": "theme02_page020",
+      "props": {
+        "kicker": "关键数字",
+        "title": "一年走下来，",
+        "titleEm": "心里有数",
+        "index": "04 / 14",
+        "stats": [
+          {
+            "value": "12680",
+            "unit": "万元",
+            "caption": "全年营收",
+            "delta": "同比 +23.8%"
+          },
+          {
+            "value": "220",
+            "unit": "家",
+            "caption": "在营经销商",
+            "delta": "净增 44 家"
+          },
+          {
+            "value": "86",
+            "unit": "款",
+            "caption": "在售单品",
+            "delta": "新增 15 款"
+          },
+          {
+            "value": "142",
+            "unit": "人",
+            "caption": "团队规模",
+            "delta": "净增 14 人"
+          }
+        ],
+        "statCount": 4,
+        "scheme": "green",
+        "emphasis": "ticket"
+      }
+    },
+    {
+      "layout": "theme02_page008",
+      "props": {
+        "kicker": "月度经营曲线",
+        "title": "每个月的热乎，",
+        "titleEm": "都有回响",
+        "annotation": "2 月春节与 12 月年货季双峰，7 月淡季见底。",
+        "annotationLabel": "看曲线",
+        "index": "05 / 14",
+        "seriesLabels": {
+          "primary": "月度营收（万元）",
+          "secondary": "净增经销商（家）"
+        },
+        "data": [
+          {
+            "label": "1 月",
+            "value": 980,
+            "secondary": 3
+          },
+          {
+            "label": "2 月",
+            "value": 1180,
+            "secondary": 5
+          },
+          {
+            "label": "3 月",
+            "value": 1020,
+            "secondary": 4
+          },
+          {
+            "label": "4 月",
+            "value": 960,
+            "secondary": 3
+          },
+          {
+            "label": "5 月",
+            "value": 1010,
+            "secondary": 4
+          },
+          {
+            "label": "6 月",
+            "value": 1040,
+            "secondary": 3
+          },
+          {
+            "label": "7 月",
+            "value": 930,
+            "secondary": 5
+          },
+          {
+            "label": "8 月",
+            "value": 990,
+            "secondary": 3
+          },
+          {
+            "label": "9 月",
+            "value": 1120,
+            "secondary": 4
+          },
+          {
+            "label": "10 月",
+            "value": 1060,
+            "secondary": 3
+          },
+          {
+            "label": "11 月",
+            "value": 1180,
+            "secondary": 3
+          },
+          {
+            "label": "12 月",
+            "value": 1210,
+            "secondary": 4
+          }
+        ],
+        "stats": [
+          {
+            "value": "1210",
+            "unit": "万元",
+            "caption": "12 月单月营收峰值"
+          },
+          {
+            "value": "930",
+            "unit": "万元",
+            "caption": "7 月为全年低点"
+          },
+          {
+            "value": "44",
+            "unit": "家",
+            "caption": "全年净增经销商"
+          }
+        ],
+        "scheme": "green",
+        "emphasis": "ticket"
+      }
+    },
+    {
+      "layout": "theme02_page010",
+      "props": {
+        "kicker": "经销商合作年限构成",
+        "title": "老朋友，",
+        "titleEm": "是慢慢攒下的",
+        "centerValue": "220",
+        "centerLabel": "在营经销商（家）",
+        "findingLabel": "一个发现",
+        "finding": "合作三年以上的老伙伴，占 62.7%。",
+        "index": "06 / 14",
+        "data": [
+          {
+            "label": "8 年以上",
+            "value": 34,
+            "pct": "15.5%"
+          },
+          {
+            "label": "5–8 年",
+            "value": 46,
+            "pct": "20.9%"
+          },
+          {
+            "label": "3–5 年",
+            "value": 58,
+            "pct": "26.4%"
+          },
+          {
+            "label": "1–3 年",
+            "value": 52,
+            "pct": "23.6%"
+          },
+          {
+            "label": "首年新签",
+            "value": 30,
+            "pct": "13.6%"
+          }
+        ],
+        "scheme": "green",
+        "emphasis": "default"
+      }
+    },
+    {
+      "layout": "theme02_page035",
+      "props": {
+        "kicker": "终端网点区域分布",
+        "title": "3.4 万个网点，",
+        "titleEm": "扎在北方五省",
+        "callout": {
+          "value": "3.4",
+          "unit": "万",
+          "caption": "终端网点总数",
+          "note": "一年净增 8000 个，吉林、辽宁两省贡献过半。"
+        },
+        "index": "07 / 14",
+        "regionCount": 5,
+        "data": [
+          {
+            "label": "吉林",
+            "value": 1.06,
+            "pct": "31.2%"
+          },
+          {
+            "label": "辽宁",
+            "value": 0.82,
+            "pct": "24.1%"
+          },
+          {
+            "label": "黑龙江",
+            "value": 0.61,
+            "pct": "17.9%"
+          },
+          {
+            "label": "山东",
+            "value": 0.52,
+            "pct": "15.3%"
+          },
+          {
+            "label": "河北",
+            "value": 0.39,
+            "pct": "11.5%"
+          }
+        ],
+        "scheme": "green",
+        "emphasis": "default"
+      }
+    },
+    {
+      "layout": "theme02_page041",
+      "props": {
+        "kicker": "年度目标达成",
+        "title": "年初许的愿，",
+        "titleEm": "年底对一对",
+        "lead": "五项目标，四项超额，员工培训还差一口气——明年补上。",
+        "index": "08 / 14",
+        "barCount": 5,
+        "bars": [
+          {
+            "label": "经销商续约率",
+            "value": 85.5,
+            "target": 75,
+            "note": "220 家续约 188 家"
+          },
+          {
+            "label": "订单准时交付率",
+            "value": 83.3,
+            "target": 77,
+            "note": "12.6 万单，准时 10.5 万单"
+          },
+          {
+            "label": "新品铺市率",
+            "value": 78.6,
+            "target": 62,
+            "note": "15 款新品进店"
+          },
+          {
+            "label": "终端动销率",
+            "value": 70.6,
+            "target": 68,
+            "note": "3.4 万网点，月均动销 2.4 万"
+          },
+          {
+            "label": "员工培训覆盖率",
+            "value": 66.9,
+            "target": 70,
+            "note": "142 人中 95 人完成年度培训"
+          }
+        ],
+        "scheme": "green",
+        "emphasis": "ticket"
+      }
+    },
+    {
+      "layout": "theme02_page022",
+      "props": {
+        "kicker": "今昔对照 2025 → 2026",
+        "from": {
+          "value": "10240",
+          "unit": "万元",
+          "label": "2025 年全年营收"
+        },
+        "to": {
+          "value": "12680",
+          "unit": "万元",
+          "label": "2026 年全年营收"
+        },
+        "delta": {
+          "value": "23.8",
+          "dir": "增长",
+          "label": "同比增幅"
+        },
+        "caption": "一年时间，营收多了 2440 万元；不是爆发，是一单一单攒出来的。",
+        "index": "09 / 14",
+        "supportCount": 3,
+        "support": [
+          {
+            "value": "44",
+            "unit": "家",
+            "label": "经销商净增"
+          },
+          {
+            "value": "15",
+            "unit": "款",
+            "label": "在售单品净增"
+          },
+          {
+            "value": "0.8",
+            "unit": "万",
+            "label": "终端网点净增"
+          }
+        ],
+        "scheme": "green",
+        "emphasis": "ticket",
+        "emphasize": "from"
+      }
+    },
+    {
+      "layout": "theme02_page052",
+      "props": {
+        "kicker": "开场致辞",
+        "name": "陈知远",
+        "nameEm": "陈知远",
+        "role": "创始人兼总经理",
+        "quote": "我们卖的不是货，是别人家饭桌上的一口热乎。",
+        "quoteBy": "陈知远 · 沐谷食品创始人兼总经理",
+        "index": "10 / 14",
+        "factCount": 5,
+        "facts": [
+          {
+            "label": "成立",
+            "value": "2016"
+          },
+          {
+            "label": "总部",
+            "value": "长春"
+          },
+          {
+            "label": "团队",
+            "value": "142 人"
+          },
+          {
+            "label": "经销商",
+            "value": "220 家"
+          },
+          {
+            "label": "在售单品",
+            "value": "86 款"
+          }
+        ],
+        "tags": [
+          "十年磨一味",
+          "热乎不出错",
+          "小公司认真做"
+        ],
+        "captions": [
+          "2026 年度暖冬家宴 · 致辞",
+          "2027.1.27 · 长春"
+        ],
+        "imageCount": 0,
+        "scheme": "green",
+        "emphasis": "default",
+        "imageSide": "right",
+        "itemCount": 5
+      }
+    },
+    {
+      "layout": "theme02_page045",
+      "props": {
+        "kicker": "致谢时刻",
+        "title": "这一年，要谢的人",
+        "titleEm": "有很多",
+        "heroKicker": "四句真心话",
+        "index": "11 / 14",
+        "itemCount": 4,
+        "items": [
+          {
+            "lead": "谢谢并肩的同事",
+            "body": "142 个人，3 条产线轮班，12 场月度复盘，把每一张订单都按时送到。"
+          },
+          {
+            "lead": "谢谢同行的伙伴",
+            "body": "220 家经销商，44 位是今年新签；年底回访，188 家续约。"
+          },
+          {
+            "lead": "谢谢店头的信任",
+            "body": "3.4 万个终端网点，月均动销 2.4 万家，是你们把货变成饭桌上的一口热乎。"
+          },
+          {
+            "lead": "谢谢身后的家人",
+            "body": "年会这天，我们把家属席留在第一排——加班晚了有人留灯，出差久了有人等门。"
+          }
+        ],
+        "scheme": "violet",
+        "emphasis": "ticket"
+      }
+    },
+    {
+      "layout": "theme02_page073",
+      "props": {
+        "kicker": "抽奖时刻",
+        "title": "好礼已经上桌，",
+        "titleEm": "就等名字",
+        "statement": "四档好礼，",
+        "statementEm": "等你抱回家",
+        "lead": "65 个中奖名额，中奖率 45.8%；没抽到的也别走，散场有暖手小礼。",
+        "index": "12 / 14",
+        "pointCount": 4,
+        "points": [
+          {
+            "value": "1",
+            "unit": "名",
+            "label": "特等奖",
+            "note": "双人温泉 3 日游"
+          },
+          {
+            "value": "6",
+            "unit": "名",
+            "label": "一等奖",
+            "note": "智能投影仪"
+          },
+          {
+            "value": "18",
+            "unit": "名",
+            "label": "二等奖",
+            "note": "空气炸锅"
+          },
+          {
+            "value": "40",
+            "unit": "名",
+            "label": "三等奖",
+            "note": "年货礼盒 + 暖谷围巾"
+          }
+        ],
+        "scheme": "green",
+        "emphasis": "default",
+        "itemCount": 4
+      }
+    },
+    {
+      "layout": "theme02_page044",
+      "props": {
+        "kicker": "2027 年，接着往前走",
+        "title": "明年，",
+        "titleEm": "我们接着往前走",
+        "index": "13 / 14",
+        "stepCount": 4,
+        "steps": [
+          {
+            "title": "营收",
+            "desc": "做到 15600 万元，同比再涨 23.0%。"
+          },
+          {
+            "title": "产品",
+            "desc": "在售单品 106 款，再推 20 款新品。"
+          },
+          {
+            "title": "渠道",
+            "desc": "经销商 280 家，终端网点 4.2 万个。"
+          },
+          {
+            "title": "团队",
+            "desc": "扩到 165 人，把培训落到每个人。"
+          }
+        ],
+        "scheme": "violet",
+        "emphasis": "ticket"
+      }
+    },
+    {
+      "layout": "theme02_page074",
+      "props": {
+        "kicker": "2026 年度暖冬家宴",
+        "ghost": "明年再聚",
+        "statement": "把一口热乎，",
+        "statementEm": "送到明年",
+        "sub": "谢谢每一位沐谷人、每一位伙伴、每一位等门的家人——2027 年 1 月 27 日，长春见。",
+        "signature": {
+          "org": "沐谷食品",
+          "date": "2027 年 1 月 27 日",
+          "note": "2026 年度暖冬家宴 · 长春 净月暖谷宴会厅"
+        },
+        "index": "14 / 14",
+        "scheme": "violet",
+        "emphasis": "default"
+      }
+    }
+  ]
+}

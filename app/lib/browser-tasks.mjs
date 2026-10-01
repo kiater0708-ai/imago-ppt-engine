@@ -8,6 +8,8 @@ import { readJson, ensureDir, copyFile } from './fsutil.mjs';
 import { loadEngine } from './layouts.mjs';
 import { checkSlideResidue, findFloatArtifacts, findMediaPlaceholder, norm, stringLeaves } from './residue.mjs';
 import { withDeckBrowser, openDeckPage, openDeckPageForShots, extractSlideTextsParallel, RESIDUE_TEXT_OPTIONS, captureShots, testHang, SLIDE_SELECTOR } from './browser-session.mjs';
+import { readLayoutProbe, PROBE_MAX_ITEMS } from './layout-probe.mjs';
+import { analyzeSlideLayout } from './layout-check.mjs';
 
 /**
  * 运行时文字检查。返回 { issues, slideCount, texts:[{index,layout,waitedMs,length}] }。
@@ -28,12 +30,13 @@ export async function runResidueTask({ goalFile, deckPptDir, browserPath, tmpBas
       const { texts } = await extractSlideTextsParallel(browser, url, {
         expectedTotal: goal.slides.length,
         onPage: (done, all) => progress('residue', done, all),
-        options: RESIDUE_TEXT_OPTIONS,
+        // 每页读数确定后量一次版面几何（失败直接抛，不当作「没问题」）
+        options: { ...RESIDUE_TEXT_OPTIONS, onStable: page => page.evaluate(readLayoutProbe, { selector: SLIDE_SELECTOR, maxItems: PROBE_MAX_ITEMS }) },
       });
       const issues = [];
       if (texts.length !== goal.slides.length) {
         issues.push({ index: null, layout: null, field: null, code: 'VALIDATOR', fixable: false, message: `浏览器里有 ${texts.length} 页，goal 有 ${goal.slides.length} 页，无法逐页核对` });
-        return { issues, slideCount: texts.length, texts: texts.map(({ text, ...rest }) => ({ ...rest, length: text.length })) };
+        return { issues, slideCount: texts.length, texts: texts.map(({ text, probe, ...rest }) => ({ ...rest, length: text.length })) };
       }
       goal.slides.forEach((slide, index) => {
         const shown = texts[index];
@@ -71,8 +74,12 @@ export async function runResidueTask({ goalFile, deckPptDir, browserPath, tmpBas
             message: `${where}：${hit.message}`,
           });
         }
+        // 通用版面检测：文字超出 / 互相压住 / 紧挨着重复（探测数据不可用就是流程失败，不静默放过）
+        if (!shown.probe || !Array.isArray(shown.probe.items)) throw new PluginError('RENDER_FAILED', `${where}：版面探测没有返回数据`);
+        issues.push(...analyzeSlideLayout({ index, layout: slide.layout, probe: shown.probe, props: slide.props || {} }));
+        if (shown.probe.truncated) process.stderr.write(`[版面检测] ${where}：文字元素超过 ${PROBE_MAX_ITEMS} 个，只检查了前面的部分\n`);
       });
-      return { issues, slideCount: texts.length, texts: texts.map(({ text, ...rest }) => ({ ...rest, length: text.length })) };
+      return { issues, slideCount: texts.length, texts: texts.map(({ text, probe, ...rest }) => ({ ...rest, length: text.length })) };
     }
   });
 }

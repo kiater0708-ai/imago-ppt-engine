@@ -1,5 +1,6 @@
 {
   "theme": "theme05",
+  "enabled": false,
   "exclude": [
     {
       "layout": "theme05_page001",
