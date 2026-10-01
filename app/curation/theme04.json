@@ -6,10 +6,6 @@
       "reason": "auto:hardcoded「全年 AI 风投总额 美元」「亿美元事件」「钱在追少数人」"
     },
     {
-      "layout": "theme04_page019",
-      "reason": "auto:hardcoded「占比」"
-    },
-    {
       "layout": "theme04_page027",
       "reason": "auto:hardcoded「风险投资」「战略投资」「成长基金」"
     },
@@ -22,8 +18,20 @@
       "reason": "auto:hardcoded「基础设施」「模型层」「应用层」"
     },
     {
+      "layout": "theme04_page044",
+      "reason": "auto:renderFailed「渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout th」"
+    },
+    {
+      "layout": "theme04_page045",
+      "reason": "auto:renderFailed「渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout th」"
+    },
+    {
       "layout": "theme04_page065",
       "reason": "auto:hardcoded「叙事驱动」「算力卡位」「兑现为王」"
+    },
+    {
+      "layout": "theme04_page066",
+      "reason": "auto:renderFailed「渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout th」"
     }
   ],
   "notes": {},
@@ -203,6 +211,15 @@
           "yellow",
           "blue",
           "pink"
+        ]
+      }
+    ],
+    "theme04_page057": [
+      {
+        "key": "mediaLayout",
+        "values": [
+          "feature",
+          "stack"
         ]
       }
     ],

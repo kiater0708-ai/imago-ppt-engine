@@ -741,6 +741,24 @@
         ]
       }
     ],
+    "theme12_page061": [
+      {
+        "key": "theme",
+        "values": [
+          "light",
+          "dark"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#5a138e",
+          "#f15a29",
+          "#3bb6ec",
+          "#1f6b2a"
+        ]
+      }
+    ],
     "theme12_page062": [
       {
         "key": "theme",

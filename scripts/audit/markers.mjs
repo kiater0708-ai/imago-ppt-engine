@@ -120,7 +120,20 @@ export function fillByShape(shape, sample, pool, tag, { fieldInfo = null, hint =
   return pool.next(fieldInfo?.maxChars ?? hint, tag);
 }
 
-function buildItem(array, index, pool, defaultItem, tag) {
+/**
+ * 嵌套数组的长度：先看它绑定的数量字段（countKey / sameLengthCountKey）当前取值，没有绑定取默认值里的实际长度；
+ * 再不超过契约给的 maxCount（校验器认这个上限，默认值里个别项可能超过它）。返回 null 表示没有任何依据，交给 fillByShape 兜底。
+ */
+export function nestedLength(nested, counts, sample) {
+  if (!nested) return null;
+  const bound = [nested.countKey, nested.sameLengthCountKey].find(key => key && Number.isInteger(counts[key]));
+  let length = bound ? counts[bound] : Array.isArray(sample) && sample.length ? sample.length : null;
+  if (length === null) return nested.fixedLength || null;
+  if (Number.isInteger(nested.maxCount) && nested.maxCount > 0) length = Math.min(length, nested.maxCount);
+  return length;
+}
+
+function buildItem(array, index, pool, defaultItem, tag, counts = {}) {
   const objectShape = array.itemShape && typeof array.itemShape === 'object' && !Array.isArray(array.itemShape);
   if (array.itemFields || objectShape) {
     const nestedInfo = array.nestedArrays || {};
@@ -129,7 +142,7 @@ function buildItem(array, index, pool, defaultItem, tag) {
     for (const name of Object.keys(shape)) {
       const nested = nestedInfo[name];
       const hint = nested?.item?.maxChars ?? nested?.itemFields?.[Object.keys(nested?.itemFields || {})[0]]?.maxChars ?? 18;
-      item[name] = fillByShape(shape[name], defaultItem?.[name], pool, `${tag}.${name}`, { fieldInfo: array.itemFields?.[name] || null, hint, fixedLength: nested?.fixedLength || null });
+      item[name] = fillByShape(shape[name], defaultItem?.[name], pool, `${tag}.${name}`, { fieldInfo: array.itemFields?.[name] || null, hint, fixedLength: nestedLength(nested, counts, defaultItem?.[name]) });
     }
     return item;
   }
@@ -155,12 +168,25 @@ export function buildMarkerProps(info, defaultProps = {}) {
     else if (field.type === 'boolean') setNested(props, field.key, typeof sample === 'boolean' ? sample : true);
     else setNested(props, field.key, pool.next(field.maxChars, field.key));
   }
+  const mediaCountKeys = new Set((info.mediaSlots || []).map(slot => slot.countKey).filter(Boolean));
+  const counts = {}; // 数量字段 → 本次取值（嵌套数组按它对齐长度）
+  for (const array of topArrays(info)) {
+    if (array.countKey) counts[array.countKey] = mediaCountKeys.has(array.countKey) ? 0 : array.visibleCount;
+  }
+  // 嵌套数组与主数组「等长」绑定时，默认值里嵌套数组的实际条数（visibleCount）才是校验器认的长度，主数组跟着对齐（不超过它自己的上限）
+  for (const array of topArrays(info)) {
+    for (const nested of Object.values(array.nestedArrays || {})) {
+      const key = nested.sameLengthCountKey;
+      const owner = topArrays(info).find(item => item.countKey === key);
+      if (key && owner && !mediaCountKeys.has(key) && Number.isInteger(nested.visibleCount) && nested.visibleCount <= owner.maxCount) counts[key] = nested.visibleCount;
+    }
+  }
   for (const array of topArrays(info)) {
     if (mediaFields.has(array.key)) continue;
-    const count = array.visibleCount;
+    const count = array.countKey && Number.isInteger(counts[array.countKey]) ? counts[array.countKey] : array.visibleCount;
     const defaults = getByPath(defaultProps, array.key);
     const items = [];
-    for (let i = 0; i < count; i += 1) items.push(buildItem(array, i, pool, itemSample(defaults, i), `${array.key}[${i}]`));
+    for (let i = 0; i < count; i += 1) items.push(buildItem(array, i, pool, itemSample(defaults, i), `${array.key}[${i}]`, counts));
     setNested(props, array.key, items);
     if (array.countKey) props[array.countKey] = count;
   }

@@ -4,22 +4,22 @@
     "total": 83,
     "audited": 82,
     "ruleExcluded": 1,
-    "hardcoded": 26,
+    "hardcoded": 20,
     "media": 0,
     "brandIcon": 0,
-    "autoExcluded": 26,
+    "autoExcluded": 20,
     "manualExcluded": 0,
     "renderFailed": 0,
-    "uncertain": 23,
-    "styleControls": 66,
-    "selectControls": 98
+    "uncertain": 3,
+    "styleControls": 74,
+    "selectControls": 109
   },
   "timings": {
-    "markerMs": 25431,
-    "controlMs": 141538,
-    "totalMs": 167069,
+    "markerMs": 25259,
+    "controlMs": 150869,
+    "totalMs": 176220,
     "markerPages": 82,
-    "controlPages": 462
+    "controlPages": 512
   },
   "ruleExcluded": [
     {
@@ -151,10 +151,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "MENU"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accent",
@@ -196,19 +196,42 @@
       "label": "03 · 报告结构 / STRUCTURE",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "章节"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "章节"
+      ],
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "排布方式",
+          "values": [
+            "rows",
+            "grid"
+          ],
+          "safe": false,
+          "reason": "取值 \"grid\"：元素数量 56 → 46"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme06_page008": {
       "label": "04 · 研究方法 / METHODOLOGY",
@@ -259,11 +282,11 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "PEAK",
         "TREND"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -342,10 +365,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "TIERS"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -384,10 +407,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "CHART"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "layout",
@@ -425,10 +448,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "TABLE"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "layout",
@@ -470,29 +493,41 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "CURVE"
       ],
-      "whitelisted": [],
       "controls": []
     },
     "theme06_page015": {
       "label": "11 · 回落季度 / Q4 PULLBACK",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "阶段"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "阶段"
+      ],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme06_page016": {
       "label": "12 · 峰值与低位 / PEAK & TROUGH",
@@ -503,35 +538,59 @@
       ],
       "evidence": {
         "hardcoded": [
-          "均值",
           "峰谷差 COLUMNS"
         ],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "均值"
+      ],
       "controls": []
     },
     "theme06_page017": {
       "label": "13 · 赛道贡献 / WATERFALL",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "合计 WATERFALL"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
-        "TOTAL"
+      "uncertain": [],
+      "whitelisted": [
+        "TOTAL",
+        "合计 WATERFALL"
       ],
-      "whitelisted": [],
-      "controls": []
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "waterfall",
+            "stack",
+            "bars"
+          ],
+          "safe": false,
+          "reason": "取值 \"stack\"：元素数量 47 → 39"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme06_page018": {
       "label": "14 · 金额区间结构 / SIZE SPLIT",
@@ -543,12 +602,12 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "COUNT",
         "AMOUNT",
         "DIVERGING"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -626,10 +685,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "AREA"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -708,10 +767,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "RADAR"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -780,19 +839,42 @@
       "label": "21 · 专业服务 / LEGAL AI",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "SEG TABLE"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [],
+      "uncertain": [
+        "SEG TABLE"
+      ],
       "whitelisted": [],
-      "controls": []
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "布局形式",
+          "values": [
+            "media",
+            "table"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme06_page026": {
       "label": "22 · 融资排名 / RANKING",
@@ -804,10 +886,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "TOP SCALE"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -845,10 +927,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "TIERS"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "layout",
@@ -1013,10 +1095,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "STRUCTURE"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accent",
@@ -1043,10 +1125,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "DONUT"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -1124,11 +1206,11 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "STAGE",
         "FLOW"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -1166,10 +1248,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "FUNNEL"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -1226,10 +1308,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "CONVERT"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accent",
@@ -1256,11 +1338,11 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "STAGE",
         "FLOW"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -1338,10 +1420,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "BUBBLES"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -1379,14 +1461,15 @@
       ],
       "evidence": {
         "hardcoded": [
-          "合计",
           "STRUCT STACKED"
         ],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "合计"
+      ],
       "controls": []
     },
     "theme06_page044": {
@@ -1399,10 +1482,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "DONUT"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -1443,7 +1526,6 @@
           "授信",
           "渠道",
           "供应",
-          "数据",
           "类资源 FULL"
         ],
         "media": [],
@@ -1451,7 +1533,8 @@
       },
       "uncertain": [],
       "whitelisted": [
-        "R0"
+        "R0",
+        "数据"
       ],
       "controls": []
     },
@@ -1465,10 +1548,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "FLOW"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -1507,10 +1590,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "STRUCTURE"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accent",
@@ -1624,19 +1707,42 @@
       "label": "48 · 分散型应用落地 / OTHER REGIONS",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "REGIONS MAP"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [],
+      "uncertain": [
+        "REGIONS MAP"
+      ],
       "whitelisted": [],
-      "controls": []
+      "controls": [
+        {
+          "key": "layout",
+          "publicKey": "layout",
+          "label": "右栏形式",
+          "values": [
+            "media",
+            "map"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme06_page053": {
       "label": "49 · 三类关键资源 / TALENT·CAPITAL·COMPUTE",
@@ -2293,22 +2399,45 @@
       "label": "70 · 全年月度热力 / MONTHLY HEAT",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "峰值 PEAK",
-          "低位 TROUGH"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
+        "峰值 PEAK",
+        "低位 TROUGH",
         "HIGH"
       ],
-      "whitelisted": [],
-      "controls": []
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "grid",
+            "columns",
+            "dots"
+          ],
+          "safe": false,
+          "reason": "取值 \"columns\"：元素数量 112 → 77"
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#c8f135",
+            "#ff5a3c",
+            "#3ca0ff",
+            "#ffd23c"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme06_page075": {
       "label": "71 · 超级交易画像 / MEGA DEALS",
@@ -2320,10 +2449,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "WALL"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accent",
@@ -2576,10 +2705,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "STATEMENT"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accent",
@@ -2637,9 +2766,9 @@
     }
   },
   "curation": {
-    "added": 26,
+    "added": 20,
     "removed": 26,
-    "styleControls": 66,
+    "styleControls": 74,
     "droppedForContract": []
   }
 }

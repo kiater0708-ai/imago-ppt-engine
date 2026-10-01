@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { selectValues, selectControls, compareGeometry, judgeControl } from '../scripts/audit/controls.mjs';
 import { makeBatches, isCoverLayout } from '../scripts/audit/batches.mjs';
-import { mergeCuration, autoReason, trimStyleControlsForContractLimit } from '../scripts/audit/curation-write.mjs';
+import { mergeCuration, autoReason, renderFailedReason, trimStyleControlsForContractLimit } from '../scripts/audit/curation-write.mjs';
 import { loadEngine } from '../app/lib/layouts.mjs';
 import { emptyCuration, validateCuration } from '../app/lib/curation.mjs';
 import { mapPool } from '../scripts/audit/theme-audit.mjs';
@@ -81,7 +81,7 @@ test('mergeCuration：保留手工条目，重写 auto 条目，styleControls �
       theme11_page011: { status: 'ok', categories: ['hardcoded'], evidence: { hardcoded: ['IGNIS 燃点'], media: [], brandIcon: [] }, controls: [{ key: 'surface', values: ['a', 'b'], safe: true }] },
       theme11_page012: { status: 'ok', categories: ['media', 'brandIcon'], evidence: { hardcoded: [], media: ['点击 拖拽上传'], brandIcon: ['/assets/social-icons/douyin.svg'] }, controls: [] },
       theme11_page001: { status: 'ok', categories: [], evidence: { hardcoded: [], media: [], brandIcon: [] }, controls: [{ key: 'surface', values: ['ink', 'paper'], safe: true }, { key: 'align', values: ['l', 'r'], safe: false }] },
-      theme11_page002: { status: 'renderFailed', categories: [], evidence: {}, controls: [] },
+      theme11_page002: { status: 'renderFailed', error: '渲染失败：cover-like layouts must use theme11_page001-page005', categories: [], evidence: {}, controls: [] },
     },
   };
   const merged = mergeCuration(existing, result);
@@ -90,7 +90,8 @@ test('mergeCuration：保留手工条目，重写 auto 条目，styleControls �
   assert.equal(reasons.theme11_page011, 'auto:hardcoded「IGNIS 燃点」', '旧的 auto 条目按新证据重写');
   assert.equal(reasons.theme11_page099, undefined, '这次没命中的旧 auto 条目清掉');
   assert.match(reasons.theme11_page012, /^auto:media「点击 拖拽上传」；brandIcon「douyin\.svg」$/);
-  assert.equal(merged.curation.exclude.length, 3);
+  assert.equal(reasons.theme11_page002, 'auto:renderFailed「渲染失败：cover-like layouts must use theme11_page001-page005」', '渲染失败自动排除');
+  assert.equal(merged.curation.exclude.length, 4);
   assert.deepEqual(merged.curation.styleControls.theme11_page001, [{ key: 'handmade', values: ['x', 'y'] }, { key: 'surface', values: ['ink', 'paper'] }]);
   assert.equal(merged.curation.styleControls.theme11_page011, undefined, '被排除的版式不写 styleControls');
   assert.deepEqual(merged.curation.notes, existing.notes);
@@ -101,6 +102,22 @@ test('mergeCuration：保留手工条目，重写 auto 条目，styleControls �
   assert.deepEqual(again.curation, merged.curation, '重复跑结果不变（幂等）');
   assert.equal(autoReason({ categories: ['hardcoded'], evidence: { hardcoded: ['IGNIS 燃点'], media: [], brandIcon: [] } }), 'auto:hardcoded「IGNIS 燃点」');
   assert.deepEqual(emptyCuration('theme01').exclude, []);
+});
+
+test('mergeCuration：renderFailed 的 reason 只取错误前 60 字；手工条目优先，不被覆盖', () => {
+  const long = '错'.repeat(100);
+  assert.equal(renderFailedReason({ error: long }), `auto:renderFailed「${'错'.repeat(60)}」`);
+  assert.equal(renderFailedReason({ error: 'a\n  b' }), 'auto:renderFailed「a b」', '换行压成空格');
+  const existing = { theme: 'theme09', exclude: [{ layout: 'theme09_page006', reason: '手工：封面不可用' }], notes: {}, styleControls: {} };
+  const result = { layouts: {
+    theme09_page006: { status: 'renderFailed', error: 'cover-like', categories: [], evidence: {}, controls: [] },
+    theme09_page050: { status: 'renderFailed', error: 'too many items', categories: [], evidence: {}, controls: [] },
+  } };
+  const merged = mergeCuration(existing, result);
+  const reasons = Object.fromEntries(merged.curation.exclude.map(item => [item.layout, item.reason]));
+  assert.equal(reasons.theme09_page006, '手工：封面不可用');
+  assert.equal(reasons.theme09_page050, 'auto:renderFailed「too many items」');
+  assert.deepEqual(mergeCuration(merged.curation, result).curation, merged.curation, '幂等');
 });
 
 test('mapPool：并发上限、顺序保持、单个失败不影响其他', async () => {

@@ -4,22 +4,22 @@
     "total": 84,
     "audited": 81,
     "ruleExcluded": 3,
-    "hardcoded": 8,
+    "hardcoded": 6,
     "media": 1,
     "brandIcon": 0,
-    "autoExcluded": 9,
+    "autoExcluded": 7,
     "manualExcluded": 0,
     "renderFailed": 0,
     "uncertain": 0,
-    "styleControls": 95,
-    "selectControls": 116
+    "styleControls": 97,
+    "selectControls": 118
   },
   "timings": {
-    "markerMs": 26368,
-    "controlMs": 218677,
-    "totalMs": 245155,
+    "markerMs": 25807,
+    "controlMs": 221512,
+    "totalMs": 247430,
     "markerPages": 81,
-    "controlPages": 660
+    "controlPages": 674
   },
   "ruleExcluded": [
     {
@@ -1486,24 +1486,51 @@
       "label": "三个数字 · 资本格局",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "其余"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
       "whitelisted": [
+        "其余",
         "Q1",
         "Q2",
         "Q3",
         "Q4"
       ],
-      "controls": []
+      "controls": [
+        {
+          "key": "palette",
+          "publicKey": "palette",
+          "label": "三卡配色",
+          "values": [
+            [
+              "#5b8def",
+              "#46b083",
+              "#7a5ae0"
+            ],
+            [
+              "#7a5ae0",
+              "#5b8def",
+              "#46b083"
+            ],
+            [
+              "#e8503a",
+              "#e0a23a",
+              "#46b083"
+            ],
+            [
+              "#5b8def",
+              "#46b083",
+              "#e0a23a"
+            ]
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme01_page043": {
       "label": "满版对比 · 双联画面",
@@ -1834,14 +1861,15 @@
       ],
       "evidence": {
         "hardcoded": [
-          "合计",
           "单位 美元"
         ],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "合计"
+      ],
       "controls": []
     },
     "theme01_page054": {
@@ -2045,19 +2073,32 @@
       "label": "子弹图 · 目标达成度",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "目标"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "目标"
+      ],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#46b083",
+            "#5b8def",
+            "#e0a23a",
+            "#e8503a",
+            "#7a5ae0"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme01_page061": {
       "label": "甘特排期 · IPO 上市窗口",
@@ -2809,9 +2850,9 @@
     }
   },
   "curation": {
-    "added": 9,
+    "added": 7,
     "removed": 9,
-    "styleControls": 95,
+    "styleControls": 97,
     "droppedForContract": []
   }
 }

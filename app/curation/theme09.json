@@ -2,6 +2,14 @@
   "theme": "theme09",
   "exclude": [
     {
+      "layout": "theme09_page006",
+      "reason": "auto:renderFailed「渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout th」"
+    },
+    {
+      "layout": "theme09_page007",
+      "reason": "auto:renderFailed「渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout th」"
+    },
+    {
       "layout": "theme09_page018",
       "reason": "auto:hardcoded「亿美元 全年」"
     },
@@ -18,10 +26,6 @@
       "reason": "auto:hardcoded「名次第 在顶部」「条赛道」「轨迹」"
     },
     {
-      "layout": "theme09_page037",
-      "reason": "auto:hardcoded「单位」"
-    },
-    {
       "layout": "theme09_page045",
       "reason": "auto:hardcoded「大模型」「基础设施」「垂直应用」"
     },
@@ -30,8 +34,8 @@
       "reason": "auto:hardcoded「转化」"
     },
     {
-      "layout": "theme09_page049",
-      "reason": "auto:hardcoded「目标」"
+      "layout": "theme09_page050",
+      "reason": "auto:renderFailed「渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout th」"
     },
     {
       "layout": "theme09_page052",
@@ -63,31 +67,23 @@
     },
     {
       "layout": "theme09_page076",
-      "reason": "auto:hardcoded「单位 合计」「合计」「全年合计」"
+      "reason": "auto:hardcoded「头部赛道份额」"
     },
     {
       "layout": "theme09_page083",
       "reason": "auto:hardcoded「升至」"
     },
     {
-      "layout": "theme09_page084",
-      "reason": "auto:hardcoded「单位」"
-    },
-    {
-      "layout": "theme09_page089",
-      "reason": "auto:hardcoded「单位」"
-    },
-    {
       "layout": "theme09_page090",
       "reason": "auto:hardcoded「峰位」"
     },
     {
-      "layout": "theme09_page094",
-      "reason": "auto:hardcoded「占比」"
-    },
-    {
       "layout": "theme09_page110",
       "reason": "auto:media「图片槽数量为 Tweaks 中调高 图片槽数量 以展示企业图」"
+    },
+    {
+      "layout": "theme09_page111",
+      "reason": "写死示例品牌名 AInsight"
     }
   ],
   "notes": {},
@@ -180,6 +176,16 @@
         ]
       }
     ],
+    "theme09_page037": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
+        ]
+      }
+    ],
     "theme09_page038": [
       {
         "key": "labelType",
@@ -207,6 +213,16 @@
         "values": [
           "降序",
           "原序"
+        ]
+      }
+    ],
+    "theme09_page049": [
+      {
+        "key": "labelType",
+        "values": [
+          "number",
+          "symbol",
+          "keyword"
         ]
       }
     ],
@@ -276,6 +292,25 @@
           "number",
           "symbol",
           "keyword"
+        ]
+      }
+    ],
+    "theme09_page084": [
+      {
+        "key": "sort",
+        "values": [
+          "跨度",
+          "止点",
+          "原序"
+        ]
+      }
+    ],
+    "theme09_page089": [
+      {
+        "key": "chartType",
+        "values": [
+          "折线",
+          "面积"
         ]
       }
     ],

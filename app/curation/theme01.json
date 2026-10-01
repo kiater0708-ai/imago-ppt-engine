@@ -6,10 +6,6 @@
       "reason": "auto:hardcoded「交叉」"
     },
     {
-      "layout": "theme01_page042",
-      "reason": "auto:hardcoded「其余」"
-    },
-    {
       "layout": "theme01_page051",
       "reason": "auto:hardcoded「估值 收入」"
     },
@@ -19,11 +15,7 @@
     },
     {
       "layout": "theme01_page053",
-      "reason": "auto:hardcoded「合计」「单位 美元」"
-    },
-    {
-      "layout": "theme01_page060",
-      "reason": "auto:hardcoded「目标」"
+      "reason": "auto:hardcoded「单位 美元」"
     },
     {
       "layout": "theme01_page065",
@@ -583,6 +575,33 @@
         ]
       }
     ],
+    "theme01_page042": [
+      {
+        "key": "palette",
+        "values": [
+          [
+            "#5b8def",
+            "#46b083",
+            "#7a5ae0"
+          ],
+          [
+            "#7a5ae0",
+            "#5b8def",
+            "#46b083"
+          ],
+          [
+            "#e8503a",
+            "#e0a23a",
+            "#46b083"
+          ],
+          [
+            "#5b8def",
+            "#46b083",
+            "#e0a23a"
+          ]
+        ]
+      }
+    ],
     "theme01_page043": [
       {
         "key": "imageFit",
@@ -774,6 +793,18 @@
         "values": [
           "#5b8def",
           "#46b083",
+          "#e0a23a",
+          "#e8503a",
+          "#7a5ae0"
+        ]
+      }
+    ],
+    "theme01_page060": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#46b083",
+          "#5b8def",
           "#e0a23a",
           "#e8503a",
           "#7a5ae0"

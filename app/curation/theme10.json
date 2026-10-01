@@ -10,10 +10,6 @@
       "reason": "auto:hardcoded「答疑 COMMON QUESTIONS」「你可能正想问的」「个常见问题」"
     },
     {
-      "layout": "theme10_page058",
-      "reason": "auto:hardcoded「均值」"
-    },
-    {
       "layout": "theme10_page062",
       "reason": "auto:hardcoded「分散度 CORRELATION」「它们彼此独立吗」「全球股票」"
     },
@@ -129,6 +125,15 @@
       }
     ],
     "theme10_page010": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
+        ]
+      }
+    ],
+    "theme10_page012": [
       {
         "key": "tone",
         "values": [
@@ -476,6 +481,15 @@
           "dawn",
           "vapor",
           "paper"
+        ]
+      }
+    ],
+    "theme10_page058": [
+      {
+        "key": "tone",
+        "values": [
+          "dark",
+          "light"
         ]
       }
     ],

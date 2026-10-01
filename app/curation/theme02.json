@@ -6,10 +6,6 @@
       "reason": "auto:media「上传主视觉 需切到 上传 显示」"
     },
     {
-      "layout": "theme02_page011",
-      "reason": "auto:hardcoded「占比」"
-    },
-    {
       "layout": "theme02_page019",
       "reason": "auto:hardcoded「带宽 融资额 全年合计」「汇入 占全年」"
     },
@@ -20,10 +16,6 @@
     {
       "layout": "theme02_page029",
       "reason": "auto:media「纯标题版式 图片数量为」"
-    },
-    {
-      "layout": "theme02_page031",
-      "reason": "auto:hardcoded「结论」"
     },
     {
       "layout": "theme02_page033",
@@ -42,10 +34,6 @@
       "reason": "auto:hardcoded「贡献」"
     },
     {
-      "layout": "theme02_page041",
-      "reason": "auto:hardcoded「目标」"
-    },
-    {
       "layout": "theme02_page055",
       "reason": "auto:hardcoded「横向看集中」「纵向看节奏」「结构看分层」"
     },
@@ -60,6 +48,10 @@
     {
       "layout": "theme02_page064",
       "reason": "auto:hardcoded「金额份额 放大」"
+    },
+    {
+      "layout": "theme02_page068",
+      "reason": "auto:renderFailed「渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout th」"
     },
     {
       "layout": "theme02_page069",
@@ -201,6 +193,22 @@
       }
     ],
     "theme02_page010": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page011": [
       {
         "key": "scheme",
         "values": [
@@ -454,6 +462,22 @@
         ]
       }
     ],
+    "theme02_page031": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
     "theme02_page032": [
       {
         "key": "scheme",
@@ -519,6 +543,22 @@
       }
     ],
     "theme02_page040": [
+      {
+        "key": "scheme",
+        "values": [
+          "green",
+          "violet"
+        ]
+      },
+      {
+        "key": "emphasis",
+        "values": [
+          "default",
+          "ticket"
+        ]
+      }
+    ],
+    "theme02_page041": [
       {
         "key": "scheme",
         "values": [

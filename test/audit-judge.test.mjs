@@ -75,3 +75,16 @@ test('judgeLayout：综合判定与证据', () => {
   assert.deepEqual(unsure.categories, []);
   assert.deepEqual(unsure.uncertain, ['faster']);
 });
+
+test('白名单：通用图表标签单独出现放行；与别的内容连用仍判写死', () => {
+  for (const word of ['合计', '全年合计', '单位', '占比', '均值', '月度均值', '重点', '峰值', '低位', '目标', '其余', '数据', '关键节点', '主线']) {
+    assert.equal(classifyCandidate(word).kind, 'whitelisted', word);
+  }
+  for (const word of ['Chart', 'WATERFALL', 'Heat Map', 'Total', 'Funnel']) assert.equal(classifyCandidate(word).kind, 'whitelisted', word);
+  assert.equal(classifyCandidate('单位 美元').kind, 'hardcoded');
+  assert.equal(classifyCandidate('亿美元').kind, 'hardcoded');
+  assert.equal(classifyCandidate('场景占比').kind, 'hardcoded');
+  assert.equal(classifyCandidate('全年上升').kind, 'hardcoded');
+  assert.equal(classifyCandidate('估值').kind, 'hardcoded', '示例数据绑定的词不放行');
+  assert.equal(classifyCandidate('融资额').kind, 'hardcoded');
+});

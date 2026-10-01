@@ -24,6 +24,12 @@ export function autoReason(entry) {
   return `${AUTO_PREFIX}${parts.join('；')}`;
 }
 
+/** 渲染失败的版式：错误原文压成一行取前 60 字。 */
+export function renderFailedReason(entry) {
+  const text = String(entry.error || '没有渲染结果').replace(/\s+/g, ' ').trim().slice(0, 60);
+  return `${AUTO_PREFIX}renderFailed「${text}」`;
+}
+
 /**
  * existing：现有清单对象；themeResult.layouts：{layout: entry}（entry 含 status、categories、evidence、controls）。
  * 返回 { curation, addedExclude:[{layout,reason}], removedAuto:[layout], styleControlCount }。不改传入对象。
@@ -36,7 +42,12 @@ export function mergeCuration(existing, themeResult) {
   const addedExclude = [];
   for (const layout of Object.keys(themeResult.layouts).sort()) {
     const entry = themeResult.layouts[layout];
-    if (entry.status !== 'ok' || !entry.categories.length || manual.has(layout)) continue;
+    if (manual.has(layout)) continue;
+    if (entry.status === 'renderFailed') {
+      addedExclude.push({ layout, reason: renderFailedReason(entry) });
+      continue;
+    }
+    if (entry.status !== 'ok' || !entry.categories.length) continue;
     addedExclude.push({ layout, reason: autoReason(entry) });
   }
   curation.exclude.push(...addedExclude);

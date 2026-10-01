@@ -4,22 +4,22 @@
     "total": 71,
     "audited": 70,
     "ruleExcluded": 1,
-    "hardcoded": 12,
+    "hardcoded": 9,
     "media": 0,
     "brandIcon": 0,
-    "autoExcluded": 12,
+    "autoExcluded": 9,
     "manualExcluded": 0,
     "renderFailed": 0,
-    "uncertain": 2,
-    "styleControls": 88,
-    "selectControls": 146
+    "uncertain": 0,
+    "styleControls": 93,
+    "selectControls": 155
   },
   "timings": {
-    "markerMs": 22644,
-    "controlMs": 284264,
-    "totalMs": 307007,
+    "markerMs": 22898,
+    "controlMs": 311508,
+    "totalMs": 334499,
     "markerPages": 70,
-    "controlPages": 906
+    "controlPages": 980
   },
   "ruleExcluded": [
     {
@@ -255,19 +255,60 @@
       "label": "目录 Contents",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "重点"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "重点"
+      ],
+      "controls": [
+        {
+          "key": "columns",
+          "publicKey": "columns",
+          "label": "每行列数",
+          "values": [
+            3,
+            4
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "focusIndex",
+          "publicKey": "focusIndex",
+          "label": "重点元素",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "safe": false,
+          "reason": "取值 0：第 7 个元素 y 相差 6.0px"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#86D62B",
+            "#23C76A",
+            "#2F7BFF",
+            "#F2A93B",
+            "#0E110B"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme07_page008": {
       "label": "方法 Methodology",
@@ -325,21 +366,66 @@
       "label": "热力 Heatmap",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "峰值月",
-          "月度均值",
-          "均值"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "峰值月",
+        "月度均值",
+        "均值"
+      ],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "bars",
+            "grid"
+          ],
+          "safe": false,
+          "reason": "取值 \"grid\"：元素数量 79 → 90"
+        },
+        {
+          "key": "focusIndex",
+          "publicKey": "focusIndex",
+          "label": "重点元素",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "safe": false,
+          "reason": "取值 0：第 19 个元素 x 相差 3.7px"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#86D62B",
+            "#23C76A",
+            "#2F7BFF",
+            "#F2A93B",
+            "#0E110B"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme07_page011": {
       "label": "排名 Ranking",
@@ -368,8 +454,6 @@
       ],
       "evidence": {
         "hardcoded": [
-          "纵轴",
-          "横轴",
           "高热度 高兑现",
           "高热度 低兑现",
           "低热度 高兑现",
@@ -379,7 +463,10 @@
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "纵轴",
+        "横轴"
+      ],
       "controls": []
     },
     "theme07_page013": {
@@ -721,15 +808,16 @@
       ],
       "evidence": {
         "hardcoded": [
-          "峰值",
-          "低位",
           "常规"
         ],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "峰值",
+        "低位"
+      ],
       "controls": []
     },
     "theme07_page023": {
@@ -779,20 +867,58 @@
       "label": "区间 Deal Size",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "数量",
-          "金额"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "数量",
+        "金额"
+      ],
+      "controls": [
+        {
+          "key": "metricMode",
+          "publicKey": "metricMode",
+          "label": "图表类型",
+          "values": [
+            "both",
+            "count",
+            "amount"
+          ],
+          "safe": false,
+          "reason": "取值 \"count\"：元素数量 102 → 80"
+        },
+        {
+          "key": "focusIndex",
+          "publicKey": "focusIndex",
+          "label": "重点元素",
+          "values": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "主题色",
+          "values": [
+            "#86D62B",
+            "#23C76A",
+            "#2F7BFF",
+            "#F2A93B",
+            "#0E110B"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme07_page025": {
       "label": "均值 Avg Ticket",
@@ -1235,10 +1361,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "NODES"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -1452,10 +1578,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "LAYERS"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "chartType",
@@ -3047,9 +3173,9 @@
     }
   },
   "curation": {
-    "added": 12,
+    "added": 9,
     "removed": 12,
-    "styleControls": 86,
+    "styleControls": 91,
     "droppedForContract": [
       {
         "layout": "theme07_page054",

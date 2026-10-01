@@ -1,31 +1,28 @@
 # theme03 版式审计
 
 - 版式总数 77；参与审计 76；现有规则已排除（媒体槽隐藏不了 / contentLocked / inspect 失败）1
-- 本次自动排除 7 个：写死文字 7、图片主体 0、品牌图标 0（一个版式命中多类时每类各计一次）
-- 人工排除（审计时仍渲染，用来核对判定）0；渲染失败 0；待人工确认 1
-- select 控件共 100 个，判定为只改外观（可随机）89 个
-- 耗时：标记渲染 29 秒（76 页）；控件检查 2 分 26 秒（252 页）；合计 2 分 55 秒
-- 清单写入：新增自动排除 7 条、清掉旧的自动排除 7 条、styleControls 89 条
+- 本次自动排除 6 个：写死文字 6、图片主体 0、品牌图标 0（一个版式命中多类时每类各计一次）
+- 人工排除（审计时仍渲染，用来核对判定）0；渲染失败 0；待人工确认 0
+- select 控件共 101 个，判定为只改外观（可随机）90 个
+- 耗时：标记渲染 35 秒（76 页）；控件检查 2 分 24 秒（254 页）；合计 2 分 59 秒
+- 清单写入：新增自动排除 6 条、清掉旧的自动排除 7 条、styleControls 90 条
 
-## 自动排除（7）
+## 自动排除（6）
 
 | 版式 | 名称 | 类别 | 证据 | 已有人工排除 |
 |---|---|---|---|---|
 | p021 | 案例对比 | 写死文字 | 写死文字：亿美元 |  |
-| p024 | 轮次单位图 | 写死文字 | 写死文字：高亮 |  |
 | p037 | 三视野 | 写死文字 | 写死文字：当下兑现 / 确定性 / 赔率 |  |
 | p038 | 核心结论 | 写死文字 | 写死文字：集中 / 节奏 / 分层 |  |
 | p045 | SWOT | 写死文字 | 写死文字：内部 增益 / 内部 损害 / 外部 增益 |  |
 | p050 | 波士顿矩阵 | 写死文字 | 写死文字：高增长 高份额 / 高增长 低份额 / 低增长 高份额 |  |
 | p073 | 护城河 | 写死文字 | 写死文字：信任 渠道 / 数据 协同 / 资源锁定 |  |
 
-## 待人工确认（1）
+## 待人工确认（0）
 
 候选文字只有一个英文词，判不准是不是写死文字，没有自动排除。
 
-| 版式 | 名称 | 候选文字 |
-|---|---|---|
-| p052 | PEST | PEST |
+（无）
 
 ## 渲染失败（0）
 
@@ -67,6 +64,7 @@
 | p022 | accent | 强调色 | blue / lime |
 | p023 | chartType | 图表类型 | bar / lollipop |
 | p023 | accent | 强调色 | blue / lime |
+| p024 | accent | 强调色 | blue / lime |
 | p025 | accent | 强调色 | blue / lime |
 | p026 | accent | 强调色 | blue / lime |
 | p027 | chartType | 主系列样式 | area / line |
@@ -143,12 +141,13 @@
 
 ## 白名单命中（供人复核）
 
-白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin
+白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin、chart、table、curve、trend、peak、trough、total、count、amount、diverging、area、radar、tiers、structure、donut、stage、flow、funnel、convert、bubbles、high、low、wall、statement、menu、scale、part、step、phase、pest、pulse、nodes、layers、layer、columns、waterfall、heat、map
 
-白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年
+白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年、合计、全年合计、单位、占比、均值、月度均值、重点、峰值、低位、目标、其余、全年、数据、分布、基准、结论、高亮、章节、摘要、阶段、纵轴、横轴、数量、金额、关键节点、主线
 
 | 命中文字 | 版式数 |
 |---|---|
+| 高亮 | 1 |
 | Q1 | 1 |
 | Q2 | 1 |
 | Q3 | 1 |
@@ -158,6 +157,7 @@
 | L3 | 1 |
 | L4 | 1 |
 | L5 | 1 |
+| PEST | 1 |
 
 ## 现有规则已排除（1，未渲染）
 

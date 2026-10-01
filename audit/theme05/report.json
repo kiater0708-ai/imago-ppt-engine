@@ -4,22 +4,22 @@
     "total": 94,
     "audited": 94,
     "ruleExcluded": 0,
-    "hardcoded": 30,
+    "hardcoded": 22,
     "media": 1,
     "brandIcon": 0,
-    "autoExcluded": 31,
+    "autoExcluded": 23,
     "manualExcluded": 0,
     "renderFailed": 0,
     "uncertain": 1,
-    "styleControls": 125,
-    "selectControls": 139
+    "styleControls": 138,
+    "selectControls": 154
   },
   "timings": {
-    "markerMs": 28495,
-    "controlMs": 283266,
-    "totalMs": 311844,
+    "markerMs": 28597,
+    "controlMs": 324047,
+    "totalMs": 352765,
     "markerPages": 94,
-    "controlPages": 1026
+    "controlPages": 1178
   },
   "ruleExcluded": [],
   "layouts": {
@@ -308,37 +308,67 @@
       "label": "产业链 Value Chain",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "重点"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "重点"
+      ],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme05_page012": {
       "label": "案例 Cases",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "重点"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "重点"
+      ],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme05_page013": {
       "label": "热力 Heatmap",
@@ -435,7 +465,6 @@
       ],
       "evidence": {
         "hardcoded": [
-          "重点",
           "高热度 高兑现",
           "明星兑现",
           "STAR DELIVERY",
@@ -463,7 +492,9 @@
       "uncertain": [
         "TO BE PROVEN"
       ],
-      "whitelisted": [],
+      "whitelisted": [
+        "重点"
+      ],
       "controls": []
     },
     "theme05_page016": {
@@ -476,33 +507,81 @@
       "evidence": {
         "hardcoded": [
           "风险传导链",
-          "重点",
           "风险"
         ],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "重点"
+      ],
       "controls": []
     },
     "theme05_page017": {
       "label": "策略 Outlook",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "PHASE TIMELINE"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [],
+      "uncertain": [
+        "PHASE TIMELINE"
+      ],
       "whitelisted": [],
-      "controls": []
+      "controls": [
+        {
+          "key": "leftColor",
+          "publicKey": "leftColor",
+          "label": "左栏色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "rightColor",
+          "publicKey": "rightColor",
+          "label": "右栏色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme05_page018": {
       "label": "结论 Conclusion",
@@ -625,14 +704,15 @@
       ],
       "evidence": {
         "hardcoded": [
-          "金额区间 笔数",
-          "合计"
+          "金额区间 笔数"
         ],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "合计"
+      ],
       "controls": []
     },
     "theme05_page021": {
@@ -713,61 +793,171 @@
       "label": "峰值图文 Peak",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "峰值"
-        ],
-        "media": [],
-        "brandIcon": []
-      },
-      "uncertain": [],
-      "whitelisted": [],
-      "controls": []
-    },
-    "theme05_page024": {
-      "label": "走势曲线 Curve",
-      "status": "ok",
-      "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
-      "evidence": {
-        "hardcoded": [
-          "基准 Q1"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
       "whitelisted": [
+        "峰值"
+      ],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "area",
+            "bar",
+            "line"
+          ],
+          "safe": false,
+          "reason": "取值 \"bar\"：元素数量 43 → 49"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
+    },
+    "theme05_page024": {
+      "label": "走势曲线 Curve",
+      "status": "ok",
+      "manualExclude": null,
+      "categories": [],
+      "evidence": {
+        "hardcoded": [],
+        "media": [],
+        "brandIcon": []
+      },
+      "uncertain": [],
+      "whitelisted": [
+        "基准 Q1",
         "Q1",
         "Q2",
         "Q3",
         "Q4"
       ],
-      "controls": []
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "曲线类型",
+          "values": [
+            "area",
+            "line"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "scope",
+          "publicKey": "scope",
+          "label": "数据范围",
+          "values": [
+            "year",
+            "month"
+          ],
+          "safe": false,
+          "reason": "取值 \"month\"：元素数量 45 → 44"
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme05_page025": {
       "label": "峰谷 Peak/Trough",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "月度均值",
-          "均值"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "月度均值",
+        "均值"
+      ],
+      "controls": [
+        {
+          "key": "highColor",
+          "publicKey": "highColor",
+          "label": "高位色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "lowColor",
+          "publicKey": "lowColor",
+          "label": "低位色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme05_page026": {
       "label": "瀑布 Waterfall",
@@ -791,20 +981,35 @@
       "label": "双维堆叠 Split",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "分布",
-          "合计"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "分布",
+        "合计"
+      ],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme05_page028": {
       "label": "大数字 Big Number",
@@ -816,10 +1021,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "PULSE"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "numberAlign",
@@ -1599,19 +1804,34 @@
       "label": "指标仪表 Meter",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "基准 pt"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "基准 pt"
+      ],
+      "controls": [
+        {
+          "key": "accentColor",
+          "publicKey": "accentColor",
+          "label": "强调色",
+          "values": [
+            "#d8402e",
+            "#e2742c",
+            "#efbe2e",
+            "#3c9a52",
+            "#4da0c6",
+            "#2c44a0",
+            "#7a3c90"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme05_page049": {
       "label": "增长漏斗 Funnel",
@@ -2079,16 +2299,17 @@
       ],
       "evidence": {
         "hardcoded": [
-          "占比构成",
-          "SHARE OF TOTAL"
+          "占比构成"
         ],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [
+        "SHARE OF TOTAL"
+      ],
+      "whitelisted": [
         "PULSE"
       ],
-      "whitelisted": [],
       "controls": []
     },
     "theme05_page061": {
@@ -3496,9 +3717,9 @@
     }
   },
   "curation": {
-    "added": 31,
+    "added": 23,
     "removed": 31,
-    "styleControls": 125,
+    "styleControls": 138,
     "droppedForContract": []
   }
 }

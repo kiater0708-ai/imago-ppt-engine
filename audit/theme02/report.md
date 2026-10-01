@@ -1,27 +1,24 @@
 # theme02 版式审计
 
 - 版式总数 74；参与审计 70；现有规则已排除（媒体槽隐藏不了 / contentLocked / inspect 失败）4
-- 本次自动排除 17 个：写死文字 13、图片主体 4、品牌图标 0（一个版式命中多类时每类各计一次）
+- 本次自动排除 14 个：写死文字 10、图片主体 4、品牌图标 0（一个版式命中多类时每类各计一次）
 - 人工排除（审计时仍渲染，用来核对判定）0；渲染失败 1；待人工确认 0
-- select 控件共 135 个，判定为只改外观（可随机）115 个
-- 耗时：标记渲染 23 秒（70 页）；控件检查 1 分 20 秒（292 页）；合计 1 分 43 秒
-- 清单写入：新增自动排除 17 条、清掉旧的自动排除 17 条、styleControls 115 条
+- select 控件共 141 个，判定为只改外观（可随机）121 个
+- 耗时：标记渲染 23 秒（70 页）；控件检查 1 分 23 秒（304 页）；合计 1 分 46 秒
+- 清单写入：新增自动排除 15 条、清掉旧的自动排除 17 条、styleControls 121 条
 
-## 自动排除（17）
+## 自动排除（14）
 
 | 版式 | 名称 | 类别 | 证据 | 已有人工排除 |
 |---|---|---|---|---|
 | p004 | 封面 C · 满幅图海报 | 图片主体 | 图片主体：上传主视觉 需切到 上传 显示 |  |
-| p011 | 融资榜单 · Leaderboard | 写死文字 | 写死文字：占比 |  |
 | p019 | 资金流向 · Sankey | 写死文字 | 写死文字：带宽 融资额 全年合计 / 汇入 占全年 |  |
 | p026 | 主题海报 · Poster | 图片主体 | 图片主体：上传主图 需切到 上传 显示 |  |
 | p029 | 案例图集 · Gallery | 图片主体 | 图片主体：纯标题版式 图片数量为 |  |
-| p031 | 双图对比 · Compare | 写死文字 | 写死文字：结论 |  |
 | p033 | 笔数分布 · Pictogram | 写死文字 | 写死文字：占全部 |  |
 | p037 | 资本漏斗 · Funnel | 写死文字 | 写死文字：留存 |  |
 | p038 | 估值散点 · Scatter | 写死文字 | 写死文字：估值 ARR 十亿美元 营收倍数 |  |
 | p039 | 资本桥 · Waterfall | 写死文字 | 写死文字：贡献 |  |
-| p041 | 达成度 · Progress | 写死文字 | 写死文字：目标 |  |
 | p055 | 结论主张 · Manifesto | 写死文字 | 写死文字：横向看集中 / 纵向看节奏 / 结构看分层 |  |
 | p060 | 集中度 · Pareto | 写死文字 | 写死文字：前三家合计 |  |
 | p062 | 赛道版图 · Treemap | 写死文字 | 写死文字：面积 吸纳资金 全年合计 |  |
@@ -39,7 +36,7 @@
 
 | 版式 | 名称 | 原因 |
 |---|---|---|
-| p068 | 资本去向 · Sunburst | 渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme02_page068 field props.groups[1].children: too many items (3 > 2); use at most fillPlan.maxCount or choose another layout - slide 1 layou… |
+| p068 | 资本去向 · Sunburst | 渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme02_page068 field props: Slide props mismatch for "theme02_page068": groups[1].children: fixed nested array length 2 does not match defaul… |
 
 ## 可随机的外观控件（styleControls）
 
@@ -63,6 +60,8 @@
 | p009 | emphasis | 强调卡片 | default / ticket |
 | p010 | scheme | 配色方案 | green / violet |
 | p010 | emphasis | 强调卡片 | default / ticket |
+| p011 | scheme | 配色方案 | green / violet |
+| p011 | emphasis | 强调卡片 | default / ticket |
 | p012 | scheme | 配色方案 | green / violet |
 | p012 | emphasis | 强调卡片 | default / ticket |
 | p013 | scheme | 配色方案 | green / violet |
@@ -93,6 +92,8 @@
 | p025 | scheme | 配色方案 | green / violet |
 | p025 | emphasis | 强调卡片 | default / ticket |
 | p025 | overlay | 标题蒙层 | corner / bar / none |
+| p031 | scheme | 配色方案 | green / violet |
+| p031 | emphasis | 强调卡片 | default / ticket |
 | p032 | scheme | 配色方案 | green / violet |
 | p032 | emphasis | 强调卡片 | default / ticket |
 | p034 | scheme | 配色方案 | green / violet |
@@ -103,6 +104,8 @@
 | p036 | emphasis | 强调卡片 | default / ticket |
 | p040 | scheme | 配色方案 | green / violet |
 | p040 | emphasis | 强调卡片 | default / ticket |
+| p041 | scheme | 配色方案 | green / violet |
+| p041 | emphasis | 强调卡片 | default / ticket |
 | p042 | scheme | 配色方案 | green / violet |
 | p042 | emphasis | 强调卡片 | default / ticket |
 | p042 | imageSide | 头像位置 | left / right |
@@ -188,13 +191,16 @@
 
 ## 白名单命中（供人复核）
 
-白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin
+白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin、chart、table、curve、trend、peak、trough、total、count、amount、diverging、area、radar、tiers、structure、donut、stage、flow、funnel、convert、bubbles、high、low、wall、statement、menu、scale、part、step、phase、pest、pulse、nodes、layers、layer、columns、waterfall、heat、map
 
-白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年
+白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年、合计、全年合计、单位、占比、均值、月度均值、重点、峰值、低位、目标、其余、全年、数据、分布、基准、结论、高亮、章节、摘要、阶段、纵轴、横轴、数量、金额、关键节点、主线
 
 | 命中文字 | 版式数 |
 |---|---|
 | VS | 2 |
+| 占比 | 1 |
+| 结论 | 1 |
+| 目标 | 1 |
 
 ## 现有规则已排除（4，未渲染）
 

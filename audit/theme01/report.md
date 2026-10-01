@@ -1,22 +1,20 @@
 # theme01 版式审计
 
 - 版式总数 84；参与审计 81；现有规则已排除（媒体槽隐藏不了 / contentLocked / inspect 失败）3
-- 本次自动排除 9 个：写死文字 8、图片主体 1、品牌图标 0（一个版式命中多类时每类各计一次）
+- 本次自动排除 7 个：写死文字 6、图片主体 1、品牌图标 0（一个版式命中多类时每类各计一次）
 - 人工排除（审计时仍渲染，用来核对判定）0；渲染失败 0；待人工确认 0
-- select 控件共 116 个，判定为只改外观（可随机）95 个
-- 耗时：标记渲染 26 秒（81 页）；控件检查 3 分 39 秒（660 页）；合计 4 分 5 秒
-- 清单写入：新增自动排除 9 条、清掉旧的自动排除 9 条、styleControls 95 条
+- select 控件共 118 个，判定为只改外观（可随机）97 个
+- 耗时：标记渲染 26 秒（81 页）；控件检查 3 分 42 秒（674 页）；合计 4 分 7 秒
+- 清单写入：新增自动排除 7 条、清掉旧的自动排除 9 条、styleControls 97 条
 
-## 自动排除（9）
+## 自动排除（7）
 
 | 版式 | 名称 | 类别 | 证据 | 已有人工排除 |
 |---|---|---|---|---|
 | p010 | 横纵分析法 | 写死文字 | 写死文字：交叉 |  |
-| p042 | 三个数字 · 资本格局 | 写死文字 | 写死文字：其余 |  |
 | p051 | 市销率天梯 · 估值 vs 收入 | 写死文字 | 写死文字：估值 收入 |  |
 | p052 | 贴纸拼贴 · 前沿掠影 | 图片主体 | 图片主体：图片 / 点击上传 |  |
-| p053 | 资金热力矩阵 | 写死文字 | 写死文字：合计 / 单位 美元 |  |
-| p060 | 子弹图 · 目标达成度 | 写死文字 | 写死文字：目标 |  |
+| p053 | 资金热力矩阵 | 写死文字 | 写死文字：单位 美元 |  |
 | p065 | 三强能力雷达 | 写死文字 | 写死文字：均分 |  |
 | p068 | 估值跃迁 · 哑铃图 | 写死文字 | 写死文字：估值 / 估值 美元 |  |
 | p075 | 同比对比 · 分组柱状图 | 写死文字 | 写死文字：单位 美元 |  |
@@ -86,6 +84,7 @@
 | p041 | unicornScene | 动态场景 | tech / automations / moving / goey |
 | p041 | imageFit | 图片填充 | cover / contain |
 | p041 | accentColor | 主题色 | #7a5ae0 / #5b8def / #46b083 / #e0a23a / #e8503a / #c9f24d |
+| p042 | palette | 三卡配色 | #5b8def,#46b083,#7a5ae0 / #7a5ae0,#5b8def,#46b083 / #e8503a,#e0a23a,#46b083 / #5… |
 | p043 | imageFit | 图片裁切 | cover / contain |
 | p043 | highlightSide | 点亮一侧 | left / right / none |
 | p043 | accentColor | 强调色 | #e8503a / #5b8def / #46b083 / #e0a23a / #7a5ae0 / #c9f24d |
@@ -105,6 +104,7 @@
 | p057 | accentColor | 主题色 | #c9f24d / #5b8def / #46b083 / #e0a23a / #e8503a / #7a5ae0 |
 | p058 | accentColor | 主题色 | #e0a23a / #5b8def / #46b083 / #e8503a / #7a5ae0 |
 | p059 | accentColor | 主题色 | #5b8def / #46b083 / #e0a23a / #e8503a / #7a5ae0 |
+| p060 | accentColor | 主题色 | #46b083 / #5b8def / #e0a23a / #e8503a / #7a5ae0 |
 | p061 | accentColor | 主题色 | #e8503a / #5b8def / #46b083 / #e0a23a / #7a5ae0 |
 | p062 | unicornScene | 动态场景 | tech / automations / moving / goey |
 | p062 | imageFit | 图片适配 | cover / contain |
@@ -159,16 +159,19 @@
 
 ## 白名单命中（供人复核）
 
-白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin
+白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin、chart、table、curve、trend、peak、trough、total、count、amount、diverging、area、radar、tiers、structure、donut、stage、flow、funnel、convert、bubbles、high、low、wall、statement、menu、scale、part、step、phase、pest、pulse、nodes、layers、layer、columns、waterfall、heat、map
 
-白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年
+白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年、合计、全年合计、单位、占比、均值、月度均值、重点、峰值、低位、目标、其余、全年、数据、分布、基准、结论、高亮、章节、摘要、阶段、纵轴、横轴、数量、金额、关键节点、主线
 
 | 命中文字 | 版式数 |
 |---|---|
+| 其余 | 1 |
 | Q1 | 1 |
 | Q2 | 1 |
 | Q3 | 1 |
 | Q4 | 1 |
+| 合计 | 1 |
+| 目标 | 1 |
 | M0 | 1 |
 
 ## 现有规则已排除（3，未渲染）

@@ -4,22 +4,22 @@
     "total": 74,
     "audited": 73,
     "ruleExcluded": 1,
-    "hardcoded": 6,
+    "hardcoded": 5,
     "media": 0,
     "brandIcon": 0,
-    "autoExcluded": 6,
+    "autoExcluded": 5,
     "manualExcluded": 0,
-    "renderFailed": 4,
-    "uncertain": 3,
-    "styleControls": 27,
-    "selectControls": 109
+    "renderFailed": 3,
+    "uncertain": 0,
+    "styleControls": 28,
+    "selectControls": 113
   },
   "timings": {
-    "markerMs": 34205,
-    "controlMs": 173778,
-    "totalMs": 208069,
+    "markerMs": 31779,
+    "controlMs": 172965,
+    "totalMs": 204822,
     "markerPages": 73,
-    "controlPages": 500
+    "controlPages": 516
   },
   "ruleExcluded": [
     {
@@ -295,10 +295,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "Part0"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accentTone",
@@ -683,19 +683,42 @@
       "label": "季度资本构成",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "占比"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "占比"
+      ],
+      "controls": [
+        {
+          "key": "hlStyle",
+          "publicKey": "hlStyle",
+          "label": "高亮样式",
+          "values": [
+            "glass",
+            "pill",
+            "underline",
+            "text"
+          ],
+          "safe": false,
+          "reason": "取值 \"pill\"：第 3 个元素 高 相差 7.6px"
+        },
+        {
+          "key": "chartVariant",
+          "publicKey": "chartVariant",
+          "label": "堆叠口径",
+          "values": [
+            "ratio",
+            "absolute"
+          ],
+          "safe": false,
+          "reason": "取值 \"absolute\"：元素数量 63 → 60"
+        }
+      ]
     },
     "theme04_page020": {
       "label": "三重集中",
@@ -1905,8 +1928,7 @@
     },
     "theme04_page057": {
       "label": "图片故事",
-      "status": "renderFailed",
-      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme04_page057 field props: Slide props mismatch for \"theme04_page057\": countBinding mismatch mediaCount=0; slotLabels has 3 - slide 1 theme theme04 layout theme04_page057 field props.mediaCount: countBinding mismatch mediaCount=0; slotLabels has 3 (pro",
+      "status": "ok",
       "manualExclude": null,
       "categories": [],
       "evidence": {
@@ -1916,7 +1938,32 @@
       },
       "uncertain": [],
       "whitelisted": [],
-      "controls": []
+      "controls": [
+        {
+          "key": "hlStyle",
+          "publicKey": "hlStyle",
+          "label": "高亮样式",
+          "values": [
+            "glass",
+            "pill",
+            "underline",
+            "text"
+          ],
+          "safe": false,
+          "reason": "取值 \"pill\"：第 2 个元素 y 相差 2.9px"
+        },
+        {
+          "key": "mediaLayout",
+          "publicKey": "mediaLayout",
+          "label": "多图构图",
+          "values": [
+            "feature",
+            "stack"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme04_page058": {
       "label": "焦点特写",
@@ -2045,10 +2092,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "PART"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accentTone",
@@ -2206,7 +2253,7 @@
     "theme04_page066": {
       "label": "泳道甘特",
       "status": "renderFailed",
-      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme04_page066 field props.lanesData[2].ev: too many items (2 > 1); use at most fillPlan.maxCount or choose another layout - slide 1 layout theme04_page066 field props.lanesData[3].ev: too many items (2 > 1); use at most fillPlan.maxCount or choose anot",
+      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme04_page066 field props: Slide props mismatch for \"theme04_page066\": lanesData[2].ev: fixed nested array length 1 does not match default 2; expected lengths by index: [1, 1, 2, 2, 1, 1]; lanesData[3].ev: fixed nested array length 1 does not match def",
       "manualExclude": null,
       "categories": [],
       "evidence": {
@@ -2284,10 +2331,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "PART"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accentTone",
@@ -2501,9 +2548,9 @@
     }
   },
   "curation": {
-    "added": 6,
+    "added": 8,
     "removed": 6,
-    "styleControls": 27,
+    "styleControls": 28,
     "droppedForContract": []
   }
 }

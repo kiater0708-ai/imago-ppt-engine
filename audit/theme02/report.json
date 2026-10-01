@@ -4,22 +4,22 @@
     "total": 74,
     "audited": 70,
     "ruleExcluded": 4,
-    "hardcoded": 13,
+    "hardcoded": 10,
     "media": 4,
     "brandIcon": 0,
-    "autoExcluded": 17,
+    "autoExcluded": 14,
     "manualExcluded": 0,
     "renderFailed": 1,
     "uncertain": 0,
-    "styleControls": 115,
-    "selectControls": 135
+    "styleControls": 121,
+    "selectControls": 141
   },
   "timings": {
-    "markerMs": 22860,
-    "controlMs": 80228,
-    "totalMs": 103145,
+    "markerMs": 23000,
+    "controlMs": 83269,
+    "totalMs": 106361,
     "markerPages": 70,
-    "controlPages": 292
+    "controlPages": 304
   },
   "ruleExcluded": [
     {
@@ -445,19 +445,40 @@
       "label": "融资榜单 · Leaderboard",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "占比"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "占比"
+      ],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme02_page012": {
       "label": "时间轴 · Timeline",
@@ -1112,21 +1133,41 @@
       "label": "双图对比 · Compare",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "结论"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
       "whitelisted": [
-        "VS"
+        "VS",
+        "结论"
       ],
-      "controls": []
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme02_page032": {
       "label": "轮次结构 · Rounds",
@@ -1400,19 +1441,40 @@
       "label": "达成度 · Progress",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "目标"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "目标"
+      ],
+      "controls": [
+        {
+          "key": "scheme",
+          "publicKey": "scheme",
+          "label": "配色方案",
+          "values": [
+            "green",
+            "violet"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "emphasis",
+          "publicKey": "emphasis",
+          "label": "强调卡片",
+          "values": [
+            "default",
+            "ticket"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme02_page042": {
       "label": "人物金句 · Portrait",
@@ -2419,7 +2481,7 @@
     "theme02_page068": {
       "label": "资本去向 · Sunburst",
       "status": "renderFailed",
-      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme02_page068 field props.groups[1].children: too many items (3 > 2); use at most fillPlan.maxCount or choose another layout - slide 1 layout theme02_page068 field props.groups[2].children: too many items (3 > 2); use at most fillPlan.maxCount or choos",
+      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme02_page068 field props: Slide props mismatch for \"theme02_page068\": groups[1].children: fixed nested array length 2 does not match default 3; expected lengths by index: [2, 3, 3]; groups[2].children: fixed nested array length 2 does not match defaul",
       "manualExclude": null,
       "categories": [],
       "evidence": {
@@ -2650,9 +2712,9 @@
     }
   },
   "curation": {
-    "added": 17,
+    "added": 15,
     "removed": 17,
-    "styleControls": 115,
+    "styleControls": 121,
     "droppedForContract": []
   }
 }

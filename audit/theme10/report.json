@@ -4,22 +4,22 @@
     "total": 95,
     "audited": 75,
     "ruleExcluded": 20,
-    "hardcoded": 6,
+    "hardcoded": 5,
     "media": 0,
     "brandIcon": 0,
-    "autoExcluded": 6,
+    "autoExcluded": 5,
     "manualExcluded": 0,
-    "renderFailed": 1,
+    "renderFailed": 0,
     "uncertain": 0,
-    "styleControls": 74,
-    "selectControls": 92
+    "styleControls": 76,
+    "selectControls": 94
   },
   "timings": {
-    "markerMs": 24202,
-    "controlMs": 104901,
-    "totalMs": 129163,
+    "markerMs": 24972,
+    "controlMs": 106087,
+    "totalMs": 131155,
     "markerPages": 75,
-    "controlPages": 264
+    "controlPages": 268
   },
   "ruleExcluded": [
     {
@@ -453,8 +453,7 @@
     },
     "theme10_page012": {
       "label": "构成对比",
-      "status": "renderFailed",
-      "error": "渲染失败（退出码 1）：…mismatch segmentCount=4; bars[0].parts has 5; countBinding mismatch segmentCount=4; bars[1].parts has 5; countBinding mismatch segmentCount=4; bars[2].parts has 5; countBinding mismatch segmentCount=4; bars[3].parts has 5 - slide 1 theme theme10 layout theme10_page012 field props.segmentCount: coun",
+      "status": "ok",
       "manualExclude": null,
       "categories": [],
       "evidence": {
@@ -464,7 +463,19 @@
       },
       "uncertain": [],
       "whitelisted": [],
-      "controls": []
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme10_page013": {
       "label": "占比树图",
@@ -1511,19 +1522,29 @@
       "label": "风险气泡",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "均值"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "均值"
+      ],
+      "controls": [
+        {
+          "key": "tone",
+          "publicKey": "tone",
+          "label": "页面底色",
+          "values": [
+            "dark",
+            "light"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme10_page059": {
       "label": "年度盈亏",
@@ -2342,9 +2363,9 @@
     }
   },
   "curation": {
-    "added": 6,
+    "added": 5,
     "removed": 6,
-    "styleControls": 74,
+    "styleControls": 76,
     "droppedForContract": []
   }
 }

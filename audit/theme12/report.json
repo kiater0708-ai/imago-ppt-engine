@@ -9,17 +9,17 @@
     "brandIcon": 0,
     "autoExcluded": 3,
     "manualExcluded": 0,
-    "renderFailed": 1,
+    "renderFailed": 0,
     "uncertain": 0,
-    "styleControls": 104,
-    "selectControls": 121
+    "styleControls": 106,
+    "selectControls": 123
   },
   "timings": {
-    "markerMs": 20622,
-    "controlMs": 118088,
-    "totalMs": 138761,
+    "markerMs": 15005,
+    "controlMs": 121401,
+    "totalMs": 136498,
     "markerPages": 55,
-    "controlPages": 456
+    "controlPages": 464
   },
   "ruleExcluded": [
     {
@@ -1916,8 +1916,7 @@
     },
     "theme12_page061": {
       "label": "评分表 / Scorecard",
-      "status": "renderFailed",
-      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme12_page061 field props: Slide props mismatch for \"theme12_page061\": countBinding mismatch columnCount=3; rows[0].v has 4; countBinding mismatch columnCount=3; rows[1].v has 4; countBinding mismatch columnCount=3; rows[2].v has 4; countBinding mismat",
+      "status": "ok",
       "manualExclude": null,
       "categories": [],
       "evidence": {
@@ -1927,7 +1926,32 @@
       },
       "uncertain": [],
       "whitelisted": [],
-      "controls": []
+      "controls": [
+        {
+          "key": "theme",
+          "publicKey": "theme",
+          "label": "配色",
+          "values": [
+            "light",
+            "dark"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "#5a138e",
+            "#f15a29",
+            "#3bb6ec",
+            "#1f6b2a"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme12_page062": {
       "label": "大数字 / By the Numbers",
@@ -2459,7 +2483,7 @@
   "curation": {
     "added": 3,
     "removed": 3,
-    "styleControls": 104,
+    "styleControls": 106,
     "droppedForContract": []
   }
 }

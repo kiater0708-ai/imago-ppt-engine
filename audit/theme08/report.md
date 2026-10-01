@@ -1,24 +1,21 @@
 # theme08 版式审计
 
 - 版式总数 84；参与审计 82；现有规则已排除（媒体槽隐藏不了 / contentLocked / inspect 失败）2
-- 本次自动排除 36 个：写死文字 19、图片主体 22、品牌图标 0（一个版式命中多类时每类各计一次）
-- 人工排除（审计时仍渲染，用来核对判定）1；渲染失败 0；待人工确认 1
-- select 控件共 59 个，判定为只改外观（可随机）43 个
-- 耗时：标记渲染 25 秒（82 页）；控件检查 47 秒（144 页）；合计 1 分 12 秒
-- 清单写入：新增自动排除 36 条、清掉旧的自动排除 36 条、styleControls 43 条
+- 本次自动排除 31 个：写死文字 12、图片主体 22、品牌图标 0（一个版式命中多类时每类各计一次）
+- 人工排除（审计时仍渲染，用来核对判定）1；渲染失败 0；待人工确认 0
+- select 控件共 66 个，判定为只改外观（可随机）48 个
+- 耗时：标记渲染 26 秒（82 页）；控件检查 52 秒（158 页）；合计 1 分 17 秒
+- 清单写入：新增自动排除 31 条、清掉旧的自动排除 36 条、styleControls 48 条
 
-## 自动排除（37）
+## 自动排除（32）
 
 | 版式 | 名称 | 类别 | 证据 | 已有人工排除 |
 |---|---|---|---|---|
-| p006 | ② 摘要 · Overview | 写死文字 | 写死文字：摘要 / 重点 |  |
-| p007 | ③ 结构 · Contents | 写死文字 | 写死文字：重点 |  |
-| p008 | ⑤ 趋势 · Trend | 写死文字 | 写死文字：融资额 / 事件数 / 峰值 |  |
+| p008 | ⑤ 趋势 · Trend | 写死文字 | 写死文字：融资额 / 事件数 |  |
 | p011 | ⑧ 案例 · Cases | 图片主体 | 图片主体：图片数量 |  |
 | p013 | ⑩ 排名 · Ranking | 写死文字 | 写死文字：榜首 |  |
 | p014 | ⑪ 象限 · Quadrant | 写死文字 | 写死文字：看好象限 |  |
 | p021 | ⑲ 峰值聚焦 · Peak | 图片主体 | 图片主体：图片数量 |  |
-| p023 | ㉑ 峰谷对比 · Peak/Trough | 写死文字 | 写死文字：单位 / 均值 |  |
 | p027 | ㉕ 累计曲线 · Capital Cur… | 写死文字 | 写死文字：累计资金占比 |  |
 | p030 | ㉘ 赛道卡 · Segment | 图片主体 | 图片主体：图片数量 |  |
 | p031 | ㉙ 知识入口 · Portal | 图片主体 | 图片主体：图片数量 |  |
@@ -33,10 +30,9 @@
 | p048 | ㊽ 安全对齐 · Alignment | 图片主体 | 图片主体：图片数量 |  |
 | p050 | ㊿ 早期轮 · Early Stage | 写死文字 | 写死文字：新主题 |  |
 | p052 | (53) 资源绑定 · Resource… | 图片主体 | 图片主体：图片可选 |  |
-| p056 | (57) 地理卡 · New York | 写死文字、图片主体 | 写死文字：重点；图片主体：图片数量 |  |
+| p056 | (57) 地理卡 · New York | 图片主体 | 图片主体：图片数量 |  |
 | p057 | (58) 地理卡 · Seattle | 图片主体 | 图片主体：图片数量 |  |
 | p058 | (59) 地理卡 · Boston | 图片主体 | 图片主体：图片数量 |  |
-| p059 | (60) 点阵图 · Other Reg… | 写死文字 | 写死文字：重点 |  |
 | p061 | (64) 案例卡 · xAI | 写死文字 | 写死文字：核心资产 |  |
 | p062 | (65) 案例卡 · CoreWeave | 图片主体 | 图片主体：图片数量 |  |
 | p064 | (67) 案例卡 · Perplexit… | 图片主体 | 图片主体：图片数量 |  |
@@ -44,18 +40,15 @@
 | p066 | (69) 案例卡 · Glean | 图片主体 | 图片主体：图片数量 |  |
 | p067 | (71) 案例卡 · SSI | 写死文字、图片主体 | 写死文字：抽象技术意象；图片主体：图片数量 |  |
 | p072 | (78) 嵌入流程 · Workflow | 图片主体 | 图片主体：无图片 mediaCount |  |
-| p075 | (81) 展望主线 · Mainline… | 写死文字、图片主体 | 写死文字：主线；图片主体：图片数量 |  |
+| p075 | (81) 展望主线 · Mainline… | 图片主体 | 图片主体：图片数量 |  |
 | p080 | (86) 哑铃图 · Range | 写死文字 | 写死文字：跨度 |  |
-| p081 | (87) 路线图 · Roadmap | 写死文字 | 写死文字：关键节点 |  |
 | p082 | (88) 照片墙 · Photo Wal… | 图片主体 | 图片主体：图片数量 | 照片墙，页面显示「// 图片数量 = 0」占位文字 |
 
-## 待人工确认（1）
+## 待人工确认（0）
 
 候选文字只有一个英文词，判不准是不是写死文字，没有自动排除。
 
-| 版式 | 名称 | 候选文字 |
-|---|---|---|
-| p046 | ㊻ 流程嵌入 · Low Code | LAYER |
+（无）
 
 ## 渲染失败（0）
 
@@ -70,6 +63,8 @@
 | p003 | backgroundTheme | 背景主题 | primary / muted |
 | p004 | backgroundTheme | 背景主题 | primary / muted |
 | p005 | backgroundTheme | 背景主题 | primary / muted |
+| p006 | backgroundTheme | 背景主题 | primary / muted |
+| p007 | backgroundTheme | 背景主题 | primary / muted |
 | p009 | backgroundTheme | 背景主题 | primary / muted |
 | p010 | backgroundTheme | 背景主题 | primary / muted |
 | p012 | backgroundTheme | 背景主题 | primary / muted |
@@ -79,6 +74,7 @@
 | p019 | backgroundTheme | 背景主题 | primary / muted |
 | p020 | backgroundTheme | 背景主题 | primary / muted |
 | p022 | backgroundTheme | 背景主题 | primary / muted |
+| p023 | backgroundTheme | 背景主题 | primary / muted |
 | p024 | backgroundTheme | 背景主题 | primary / muted |
 | p025 | backgroundTheme | 背景主题 | primary / muted |
 | p026 | backgroundTheme | 背景主题 | primary / muted / ink |
@@ -95,6 +91,7 @@
 | p053 | backgroundTheme | 背景主题 | primary / muted |
 | p054 | backgroundTheme | 背景主题 | primary / muted |
 | p055 | backgroundTheme | 背景主题 | primary / muted / ink |
+| p059 | backgroundTheme | 背景主题 | primary / muted |
 | p063 | backgroundTheme | 背景主题 | primary / muted |
 | p068 | backgroundTheme | 背景主题 | primary / muted |
 | p069 | backgroundTheme | 背景主题 | primary / muted |
@@ -106,17 +103,20 @@
 | p078 | backgroundTheme | 背景主题 | primary / muted / ink |
 | p078 | numberStyle | 数字样式 | solid / outline |
 | p079 | backgroundTheme | 背景主题 | primary / muted |
+| p081 | backgroundTheme | 背景主题 | primary / muted |
 | p083 | backgroundTheme | 背景主题 | primary / muted |
 | p084 | backgroundTheme | 背景主题 | primary / muted / ink |
 
-### 不收的 select 控件（16，会改版式几何或渲染失败）
+### 不收的 select 控件（18，会改版式几何或渲染失败）
 
 | 版式 | 控件 | 原因 |
 |---|---|---|
+| p006 | chartType | 取值 "donut"：元素数量 48 → 39 |
 | p009 | chartType | 取值 "bars"：元素数量 52 → 53 |
 | p012 | columnCount | 取值 4：第 7 个元素 宽 相差 137.5px |
 | p016 | backgroundTheme | 取值 "primary"：元素数量 18 → 19 |
 | p019 | chartType | 取值 "area"：第 29 个元素 x 相差 38.0px |
+| p023 | chartType | 取值 "lollipop"：元素数量 64 → 76 |
 | p025 | chartType | 取值 "grouped"：元素数量 53 → 51 |
 | p035 | backgroundTheme | 取值 "ink"：元素数量 19 → 18 |
 | p036 | chartType | 取值 "column"：第 33 个元素 x 相差 51.9px |
@@ -132,17 +132,25 @@
 
 ## 白名单命中（供人复核）
 
-白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin
+白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin、chart、table、curve、trend、peak、trough、total、count、amount、diverging、area、radar、tiers、structure、donut、stage、flow、funnel、convert、bubbles、high、low、wall、statement、menu、scale、part、step、phase、pest、pulse、nodes、layers、layer、columns、waterfall、heat、map
 
-白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年
+白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年、合计、全年合计、单位、占比、均值、月度均值、重点、峰值、低位、目标、其余、全年、数据、分布、基准、结论、高亮、章节、摘要、阶段、纵轴、横轴、数量、金额、关键节点、主线
 
 | 命中文字 | 版式数 |
 |---|---|
+| 重点 | 4 |
+| 摘要 | 1 |
+| 峰值 | 1 |
+| 单位 | 1 |
+| 均值 | 1 |
 | L5 | 1 |
 | L4 | 1 |
 | L3 | 1 |
 | L2 | 1 |
 | L1 | 1 |
+| LAYER | 1 |
+| 主线 | 1 |
+| 关键节点 | 1 |
 
 ## 现有规则已排除（2，未渲染）
 

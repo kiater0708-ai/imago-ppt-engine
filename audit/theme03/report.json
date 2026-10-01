@@ -4,22 +4,22 @@
     "total": 77,
     "audited": 76,
     "ruleExcluded": 1,
-    "hardcoded": 7,
+    "hardcoded": 6,
     "media": 0,
     "brandIcon": 0,
-    "autoExcluded": 7,
+    "autoExcluded": 6,
     "manualExcluded": 0,
     "renderFailed": 0,
-    "uncertain": 1,
-    "styleControls": 89,
-    "selectControls": 100
+    "uncertain": 0,
+    "styleControls": 90,
+    "selectControls": 101
   },
   "timings": {
-    "markerMs": 29062,
-    "controlMs": 146107,
-    "totalMs": 175239,
+    "markerMs": 34750,
+    "controlMs": 144192,
+    "totalMs": 179048,
     "markerPages": 76,
-    "controlPages": 252
+    "controlPages": 254
   },
   "ruleExcluded": [
     {
@@ -809,19 +809,29 @@
       "label": "轮次单位图",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "高亮"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "高亮"
+      ],
+      "controls": [
+        {
+          "key": "accent",
+          "publicKey": "accent",
+          "label": "强调色",
+          "values": [
+            "blue",
+            "lime"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme03_page025": {
       "label": "月度明细",
@@ -1580,10 +1590,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "PEST"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "accent",
@@ -2346,9 +2356,9 @@
     }
   },
   "curation": {
-    "added": 7,
+    "added": 6,
     "removed": 7,
-    "styleControls": 89,
+    "styleControls": 90,
     "droppedForContract": []
   }
 }

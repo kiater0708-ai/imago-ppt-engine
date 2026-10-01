@@ -4,7 +4,7 @@
 - 本次自动排除 10 个：写死文字 12、图片主体 1、品牌图标 0（一个版式命中多类时每类各计一次）
 - 人工排除（审计时仍渲染，用来核对判定）4；渲染失败 0；待人工确认 0
 - select 控件共 55 个，判定为只改外观（可随机）50 个
-- 耗时：标记渲染 18 秒（63 页）；控件检查 58 秒（208 页）；合计 1 分 16 秒
+- 耗时：标记渲染 17 秒（63 页）；控件检查 1 分 1 秒（208 页）；合计 1 分 19 秒
 - 清单写入：新增自动排除 10 条、清掉旧的自动排除 10 条、styleControls 50 条
 
 ## 自动排除（12）
@@ -101,9 +101,9 @@
 
 ## 白名单命中（供人复核）
 
-白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin
+白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin、chart、table、curve、trend、peak、trough、total、count、amount、diverging、area、radar、tiers、structure、donut、stage、flow、funnel、convert、bubbles、high、low、wall、statement、menu、scale、part、step、phase、pest、pulse、nodes、layers、layer、columns、waterfall、heat、map
 
-白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年
+白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年、合计、全年合计、单位、占比、均值、月度均值、重点、峰值、低位、目标、其余、全年、数据、分布、基准、结论、高亮、章节、摘要、阶段、纵轴、横轴、数量、金额、关键节点、主线
 
 本主题没有命中。
 

@@ -6,10 +6,6 @@
       "reason": "auto:hardcoded「亿美元」"
     },
     {
-      "layout": "theme03_page024",
-      "reason": "auto:hardcoded「高亮」"
-    },
-    {
       "layout": "theme03_page037",
       "reason": "auto:hardcoded「当下兑现」「确定性」「赔率」"
     },
@@ -312,6 +308,15 @@
           "lollipop"
         ]
       },
+      {
+        "key": "accent",
+        "values": [
+          "blue",
+          "lime"
+        ]
+      }
+    ],
+    "theme03_page024": [
       {
         "key": "accent",
         "values": [

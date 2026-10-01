@@ -15,9 +15,9 @@
     "selectControls": 55
   },
   "timings": {
-    "markerMs": 17825,
-    "controlMs": 57812,
-    "totalMs": 75702,
+    "markerMs": 17469,
+    "controlMs": 61059,
+    "totalMs": 78631,
     "markerPages": 63,
     "controlPages": 208
   },

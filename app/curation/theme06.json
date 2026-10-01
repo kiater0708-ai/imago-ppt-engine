@@ -6,24 +6,12 @@
       "reason": "auto:hardcoded「全年融资 TOTAL」「大额事件 DEALS」「平均单笔 AVG TICKET」"
     },
     {
-      "layout": "theme06_page007",
-      "reason": "auto:hardcoded「章节」"
-    },
-    {
       "layout": "theme06_page014",
       "reason": "auto:hardcoded「高亮面积图 PEAK CURVE」"
     },
     {
-      "layout": "theme06_page015",
-      "reason": "auto:hardcoded「阶段」"
-    },
-    {
       "layout": "theme06_page016",
-      "reason": "auto:hardcoded「均值」「峰谷差 COLUMNS」"
-    },
-    {
-      "layout": "theme06_page017",
-      "reason": "auto:hardcoded「合计 WATERFALL」"
+      "reason": "auto:hardcoded「峰谷差 COLUMNS」"
     },
     {
       "layout": "theme06_page023",
@@ -32,10 +20,6 @@
     {
       "layout": "theme06_page024",
       "reason": "auto:hardcoded「SEG SPLIT」"
-    },
-    {
-      "layout": "theme06_page025",
-      "reason": "auto:hardcoded「SEG TABLE」"
     },
     {
       "layout": "theme06_page030",
@@ -47,7 +31,7 @@
     },
     {
       "layout": "theme06_page043",
-      "reason": "auto:hardcoded「合计」「STRUCT STACKED」"
+      "reason": "auto:hardcoded「STRUCT STACKED」"
     },
     {
       "layout": "theme06_page045",
@@ -64,10 +48,6 @@
     {
       "layout": "theme06_page051",
       "reason": "auto:hardcoded「REGIONS PANEL」"
-    },
-    {
-      "layout": "theme06_page052",
-      "reason": "auto:hardcoded「REGIONS MAP」"
     },
     {
       "layout": "theme06_page054",
@@ -100,10 +80,6 @@
     {
       "layout": "theme06_page063",
       "reason": "auto:hardcoded「FIGURES MOSAIC」"
-    },
-    {
-      "layout": "theme06_page074",
-      "reason": "auto:hardcoded「峰值 PEAK」「低位 TROUGH」"
     }
   ],
   "notes": {},
@@ -153,6 +129,17 @@
       }
     ],
     "theme06_page005": [
+      {
+        "key": "accent",
+        "values": [
+          "#c8f135",
+          "#ff5a3c",
+          "#3ca0ff",
+          "#ffd23c"
+        ]
+      }
+    ],
+    "theme06_page007": [
       {
         "key": "accent",
         "values": [
@@ -236,6 +223,28 @@
         ]
       }
     ],
+    "theme06_page015": [
+      {
+        "key": "accent",
+        "values": [
+          "#c8f135",
+          "#ff5a3c",
+          "#3ca0ff",
+          "#ffd23c"
+        ]
+      }
+    ],
+    "theme06_page017": [
+      {
+        "key": "accent",
+        "values": [
+          "#c8f135",
+          "#ff5a3c",
+          "#3ca0ff",
+          "#ffd23c"
+        ]
+      }
+    ],
     "theme06_page018": [
       {
         "key": "accent",
@@ -288,6 +297,24 @@
       }
     ],
     "theme06_page022": [
+      {
+        "key": "accent",
+        "values": [
+          "#c8f135",
+          "#ff5a3c",
+          "#3ca0ff",
+          "#ffd23c"
+        ]
+      }
+    ],
+    "theme06_page025": [
+      {
+        "key": "layout",
+        "values": [
+          "media",
+          "table"
+        ]
+      },
       {
         "key": "accent",
         "values": [
@@ -511,6 +538,24 @@
         ]
       }
     ],
+    "theme06_page052": [
+      {
+        "key": "layout",
+        "values": [
+          "media",
+          "map"
+        ]
+      },
+      {
+        "key": "accent",
+        "values": [
+          "#c8f135",
+          "#ff5a3c",
+          "#3ca0ff",
+          "#ffd23c"
+        ]
+      }
+    ],
     "theme06_page053": [
       {
         "key": "align",
@@ -672,6 +717,17 @@
       }
     ],
     "theme06_page073": [
+      {
+        "key": "accent",
+        "values": [
+          "#c8f135",
+          "#ff5a3c",
+          "#3ca0ff",
+          "#ffd23c"
+        ]
+      }
+    ],
+    "theme06_page074": [
       {
         "key": "accent",
         "values": [

@@ -18,48 +18,20 @@
       "reason": "auto:hardcoded「通用大模型」"
     },
     {
-      "layout": "theme05_page011",
-      "reason": "auto:hardcoded「重点」"
-    },
-    {
-      "layout": "theme05_page012",
-      "reason": "auto:hardcoded「重点」"
-    },
-    {
       "layout": "theme05_page015",
-      "reason": "auto:hardcoded「重点」「高热度 高兑现」「明星兑现」"
+      "reason": "auto:hardcoded「高热度 高兑现」「明星兑现」「STAR DELIVERY」"
     },
     {
       "layout": "theme05_page016",
-      "reason": "auto:hardcoded「风险传导链」「重点」「风险」"
-    },
-    {
-      "layout": "theme05_page017",
-      "reason": "auto:hardcoded「PHASE TIMELINE」"
+      "reason": "auto:hardcoded「风险传导链」「风险」"
     },
     {
       "layout": "theme05_page020",
-      "reason": "auto:hardcoded「金额区间 笔数」「合计」"
-    },
-    {
-      "layout": "theme05_page023",
-      "reason": "auto:hardcoded「峰值」"
-    },
-    {
-      "layout": "theme05_page024",
-      "reason": "auto:hardcoded「基准 Q1」"
-    },
-    {
-      "layout": "theme05_page025",
-      "reason": "auto:hardcoded「月度均值」「均值」"
+      "reason": "auto:hardcoded「金额区间 笔数」"
     },
     {
       "layout": "theme05_page026",
       "reason": "auto:hardcoded「赛道贡献明细」"
-    },
-    {
-      "layout": "theme05_page027",
-      "reason": "auto:hardcoded「分布」「合计」"
     },
     {
       "layout": "theme05_page029",
@@ -82,12 +54,8 @@
       "reason": "auto:hardcoded「外层 通用防护」「内层 核心合规」"
     },
     {
-      "layout": "theme05_page048",
-      "reason": "auto:hardcoded「基准 pt」"
-    },
-    {
       "layout": "theme05_page060",
-      "reason": "auto:hardcoded「占比构成」「SHARE OF TOTAL」"
+      "reason": "auto:hardcoded「占比构成」"
     },
     {
       "layout": "theme05_page065",
@@ -201,6 +169,34 @@
         ]
       }
     ],
+    "theme05_page011": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page012": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
     "theme05_page013": [
       {
         "key": "colorScale",
@@ -230,6 +226,44 @@
           "category",
           "accent",
           "mono"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page017": [
+      {
+        "key": "leftColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "rightColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
         ]
       },
       {
@@ -315,6 +349,93 @@
       }
     ],
     "theme05_page022": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page023": [
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page024": [
+      {
+        "key": "chartType",
+        "values": [
+          "area",
+          "line"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page025": [
+      {
+        "key": "highColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "lowColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page027": [
       {
         "key": "accentColor",
         "values": [
@@ -659,6 +780,20 @@
           "right"
         ]
       },
+      {
+        "key": "accentColor",
+        "values": [
+          "#d8402e",
+          "#e2742c",
+          "#efbe2e",
+          "#3c9a52",
+          "#4da0c6",
+          "#2c44a0",
+          "#7a3c90"
+        ]
+      }
+    ],
+    "theme05_page048": [
       {
         "key": "accentColor",
         "values": [

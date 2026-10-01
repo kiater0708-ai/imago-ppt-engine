@@ -4,22 +4,22 @@
     "total": 84,
     "audited": 82,
     "ruleExcluded": 2,
-    "hardcoded": 19,
+    "hardcoded": 12,
     "media": 22,
     "brandIcon": 0,
-    "autoExcluded": 36,
+    "autoExcluded": 31,
     "manualExcluded": 1,
     "renderFailed": 0,
-    "uncertain": 1,
-    "styleControls": 43,
-    "selectControls": 59
+    "uncertain": 0,
+    "styleControls": 48,
+    "selectControls": 66
   },
   "timings": {
-    "markerMs": 25417,
-    "controlMs": 46826,
-    "totalMs": 72318,
+    "markerMs": 25537,
+    "controlMs": 51616,
+    "totalMs": 77258,
     "markerPages": 82,
-    "controlPages": 144
+    "controlPages": 158
   },
   "ruleExcluded": [
     {
@@ -168,38 +168,69 @@
       "label": "② 摘要 · Overview",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "摘要",
-          "重点"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "摘要",
+        "重点"
+      ],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "bars",
+            "donut"
+          ],
+          "safe": false,
+          "reason": "取值 \"donut\"：元素数量 48 → 39"
+        }
+      ]
     },
     "theme08_page007": {
       "label": "③ 结构 · Contents",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "重点"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "重点"
+      ],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme08_page008": {
       "label": "⑤ 趋势 · Trend",
@@ -211,14 +242,15 @@
       "evidence": {
         "hardcoded": [
           "融资额",
-          "事件数",
-          "峰值"
+          "事件数"
         ],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "峰值"
+      ],
       "controls": []
     },
     "theme08_page009": {
@@ -593,20 +625,41 @@
       "label": "㉑ 峰谷对比 · Peak/Trough",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "单位",
-          "均值"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "单位",
+        "均值"
+      ],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "column",
+            "lollipop"
+          ],
+          "safe": false,
+          "reason": "取值 \"lollipop\"：元素数量 64 → 76"
+        }
+      ]
     },
     "theme08_page024": {
       "label": "㉒ 贡献瀑布 · Waterfall",
@@ -1138,10 +1191,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "LAYER"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "backgroundTheme",
@@ -1391,20 +1444,19 @@
       "status": "ok",
       "manualExclude": null,
       "categories": [
-        "hardcoded",
         "media"
       ],
       "evidence": {
-        "hardcoded": [
-          "重点"
-        ],
+        "hardcoded": [],
         "media": [
           "图片数量"
         ],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "重点"
+      ],
       "controls": []
     },
     "theme08_page057": {
@@ -1447,19 +1499,29 @@
       "label": "(60) 点阵图 · Other Regions",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "重点"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "重点"
+      ],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme08_page060": {
       "label": "(61) 金句 · Resources",
@@ -1840,20 +1902,19 @@
       "status": "ok",
       "manualExclude": null,
       "categories": [
-        "hardcoded",
         "media"
       ],
       "evidence": {
-        "hardcoded": [
-          "主线"
-        ],
+        "hardcoded": [],
         "media": [
           "图片数量"
         ],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "主线"
+      ],
       "controls": []
     },
     "theme08_page076": {
@@ -1979,19 +2040,29 @@
       "label": "(87) 路线图 · Roadmap",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "关键节点"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "关键节点"
+      ],
+      "controls": [
+        {
+          "key": "backgroundTheme",
+          "publicKey": "backgroundTheme",
+          "label": "背景主题",
+          "values": [
+            "primary",
+            "muted"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme08_page082": {
       "label": "(88) 照片墙 · Photo Wall",
@@ -2066,9 +2137,9 @@
     }
   },
   "curation": {
-    "added": 36,
+    "added": 31,
     "removed": 36,
-    "styleControls": 43,
+    "styleControls": 48,
     "droppedForContract": []
   }
 }

@@ -1,37 +1,31 @@
 # theme07 版式审计
 
 - 版式总数 71；参与审计 70；现有规则已排除（媒体槽隐藏不了 / contentLocked / inspect 失败）1
-- 本次自动排除 12 个：写死文字 12、图片主体 0、品牌图标 0（一个版式命中多类时每类各计一次）
-- 人工排除（审计时仍渲染，用来核对判定）0；渲染失败 0；待人工确认 2
-- select 控件共 146 个，判定为只改外观（可随机）88 个
-- 耗时：标记渲染 23 秒（70 页）；控件检查 4 分 44 秒（906 页）；合计 5 分 7 秒
-- 清单写入：新增自动排除 12 条、清掉旧的自动排除 12 条、styleControls 86 条；另有 2 个控件因契约会超 1500 字符没有写入（p054.accentColor、p054.focusIndex）
+- 本次自动排除 9 个：写死文字 9、图片主体 0、品牌图标 0（一个版式命中多类时每类各计一次）
+- 人工排除（审计时仍渲染，用来核对判定）0；渲染失败 0；待人工确认 0
+- select 控件共 155 个，判定为只改外观（可随机）93 个
+- 耗时：标记渲染 23 秒（70 页）；控件检查 5 分 12 秒（980 页）；合计 5 分 34 秒
+- 清单写入：新增自动排除 9 条、清掉旧的自动排除 12 条、styleControls 91 条；另有 2 个控件因契约会超 1500 字符没有写入（p054.accentColor、p054.focusIndex）
 
-## 自动排除（12）
+## 自动排除（9）
 
 | 版式 | 名称 | 类别 | 证据 | 已有人工排除 |
 |---|---|---|---|---|
-| p007 | 目录 Contents | 写死文字 | 写死文字：重点 |  |
-| p010 | 热力 Heatmap | 写死文字 | 写死文字：峰值月 / 月度均值 / 均值 |  |
 | p011 | 排名 Ranking | 写死文字 | 写死文字：亿美元 |  |
-| p012 | 象限 Quadrant | 写死文字 | 写死文字：纵轴 / 横轴 / 高热度 高兑现 |  |
+| p012 | 象限 Quadrant | 写死文字 | 写死文字：高热度 高兑现 / 高热度 低兑现 / 低热度 高兑现 |  |
 | p014 | 策略 Outlook | 写死文字 | 写死文字：看好方向 / 谨慎方向 |  |
 | p017 | 气泡 Deal Map | 写死文字 | 写死文字：亿美元 |  |
 | p020 | 季度 Q3 峰值 | 写死文字 | 写死文字：融资额 |  |
-| p022 | 峰谷 Peak/Trough | 写死文字 | 写死文字：峰值 / 低位 / 常规 |  |
-| p024 | 区间 Deal Size | 写死文字 | 写死文字：数量 / 金额 |  |
+| p022 | 峰谷 Peak/Trough | 写死文字 | 写死文字：常规 |  |
 | p051 | 联盟 云厂商 | 写死文字 | 写死文字：算力消费回收 |  |
 | p063 | 风险 壁垒压缩 | 写死文字 | 写死文字：壁垒线 |  |
 | p064 | 策略 优先基建 | 写死文字 | 写死文字：确定性 |  |
 
-## 待人工确认（2）
+## 待人工确认（0）
 
 候选文字只有一个英文词，判不准是不是写死文字，没有自动排除。
 
-| 版式 | 名称 | 候选文字 |
-|---|---|---|
-| p034 | 赛道 算力云 | NODES |
-| p038 | 赛道 AI 安全 | LAYERS |
+（无）
 
 ## 渲染失败（0）
 
@@ -47,7 +41,10 @@
 | p004 | accentColor | 主题色 | #8FE327 / #23C76A / #2F7BFF / #F5A623 / #FFFFFF |
 | p005 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
 | p006 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
+| p007 | columns | 每行列数 | 3 / 4 |
+| p007 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
 | p008 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
+| p010 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
 | p013 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
 | p015 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
 | p016 | backgroundVariant | 背景风格 | dark / paper |
@@ -59,6 +56,8 @@
 | p021 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
 | p023 | focusIndex | 重点元素 | 0 / 1 / 2 / 3 / 4 |
 | p023 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
+| p024 | focusIndex | 重点元素 | 0 / 1 / 2 / 3 |
+| p024 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
 | p025 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
 | p026 | focusIndex | 重点元素 | 0 / 1 / 2 / 3 |
 | p026 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
@@ -130,7 +129,7 @@
 | p071 | imageRatio | 图片比例 | portrait / landscape / square / auto |
 | p071 | accentColor | 主题色 | #86D62B / #23C76A / #2F7BFF / #F2A93B / #0E110B |
 
-### 不收的 select 控件（58，会改版式几何或渲染失败）
+### 不收的 select 控件（62，会改版式几何或渲染失败）
 
 | 版式 | 控件 | 原因 |
 |---|---|---|
@@ -138,13 +137,17 @@
 | p005 | heroMotif | 取值 "lens"：元素数量 86 → 84 |
 | p006 | focusIndex | 取值 1：第 39 个元素 y 相差 6.0px |
 | p006 | chartType | 取值 "donut"：元素数量 120 → 117 |
+| p007 | focusIndex | 取值 0：第 7 个元素 y 相差 6.0px |
 | p008 | layout | 取值 "row"：第 18 个元素 宽 相差 518.7px |
 | p008 | focusIndex | 取值 0：第 18 个元素 x 相差 8.0px |
+| p010 | chartType | 取值 "grid"：元素数量 79 → 90 |
+| p010 | focusIndex | 取值 0：第 19 个元素 x 相差 3.7px |
 | p013 | focusIndex | 取值 1：第 18 个元素 x 相差 8.0px |
 | p015 | align | 取值 "left"：第 11 个元素 x 相差 791.8px |
 | p016 | layout | 取值 "center"：元素数量 56 → 52 |
 | p019 | focusIndex | 取值 1：第 18 个元素 x 相差 6.0px |
 | p021 | focusIndex | 取值 0：第 14 个元素 x 相差 7.5px |
+| p024 | metricMode | 取值 "count"：元素数量 102 → 80 |
 | p026 | imageRatio | 取值 "landscape"：第 11 个元素 x 相差 150.5px |
 | p027 | chartType | 取值 "lollipop"：第 17 个元素 y 相差 9.0px |
 | p027 | focusIndex | 取值 1：第 13 个元素 x 相差 6.0px |
@@ -195,13 +198,25 @@
 
 ## 白名单命中（供人复核）
 
-白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin
+白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin、chart、table、curve、trend、peak、trough、total、count、amount、diverging、area、radar、tiers、structure、donut、stage、flow、funnel、convert、bubbles、high、low、wall、statement、menu、scale、part、step、phase、pest、pulse、nodes、layers、layer、columns、waterfall、heat、map
 
-白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年
+白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年、合计、全年合计、单位、占比、均值、月度均值、重点、峰值、低位、目标、其余、全年、数据、分布、基准、结论、高亮、章节、摘要、阶段、纵轴、横轴、数量、金额、关键节点、主线
 
 | 命中文字 | 版式数 |
 |---|---|
+| 重点 | 1 |
+| 峰值月 | 1 |
+| 月度均值 | 1 |
+| 均值 | 1 |
+| 纵轴 | 1 |
+| 横轴 | 1 |
 | Q1 | 1 |
+| 峰值 | 1 |
+| 低位 | 1 |
+| 数量 | 1 |
+| 金额 | 1 |
+| NODES | 1 |
+| LAYERS | 1 |
 
 ## 现有规则已排除（1，未渲染）
 

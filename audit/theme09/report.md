@@ -1,13 +1,13 @@
 # theme09 版式审计
 
 - 版式总数 111；参与审计 94；现有规则已排除（媒体槽隐藏不了 / contentLocked / inspect 失败）17
-- 本次自动排除 22 个：写死文字 19、图片主体 3、品牌图标 0（一个版式命中多类时每类各计一次）
-- 人工排除（审计时仍渲染，用来核对判定）0；渲染失败 4；待人工确认 3
-- select 控件共 74 个，判定为只改外观（可随机）24 个
-- 耗时：标记渲染 40 秒（94 页）；控件检查 2 分 6 秒（350 页）；合计 2 分 46 秒
-- 清单写入：新增自动排除 22 条、清掉旧的自动排除 22 条、styleControls 24 条
+- 本次自动排除 17 个：写死文字 14、图片主体 3、品牌图标 0（一个版式命中多类时每类各计一次）
+- 人工排除（审计时仍渲染，用来核对判定）1；渲染失败 3；待人工确认 1
+- select 控件共 84 个，判定为只改外观（可随机）28 个
+- 耗时：标记渲染 41 秒（94 页）；控件检查 2 分 10 秒（398 页）；合计 2 分 51 秒
+- 清单写入：新增自动排除 20 条、清掉旧的自动排除 22 条、styleControls 28 条
 
-## 自动排除（22）
+## 自动排除（17）
 
 | 版式 | 名称 | 类别 | 证据 | 已有人工排除 |
 |---|---|---|---|---|
@@ -15,10 +15,8 @@
 | p019 | 论点推演 | 写死文字 | 写死文字：据此推演如右 |  |
 | p034 | 08 轮次结构 | 写死文字 | 写死文字：各轮次 分布 |  |
 | p036 | 赛道名次 | 写死文字 | 写死文字：名次第 在顶部 / 条赛道 / 轨迹 |  |
-| p037 | 同比对望 | 写死文字 | 写死文字：单位 |  |
 | p045 | 09 定位矩阵 | 写死文字 | 写死文字：大模型 / 基础设施 / 垂直应用 |  |
 | p047 | 09 资本漏斗 | 写死文字 | 写死文字：转化 |  |
-| p049 | 计量条 | 写死文字 | 写死文字：目标 |  |
 | p052 | 09 观点引述 | 写死文字 | 写死文字：看好 / 谨慎 / 中性 |  |
 | p062 | 资金玫瑰 | 写死文字 | 写死文字：赛道 |  |
 | p067 | 评级矩阵 | 写死文字 | 写死文字：综合 / 等级 / 卓越 |  |
@@ -26,32 +24,26 @@
 | p070 | 影像拼贴 | 图片主体 | 图片主体：图片槽数量 调大以拼贴影像 / 图片为示意 槽位按比例自适应 |  |
 | p071 | 径向透视 | 写死文字 | 写死文字：口径说明 |  |
 | p075 | 影像长卷 | 图片主体 | 图片主体：图片槽数量 调大以走带 / 图片为示意 画格按比例自适应 |  |
-| p076 | 10 资金瀑布 | 写死文字 | 写死文字：单位 合计 / 合计 / 全年合计 |  |
+| p076 | 10 资金瀑布 | 写死文字 | 写死文字：头部赛道份额 |  |
 | p083 | 10 排名变迁 | 写死文字 | 写死文字：升至 |  |
-| p084 | 区间对比 | 写死文字 | 写死文字：单位 |  |
-| p089 | 10 季度走势 | 写死文字 | 写死文字：单位 |  |
 | p090 | 单笔分布 | 写死文字 | 写死文字：峰位 |  |
-| p094 | 10 结构演变 | 写死文字 | 写死文字：占比 |  |
 | p110 | 企业掘影 | 图片主体 | 图片主体：图片槽数量为 Tweaks 中调高 图片槽数量 以展示企业图集 |  |
 
-## 待人工确认（3）
+## 待人工确认（1）
 
 候选文字只有一个英文词，判不准是不是写死文字，没有自动排除。
 
 | 版式 | 名称 | 候选文字 |
 |---|---|---|
-| p010 | 目录 | Step |
-| p104 | 13 实施路径 | PHASE |
 | p111 | 结语 | AInsight |
 
-## 渲染失败（4）
+## 渲染失败（3）
 
 | 版式 | 名称 | 原因 |
 |---|---|---|
 | p006 | 封面G 终端 | 渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme09_page006 field layout: cover-like layouts must use themeXX_page001-page005 |
 | p007 | Cover | 渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme09_page007 field layout: cover-like layouts must use themeXX_page001-page005 |
-| p048 | 市占矩形 | 渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme09_page048 field props: Slide props mismatch for "theme09_page048": cats[0].vals 的数量 5 必须等于 segs 的数量 4; cats[1].vals 的数量 5 必须等于 segs 的数量 … |
-| p050 | 09 关键指标 | 渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme09_page050 field props.stats[2].spark: too many items (5 > 4); use at most fillPlan.maxCount or choose another layout - slide 1 layout th… |
+| p050 | 09 关键指标 | 渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme09_page050 field props: Slide props mismatch for "theme09_page050": stats[2].spark: fixed nested array length 4 does not match default 5;… |
 
 ## 可随机的外观控件（styleControls）
 
@@ -66,9 +58,11 @@
 | p030 | labelType | 标签类型 | number / symbol / keyword |
 | p032 | labelType | 标签类型 | number / symbol / keyword |
 | p035 | sort | 排序方式 | 降序 / 升序 / 原序 |
+| p037 | labelType | 标签类型 | number / symbol / keyword |
 | p038 | labelType | 标签类型 | number / symbol / keyword |
 | p041 | pivot | 中枢符 | VS / ÷ / → / / |
 | p046 | sort | 排序 | 降序 / 原序 |
+| p049 | labelType | 标签类型 | number / symbol / keyword |
 | p051 | labelType | 标签类型 | number / symbol / keyword |
 | p056 | labelType | 标签类型 | number / symbol / keyword |
 | p059 | labelType | 标签类型 | number / symbol / keyword |
@@ -76,13 +70,15 @@
 | p073 | labelType | 标签类型 | number / symbol / keyword |
 | p079 | sort | 排序 | 降序 / 原序 |
 | p081 | labelType | 标签类型 | number / symbol / keyword |
+| p084 | sort | 排序 | 跨度 / 止点 / 原序 |
+| p089 | chartType | 图表类型 | 折线 / 面积 |
 | p093 | direction | 排序 | 升序 / 原序 |
 | p095 | labelType | 标签类型 | number / symbol / keyword |
 | p101 | labelType | 标签类型 | number / symbol / keyword |
 | p103 | labelType | 标签类型 | number / symbol / keyword |
 | p106 | imgSide | 图片位置 | left / right |
 
-### 不收的 select 控件（50，会改版式几何或渲染失败）
+### 不收的 select 控件（56，会改版式几何或渲染失败）
 
 | 版式 | 控件 | 原因 |
 |---|---|---|
@@ -107,11 +103,13 @@
 | p031 | align | 取值 "居左"：第 2 个元素 x 相差 743.5px |
 | p032 | side | 取值 "右归左"：第 6 个元素 y 相差 75.8px |
 | p035 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 41.2px |
+| p037 | sort | 取值 "右值"：第 56 个元素 x 相差 94.2px |
 | p040 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 50.5px |
 | p042 | align | 取值 "居中"：元素数量 15 → 14 |
 | p043 | orientation | 取值 "纵向"：第 6 个元素 x 相差 38.0px |
 | p043 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 50.5px |
 | p044 | labelType | 取值 "symbol"：第 6 个元素 x 相差 2.7px |
+| p048 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 41.2px |
 | p053 | align | 取值 "居左"：第 3 个元素 x 相差 806.1px |
 | p054 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 14.4px |
 | p055 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 50.5px |
@@ -126,10 +124,14 @@
 | p077 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 50.5px |
 | p079 | labelType | 取值 "symbol"：第 6 个元素 x 相差 2.5px |
 | p081 | axis | 取值 "月度"：元素数量 63 → 79 |
+| p084 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 41.2px |
 | p085 | gaugeStyle | 取值 "整环"：第 9 个元素 x 相差 6.6px |
 | p085 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 50.5px |
 | p086 | labelType | 取值 "symbol"：第 3 个元素 宽 相差 47.8px |
+| p089 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 50.5px |
 | p093 | labelType | 取值 "symbol"：第 20 个元素 宽 相差 3.4px |
+| p094 | mode | 取值 "绝对值"：第 8 个元素 x 相差 43.4px |
+| p094 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 50.5px |
 | p098 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 50.5px |
 | p099 | sort | 取值 "原序"：第 9 个元素 宽 相差 4.1px |
 | p099 | labelType | 取值 "symbol"：第 2 个元素 宽 相差 50.5px |
@@ -139,25 +141,33 @@
 
 ## 白名单命中（供人复核）
 
-白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin
+白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin、chart、table、curve、trend、peak、trough、total、count、amount、diverging、area、radar、tiers、structure、donut、stage、flow、funnel、convert、bubbles、high、low、wall、statement、menu、scale、part、step、phase、pest、pulse、nodes、layers、layer、columns、waterfall、heat、map
 
-白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年
+白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年、合计、全年合计、单位、占比、均值、月度均值、重点、峰值、低位、目标、其余、全年、数据、分布、基准、结论、高亮、章节、摘要、阶段、纵轴、横轴、数量、金额、关键节点、主线
 
 | 命中文字 | 版式数 |
 |---|---|
+| 单位 | 3 |
+| 占比 | 2 |
+| Step | 1 |
 | No | 1 |
 | R1 | 1 |
 | R2 | 1 |
 | R3 | 1 |
 | R4 | 1 |
 | VS | 1 |
+| 目标 | 1 |
 | F0 | 1 |
+| 单位 合计 | 1 |
+| 合计 | 1 |
+| 全年合计 | 1 |
 | MAR | 1 |
 | M4 M6 | 1 |
 | Q1 | 1 |
 | Q2 | 1 |
 | Q3 | 1 |
 | Q4 | 1 |
+| PHASE | 1 |
 
 ## 现有规则已排除（17，未渲染）
 

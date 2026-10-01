@@ -1,13 +1,13 @@
 # theme05 版式审计
 
 - 版式总数 94；参与审计 94；现有规则已排除（媒体槽隐藏不了 / contentLocked / inspect 失败）0
-- 本次自动排除 31 个：写死文字 30、图片主体 1、品牌图标 0（一个版式命中多类时每类各计一次）
+- 本次自动排除 23 个：写死文字 22、图片主体 1、品牌图标 0（一个版式命中多类时每类各计一次）
 - 人工排除（审计时仍渲染，用来核对判定）0；渲染失败 0；待人工确认 1
-- select 控件共 139 个，判定为只改外观（可随机）125 个
-- 耗时：标记渲染 28 秒（94 页）；控件检查 4 分 43 秒（1026 页）；合计 5 分 12 秒
-- 清单写入：新增自动排除 31 条、清掉旧的自动排除 31 条、styleControls 125 条
+- select 控件共 154 个，判定为只改外观（可随机）138 个
+- 耗时：标记渲染 29 秒（94 页）；控件检查 5 分 24 秒（1178 页）；合计 5 分 53 秒
+- 清单写入：新增自动排除 23 条、清掉旧的自动排除 31 条、styleControls 138 条
 
-## 自动排除（31）
+## 自动排除（23）
 
 | 版式 | 名称 | 类别 | 证据 | 已有人工排除 |
 |---|---|---|---|---|
@@ -15,24 +15,16 @@
 | p003 | 封面 链通全国 | 写死文字 | 写死文字：SUPPLY NET / 打通物流脉络 / 构筑产业护城河 |  |
 | p004 | 封面 把握消费趋势 | 写死文字 | 写死文字：PRESS MENU TO BEGIN SERVE WITH HEART ACH… |  |
 | p010 | 占比 Share | 写死文字 | 写死文字：通用大模型 |  |
-| p011 | 产业链 Value Chain | 写死文字 | 写死文字：重点 |  |
-| p012 | 案例 Cases | 写死文字 | 写死文字：重点 |  |
-| p015 | 象限 Quadrant | 写死文字 | 写死文字：重点 / 高热度 高兑现 / 明星兑现 |  |
-| p016 | 风险 Risk | 写死文字 | 写死文字：风险传导链 / 重点 / 风险 |  |
-| p017 | 策略 Outlook | 写死文字 | 写死文字：PHASE TIMELINE |  |
-| p020 | 气泡 Deal Map | 写死文字 | 写死文字：金额区间 笔数 / 合计 |  |
-| p023 | 峰值图文 Peak | 写死文字 | 写死文字：峰值 |  |
-| p024 | 走势曲线 Curve | 写死文字 | 写死文字：基准 Q1 |  |
-| p025 | 峰谷 Peak/Trough | 写死文字 | 写死文字：月度均值 / 均值 |  |
+| p015 | 象限 Quadrant | 写死文字 | 写死文字：高热度 高兑现 / 明星兑现 / STAR DELIVERY |  |
+| p016 | 风险 Risk | 写死文字 | 写死文字：风险传导链 / 风险 |  |
+| p020 | 气泡 Deal Map | 写死文字 | 写死文字：金额区间 笔数 |  |
 | p026 | 瀑布 Waterfall | 写死文字 | 写死文字：赛道贡献明细 |  |
-| p027 | 双维堆叠 Split | 写死文字 | 写死文字：分布 / 合计 |  |
 | p029 | 累计曲线 Cumulative | 写死文字 | 写死文字：头部集中度 |  |
 | p036 | 场景占比 Scene | 写死文字 | 写死文字：场景占比 |  |
 | p037 | 金句 Statement | 写死文字 | 写死文字：研发效率 / Developer Productivity |  |
 | p041 | 容量栅格 Capacity | 写死文字 | 写死文字：占用 单元 / 闲置 单元 |  |
 | p045 | 分层防线 Gate | 写死文字 | 写死文字：外层 通用防护 / 内层 核心合规 |  |
-| p048 | 指标仪表 Meter | 写死文字 | 写死文字：基准 pt |  |
-| p060 | 占比大数字 Dominance | 写死文字 | 写死文字：占比构成 / SHARE OF TOTAL |  |
+| p060 | 占比大数字 Dominance | 写死文字 | 写死文字：占比构成 |  |
 | p065 | 三类资源 Triad | 写死文字 | 写死文字：AI 竞争首先是资源组织能力竞争 / EXPANDED SLIDE P6 |  |
 | p072 | 架构栈 Stack | 写死文字 | 写死文字：AI 延展 |  |
 | p077 | 转化阶梯 Ladder | 写死文字 | 写死文字：较上一阶段流失 |  |
@@ -49,7 +41,7 @@
 
 | 版式 | 名称 | 候选文字 |
 |---|---|---|
-| p028 | 大数字 Big Number | PULSE |
+| p017 | 策略 Outlook | PHASE TIMELINE |
 
 ## 渲染失败（0）
 
@@ -65,10 +57,15 @@
 | p008 | panelColor | 面板色 | #2c44a0 / #7a3c90 / #3c9a52 / #d8402e / #1a1814 |
 | p008 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p009 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p011 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p012 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p013 | colorScale | 色阶模式 | warm / cool / mono |
 | p013 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p014 | colorMode | 配色模式 | category / accent / mono |
 | p014 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p017 | leftColor | 左栏色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p017 | rightColor | 右栏色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p017 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p018 | theme | 背景主题 | paper / dark |
 | p018 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p019 | theme | 背景主题 | dark / paper / color |
@@ -76,6 +73,13 @@
 | p019 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p021 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p022 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p023 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p024 | chartType | 曲线类型 | area / line |
+| p024 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p025 | highColor | 高位色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p025 | lowColor | 低位色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p025 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p027 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p028 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p030 | theme | 背景主题 | dark / paper / color |
 | p030 | bgColor | 色块背景 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
@@ -108,6 +112,7 @@
 | p046 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p047 | imageSide | 图片位置 | left / right |
 | p047 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
+| p048 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p049 | imageSide | 图片位置 | left / right |
 | p049 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p050 | imageSide | 图片位置 | left / right |
@@ -185,7 +190,7 @@
 | p094 | bgColor | 色块背景 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 | p094 | accentColor | 强调色 | #d8402e / #e2742c / #efbe2e / #3c9a52 / #4da0c6 / #2c44a0 / #7a3c90 |
 
-### 不收的 select 控件（14，会改版式几何或渲染失败）
+### 不收的 select 控件（16，会改版式几何或渲染失败）
 
 | 版式 | 控件 | 原因 |
 |---|---|---|
@@ -193,6 +198,8 @@
 | p009 | chartType | 取值 "line"：元素数量 45 → 37 |
 | p018 | quoteAlign | 取值 "center"：第 4 个元素 x 相差 848.6px |
 | p021 | chartType | 取值 "line"：元素数量 48 → 42 |
+| p023 | chartType | 取值 "bar"：元素数量 43 → 49 |
+| p024 | scope | 取值 "month"：元素数量 45 → 44 |
 | p028 | numberAlign | 取值 "center"：第 6 个元素 x 相差 393.7px |
 | p038 | chartType | 取值 "line"：元素数量 57 → 51 |
 | p055 | chartType | 取值 "stack"：元素数量 40 → 39 |
@@ -206,16 +213,25 @@
 
 ## 白名单命中（供人复核）
 
-白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin
+白名单（英文）：top、no、nos、vol、page、pages、fig、figure、est、rev、ver、tel、fax、www、com、am、pm、vs、and、the、for、of、jan、feb、mar、apr、may、jun、jul、aug、sep、sept、oct、nov、dec、mon、tue、wed、thu、fri、sat、sun、january、february、march、april、june、july、august、september、october、november、december、monday、tuesday、wednesday、thursday、friday、saturday、sunday、next、prev、previous、back、scroll、start、end、fin、chart、table、curve、trend、peak、trough、total、count、amount、diverging、area、radar、tiers、structure、donut、stage、flow、funnel、convert、bubbles、high、low、wall、statement、menu、scale、part、step、phase、pest、pulse、nodes、layers、layer、columns、waterfall、heat、map
 
-白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年
+白名单（中文）：一月、二月、三月、四月、五月、六月、七月、八月、九月、十月、十一月、十二月、周一、周二、周三、周四、周五、周六、周日、星期一、星期二、星期三、星期四、星期五、星期六、星期日、第一季度、第二季度、第三季度、第四季度、季度、上半年、下半年、合计、全年合计、单位、占比、均值、月度均值、重点、峰值、低位、目标、其余、全年、数据、分布、基准、结论、高亮、章节、摘要、阶段、纵轴、横轴、数量、金额、关键节点、主线
 
 | 命中文字 | 版式数 |
 |---|---|
+| 重点 | 4 |
 | Q1 | 3 |
 | Q2 | 3 |
 | Q3 | 3 |
 | Q4 | 2 |
+| 合计 | 2 |
+| PULSE | 2 |
+| 峰值 | 1 |
+| 基准 Q1 | 1 |
+| 月度均值 | 1 |
+| 均值 | 1 |
+| 分布 | 1 |
+| 基准 pt | 1 |
 | II | 1 |
 | L4 | 1 |
 | L3 | 1 |

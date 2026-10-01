@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { loadEngine } from '../app/lib/layouts.mjs';
 import { getByPath } from '../app/lib/residue.mjs';
-import { markerText, createMarkerPool, buildMarkerProps, numberValue, setNested, fillByShape, isKeepToken } from '../scripts/audit/markers.mjs';
+import { markerText, createMarkerPool, buildMarkerProps, nestedLength, numberValue, setNested, fillByShape, isKeepToken } from '../scripts/audit/markers.mjs';
 
 test('markerText：不超过字数上限，上限够用时是 M + 36 进制', () => {
   assert.equal(markerText(0, 18), 'M00');
@@ -117,7 +117,10 @@ test('buildMarkerProps：全部真实版式（12 套）——字符串不超上�
       if (String(array.key).includes('[]')) continue;
       const items = getByPath(built.props, array.key);
       if (!Array.isArray(items)) continue;
-      assert.equal(items.length, array.visibleCount, `${page.key} ${array.key} 数量`);
+      // 数量以写进 props 的数量字段为准：默认等于 visibleCount，仅媒体数量绑定（置 0）、与嵌套数组等长对齐时不同，且不超过 maxCount
+      const expected = array.countKey && Number.isInteger(built.props[array.countKey]) ? built.props[array.countKey] : array.visibleCount;
+      assert.equal(items.length, expected, `${page.key} ${array.key} 数量`);
+      assert.ok(items.length <= array.maxCount, `${page.key} ${array.key} 超过 maxCount`);
       for (const [name, field] of Object.entries(array.itemFields || {})) {
         for (const item of items) if (typeof item?.[name] === 'string' && field.maxChars && !built.keptTokens.includes(item[name])) assert.ok([...item[name]].length <= field.maxChars, `${page.key} ${array.key}.${name}`);
       }
@@ -129,4 +132,29 @@ test('buildMarkerProps：全部真实版式（12 套）——字符串不超上�
     for (const slot of info.mediaSlots || []) if (slot.countKey) assert.equal(built.props[slot.countKey], 0, `${page.key} 媒体数量`);
   }
   assert.ok(layouts > 900, `只检查了 ${layouts} 个版式`);
+});
+
+test('nestedLength：按绑定的数量字段对齐，不超过 maxCount；没有依据返回 null', () => {
+  assert.equal(nestedLength({ countKey: 'columnCount', maxCount: 4 }, { columnCount: 3 }, [1, 2, 3, 4]), 3);
+  assert.equal(nestedLength({ sameLengthCountKey: 'segCount', maxCount: 5 }, { segCount: 4 }, [1, 2, 3, 4, 5]), 4);
+  assert.equal(nestedLength({ maxCount: 2 }, {}, [1, 2, 3]), 2, '默认值比上限长要截断');
+  assert.equal(nestedLength({ maxCount: 4 }, {}, [1, 2]), 2);
+  assert.equal(nestedLength({ maxCount: 4 }, {}, undefined), null);
+  assert.equal(nestedLength(undefined, {}, [1]), null);
+});
+
+test('标记 props：嵌套数组遵守 maxCount 和数量绑定（theme12_page061、theme09_page048、theme10_page012）', async () => {
+  const engine = await loadEngine();
+  const build = key => buildMarkerProps(engine.inspectLayout(key, { compact: true }), engine.getLayoutRecord(key)?.defaultProps || {}).props;
+  const p12 = build('theme12_page061');
+  assert.equal(p12.columnCount, p12.cols.length);
+  for (const row of p12.rows) assert.equal(row.v.length, p12.columnCount);
+  const p09 = build('theme09_page048');
+  assert.equal(p09.segs.length, p09.segCount);
+  for (const cat of p09.cats) assert.equal(cat.vals.length, p09.segCount);
+  const p10 = build('theme10_page012');
+  for (const bar of p10.bars) assert.equal(bar.parts.length, p10.segmentCount);
+  const p04 = build('theme04_page057');
+  assert.equal(p04.mediaCount, 0);
+  assert.equal(p04.slotLabels.length, 0, '与媒体数量绑定的标签数组跟着为 0');
 });

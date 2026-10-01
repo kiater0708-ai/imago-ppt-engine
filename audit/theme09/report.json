@@ -4,22 +4,22 @@
     "total": 111,
     "audited": 94,
     "ruleExcluded": 17,
-    "hardcoded": 19,
+    "hardcoded": 14,
     "media": 3,
     "brandIcon": 0,
-    "autoExcluded": 22,
-    "manualExcluded": 0,
-    "renderFailed": 4,
-    "uncertain": 3,
-    "styleControls": 24,
-    "selectControls": 74
+    "autoExcluded": 17,
+    "manualExcluded": 1,
+    "renderFailed": 3,
+    "uncertain": 1,
+    "styleControls": 28,
+    "selectControls": 84
   },
   "timings": {
-    "markerMs": 40241,
-    "controlMs": 125968,
-    "totalMs": 166289,
+    "markerMs": 40739,
+    "controlMs": 130176,
+    "totalMs": 171037,
     "markerPages": 94,
-    "controlPages": 350
+    "controlPages": 398
   },
   "ruleExcluded": [
     {
@@ -285,10 +285,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "Step"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "labelType",
@@ -934,19 +934,42 @@
       "label": "同比对望",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "单位"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "单位"
+      ],
+      "controls": [
+        {
+          "key": "sort",
+          "publicKey": "sort",
+          "label": "排序",
+          "values": [
+            "合计",
+            "右值",
+            "原序"
+          ],
+          "safe": false,
+          "reason": "取值 \"右值\"：第 56 个元素 x 相差 94.2px"
+        },
+        {
+          "key": "labelType",
+          "publicKey": "labelType",
+          "label": "标签类型",
+          "values": [
+            "number",
+            "symbol",
+            "keyword"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme09_page038": {
       "label": "核心数字",
@@ -1191,8 +1214,7 @@
     },
     "theme09_page048": {
       "label": "市占矩形",
-      "status": "renderFailed",
-      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme09_page048 field props: Slide props mismatch for \"theme09_page048\": cats[0].vals 的数量 5 必须等于 segs 的数量 4; cats[1].vals 的数量 5 必须等于 segs 的数量 4; cats[2].vals 的数量 5 必须等于 segs 的数量 4; cats[3].vals 的数量 5 必须等于 segs 的数量 4; cats[4].vals 的数量 5 必须等于 segs 的数量 4 - ",
+      "status": "ok",
       "manualExclude": null,
       "categories": [],
       "evidence": {
@@ -1202,30 +1224,54 @@
       },
       "uncertain": [],
       "whitelisted": [],
-      "controls": []
+      "controls": [
+        {
+          "key": "labelType",
+          "publicKey": "labelType",
+          "label": "标签类型",
+          "values": [
+            "number",
+            "symbol",
+            "keyword"
+          ],
+          "safe": false,
+          "reason": "取值 \"symbol\"：第 2 个元素 宽 相差 41.2px"
+        }
+      ]
     },
     "theme09_page049": {
       "label": "计量条",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "目标"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "目标"
+      ],
+      "controls": [
+        {
+          "key": "labelType",
+          "publicKey": "labelType",
+          "label": "标签类型",
+          "values": [
+            "number",
+            "symbol",
+            "keyword"
+          ],
+          "safe": true,
+          "reason": ""
+        }
+      ]
     },
     "theme09_page050": {
       "label": "09 关键指标",
       "status": "renderFailed",
-      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme09_page050 field props.stats[2].spark: too many items (5 > 4); use at most fillPlan.maxCount or choose another layout - slide 1 layout theme09_page050 field props.stats[3].spark: too many items (5 > 4); use at most fillPlan.maxCount or choose anothe",
+      "error": "渲染失败（退出码 1）：Goal spec validation failed: - slide 1 layout theme09_page050 field props: Slide props mismatch for \"theme09_page050\": stats[2].spark: fixed nested array length 4 does not match default 5; expected lengths by index: [4, 4, 5, 5, 4, 3]; stats[3].spark: fixed nested array length 4 does not match defau",
       "manualExclude": null,
       "categories": [],
       "evidence": {
@@ -1810,17 +1856,18 @@
       ],
       "evidence": {
         "hardcoded": [
-          "单位 合计",
-          "合计",
-          "全年合计",
-          "占比",
           "头部赛道份额"
         ],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
+      "whitelisted": [
+        "单位 合计",
+        "合计",
+        "全年合计",
+        "占比"
+      ],
       "controls": []
     },
     "theme09_page077": {
@@ -1970,19 +2017,42 @@
       "label": "区间对比",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "单位"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "单位"
+      ],
+      "controls": [
+        {
+          "key": "sort",
+          "publicKey": "sort",
+          "label": "排序",
+          "values": [
+            "跨度",
+            "止点",
+            "原序"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "labelType",
+          "publicKey": "labelType",
+          "label": "标签类型",
+          "values": [
+            "number",
+            "symbol",
+            "keyword"
+          ],
+          "safe": false,
+          "reason": "取值 \"symbol\"：第 2 个元素 宽 相差 41.2px"
+        }
+      ]
     },
     "theme09_page085": {
       "label": "10 景气仪表",
@@ -2053,19 +2123,41 @@
       "label": "10 季度走势",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "单位"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "单位"
+      ],
+      "controls": [
+        {
+          "key": "chartType",
+          "publicKey": "chartType",
+          "label": "图表类型",
+          "values": [
+            "折线",
+            "面积"
+          ],
+          "safe": true,
+          "reason": ""
+        },
+        {
+          "key": "labelType",
+          "publicKey": "labelType",
+          "label": "标签类型",
+          "values": [
+            "number",
+            "symbol",
+            "keyword"
+          ],
+          "safe": false,
+          "reason": "取值 \"symbol\"：第 2 个元素 宽 相差 50.5px"
+        }
+      ]
     },
     "theme09_page090": {
       "label": "单笔分布",
@@ -2155,19 +2247,41 @@
       "label": "10 结构演变",
       "status": "ok",
       "manualExclude": null,
-      "categories": [
-        "hardcoded"
-      ],
+      "categories": [],
       "evidence": {
-        "hardcoded": [
-          "占比"
-        ],
+        "hardcoded": [],
         "media": [],
         "brandIcon": []
       },
       "uncertain": [],
-      "whitelisted": [],
-      "controls": []
+      "whitelisted": [
+        "占比"
+      ],
+      "controls": [
+        {
+          "key": "mode",
+          "publicKey": "mode",
+          "label": "图表类型",
+          "values": [
+            "占比",
+            "绝对值"
+          ],
+          "safe": false,
+          "reason": "取值 \"绝对值\"：第 8 个元素 x 相差 43.4px"
+        },
+        {
+          "key": "labelType",
+          "publicKey": "labelType",
+          "label": "标签类型",
+          "values": [
+            "number",
+            "symbol",
+            "keyword"
+          ],
+          "safe": false,
+          "reason": "取值 \"symbol\"：第 2 个元素 宽 相差 50.5px"
+        }
+      ]
     },
     "theme09_page095": {
       "label": "编年纪事",
@@ -2352,10 +2466,10 @@
         "media": [],
         "brandIcon": []
       },
-      "uncertain": [
+      "uncertain": [],
+      "whitelisted": [
         "PHASE"
       ],
-      "whitelisted": [],
       "controls": [
         {
           "key": "labelType",
@@ -2473,7 +2587,7 @@
     "theme09_page111": {
       "label": "结语",
       "status": "ok",
-      "manualExclude": null,
+      "manualExclude": "写死示例品牌名 AInsight",
       "categories": [],
       "evidence": {
         "hardcoded": [],
@@ -2488,9 +2602,9 @@
     }
   },
   "curation": {
-    "added": 22,
+    "added": 20,
     "removed": 22,
-    "styleControls": 24,
+    "styleControls": 28,
     "droppedForContract": []
   }
 }

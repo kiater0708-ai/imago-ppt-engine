@@ -10,12 +10,19 @@ export const DECOR_WHITELIST_LATIN = [
   'january', 'february', 'march', 'april', 'june', 'july', 'august', 'september', 'october', 'november', 'december',
   'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',
   'next', 'prev', 'previous', 'back', 'scroll', 'start', 'end', 'fin',
+  // 通用图表 / 版面标签
+  'chart', 'table', 'curve', 'trend', 'peak', 'trough', 'total', 'count', 'amount', 'diverging', 'area', 'radar', 'tiers', 'structure',
+  'donut', 'stage', 'flow', 'funnel', 'convert', 'bubbles', 'high', 'low', 'wall', 'statement', 'menu', 'scale', 'part', 'step', 'phase',
+  'pest', 'pulse', 'nodes', 'layers', 'layer', 'columns', 'waterfall', 'heat', 'map',
 ];
 /** 中文的常见装饰词（月份、星期、序数、季度）。 */
 export const DECOR_WHITELIST_CJK = [
   '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月',
   '周一', '周二', '周三', '周四', '周五', '周六', '周日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日',
   '第一季度', '第二季度', '第三季度', '第四季度', '季度', '上半年', '下半年',
+  // 通用图表标签（与示例数据绑定的词如「美元 估值 融资额」不放进来）
+  '合计', '全年合计', '单位', '占比', '均值', '月度均值', '重点', '峰值', '低位', '目标', '其余', '全年', '数据', '分布', '基准', '结论',
+  '高亮', '章节', '摘要', '阶段', '纵轴', '横轴', '数量', '金额', '关键节点', '主线',
 ];
 
 /** 平台图标：资源路径或文件名里出现这些词。 */

@@ -2,16 +2,8 @@
   "theme": "theme08",
   "exclude": [
     {
-      "layout": "theme08_page006",
-      "reason": "auto:hardcoded「摘要」「重点」"
-    },
-    {
-      "layout": "theme08_page007",
-      "reason": "auto:hardcoded「重点」"
-    },
-    {
       "layout": "theme08_page008",
-      "reason": "auto:hardcoded「融资额」「事件数」「峰值」"
+      "reason": "auto:hardcoded「融资额」「事件数」"
     },
     {
       "layout": "theme08_page011",
@@ -28,10 +20,6 @@
     {
       "layout": "theme08_page021",
       "reason": "auto:media「图片数量」"
-    },
-    {
-      "layout": "theme08_page023",
-      "reason": "auto:hardcoded「单位」「均值」"
     },
     {
       "layout": "theme08_page027",
@@ -91,7 +79,7 @@
     },
     {
       "layout": "theme08_page056",
-      "reason": "auto:media「图片数量」；hardcoded「重点」"
+      "reason": "auto:media「图片数量」"
     },
     {
       "layout": "theme08_page057",
@@ -100,10 +88,6 @@
     {
       "layout": "theme08_page058",
       "reason": "auto:media「图片数量」"
-    },
-    {
-      "layout": "theme08_page059",
-      "reason": "auto:hardcoded「重点」"
     },
     {
       "layout": "theme08_page061",
@@ -135,15 +119,11 @@
     },
     {
       "layout": "theme08_page075",
-      "reason": "auto:media「图片数量」；hardcoded「主线」"
+      "reason": "auto:media「图片数量」"
     },
     {
       "layout": "theme08_page080",
       "reason": "auto:hardcoded「跨度」"
-    },
-    {
-      "layout": "theme08_page081",
-      "reason": "auto:hardcoded「关键节点」"
     },
     {
       "layout": "theme08_page082",
@@ -189,6 +169,24 @@
       }
     ],
     "theme08_page005": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page006": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page007": [
       {
         "key": "backgroundTheme",
         "values": [
@@ -271,6 +269,15 @@
       }
     ],
     "theme08_page022": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page023": [
       {
         "key": "backgroundTheme",
         "values": [
@@ -427,6 +434,15 @@
         ]
       }
     ],
+    "theme08_page059": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
     "theme08_page063": [
       {
         "key": "backgroundTheme",
@@ -518,6 +534,15 @@
       }
     ],
     "theme08_page079": [
+      {
+        "key": "backgroundTheme",
+        "values": [
+          "primary",
+          "muted"
+        ]
+      }
+    ],
+    "theme08_page081": [
       {
         "key": "backgroundTheme",
         "values": [
