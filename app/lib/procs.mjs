@@ -48,10 +48,21 @@ export function snapshotProcesses({ platform = process.platform, exec = execFile
   }
 }
 
-/** rows 里 rootPid 的所有后代（不含 root 自己）。 */
+/** 启动时间转毫秒；取不到返回 NaN（不参与判断）。 */
+function startMs(row) {
+  return row?.start ? Date.parse(row.start) : NaN;
+}
+
+/**
+ * rows 里 rootPid 的所有后代（不含 root 自己）。
+ * 父进程退出后它的 PID 会被系统复用：比「父进程」启动得还早的进程不是它的子进程，排除。
+ * 否则宿主（绘境）的启动器退出、PID 恰好被浏览器任务里的新进程拿到时，宿主会被当成后代一起杀掉。
+ */
 export function descendantsOf(rootPid, rows) {
   const children = new Map();
+  const byPid = new Map();
   for (const row of rows) {
+    byPid.set(row.pid, row);
     if (!children.has(row.ppid)) children.set(row.ppid, []);
     children.get(row.ppid).push(row);
   }
@@ -59,8 +70,12 @@ export function descendantsOf(rootPid, rows) {
   const queue = [rootPid];
   const seen = new Set(queue);
   while (queue.length) {
-    for (const child of children.get(queue.shift()) || []) {
+    const parentPid = queue.shift();
+    const parentStart = startMs(byPid.get(parentPid));
+    for (const child of children.get(parentPid) || []) {
       if (seen.has(child.pid)) continue;
+      const childStart = startMs(child);
+      if (Number.isFinite(parentStart) && Number.isFinite(childStart) && childStart < parentStart) continue;
       seen.add(child.pid);
       out.push(child);
       queue.push(child.pid);
