@@ -43,7 +43,7 @@ node app/cli.mjs <命令> --request <请求.json>      # info 可不带 --reques
 
 | 命令 | 请求 | result 字段 |
 |---|---|---|
-| `info` | — | `pluginVersion`、`protocol`、`engine`、`themes:[{id,name,scenario,audience,preview,enabled}]`（preview 暂为 null；`enabled:false` 的主题宿主不要展示给学员，见下「主题停用」）、`browser:{found,path,kind}` |
+| `info` | — | `pluginVersion`、`protocol`、`engine`、`themes:[{id,name,scenario,audience,preview,enabled}]`（preview 是封面预览 JPEG 的 data URI，没有预览图时为 null；`enabled:false` 的主题宿主不要展示给学员，见下「主题停用」）、`browser:{found,path,kind}` |
 | `selftest` | `{protocol, workDir}` | `ok`、`steps`（各步耗时）、`pptx`、`pages` |
 | `catalog` | `{protocol, theme, seed, sampleRatio?=0.7}` | `layouts:[{layout,label,roles,cover,summary}]`、`coverCandidates`（同结构，全量）、`stats` |
 | `contracts` | `{protocol, theme, layouts:[...]}` | `contracts:{<layout>:{label,fields,arrays,forcedProps,examples,notes,styleControls,...}}` |

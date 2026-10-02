@@ -1,7 +1,9 @@
 // 版式资料：读大师运行时的版式契约，按版式清单（curation）与全局规则筛候选，生成 catalog 摘要与 contracts 填写契约。不调模型。
 // 摘要/契约的格式沿用 P0 原型第二轮（lib/layouts.mjs）。
 import crypto from 'node:crypto';
-import { importFromRuntime, CURATION_DIR } from './paths.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import { importFromRuntime, CURATION_DIR, APP_DIR } from './paths.mjs';
 import { PluginError } from './errors.mjs';
 import { isThemeEnabled } from './curation.mjs';
 import { getByPath } from './residue.mjs';
@@ -32,14 +34,29 @@ export async function loadEngine() {
   return engineCache;
 }
 
-/** 主题列表：id、名称、场景、受众、预览图（插件内暂无预览图，恒为 null）。 */
-export function listThemes(engine, curationDir = CURATION_DIR) {
+export const PREVIEW_DIR = path.join(APP_DIR, 'previews');
+const PREVIEW_MAX_BYTES = 200 * 1024;
+
+/** 主题封面预览：`app/previews/<主题>.jpg` 存在且不超过 200KB 时返回 JPEG data URI，否则 null（宿主显示占位）。 */
+export function themePreview(theme, dir = PREVIEW_DIR) {
+  if (!/^[A-Za-z0-9_-]{1,64}$/.test(theme)) return null;
+  try {
+    const bytes = fs.readFileSync(path.join(dir, `${theme}.jpg`));
+    if (bytes.length > PREVIEW_MAX_BYTES || bytes[0] !== 0xff || bytes[1] !== 0xd8) return null;
+    return `data:image/jpeg;base64,${bytes.toString('base64')}`;
+  } catch {
+    return null;
+  }
+}
+
+/** 主题列表：id、名称、场景、受众、预览图（JPEG data URI，没有则 null）。 */
+export function listThemes(engine, curationDir = CURATION_DIR, previewDir = PREVIEW_DIR) {
   return engine.THEME_PACKS.map(pack => ({
     id: pack.key,
     name: pack.displayName || pack.name || pack.label || pack.key,
     scenario: pack.scenario || '',
     audience: pack.audience || '',
-    preview: null,
+    preview: themePreview(pack.key, previewDir),
     enabled: isThemeEnabled(pack.key, curationDir),
   }));
 }
